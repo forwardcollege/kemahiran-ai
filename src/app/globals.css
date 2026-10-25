@@ -1,17 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: oklch(0.985 0.008 87);
-  --foreground: oklch(0.22 0.035 244);
+  --background: oklch(0.978 0.012 89);
+  --foreground: oklch(0.205 0.04 246);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.035 244);
-  --primary: oklch(0.48 0.14 208);
+  --card-foreground: oklch(0.205 0.04 246);
+  --primary: oklch(0.46 0.105 195);
   --primary-foreground: oklch(0.99 0.01 90);
-  --secondary: oklch(0.95 0.025 188);
-  --secondary-foreground: oklch(0.28 0.055 207);
-  --muted-foreground: oklch(0.46 0.028 244);
-  --border: oklch(0.87 0.018 218);
-  --ring: oklch(0.58 0.14 208);
+  --secondary: oklch(0.94 0.035 188);
+  --secondary-foreground: oklch(0.27 0.055 202);
+  --accent: oklch(0.79 0.15 73);
+  --accent-foreground: oklch(0.24 0.04 55);
+  --visual: oklch(0.65 0.16 33);
+  --visual-soft: oklch(0.94 0.04 38);
+  --prompt: oklch(0.72 0.135 76);
+  --prompt-soft: oklch(0.95 0.045 83);
+  --muted-foreground: oklch(0.45 0.035 244);
+  --border: oklch(0.855 0.025 218);
+  --ring: oklch(0.52 0.11 195);
 }
 
 @theme inline {
@@ -23,10 +29,18 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-visual: var(--visual);
+  --color-visual-soft: var(--visual-soft);
+  --color-prompt: var(--prompt);
+  --color-prompt-soft: var(--prompt-soft);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans:
+    "Avenir Next", Avenir, Inter, ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
@@ -34,14 +48,21 @@
 }
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 body {
   background: var(--background);
   color: var(--foreground);
+  font-feature-settings: "ss01", "cv02";
 }
 a,
 button {
   outline-offset: 3px;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 45%, white);
+  color: var(--foreground);
 }
 
 .prose-content {

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { localeSchema } from "@/lib/content/schema";
 import "../globals.css";
 
@@ -37,7 +39,9 @@ export default async function LocaleLayout({
             ? "Langkau ke kandungan utama"
             : "Skip to main content"}
         </a>
+        <SiteHeader locale={parsed.data} />
         {children}
+        <SiteFooter locale={parsed.data} />
       </body>
     </html>
   );

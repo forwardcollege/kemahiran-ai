@@ -101,6 +101,8 @@ Deliver the public catalogue experience, with the three libraries clearly differ
 
 The approved first step is a coded vertical slice containing the responsive shell, homepage direction, representative resource cards, a sample discovery/filter treatment and one library index. Stop for product-owner review before applying the direction across every Phase 2 page.
 
+**Preview checkpoint (2026-10-25):** The `phase-2-design-preview` branch now contains the coded vertical slice described in [docs/design/phase-2-preview.md](docs/design/phase-2-preview.md). It has passed formatting, lint, type checking, unit tests, content validation and a production build, plus local desktop/compact-screen visual checks. It remains awaiting product-owner design approval; no Phase 2 acceptance criterion is marked complete yet.
+
 - Apply the approved Forward College theme to shadcn components.
 - Build responsive header, mobile navigation, footer and language switcher.
 - Build the homepage entry points and explanations.
@@ -284,5 +286,5 @@ These are not implied by MVP approval.
 | 2026-10-25 | Approve all 36 completed resource records for application integration and begin Phase 1; publication, licensing and outstanding tool-test gates remain separate | Approved                          |
 | 2026-10-25 | Approve the 10-resource anchor batch as the pattern for producing the remaining catalogue; this is not publication approval                                     | Approved                          |
 | 2026-10-25 | Use one bilingual Skill package with a Malay-first `README.md` and an English operational `SKILL.md` that defaults output to Bahasa Melayu                      | Approved                          |
-| 2026-10-25 | Use Forward College for institutional and original-content provenance; remove Forward Academy references                                                        | Approved                          |
+| 2026-10-25 | Use Forward College exclusively for institutional and original-content provenance                                                                               | Approved                          |
 | 2026-10-25 | Begin Phase 2 with a coded vertical slice and stop for product-owner review before scaling the complete interface                                               | Approved                          |
