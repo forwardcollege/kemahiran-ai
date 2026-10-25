@@ -190,10 +190,6 @@ Cipta foto gaya hidup {{ASPECT_RATIO}} yang menunjukkan {{PRODUCT}} digunakan se
 
 Imej yang cantik tetapi tidak tepat boleh mengelirukan pelanggan. Jangan gunakan AI untuk mereka pensijilan, hasil kesihatan, saiz hidangan, warna produk atau aksesori yang tidak termasuk. Semak keperluan platform jualan dan undang-undang pengiklanan yang terpakai.
 
-### Status pratonton
-
-Satu produk rujukan sintetik dan dua pratonton telah dihasilkan dengan ChatGPT Image pada 25 Oktober 2026. Variasi katalog dan gaya hidup mengekalkan bentuk, glasir teal, jalur dasar warna pasir dan tanda bulan sabit produk rekaan. Ujian ini tidak membuktikan ketepatan bagi produk sebenar; pemilik produk masih perlu membandingkan setiap hasil dengan foto serta maklumat produk yang diluluskan.
-
 ## English
 
 ### Intended use
@@ -233,7 +229,3 @@ Create an {{ASPECT_RATIO}} lifestyle photograph showing {{PRODUCT}} used plausib
 ### Limitations and responsible use
 
 An attractive but inaccurate image can mislead customers. Do not use AI to invent certifications, health outcomes, serving sizes, product colours or included accessories. Verify applicable marketplace and advertising requirements.
-
-### Preview status
-
-A synthetic product reference and two previews were generated with ChatGPT Image on 25 October 2026. The catalogue and lifestyle variants preserved the fictional product's shape, teal glaze, sand-coloured base band and crescent mark. This does not establish fidelity for a real product; the owner must still compare every output with approved photographs and product information.

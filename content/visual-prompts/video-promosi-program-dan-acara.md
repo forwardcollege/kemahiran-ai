@@ -184,10 +184,6 @@ Cipta satu syot promosi {{ASPECT_RATIO}} selama 10 saat di {{VENUE_CONTEXT}}. Ka
 
 Video janaan bukan rakaman program sebenar. Jangan persembahkannya sebagai dokumentasi peserta atau bukti hasil. Dapatkan hak bagi muzik, logo dan aset yang ditambah. Jangan gunakan rupa individu sebenar tanpa kebenaran.
 
-### Status pratonton
-
-Papan cerita montaj dan satu bingkai utama satu syot telah dihasilkan dengan ChatGPT Image pada 25 Oktober 2026. Kedua-duanya hanya menguji komposisi, representasi dan ruang teks. Tiada video dijana; gerakan, kesinambungan masa, audio, transisi dan keserasian Veo masih belum diuji atau diluluskan.
-
 ## English
 
 ### Intended use
@@ -234,7 +230,3 @@ Create one 10-second {{ASPECT_RATIO}} promotional shot in {{VENUE_CONTEXT}}. Mov
 ### Limitations and responsible use
 
 Generated video is not footage of the real programme. Do not present it as participant documentation or evidence of outcomes. Secure rights for music, logos and added assets. Do not use a real person’s likeness without permission.
-
-### Preview status
-
-A montage storyboard and a one-shot key frame were generated with ChatGPT Image on 25 October 2026. They test only composition, representation and copy space. No video was generated; motion, temporal continuity, audio, transitions and Veo compatibility remain untested and unapproved.

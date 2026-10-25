@@ -185,10 +185,6 @@ Cipta komposisi grafik editorial {{ASPECT_RATIO}} untuk {{PROGRAMME_THEME}} meng
 
 Orang janaan bukan peserta sebenar. Jangan gambarkan mereka sebagai penerima manfaat sebenar. Logo perlu ditambah daripada fail rasmi; jangan minta model mereka-reka atau membina semula logo.
 
-### Status pratonton
-
-Dua pratonton sintetik telah dihasilkan dengan ChatGPT Image pada 25 Oktober 2026: satu variasi fotografi editorial dan satu variasi grafik tanpa manusia. Kedua-duanya mengekalkan ruang tipografi serta tidak menjana teks atau logo. Pratonton belum diluluskan untuk penerbitan.
-
 ## English
 
 ### Intended use
@@ -228,7 +224,3 @@ Create an {{ASPECT_RATIO}} editorial graphic composition for {{PROGRAMME_THEME}}
 ### Limitations and responsible use
 
 Generated people are not real participants. Do not present them as actual beneficiaries. Add logos from approved source files; never ask the model to invent or reconstruct one.
-
-### Preview status
-
-Two synthetic previews were generated with ChatGPT Image on 25 October 2026: one editorial-photography variant and one people-free graphic variant. Both preserve typography space and contain no generated text or logo. The previews are not approved for publication.

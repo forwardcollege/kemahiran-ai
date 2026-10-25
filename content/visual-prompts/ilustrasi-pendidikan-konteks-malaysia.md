@@ -186,10 +186,6 @@ Cipta satu set empat ilustrasi kecil yang konsisten untuk lembaran kerja {{LEARN
 
 Ilustrasi janaan boleh mengandungi kesilapan fakta atau stereotaip. Jangan gunakan imej rekaan sebagai bukti sejarah atau saintifik. Elakkan menghasilkan wajah murid sebenar dan jangan memuat naik foto murid tanpa kebenaran serta asas pemprosesan yang sesuai.
 
-### Status pratonton
-
-Dua pratonton sintetik telah dihasilkan dengan ChatGPT Image pada 25 Oktober 2026: satu ilustrasi konsep kitar semula dan satu set visual lembaran kerja penggunaan air. Pratonton ini ialah bukti ujian draf, bukan bahan yang telah diluluskan. Semakan manusia terhadap ketepatan pembelajaran, kesesuaian umur dan representasi masih diperlukan.
-
 ## English
 
 ### Intended use
@@ -231,7 +227,3 @@ Create a consistent set of four small illustrations for a {{LEARNER_LEVEL}} work
 ### Limitations and responsible use
 
 Generated illustrations may contain factual errors or stereotypes. Do not use a fictional image as historical or scientific evidence. Avoid generating identifiable real learners, and never upload student photographs without proper permission and a valid processing basis.
-
-### Preview status
-
-Two synthetic previews were generated with ChatGPT Image on 25 October 2026: a recycling concept illustration and a water-use worksheet set. They are draft test evidence, not approved materials. Human review of learning accuracy, age suitability and representation is still required.

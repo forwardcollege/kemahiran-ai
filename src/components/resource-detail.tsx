@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
+import { CaretRightIcon } from "@phosphor-icons/react/ssr";
 import type { Resource } from "@/lib/content/repository";
 import { renderSafeMarkdown } from "@/lib/content/markdown";
 import type { Locale } from "@/lib/content/schema";
@@ -9,6 +9,12 @@ const paths = {
   skill: "skills",
   llm_prompt: "llm-prompts",
   visual_prompt: "visual-prompts",
+} as const;
+
+const libraryLabels = {
+  skill: { ms: "Kemahiran AI", en: "AI Skills" },
+  llm_prompt: { ms: "Prompt LLM", en: "LLM Prompts" },
+  visual_prompt: { ms: "Imej & Video", en: "Image & Video" },
 } as const;
 
 export async function ResourceDetail({
@@ -21,6 +27,12 @@ export async function ResourceDetail({
   const { data } = resource;
   const counterpart: Locale = locale === "ms" ? "en" : "ms";
   const html = await renderSafeMarkdown(resource.body[locale]);
+  const licenseLabel =
+    data.license.id === "pending"
+      ? locale === "ms"
+        ? "Lesen akan disahkan sebelum penerbitan"
+        : "Licence to be confirmed before publication"
+      : data.license.label;
 
   return (
     <main
@@ -31,12 +43,31 @@ export async function ResourceDetail({
         aria-label={locale === "ms" ? "Jejak navigasi" : "Breadcrumb"}
         className="mb-8 flex items-center justify-between gap-4 text-sm"
       >
-        <Link
-          href={`/${locale}`}
-          className="font-medium text-primary underline-offset-4 hover:underline"
-        >
-          {locale === "ms" ? "Kembali ke pustaka" : "Back to library"}
-        </Link>
+        <ol className="flex min-w-0 flex-1 items-center gap-1.5 text-muted-foreground">
+          <li className="shrink-0">
+            <Link
+              href={`/${locale}`}
+              className="font-medium text-foreground underline-offset-4 hover:text-primary hover:underline focus-visible:text-primary"
+            >
+              {locale === "ms" ? "Semua Sumber" : "All Resources"}
+            </Link>
+          </li>
+          <li className="flex shrink-0 items-center gap-1.5">
+            <CaretRightIcon aria-hidden="true" size={14} weight="bold" />
+            <Link
+              href={`/${locale}/${paths[data.type]}`}
+              className="font-medium text-foreground underline-offset-4 hover:text-primary hover:underline focus-visible:text-primary"
+            >
+              {libraryLabels[data.type][locale]}
+            </Link>
+          </li>
+          <li className="hidden min-w-0 items-center gap-1.5 sm:flex">
+            <CaretRightIcon aria-hidden="true" size={14} weight="bold" />
+            <span aria-current="page" className="truncate">
+              {data.title[locale]}
+            </span>
+          </li>
+        </ol>
         <Link
           href={`/${counterpart}/${paths[data.type]}/${data.slug[counterpart]}`}
           hrefLang={counterpart === "ms" ? "ms-MY" : "en-MY"}
@@ -47,11 +78,6 @@ export async function ResourceDetail({
       </nav>
 
       <header className="mb-10 space-y-5">
-        <div className="flex flex-wrap gap-2">
-          <Badge>{data.type.replace("_", " ")}</Badge>
-          <Badge variant="outline">v{data.version}</Badge>
-          <Badge variant="secondary">{data.review.status}</Badge>
-        </div>
         <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
           {data.title[locale]}
         </h1>
@@ -61,14 +87,27 @@ export async function ResourceDetail({
       </header>
 
       {data.type === "visual_prompt" ? (
-        <figure className="mb-10 overflow-hidden rounded-2xl border bg-secondary">
+        <figure className="relative isolate mb-10 aspect-video overflow-hidden rounded-2xl border bg-secondary">
+          <Image
+            src={data.visual_prompt.preview.src}
+            alt=""
+            fill
+            sizes="(max-width: 1024px) 100vw, 896px"
+            className="pointer-events-none scale-110 object-cover opacity-60 blur-2xl saturate-75"
+            aria-hidden="true"
+          />
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 bg-background/20"
+          />
           <Image
             src={data.visual_prompt.preview.src}
             alt={data.visual_prompt.preview.alt[locale]}
             width={data.visual_prompt.preview.width}
             height={data.visual_prompt.preview.height}
-            className="h-auto w-full"
-            priority
+            sizes="(max-width: 1024px) 100vw, 896px"
+            className="relative z-10 h-full w-full object-contain"
+            preload
           />
         </figure>
       ) : null}
@@ -97,9 +136,15 @@ export async function ResourceDetail({
           </div>
           <div>
             <dt className="font-semibold">
+              {locale === "ms" ? "Versi" : "Version"}
+            </dt>
+            <dd>{data.version}</dd>
+          </div>
+          <div>
+            <dt className="font-semibold">
               {locale === "ms" ? "Lesen" : "Licence"}
             </dt>
-            <dd>{data.license.label}</dd>
+            <dd>{licenseLabel}</dd>
           </div>
           <div>
             <dt className="font-semibold">

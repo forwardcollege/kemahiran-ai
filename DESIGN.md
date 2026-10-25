@@ -102,6 +102,7 @@ The whole title is a link. Do not hide essential information behind hover. Focus
 - Visual Prompt accent: warm amber.
 - Muted colour family: slate inspired by `#94A3B8`. Use that lighter value on dark surfaces only; use a darker slate such as `#475569` for small text on the ivory canvas.
 - Borders: cool light slate on the ivory canvas and `#27272A` or an equivalent tested dark-surface border in the rail.
+- Footer: charcoal indigo anchored to `#171A2E`, visibly distinct from the navigation rail. Its wordmark repeats the standalone blue magic-wand mark and the same blue `.AI` treatment used in the header.
 - Main content surfaces remain ivory or near-white. Do not convert the whole catalogue to the reference's dark colour mode.
 
 Accent colours are semantic cues and must always be paired with a label or icon.

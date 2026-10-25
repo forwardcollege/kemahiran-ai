@@ -24,6 +24,8 @@
   --sidebar: #0b1120;
   --sidebar-muted: #94a3b8;
   --sidebar-border: #27272a;
+  --footer: #171a2e;
+  --footer-foreground: #f8fafc;
 }
 
 @theme inline {
@@ -47,6 +49,8 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
+  --color-footer: var(--footer);
+  --color-footer-foreground: var(--footer-foreground);
   --font-sans: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
   --font-mono:
     var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, SFMono-Regular,
@@ -130,11 +134,12 @@ button {
   width: 2.2rem;
   height: 2.2rem;
   place-items: center;
-  border-radius: 0.55rem;
-  background: var(--foreground);
-  color: var(--background);
-  font-size: 0.82rem;
-  font-weight: 900;
+  color: var(--primary);
+}
+
+.brand-mark svg {
+  width: 1.55rem;
+  height: 1.55rem;
 }
 
 .brand-name {
@@ -211,7 +216,8 @@ button {
 
 .sidebar-brand p {
   margin-top: 0.45rem;
-  padding-left: 2.85rem;
+  padding-left: 0;
+  text-align: left;
   color: var(--sidebar-muted);
   font-size: 0.7rem;
   line-height: 1.55;
@@ -474,6 +480,8 @@ button {
 }
 
 .catalogue-controls {
+  position: relative;
+  z-index: 10;
   margin-top: 1.15rem;
   animation: interface-reveal 240ms 80ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -542,9 +550,10 @@ button {
 
 .audience-scroll::after {
   position: absolute;
+  z-index: 1;
   inset: 0 0 0 auto;
-  width: 3rem;
-  background: linear-gradient(90deg, transparent, var(--background) 88%);
+  width: 3.5rem;
+  background: linear-gradient(90deg, transparent, var(--background) 76%);
   content: "";
   opacity: 0;
   pointer-events: none;
@@ -620,31 +629,9 @@ button {
   border-radius: 0.55rem;
 }
 
-.catalogue-select {
-  display: grid;
-  min-height: 2.75rem;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 0.45rem;
-  border: 1px solid var(--border);
-  border-radius: 0.55rem;
-  background: var(--card);
-  padding-inline: 0.8rem;
-}
-
-.catalogue-select > svg {
+.catalogue-sort-trigger > svg {
   width: 0.95rem;
   height: 0.95rem;
-}
-
-.catalogue-select select {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  color: var(--foreground);
-  font-size: 0.76rem;
-  font-weight: 750;
-  outline: none;
 }
 
 .extra-filters {
@@ -999,10 +986,6 @@ button {
   .desktop-sidebar .brand-name {
     color: white;
   }
-  .desktop-sidebar .brand-mark {
-    background: white;
-    color: var(--sidebar);
-  }
   .mobile-header {
     display: none;
   }
@@ -1075,10 +1058,6 @@ button {
   }
   .catalogue-actions > * {
     flex: 1;
-    min-width: 0;
-  }
-  .catalogue-select select {
-    width: 100%;
     min-width: 0;
   }
   .extra-filters {
@@ -1157,11 +1136,14 @@ button {
   list-style: decimal;
 }
 .prose-content pre {
-  overflow-x: auto;
+  overflow-x: hidden;
   border-radius: 0.8rem;
   background: var(--sidebar);
   padding: 1rem;
   color: white;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .prose-content code {
   font-family: var(--font-mono);

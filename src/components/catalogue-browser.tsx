@@ -8,7 +8,6 @@ import {
   BookOpenIcon,
   BooksIcon,
   BuildingsIcon,
-  CaretDownIcon,
   ChartBarIcon,
   ChatTextIcon,
   FileTextIcon,
@@ -22,6 +21,7 @@ import {
 } from "@phosphor-icons/react/ssr";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Select } from "@/components/ui/select";
 import type { Locale, ResourceFrontmatter } from "@/lib/content/schema";
 
 export type CatalogueItem = {
@@ -113,7 +113,7 @@ export function CatalogueBrowser({
   const [sort, setSort] = useState("newest");
   const [showFilters, setShowFilters] = useState(false);
   const [saved, setSaved] = useState<string[]>([]);
-  const [audienceHasMore, setAudienceHasMore] = useState(false);
+  const [audienceHasMore, setAudienceHasMore] = useState(true);
   const audienceScrollRef = useRef<HTMLDivElement>(null);
   const labels =
     locale === "ms"
@@ -170,12 +170,17 @@ export function CatalogueBrowser({
     };
 
     updateOverflowCue();
+    const animationFrame = requestAnimationFrame(updateOverflowCue);
     scroller.addEventListener("scroll", updateOverflowCue, { passive: true });
+    window.addEventListener("resize", updateOverflowCue);
     const resizeObserver = new ResizeObserver(updateOverflowCue);
     resizeObserver.observe(scroller);
+    void document.fonts.ready.then(updateOverflowCue);
 
     return () => {
+      cancelAnimationFrame(animationFrame);
       scroller.removeEventListener("scroll", updateOverflowCue);
+      window.removeEventListener("resize", updateOverflowCue);
       resizeObserver.disconnect();
     };
   }, [availableAudiences.length]);
@@ -282,20 +287,17 @@ export function CatalogueBrowser({
             </div>
           </div>
           <div className="catalogue-actions">
-            <label className="catalogue-select">
-              <span className="sr-only">
-                {locale === "ms" ? "Susunan" : "Sort order"}
-              </span>
-              <ChartBarIcon aria-hidden="true" weight="regular" />
-              <select
-                value={sort}
-                onChange={(event) => setSort(event.target.value)}
-              >
-                <option value="newest">{labels.sort}</option>
-                <option value="title">{labels.titleSort}</option>
-              </select>
-              <CaretDownIcon aria-hidden="true" weight="bold" />
-            </label>
+            <Select
+              className="catalogue-sort"
+              value={sort}
+              onValueChange={setSort}
+              label={locale === "ms" ? "Susunan" : "Sort order"}
+              leadingIcon={<ChartBarIcon aria-hidden="true" weight="regular" />}
+              options={[
+                { value: "newest", label: labels.sort },
+                { value: "title", label: labels.titleSort },
+              ]}
+            />
             <Button
               type="button"
               variant="secondary"

@@ -10,6 +10,7 @@ import {
   HeartIcon,
   ImageIcon,
   ListIcon,
+  MagicWandIcon,
   PlusCircleIcon,
   QuestionIcon,
   SignInIcon,
@@ -103,7 +104,9 @@ export function SiteHeader({
     <>
       <div className="sidebar-brand">
         <Link href={`/${locale}`} aria-label="Kemahiran.AI">
-          <span className="brand-mark">K.</span>
+          <span className="brand-mark" aria-hidden="true">
+            <MagicWandIcon weight="bold" />
+          </span>
           <span className="brand-name">
             Kemahiran<span>.AI</span>
           </span>
@@ -183,7 +186,9 @@ export function SiteHeader({
           className="mobile-brand"
           aria-label="Kemahiran.AI"
         >
-          <span className="brand-mark">K.</span>
+          <span className="brand-mark" aria-hidden="true">
+            <MagicWandIcon weight="bold" />
+          </span>
           <span className="brand-name">
             Kemahiran<span>.AI</span>
           </span>
