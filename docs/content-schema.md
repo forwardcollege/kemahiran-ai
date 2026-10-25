@@ -230,20 +230,25 @@ skill:
       - All suggestions require teacher review before use.
 ```
 
-The body should contain, in each language:
+Every Skill body must use this exact level-three section order. Content depth may vary, and complex examples may add level-four input/output subsections, but the primary information architecture stays predictable.
 
-- who it is for;
-- prerequisites;
-- step-by-step usage;
-- copyable instruction version;
-- example input and output;
-- limitations/responsible-use guidance; and
-- package explanation where applicable.
+| Bahasa Melayu                           | English                         |
+| --------------------------------------- | ------------------------------- |
+| Hasil yang anda akan peroleh            | What you will get               |
+| Sebelum bermula                         | Before you begin                |
+| Langkah penggunaan                      | How to use it                   |
+| Arahan untuk disalin                    | Copyable instruction            |
+| Contoh penggunaan                       | Worked example                  |
+| Semakan kualiti                         | Quality check                   |
+| Batasan dan penggunaan bertanggungjawab | Limitations and responsible use |
+
+Package availability, included files and download instructions belong to the shared Skill action panel and frontmatter rather than a repeated body section.
 
 ### Downloadable Skill package convention
 
 A downloadable Skill uses one package for both languages:
 
+- `SKILL.md` must sit at the root of the ZIP archive so Gemini Skills can recognise it during upload. Keep supporting folders such as `references/` relative to that root; do not add an extra wrapping directory.
 - `README.md` is required as the Malay-first bilingual guide for non-technical users.
 - `SKILL.md` is the compact operational specification and may be written in English for compatibility across AI tools. It must direct the tool to answer in Bahasa Melayu by default and in English when the user requests it.
 - `LICENSES.md` is required and must list every packaged file, its provenance and its licence status.
@@ -412,7 +417,7 @@ This is the intended non-developer workflow after implementation:
 4. Write the Malay section first, using Malaysian terminology and context.
 5. Write or commission the reviewed English variant in the same file.
 6. Add preview assets under `public/media/resources/{resource-id}/` if required.
-7. Add any Skill package under `public/downloads/skills/{resource-id}/{version}/`.
+7. Add any Skill package under `public/downloads/skills/{resource-id}/{version}/`, with `SKILL.md` at the archive root.
 8. Run the future `pnpm content:validate` command or rely on the pull-request check.
 9. Preview the generated page in both languages.
 10. Move the record through editorial review, tool testing and accountable Forward College internal approval. Record specialist review separately when it is available.

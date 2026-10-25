@@ -59,9 +59,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.2.1
+version: 0.2.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [prompt-official-letter-001, prompt-meeting-actions-001]
 featured: true
 search_aliases:
@@ -99,7 +99,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-meeting-minutes-001/0.2.1/draft-formal-meeting-minutes.zip,
+      path: /downloads/skills/skill-meeting-minutes-001/0.2.2/draft-formal-meeting-minutes.zip,
       format: skill_md_zip,
       included_files:
         [README.md, SKILL.md, LICENSES.md, references/template-setup.md],
@@ -185,11 +185,13 @@ Hasilkan:
 Kekalkan istilah rasmi. Jangan menambah dasar, komitmen atau pendapat tentang individu. Sebelum menjawab, semak bahawa tiada keputusan baharu dicipta, keputusan tidak ditukar menjadi tindakan tanpa arahan sumber, setiap tindakan mempunyai sumber, tiada status tindakan direka dan tiada nombor agenda digunakan melainkan sumber melabelkannya sebagai agenda atau item.
 ```
 
-### Contoh input dan hasil ringkas
+### Contoh penggunaan
+
+#### Contoh input
 
 Input sintetik: “Agenda 2: Tarikh bengkel dicadang 12 November. Ahli bersetuju selepas dewan disahkan. Aina semak dewan sebelum 30 Oktober.”
 
-Hasil yang sesuai:
+#### Contoh hasil
 
 | Agenda            | Keputusan                                              | Tindakan                 | Pemilik | Tarikh     |
 | ----------------- | ------------------------------------------------------ | ------------------------ | ------- | ---------- |
@@ -206,10 +208,6 @@ Hasil yang sesuai:
 ### Batasan dan penggunaan bertanggungjawab
 
 AI tidak mengetahui apa yang benar-benar dipersetujui selain input yang diberikan. Jangan gunakan ringkasan AI sebagai rekod rasmi tanpa pengesahan manusia. Ikuti dasar organisasi bagi rakaman, penyimpanan dan penggunaan alat AI.
-
-### Pakej kemahiran
-
-Pakej boleh muat turun tersedia dan mengandungi panduan dwibahasa `README.md`, spesifikasi operasi `SKILL.md`, panduan templat dan manifest lesen. Arahan di atas juga boleh digunakan terus tanpa pemasangan.
 
 ## English
 
@@ -258,9 +256,13 @@ Provide:
 Preserve official terminology. Do not add policies, commitments or opinions about individuals. Before answering, verify that no new decision was invented, no decision became an action without source instruction, every action has a source, no action status was invented and no agenda number appears unless the source labels it as an agenda or item number.
 ```
 
-### Short sample input and output
+### Worked example
+
+#### Sample input
 
 Synthetic input: “Item 2: Workshop proposed for 12 November. Members agreed subject to venue confirmation. Aina to check the hall by 30 October.”
+
+#### Sample output
 
 | Item             | Decision                                            | Action                  | Owner | Due date   |
 | ---------------- | --------------------------------------------------- | ----------------------- | ----- | ---------- |
@@ -277,7 +279,3 @@ Synthetic input: “Item 2: Workshop proposed for 12 November. Members agreed su
 ### Limitations and responsible use
 
 AI does not know what was actually agreed beyond the supplied input. Never treat an AI summary as the official record without human verification. Follow organisational policies for recording, retention and AI use.
-
-### Skill package
-
-A downloadable package is available with a bilingual `README.md`, the operational `SKILL.md` specification, template guidance and a licence manifest. The instruction above also works without installation.

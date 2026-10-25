@@ -63,9 +63,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.1.1
+version: 0.1.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-rubric-001, prompt-parent-message-001]
 featured: false
 search_aliases:
@@ -104,7 +104,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-student-feedback-001/0.1.1/draft-constructive-student-feedback.zip,
+      path: /downloads/skills/skill-student-feedback-001/0.1.2/draft-constructive-student-feedback.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -139,9 +139,21 @@ skill:
 
 ## Bahasa Melayu
 
-### Cara menggunakan
+### Hasil yang anda akan peroleh
 
-Nyahkenal pasti petikan kerja murid. Berikan objektif atau rubrik dan hanya bukti yang perlu. Jangan masukkan nama, nombor pengenalan, diagnosis, rekod disiplin atau maklumat keluarga.
+Draf maklum balas yang membezakan bukti, kekuatan, jurang dan langkah seterusnya tanpa mereka markah atau membuat andaian tentang murid.
+
+### Sebelum bermula
+
+Nyahkenal pasti petikan kerja murid. Sediakan objektif atau rubrik yang diluluskan dan hanya bukti yang diperlukan. Jangan masukkan nama, nombor pengenalan, diagnosis, rekod disiplin atau maklumat keluarga.
+
+### Langkah penggunaan
+
+1. Semak bahawa semua bukti telah dinyahkenal pasti.
+2. Berikan kriteria, petikan kerja, nada dan panjang yang dikehendaki.
+3. Salin arahan di bawah dan lengkapkan pemboleh ubahnya.
+4. Bandingkan setiap kenyataan dengan bukti sebenar dan kriteria.
+5. Edit nada, langkah seterusnya dan keputusan pentaksiran sebelum digunakan.
 
 ### Arahan untuk disalin
 
@@ -155,19 +167,38 @@ Nada dan panjang: {{NADA_PANJANG}}
 Pisahkan: (1) bukti yang diperhatikan, (2) satu kekuatan yang disokong bukti, (3) satu jurang berbanding kriteria, (4) satu langkah seterusnya yang khusus, dan (5) perkara untuk semakan guru. Jangan cipta markah, niat, tahap kebolehan, diagnosis atau sifat watak. Jangan gunakan pujian umum tanpa bukti. Jika rubrik atau bukti tiada, tanya dan berhenti.
 ```
 
-### Contoh ringkas
+### Contoh penggunaan
 
 Daripada petikan hujah sintetik dan kriteria penggunaan bukti, maklum balas menyebut bukti sebenar, satu jurang hubungan alasan-bukti dan satu tindakan semakan ayat.
 
-### Semakan dan batasan
+### Semakan kualiti
 
-Pastikan nada menghormati murid, langkah boleh dilakukan dan tiada maklumat baharu dicipta. Guru mesti menyemak kesesuaian emosi, bahasa, konteks dan keputusan pentaksiran.
+- Kekuatan dan jurang disokong oleh bukti yang diberikan.
+- Langkah seterusnya khusus dan boleh dilakukan.
+- Nada menghormati murid dan tiada maklumat baharu dicipta.
+- Tiada identiti atau maklumat sensitif murid dikekalkan.
+
+### Batasan dan penggunaan bertanggungjawab
+
+AI tidak memahami keseluruhan konteks murid atau kelas. Guru mesti menyemak kesesuaian emosi, bahasa, konteks dan keputusan pentaksiran serta meluluskan maklum balas akhir.
 
 ## English
 
-### How to use
+### What you will get
 
-De-identify the learner-work extract. Supply the objective or rubric and only necessary evidence. Do not include names, identifiers, diagnoses, disciplinary records or family information.
+A feedback draft that separates evidence, strengths, gaps and next steps without inventing marks or making assumptions about the learner.
+
+### Before you begin
+
+De-identify the learner-work extract. Supply the approved objective or rubric and only necessary evidence. Do not include names, identifiers, diagnoses, disciplinary records or family information.
+
+### How to use it
+
+1. Confirm that all evidence has been de-identified.
+2. Supply the criteria, work extract, desired tone and length.
+3. Copy the instruction below and complete its variables.
+4. Check every statement against the actual evidence and criteria.
+5. Edit the tone, next step and assessment decision before use.
 
 ### Copyable instruction
 
@@ -181,10 +212,17 @@ Tone and length: {{TONE_LENGTH}}
 Separate: (1) observed evidence, (2) one evidence-supported strength, (3) one gap against the criteria, (4) one specific next step, and (5) teacher-review points. Do not invent marks, intent, ability level, diagnosis or character traits. Do not use generic praise without evidence. If the rubric or evidence is absent, ask and stop.
 ```
 
-### Short example
+### Worked example
 
 From a synthetic argument extract and an evidence-use criterion, the feedback identifies actual evidence, one reasoning gap and one sentence-revision action.
 
-### Checks and limitations
+### Quality check
 
-Ensure the tone respects the learner, the step is achievable and no new information is invented. The teacher must review emotional, language, contextual and assessment suitability.
+- Strengths and gaps are supported by the supplied evidence.
+- The next step is specific and achievable.
+- The tone respects the learner and no new information is invented.
+- No learner identity or sensitive information remains.
+
+### Limitations and responsible use
+
+AI does not understand the learner's full context or classroom circumstances. The teacher must review emotional, language, contextual and assessment suitability and approve the final feedback.

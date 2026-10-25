@@ -59,9 +59,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.2.1
+version: 0.2.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids:
   [
     skill-rph-001,
@@ -108,7 +108,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-dskp-activity-001/0.2.1/design-dskp-aligned-activities.zip,
+      path: /downloads/skills/skill-dskp-activity-001/0.2.2/design-dskp-aligned-activities.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -185,17 +185,20 @@ Anggap masa, bahan dan kemudahan sebagai had tertutup. Jangan tambah aplikasi, p
 Perkataan seperti menulis, mencatat, melengkapkan lembaran, menggunakan kad, merujuk panduan bergambar atau merekod pada papan putih memerlukan bahan yang sepadan. Jangan gunakannya jika kertas, alat tulis, lembaran, kad atau papan putih tidak berada dalam senarai. Jika bukti bertulis diperlukan tetapi medium tidak diberi, nyatakan `Medium rekod belum disahkan` dan tunggu keputusan guru. Jangan menukar bahan terhad kepada stesen yang mustahil dilaksanakan serentak.
 ```
 
-### Contoh ringkas
+### Contoh penggunaan
 
 Input sintetik: Sains Tingkatan 1, standard yang disahkan tentang ketumpatan, 40 minit, penimbang, silinder penyukat, air dan tiga objek selamat. Hasil sepatutnya membandingkan demonstrasi berpandu, siasatan kumpulan kecil dan analisis data yang diberikan tanpa menambah bahan lain.
+
+### Semakan kualiti
+
+- Dokumen, kod, pernyataan standard dan lokasi sumber telah disahkan.
+- Ketiga-tiga pilihan menyokong standard yang sama dan mempunyai bukti pembelajaran.
+- Masa, bahan dan kemudahan dipatuhi sebagai had tertutup.
+- Risiko, aksesibiliti serta sokongan atau pengayaan telah disemak guru.
 
 ### Batasan dan penggunaan bertanggungjawab
 
 AI tidak mengetahui keadaan sebenar kelas atau prosedur keselamatan sekolah. Guru mesti menyemak standard, arahan, masa, bahan, aksesibiliti dan risiko sebelum digunakan. Jika specialist review belum diperoleh, sahkan semua rujukan dengan DSKP semasa.
-
-### Pakej kemahiran
-
-Pakej draf mengandungi arahan generik sahaja dan tidak membundel PDF DSKP. Semua fungsi utama boleh digunakan dengan menyalin arahan di atas dan melampirkan sumber sendiri.
 
 ## English
 
@@ -238,14 +241,17 @@ Treat time, materials and facilities as closed constraints. Do not add apps, dev
 Words such as write, record, complete a worksheet, use cards, consult a picture guide or copy from a whiteboard imply matching materials. Do not use them when paper, writing tools, worksheets, cards or a whiteboard are absent from the list. When written evidence is needed but no medium was supplied, state `Recording medium not confirmed` and wait for the teacher. Do not turn limited equipment into stations that cannot operate concurrently.
 ```
 
-### Short example
+### Worked example
 
 Synthetic input: Form 1 Science, a confirmed density standard, 40 minutes, a scale, measuring cylinder, water and three safe objects. The result should compare a guided demonstration, small-group investigation and supplied-data analysis without adding materials.
+
+### Quality check
+
+- The document, code, standard wording and source location have been confirmed.
+- All three options support the same standard and include evidence of learning.
+- Time, materials and facilities are respected as closed constraints.
+- A teacher has reviewed risks, accessibility and optional support or extension.
 
 ### Limitations and responsible use
 
 AI does not know the real classroom or school safety procedures. The teacher must verify the standard, instructions, timing, materials, accessibility and risks. Where specialist review was not obtained, verify all references against the current DSKP.
-
-### Skill package
-
-The draft package contains generic instructions only and does not bundle a DSKP PDF. The complete workflow remains usable by copying the instruction above and attaching your own source.

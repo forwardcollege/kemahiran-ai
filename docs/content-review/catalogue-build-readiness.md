@@ -1,7 +1,7 @@
 # Catalogue Build Readiness
 
 Status: Ready for application integration; publication gates remain open  
-Date: 2026-10-25  
+Date: 2026-10-26
 Scope: All 36 MVP resources
 
 ## Outcome
@@ -20,24 +20,24 @@ Every record has one shared identity, Malay and English content, controlled taxo
 
 ## Skill downloads
 
-All 12 Skills now have a versioned ZIP at the exact public path declared in the resource record. Each archive opens into one named Skill folder and contains a Malay-first bilingual `README.md`, the operational `SKILL.md`, `LICENSES.md` and only the supporting reference files declared by that package. One package serves both language variants; there are no duplicated Malay and English archives.
+All 12 Skills now have a versioned ZIP at the exact public path declared in the resource record. Each archive contains `SKILL.md` at its root for Gemini Skills upload compatibility, together with a Malay-first bilingual `README.md`, `LICENSES.md` and only the supporting reference files declared by that package. One package serves both language variants; there are no duplicated Malay and English archives.
 
 | Resource ID                           | Version | Archive                                     |
 | ------------------------------------- | ------- | ------------------------------------------- |
-| `skill-rph-001`                       | 0.4.1   | `generate-dskp-grounded-rph.zip`            |
-| `skill-dskp-activity-001`             | 0.2.1   | `design-dskp-aligned-activities.zip`        |
-| `skill-assessment-set-001`            | 0.2.1   | `build-assessment-materials.zip`            |
-| `skill-rubric-001`                    | 0.1.1   | `design-moderate-rubrics.zip`               |
-| `skill-student-feedback-001`          | 0.1.1   | `draft-constructive-student-feedback.zip`   |
-| `skill-meeting-minutes-001`           | 0.2.1   | `draft-formal-meeting-minutes.zip`          |
-| `skill-policy-analysis-001`           | 0.1.1   | `analyse-circular-policy-document.zip`      |
-| `skill-programme-paper-001`           | 0.1.1   | `draft-programme-paper.zip`                 |
-| `skill-activity-report-001`           | 0.1.1   | `build-activity-outcome-report.zip`         |
-| `skill-business-proposal-001`         | 0.2.1   | `draft-business-proposal.zip`               |
-| `skill-management-report-001`         | 0.1.1   | `build-data-informed-management-report.zip` |
-| `skill-customer-service-playbook-001` | 0.1.1   | `build-customer-service-playbook.zip`       |
+| `skill-rph-001`                       | 0.4.2   | `generate-dskp-grounded-rph.zip`            |
+| `skill-dskp-activity-001`             | 0.2.2   | `design-dskp-aligned-activities.zip`        |
+| `skill-assessment-set-001`            | 0.2.2   | `build-assessment-materials.zip`            |
+| `skill-rubric-001`                    | 0.1.2   | `design-moderate-rubrics.zip`               |
+| `skill-student-feedback-001`          | 0.1.2   | `draft-constructive-student-feedback.zip`   |
+| `skill-meeting-minutes-001`           | 0.2.2   | `draft-formal-meeting-minutes.zip`          |
+| `skill-policy-analysis-001`           | 0.1.2   | `analyse-circular-policy-document.zip`      |
+| `skill-programme-paper-001`           | 0.1.2   | `draft-programme-paper.zip`                 |
+| `skill-activity-report-001`           | 0.1.2   | `build-activity-outcome-report.zip`         |
+| `skill-business-proposal-001`         | 0.2.2   | `draft-business-proposal.zip`               |
+| `skill-management-report-001`         | 0.1.2   | `build-data-informed-management-report.zip` |
+| `skill-customer-service-playbook-001` | 0.1.2   | `build-customer-service-playbook.zip`       |
 
-The archives are suitable for local and authenticated preview testing. They must not be offered publicly until the distribution licence is chosen and every `LICENSES.md` manifest is updated.
+The archives use the approved CC BY 4.0 resource licence and retain their `LICENSES.md` manifests. Public availability still follows each resource's publication status and release gates.
 
 ## Compatibility evidence
 

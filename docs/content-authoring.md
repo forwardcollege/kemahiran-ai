@@ -1,7 +1,7 @@
 # Kemahiran.AI Content Authoring Guide
 
 Status: Approved workflow for the MVP catalogue  
-Last updated: 2026-10-25
+Last updated: 2026-10-26
 
 This guide is for contributors adding or revising catalogue resources without changing application code. The Git repository is the source of truth. Supabase is not a catalogue CMS.
 
@@ -26,9 +26,12 @@ Do not split one bilingual resource into separate Malay and English files.
 9. Record provenance, licence, reviewer, version, dates, limitations and related immutable IDs.
 10. Add preview media under `public/media/resources/{resource-id}/` for a visual collection.
 11. Add a portable source package under `packages/skills/{package-name}/` when a Skill is downloadable. Include a Malay-first bilingual `README.md`, the operational `SKILL.md` and `LICENSES.md`; include only necessary original or licensed support files.
-12. Publish the versioned archive under `public/downloads/skills/{resource-id}/{version}/` only after its manifest and distribution rights are confirmed.
+12. Build the ZIP with `SKILL.md` at the archive root so Gemini can recognise it. Keep supporting folders such as `references/` relative to that root.
+13. Publish the versioned archive under `public/downloads/skills/{resource-id}/{version}/` only after its manifest and distribution rights are confirmed.
 
 The complete field contract and status lifecycle are defined in `docs/content-schema.md`.
+
+For a Skill, keep the seven required level-three body sections in the exact bilingual order documented in the schema. Use level-four headings such as `Contoh input` and `Contoh hasil` only inside `Contoh penggunaan` when that distinction improves understanding. Do not add a repeated package section to the body; package guidance is rendered from structured metadata.
 
 ## Review and testing sequence
 

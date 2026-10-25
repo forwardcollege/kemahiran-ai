@@ -51,9 +51,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.2.1
+version: 0.2.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [prompt-customer-response-001, visual-product-photo-001]
 featured: true
 search_aliases:
@@ -92,7 +92,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-business-proposal-001/0.2.1/draft-business-proposal.zip,
+      path: /downloads/skills/skill-business-proposal-001/0.2.2/draft-business-proposal.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -188,9 +188,13 @@ Mula dengan senarai maksimum lima jurang kritikal. Jika jurang menjejaskan skop,
 Gunakan `[PERLU DISAHKAN]` hanya untuk butiran bukan kritikal yang tidak mengubah tawaran komersial. Akhiri dengan audit konsistensi skop-jadual-harga dan senarai tuntutan yang memerlukan bukti. Audit ketepatan dan aritmetik; jangan menilai harga sebagai berpatutan, kompetitif atau mengikut pasaran tanpa bukti.
 ```
 
-### Contoh input dan hasil ringkas
+### Contoh penggunaan
+
+#### Contoh input
 
 Input sintetik: sebuah syarikat latihan diminta menjalankan dua bengkel literasi AI untuk 40 peserta, termasuk modul dan laporan ringkas. Harga belum diluluskan.
+
+#### Contoh hasil
 
 Hasil yang betul menyenaraikan dua bengkel, modul, laporan dan tanggungjawab pelanggan; bahagian harga mesti bertanda `[PERLU DISAHKAN]`, bukannya mereka angka.
 
@@ -205,10 +209,6 @@ Hasil yang betul menyenaraikan dua bengkel, modul, laporan dan tanggungjawab pel
 ### Batasan dan penggunaan bertanggungjawab
 
 Ini bukan nasihat undang-undang, kewangan atau cukai. Jangan masukkan data sulit pelanggan ke alat yang tidak diluluskan. Manusia mesti mengesahkan semua komitmen, angka dan terma sebelum cadangan dihantar.
-
-### Pakej kemahiran
-
-Pakej boleh muat turun tersedia dan mengandungi panduan dwibahasa `README.md`, spesifikasi operasi `SKILL.md` dan manifest lesen. Arahan di atas juga boleh disalin dan digunakan terus tanpa pemasangan.
 
 ## English
 
@@ -258,9 +258,13 @@ Begin with no more than five critical gaps. If a gap affects scope, schedule, pr
 Use `[CONFIRMATION REQUIRED]` only for non-critical details that do not change the commercial offer. End with a scope-schedule-price consistency audit and a list of claims requiring evidence. Audit accuracy and arithmetic; do not judge the price as fair, competitive or market-standard without evidence.
 ```
 
-### Short sample input and output
+### Worked example
+
+#### Sample input
 
 Synthetic input: a training company is asked to run two AI-literacy workshops for 40 participants, including modules and a short report. Pricing is not approved.
+
+#### Sample output
 
 An appropriate output lists two workshops, modules, the report and client responsibilities; the price must be marked `[CONFIRMATION REQUIRED]` rather than invented.
 
@@ -275,7 +279,3 @@ An appropriate output lists two workshops, modules, the report and client respon
 ### Limitations and responsible use
 
 This is not legal, financial or tax advice. Do not enter confidential client data into an unapproved tool. A human must verify every commitment, number and term before sending the proposal.
-
-### Skill package
-
-A downloadable package is available with a bilingual `README.md`, the operational `SKILL.md` specification and a licence manifest. The instruction above can also be copied and used directly without installation.

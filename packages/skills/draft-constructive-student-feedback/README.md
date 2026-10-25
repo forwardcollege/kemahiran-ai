@@ -4,7 +4,7 @@ Panduan pengguna untuk pakej Kemahiran.AI `draft-constructive-student-feedback`.
 
 ## Cara menggunakan dalam Gemini
 
-1. Tambahkan `SKILL.md` sebagai arahan Kemahiran atau Gem.
+1. Muat naik pakej ZIP melalui Gemini `Customize → Skills → Create → Upload`.
 2. Sediakan kriteria yang diluluskan dan bukti kerja yang telah dinyahkenal pasti.
 3. Nyatakan nada, bahasa dan bentuk maklum balas yang diperlukan.
 4. Guru menyemak kesesuaian emosi, bahasa, konteks dan pentaksiran sebelum berkongsi.
@@ -13,4 +13,4 @@ Panduan pengguna untuk pakej Kemahiran.AI `draft-constructive-student-feedback`.
 
 ## English
 
-Add `SKILL.md` as the Skill or Gem instruction and provide approved criteria plus de-identified work evidence. State the desired tone, language and feedback format. The operational file is in English for portability but requests Malay output by default. Do not include names, diagnoses, disciplinary or family information, and do not let the AI invent marks, intent, ability or unobserved performance.
+Upload the ZIP package through Gemini `Customize → Skills → Create → Upload` and provide approved criteria plus de-identified work evidence. State the desired tone, language and feedback format. The operational file is in English for portability but requests Malay output by default. Do not include names, diagnoses, disciplinary or family information, and do not let the AI invent marks, intent, ability or unobserved performance.

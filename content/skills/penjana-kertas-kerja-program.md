@@ -59,9 +59,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.1.1
+version: 0.1.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [prompt-programme-outcomes-001, skill-activity-report-001]
 featured: false
 search_aliases:
@@ -106,7 +106,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-programme-paper-001/0.1.1/draft-programme-paper.zip,
+      path: /downloads/skills/skill-programme-paper-001/0.1.2/draft-programme-paper.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -141,9 +141,21 @@ skill:
 
 ## Bahasa Melayu
 
-### Langkah
+### Hasil yang anda akan peroleh
+
+Draf kertas kerja yang menyusun rasional, objektif, hasil, pelaksanaan, jadual, tanggungjawab, anggaran kewangan, risiko, pemantauan dan kelulusan yang diperlukan.
+
+### Sebelum bermula
 
 Sediakan tujuan, masalah, peserta sasaran, hasil, tarikh, lokasi, aktiviti, pasukan, bajet diluluskan dan risiko. Jika format organisasi diberi, gunakan strukturnya sahaja—templat bukan bukti fakta program.
+
+### Langkah penggunaan
+
+1. Lengkapkan brief program dan kenal pasti pihak pelulus.
+2. Bezakan fakta yang disahkan, had yang diluluskan dan jurang maklumat.
+3. Salin arahan di bawah dan jawab soalan penjelasan sebelum draf dijana.
+4. Semak keselarasan objektif, aktiviti, jadual, tanggungjawab dan bajet.
+5. Dapatkan semakan kewangan, keselamatan, perolehan dan dasar yang berkenaan.
 
 ### Arahan untuk disalin
 
@@ -161,19 +173,38 @@ Format organisasi: {{FORMAT}}
 Susun latar belakang, rasional, objektif, hasil, skop, pelaksanaan, jadual, tanggungjawab, anggaran kewangan, risiko, pemantauan dan kelulusan diperlukan. Jangan cipta harga, nombor akaun, penaja, kelulusan, petunjuk atau dasar. Gunakan [PERLU PENGESAHAN] bagi jurang dan asingkan andaian daripada fakta.
 ```
 
-### Contoh dan semakan
+### Contoh penggunaan
 
-Contoh sintetik: bengkel literasi AI sehari untuk 40 peserta dengan had perbelanjaan tetapi sebut harga belum diterima. Pastikan angka belum sah kekal sebagai tempat letak, jumlah konsisten dan pemilik tindakan dinyatakan.
+Contoh sintetik: bengkel literasi AI sehari untuk 40 peserta dengan had perbelanjaan tetapi sebut harga belum diterima. Draf menggunakan had yang diluluskan, mengekalkan angka belum sah sebagai tempat letak dan menyatakan pemilik bagi tindakan mendapatkan sebut harga.
 
-### Batasan
+### Semakan kualiti
+
+- Rasional, objektif, aktiviti dan hasil saling berkait.
+- Jadual, tanggungjawab dan keperluan sumber konsisten.
+- Angka yang belum disahkan kekal sebagai tempat letak dan jumlah dikira semula.
+- Risiko, tindakan kawalan, pemilik dan kelulusan dinyatakan.
+
+### Batasan dan penggunaan bertanggungjawab
 
 Draf bukan kelulusan rasmi, komitmen kewangan atau nasihat perolehan. Pegawai mesti menyemak format, kewangan, keselamatan dan dasar.
 
 ## English
 
-### Steps
+### What you will get
+
+A programme-paper draft covering rationale, objectives, outcomes, delivery, schedule, responsibilities, financial estimate, risks, monitoring and required approvals.
+
+### Before you begin
 
 Prepare the purpose, problem, audience, outcomes, dates, venue, activities, team, approved budget and risks. An organisational template supplies structure only; it is not evidence of programme facts.
+
+### How to use it
+
+1. Complete the programme brief and identify the approving authority.
+2. Separate verified facts, approved limits and information gaps.
+3. Copy the instruction below and answer clarification questions before drafting.
+4. Check alignment across objectives, activities, schedule, responsibilities and budget.
+5. Obtain relevant finance, safety, procurement and policy review.
 
 ### Copyable instruction
 
@@ -191,10 +222,17 @@ Organisational format: {{FORMAT}}
 Structure the background, rationale, objectives, outcomes, scope, delivery, schedule, responsibilities, financial estimate, risks, monitoring and approvals required. Do not invent prices, bank details, sponsors, approvals, indicators or policies. Use [CONFIRMATION REQUIRED] for gaps and separate assumptions from facts.
 ```
 
-### Example and checks
+### Worked example
 
-Synthetic example: a one-day AI-literacy workshop for 40 participants with a spending limit but no quotations. Keep unverified figures as placeholders, reconcile totals and name action owners.
+Synthetic example: a one-day AI-literacy workshop for 40 participants with a spending limit but no quotations. The draft uses the approved limit, keeps unverified figures as placeholders and names the owner responsible for obtaining quotations.
 
-### Limitations
+### Quality check
+
+- Rationale, objectives, activities and outcomes align.
+- Schedule, responsibilities and resource needs are consistent.
+- Unverified figures remain placeholders and totals are recalculated.
+- Risks, controls, owners and required approvals are stated.
+
+### Limitations and responsible use
 
 The draft is not official approval, a financial commitment or procurement advice. An officer must verify format, finance, safety and policy.

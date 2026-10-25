@@ -63,9 +63,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.1.1
+version: 0.1.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-assessment-set-001, skill-student-feedback-001]
 featured: false
 search_aliases:
@@ -113,7 +113,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-rubric-001/0.1.1/design-moderate-rubrics.zip,
+      path: /downloads/skills/skill-rubric-001/0.1.2/design-moderate-rubrics.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -154,11 +154,15 @@ skill:
 
 ## Bahasa Melayu
 
-### Kegunaan
+### Hasil yang anda akan peroleh
 
-Gunakan aliran ini untuk membina atau memperkemas rubrik analitik. Ia membantu penyelarasan, bukan menggantikan pertimbangan guru.
+Draf rubrik analitik dengan kriteria boleh diperhatikan, aras prestasi yang berbeza secara bermakna dan catatan penyelarasan berdasarkan respons contoh.
 
-### Langkah
+### Sebelum bermula
+
+Sediakan hasil pembelajaran, arahan tugasan, tahap murid, dasar pemarkahan, struktur rubrik yang diluluskan dan sekurang-kurangnya dua respons contoh yang telah dinyahkenal pasti jika penyelarasan diperlukan.
+
+### Langkah penggunaan
 
 1. Berikan hasil pembelajaran, arahan tugasan, tahap murid dan dasar pemarkahan.
 2. Tentukan kriteria yang benar-benar dapat dilihat dalam hasil kerja.
@@ -182,21 +186,32 @@ Respons contoh dinyahkenal pasti: {{RESPONS_CONTOH}}
 Bina jadual kriteria dan aras prestasi menggunakan bukti yang boleh diperhatikan. Elakkan kata kabur seperti “baik” tanpa penerangan. Jangan menambah hasil pembelajaran, wajaran atau penalti. Jika respons contoh ada, gunakan rubrik secara tentatif pada setiap respons, jelaskan bukti dan tandakan perbezaan tafsiran. Akhiri dengan isu keadilan, aksesibiliti, pertindihan deskriptor dan keputusan yang mesti dibuat guru. Jangan beri gred akhir kepada murid sebenar.
 ```
 
-### Contoh dan semakan
+### Contoh penggunaan
 
-Contoh sintetik: rubrik empat aras untuk pembentangan sains berdasarkan ketepatan fakta, penggunaan bukti dan kejelasan penerangan. Semak bahawa setiap aras berbeza secara bermakna, boleh dibuktikan dan tidak menghukum gaya bahasa yang tidak berkaitan dengan hasil.
+Contoh sintetik: rubrik empat aras untuk pembentangan sains berdasarkan ketepatan fakta, penggunaan bukti dan kejelasan penerangan. Dua respons contoh dinyahkenal pasti digunakan untuk mengesan deskriptor yang bertindih atau sukar dibuktikan.
 
-### Batasan
+### Semakan kualiti
+
+- Setiap kriteria berkait dengan hasil pembelajaran.
+- Setiap aras berbeza secara bermakna dan menggunakan bukti yang boleh diperhatikan.
+- Deskriptor tidak menghukum gaya bahasa yang tidak berkaitan dengan hasil.
+- Markah, wajaran dan penalti sepadan dengan dasar yang diluluskan.
+
+### Batasan dan penggunaan bertanggungjawab
 
 Rubrik janaan belum disahkan adil atau konsisten. Guru perlu menyemak penjajaran, bahasa, aksesibiliti dan keputusan pemarkahan.
 
 ## English
 
-### Intended use
+### What you will get
 
-Use this workflow to create or refine an analytic rubric. It supports moderation rather than replacing teacher judgement.
+A draft analytic rubric with observable criteria, meaningfully distinct performance levels and moderation notes based on sample responses.
 
-### Steps
+### Before you begin
+
+Prepare the learning outcomes, task instructions, learner level, marking policy, approved rubric structure and at least two de-identified sample responses when moderation is required.
+
+### How to use it
 
 1. Supply the learning outcomes, task instructions, learner level and marking policy.
 2. Define criteria observable in the work.
@@ -220,10 +235,17 @@ De-identified sample responses: {{SAMPLE_RESPONSES}}
 Create a criteria-by-performance-level table using observable evidence. Avoid vague words such as “good” without explanation. Do not add outcomes, weights or penalties. If samples are available, apply the rubric tentatively, cite evidence and flag interpretation differences. Finish with fairness, accessibility, descriptor-overlap and teacher-decision checks. Do not issue final grades for real learners.
 ```
 
-### Example and checks
+### Worked example
 
-Synthetic example: a four-level science-presentation rubric for factual accuracy, evidence and explanatory clarity. Check that levels are meaningfully distinct, evidence-based and do not penalise language style unrelated to the outcome.
+Synthetic example: a four-level science-presentation rubric for factual accuracy, evidence and explanatory clarity. Two de-identified sample responses are used to identify overlapping or unobservable descriptors.
 
-### Limitations
+### Quality check
+
+- Every criterion maps to a learning outcome.
+- Every level is meaningfully distinct and uses observable evidence.
+- Descriptors do not penalise language style unrelated to the outcome.
+- Marks, weights and penalties match the approved policy.
+
+### Limitations and responsible use
 
 An AI-generated rubric is not validated for fairness or reliability. A teacher must verify alignment, language, accessibility and marking decisions.

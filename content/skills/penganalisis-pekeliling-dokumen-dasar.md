@@ -63,9 +63,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.1.1
+version: 0.1.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [prompt-circular-actions-001]
 featured: false
 search_aliases:
@@ -104,7 +104,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-policy-analysis-001/0.1.1/analyse-circular-policy-document.zip,
+      path: /downloads/skills/skill-policy-analysis-001/0.1.2/analyse-circular-policy-document.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -143,6 +143,14 @@ skill:
 
 ## Bahasa Melayu
 
+### Hasil yang anda akan peroleh
+
+Ringkasan bersumber yang menerangkan tujuan dokumen, pihak terlibat, kewajipan, larangan, tarikh, tindakan, implikasi operasi dan perkara yang masih memerlukan pengesahan.
+
+### Sebelum bermula
+
+Sediakan dokumen rasmi yang lengkap dan dibenarkan organisasi. Nyatakan tujuan analisis, unit terlibat, tarikh rujukan dan keputusan yang perlu disokong. Pastikan versi, tarikh kuat kuasa dan dokumen yang diganti dapat dikenal pasti jika dinyatakan.
+
 ### Langkah penggunaan
 
 1. Gunakan dokumen rasmi yang lengkap dan dibenarkan organisasi.
@@ -163,17 +171,32 @@ Tarikh rujukan: {{TARIKH}}
 Hasilkan: identiti dokumen; tujuan; pihak terlibat; kewajipan dan larangan; tarikh atau tempoh; tindakan mengikut keutamaan; implikasi operasi yang jelas daripada teks; soalan belum selesai; dan jadual tuntutan dengan halaman/seksyen. Petik secara ringkas dan parafrasa selebihnya. Jangan mereka maksud, tarikh, kuasa, pengecualian atau hubungan dengan dasar lain. Labelkan inferens [TAFSIRAN — SAHKAN DENGAN PEMILIK DASAR].
 ```
 
-### Contoh dan semakan
+### Contoh penggunaan
 
-Contoh sintetik: pekeliling tiga halaman tentang tarikh penghantaran laporan. Semak setiap tarikh, pihak dan tindakan terhadap lokasi sumber; jangan anggap unit yang tidak disebut turut terpakai.
+Contoh sintetik: pekeliling tiga halaman tentang tarikh penghantaran laporan. Hasil menyenaraikan tarikh, pihak, tindakan dan lokasi sumber serta menandakan unit yang tidak disebut sebagai perkara untuk pengesahan, bukannya menganggap unit itu turut terpakai.
 
-### Batasan
+### Semakan kualiti
+
+- Identiti, versi dan tarikh kuat kuasa dokumen dinyatakan.
+- Setiap tarikh, kewajipan dan tindakan mempunyai halaman atau seksyen sumber.
+- Petikan dokumen, parafrasa dan tafsiran tentatif dibezakan.
+- Pengecualian atau hubungan dengan dasar lain tidak direka.
+
+### Batasan dan penggunaan bertanggungjawab
 
 AI boleh tersalah membaca jadual, pindaan atau rujukan silang. Pegawai bertanggungjawab menyemak dokumen terkini dan mendapatkan pengesahan pihak berkuasa.
 
 ## English
 
-### Workflow
+### What you will get
+
+A source-grounded summary covering the document purpose, affected parties, obligations, prohibitions, dates, actions, operational implications and items still requiring confirmation.
+
+### Before you begin
+
+Prepare a complete authoritative document permitted by the organisation. State the analysis purpose, affected unit, reference date and decision being supported. Confirm its version, effective date and superseded material where stated.
+
+### How to use it
 
 1. Use a complete authoritative document permitted by the organisation.
 2. State the purpose, affected unit and decision being supported.
@@ -193,10 +216,17 @@ Reference date: {{DATE}}
 Provide: document identity; purpose; affected parties; obligations and prohibitions; dates or periods; prioritised actions; operational implications clearly supported by the text; unresolved questions; and a claim table with page/section locations. Quote briefly and paraphrase the rest. Do not invent meaning, dates, authority, exceptions or links to other policies. Mark inference [INTERPRETATION — VERIFY WITH POLICY OWNER].
 ```
 
-### Example and checks
+### Worked example
 
-Synthetic example: a three-page circular about report-submission dates. Verify every date, party and action against its source location; do not assume an unmentioned unit is covered.
+Synthetic example: a three-page circular about report-submission dates. The result lists dates, parties, actions and source locations, and flags an unmentioned unit for confirmation instead of assuming coverage.
 
-### Limitations
+### Quality check
+
+- Document identity, version and effective date are stated.
+- Every date, obligation and action has a page or section source.
+- Document text, paraphrase and tentative interpretation are separated.
+- Exceptions or relationships with other policies are not invented.
+
+### Limitations and responsible use
 
 AI may misread tables, amendments or cross-references. An authorised officer must verify the current source and obtain confirmation from the responsible authority.

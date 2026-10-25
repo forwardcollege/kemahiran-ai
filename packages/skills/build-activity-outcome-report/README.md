@@ -4,7 +4,7 @@ Panduan pengguna untuk pakej Kemahiran.AI `build-activity-outcome-report`.
 
 ## Cara menggunakan dalam Gemini
 
-1. Tambahkan `SKILL.md` sebagai arahan Kemahiran atau Gem.
+1. Muat naik pakej ZIP melalui Gemini `Customize → Skills → Create → Upload`.
 2. Sediakan pelan atau sasaran program serta bukti pelaksanaan yang telah disahkan.
 3. Nyatakan tempoh pelaporan, unit ukuran dan pembaca sasaran.
 4. Semak fakta, perbandingan, tafsiran dan tindakan sebelum laporan diedarkan.
@@ -13,4 +13,4 @@ Panduan pengguna untuk pakej Kemahiran.AI `build-activity-outcome-report`.
 
 ## English
 
-Add `SKILL.md` as the Skill or Gem instruction, then supply the programme plan or targets and verified delivery evidence. State the reporting period, units and intended reader. The operational file is in English for portability but requests Malay output by default. Use synthetic, aggregate or de-identified data and verify all facts, comparisons, interpretations and actions before circulation.
+Upload the ZIP package through Gemini `Customize → Skills → Create → Upload`, then supply the programme plan or targets and verified delivery evidence. State the reporting period, units and intended reader. The operational file is in English for portability but requests Malay output by default. Use synthetic, aggregate or de-identified data and verify all facts, comparisons, interpretations and actions before circulation.

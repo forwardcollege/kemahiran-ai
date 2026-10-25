@@ -59,9 +59,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.2.1
+version: 0.2.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [prompt-kbat-questions-001, skill-rubric-001, skill-rph-001]
 featured: false
 search_aliases:
@@ -103,7 +103,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-assessment-set-001/0.2.1/build-assessment-materials.zip,
+      path: /downloads/skills/skill-assessment-set-001/0.2.2/build-assessment-materials.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -153,6 +153,14 @@ Versi murid tanpa jawapan, skema jawapan berasingan, pemetaan soalan kepada hasi
 
 Sediakan kandungan yang dibenarkan, hasil pembelajaran, tahap murid, masa, bilangan dan jenis soalan, agihan kesukaran, bahasa serta bentuk pemarkahan. Jika penjajaran DSKP diperlukan, berikan sumber rasmi yang boleh dikenal pasti.
 
+### Langkah penggunaan
+
+1. Lampirkan kandungan sumber dan nyatakan hasil pembelajaran serta tahap murid.
+2. Tetapkan bilangan soalan, format, masa, agihan kesukaran dan kaedah pemarkahan.
+3. Salin arahan di bawah dan jawab soalan penjelasan sebelum penjanaan bermula.
+4. Semak pemetaan hasil, kertas murid dan skema secara berasingan.
+5. Uji setiap soalan untuk kekaburan, petunjuk tidak sengaja, bias dan lebih daripada satu jawapan munasabah.
+
 ### Arahan untuk disalin
 
 ```text
@@ -180,17 +188,20 @@ Jangan menilai murid sebenar, meramal kebolehan atau menggunakan nama dan respon
 Semua istilah fakta dalam soalan, pilihan jawapan dan skema mesti datang daripada sumber. Jika sumber tidak menyediakan pengalih perhatian objektif yang sah, gunakan format lain atau minta kandungan tambahan; jangan cipta istilah mata pelajaran. Jangan paparkan label `mudah/sederhana/mencabar` pada versi murid kecuali diminta. Dalam audit, gunakan bahasa terhad seperti `tiada isu jelas dikesan dalam draf ini — perlu semakan guru`; jangan nyatakan `tiada kekaburan`, `tiada bias` atau `masa sesuai` sebagai kepastian.
 ```
 
-### Contoh ringkas
+### Contoh penggunaan
 
 Input sintetik: petikan 500 patah perkataan tentang kitaran air, Tahun 5, 20 minit, enam soalan objektif dan dua soalan respons pendek. Hasil mesti menggunakan hanya petikan itu dan memisahkan kertas murid daripada skema.
+
+### Semakan kualiti
+
+- Setiap soalan dipetakan kepada hasil pembelajaran dan datang daripada sumber.
+- Versi murid tidak mengandungi jawapan atau petunjuk tersembunyi.
+- Skema menyatakan jawapan, alasan, markah dan alternatif yang sah apabila berkenaan.
+- Bahasa, masa, aksesibiliti dan aras kesukaran telah disemak guru.
 
 ### Batasan dan penggunaan bertanggungjawab
 
 Soalan janaan boleh kabur, tersalah aras atau mempunyai lebih daripada satu jawapan munasabah. Guru perlu menyemak semua fakta, bahasa, pemarkahan, aksesibiliti dan kesesuaian sebelum digunakan.
-
-### Pakej kemahiran
-
-Pakej draf menyediakan aliran kerja generik dan contoh sintetik sahaja. Ia tidak mengandungi bahan berhak cipta, soalan peperiksaan sebenar atau data murid.
 
 ## English
 
@@ -201,6 +212,14 @@ A learner version without answers, a separate answer scheme, question-to-outcome
 ### Before you begin
 
 Prepare authorised source content, learning outcomes, learner level, time, question count and types, difficulty distribution, language and marking approach. Supply an identifiable official source when DSKP alignment is required.
+
+### How to use it
+
+1. Attach the source content and state the learning outcomes and learner level.
+2. Set the question count, formats, time, difficulty distribution and marking approach.
+3. Copy the instruction below and answer its clarification questions before generation.
+4. Review the outcome mapping, learner paper and answer scheme separately.
+5. Trial every item for ambiguity, accidental clues, bias and more than one reasonable answer.
 
 ### Copyable instruction
 
@@ -229,14 +248,17 @@ Do not assess real learners, predict ability or use real names and responses. Do
 Every factual term in questions, answer options and the scheme must come from the source. If the source cannot support valid objective distractors, use another format or request more content; do not invent subject terms. Do not display `easy/medium/challenging` labels in the learner version unless requested. In the audit use calibrated wording such as `no obvious issue detected in this draft — teacher review required`; never state `no ambiguity`, `no bias` or `time is suitable` as certainty.
 ```
 
-### Short example
+### Worked example
 
 Synthetic input: a 500-word passage about the water cycle, Year 5, 20 minutes, six objective questions and two short responses. The result must use only that passage and separate the learner paper from the scheme.
+
+### Quality check
+
+- Every question maps to a learning outcome and comes from the source.
+- The learner version contains no answers or hidden clues.
+- The scheme states answers, rationale, marks and valid alternatives where relevant.
+- A teacher has checked wording, time, accessibility and difficulty.
 
 ### Limitations and responsible use
 
 Generated questions may be ambiguous, mis-levelled or permit multiple reasonable answers. The teacher must review all facts, wording, marking, accessibility and suitability before use.
-
-### Skill package
-
-The draft package provides a generic workflow and synthetic example only. It contains no copyrighted teaching material, real examination questions or learner data.

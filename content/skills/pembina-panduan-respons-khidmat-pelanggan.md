@@ -67,9 +67,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.1.1
+version: 0.1.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [prompt-customer-response-001]
 featured: false
 search_aliases:
@@ -114,7 +114,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-customer-service-playbook-001/0.1.1/build-customer-service-playbook.zip,
+      path: /downloads/skills/skill-customer-service-playbook-001/0.1.2/build-customer-service-playbook.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -149,6 +149,22 @@ skill:
 
 ## Bahasa Melayu
 
+### Hasil yang anda akan peroleh
+
+Panduan respons dengan prinsip, struktur mesej, pola boleh sunting, pencetus eskalasi dan senarai semak kualiti yang terikat kepada dasar serta had kuasa sebenar.
+
+### Sebelum bermula
+
+Sediakan dasar pulangan, bayaran balik, privasi dan eskalasi yang diluluskan, standard perkhidmatan, nada jenama, saluran serta had kuasa petugas. Gunakan senario pelanggan yang telah dinyahkenal pasti.
+
+### Langkah penggunaan
+
+1. Kenal pasti dasar dan had kuasa yang terpakai bagi setiap saluran.
+2. Buang nama, nombor pesanan dan maklumat pelanggan yang tidak diperlukan.
+3. Salin arahan di bawah dan lengkapkan senario contoh.
+4. Uji pola terhadap kes biasa, kes sempadan dan kes yang memerlukan eskalasi.
+5. Dapatkan kelulusan pemilik dasar sebelum panduan digunakan oleh pasukan.
+
 ### Arahan untuk disalin
 
 ```text
@@ -164,11 +180,38 @@ Senario dinyahkenal pasti: {{SENARIO}}
 Hasilkan prinsip respons, struktur mesej, perkara wajib/dilarang, matriks senario, pola boleh sunting bagi setiap saluran, pencetus eskalasi dan senarai semak QA. Jangan menjanjikan pampasan, tarikh, hasil atau pengecualian yang tidak diluluskan. Jangan masukkan data pelanggan sebenar. Uji pola pada senario dan tandakan konflik dasar [PERLU PEMILIK DASAR].
 ```
 
-### Contoh dan batasan
+### Contoh penggunaan
 
-Contoh sintetik: pesanan lewat dengan polisi hanya membenarkan siasatan penghantaran, bukan bayaran balik automatik. Panduan mesti mengakui isu tanpa membuat janji. Pemilik dasar dan pasukan undang-undang/pematuhan perlu menyemak jika berkenaan.
+Contoh sintetik: pesanan lewat dengan polisi hanya membenarkan siasatan penghantaran, bukan bayaran balik automatik. Respons mesti mengakui isu, menerangkan langkah siasatan dan mengelakkan janji bayaran balik atau tarikh penyelesaian yang tidak diluluskan.
+
+### Semakan kualiti
+
+- Setiap respons mematuhi dasar dan had kuasa yang dinyatakan.
+- Nada jelas dan empati tanpa mengakui liabiliti yang tidak disahkan.
+- Janji, pampasan, tarikh dan pengecualian tidak direka.
+- Pencetus serta laluan eskalasi dinyatakan dengan jelas.
+
+### Batasan dan penggunaan bertanggungjawab
+
+Panduan ini bukan nasihat undang-undang dan tidak menggantikan dasar organisasi. Pemilik dasar serta pasukan undang-undang atau pematuhan perlu menyemaknya apabila berkenaan. Jangan masukkan data pelanggan sebenar ke alat yang tidak diluluskan.
 
 ## English
+
+### What you will get
+
+A response playbook with principles, message structure, editable patterns, escalation triggers and a quality checklist constrained by real policies and authority limits.
+
+### Before you begin
+
+Prepare approved return, refund, privacy and escalation policies, service standards, brand tone, channels and agent-authority limits. Use de-identified customer scenarios.
+
+### How to use it
+
+1. Identify the applicable policies and authority limits for each channel.
+2. Remove names, order numbers and unnecessary customer information.
+3. Copy the instruction below and complete the sample scenarios.
+4. Trial the patterns on common cases, boundary cases and escalation cases.
+5. Obtain policy-owner approval before team use.
 
 ### Copyable instruction
 
@@ -185,6 +228,17 @@ De-identified scenarios: {{SCENARIOS}}
 Provide response principles, message structure, required/prohibited content, a scenario matrix, editable patterns by channel, escalation triggers and a QA checklist. Do not promise compensation, dates, outcomes or exceptions without authority. Do not include real customer data. Trial patterns on the scenarios and mark policy conflicts [POLICY OWNER REQUIRED].
 ```
 
-### Example and limitations
+### Worked example
 
-Synthetic example: a late order where policy allows only a delivery investigation, not an automatic refund. The guide must acknowledge the issue without making a promise. The policy owner and legal/compliance team should review where relevant.
+Synthetic example: a late order where policy allows only a delivery investigation, not an automatic refund. The response must acknowledge the issue, explain the investigation step and avoid promising an unapproved refund or resolution date.
+
+### Quality check
+
+- Every response follows the stated policies and authority limits.
+- The tone is clear and empathetic without admitting unverified liability.
+- Promises, compensation, dates and exceptions are not invented.
+- Escalation triggers and routes are explicit.
+
+### Limitations and responsible use
+
+This playbook is not legal advice and does not replace organisational policy. The policy owner and legal or compliance team should review it where relevant. Do not enter real customer data into an unapproved tool.

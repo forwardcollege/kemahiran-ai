@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CaretRightIcon } from "@phosphor-icons/react/ssr";
+import { SkillActions } from "@/components/skill-actions";
 import type { Resource } from "@/lib/content/repository";
-import { renderSafeMarkdown } from "@/lib/content/markdown";
+import {
+  extractFencedCodeBlockAfterHeading,
+  renderSafeMarkdown,
+} from "@/lib/content/markdown";
 import type { Locale } from "@/lib/content/schema";
 
 const paths = {
@@ -27,6 +31,13 @@ export async function ResourceDetail({
   const { data } = resource;
   const counterpart: Locale = locale === "ms" ? "en" : "ms";
   const html = await renderSafeMarkdown(resource.body[locale]);
+  const copyableInstruction =
+    data.type === "skill"
+      ? extractFencedCodeBlockAfterHeading(
+          resource.body[locale],
+          locale === "ms" ? "Arahan untuk disalin" : "Copyable instruction",
+        )
+      : null;
   const licenseLabel =
     data.license.id === "pending"
       ? locale === "ms"
@@ -86,6 +97,19 @@ export async function ResourceDetail({
         </p>
       </header>
 
+      {data.type === "skill" ? (
+        <SkillActions
+          locale={locale}
+          instruction={copyableInstruction}
+          copyAvailable={data.skill.instruction_copy_available}
+          packagePath={data.skill.package.path}
+          packageAvailable={data.skill.package.available}
+          packageFiles={data.skill.package.included_files}
+          estimatedMinutes={data.skill.estimated_minutes}
+          prerequisites={data.skill.prerequisites[locale]}
+        />
+      ) : null}
+
       {data.type === "visual_prompt" ? (
         <figure className="relative isolate mb-10 aspect-video overflow-hidden rounded-2xl border bg-secondary">
           <Image
@@ -112,10 +136,25 @@ export async function ResourceDetail({
         </figure>
       ) : null}
 
-      <article
-        className="prose-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      {data.type === "skill" ? (
+        <section aria-labelledby="skill-guide-title">
+          <h2
+            id="skill-guide-title"
+            className="mb-5 text-2xl font-semibold tracking-tight sm:text-3xl"
+          >
+            {locale === "ms" ? "Panduan lengkap" : "Complete guide"}
+          </h2>
+          <article
+            className="prose-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+        </section>
+      ) : (
+        <article
+          className="prose-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      )}
 
       <aside
         className="mt-12 rounded-2xl border bg-secondary/60 p-6"

@@ -67,9 +67,9 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.1.1
+version: 0.1.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-programme-paper-001, prompt-programme-outcomes-001]
 featured: false
 search_aliases:
@@ -104,7 +104,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-activity-report-001/0.1.1/build-activity-outcome-report.zip,
+      path: /downloads/skills/skill-activity-report-001/0.1.2/build-activity-outcome-report.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -126,6 +126,22 @@ skill:
 
 ## Bahasa Melayu
 
+### Hasil yang anda akan peroleh
+
+Draf laporan yang membezakan pelaksanaan, output, hasil yang diperhatikan, tafsiran tentatif, batas data dan tindakan susulan tanpa melebihkan tuntutan impak.
+
+### Sebelum bermula
+
+Sediakan pelan dan sasaran asal, rekod pelaksanaan, data penyertaan atau output, bukti hasil serta isu susulan. Nyahkenal pasti rekod peserta dan pastikan unit serta tempoh perbandingan sepadan.
+
+### Langkah penggunaan
+
+1. Asingkan sasaran, aktiviti sebenar, output dan bukti hasil.
+2. Semak bilangan respons, nilai hilang, unit dan tempoh pelaporan.
+3. Salin arahan di bawah dan lengkapkan input yang diketahui sahaja.
+4. Bandingkan setiap tuntutan dengan sumber dan labelkan bukti yang tidak mencukupi.
+5. Sahkan tindakan, pemilik, tarikh dan tahap kerahsiaan sebelum edaran.
+
 ### Arahan untuk disalin
 
 ```text
@@ -140,11 +156,38 @@ Isu dan susulan: {{ISU_SUSULAN}}
 Pisahkan fakta pelaksanaan, output, hasil yang diperhatikan, tafsiran tentatif, batas data, isu, pelajaran dan tindakan susulan. Bandingkan sasaran dengan sebenar hanya apabila unit dan tempoh sepadan. Jangan mereka sebab, testimoni, bilangan, kadar, penjimatan atau impak. Label tuntutan yang belum disokong [BUKTI TIDAK MENCUKUPI]. Akhiri dengan jadual tindakan, pemilik, tarikh dan jurang pengesahan.
 ```
 
-### Contoh, semakan dan batasan
+### Contoh penggunaan
 
-Contoh sintetik: 38 daripada sasaran 40 hadir dan 30 borang maklum balas diterima. Jangan melaporkan 95% kepuasan tanpa bilangan respons yang sah atau mendakwa program menyebabkan perubahan jangka panjang. Pegawai mesti menyemak sumber, privasi dan semua tuntutan hasil.
+Contoh sintetik: 38 daripada sasaran 40 hadir dan 30 borang maklum balas diterima. Laporan boleh menyatakan kehadiran sebenar dan kadar respons, tetapi tidak boleh melaporkan 95% kepuasan tanpa bilangan respons yang sah atau mendakwa program menyebabkan perubahan jangka panjang.
+
+### Semakan kualiti
+
+- Sasaran dan pencapaian menggunakan unit serta tempoh yang sepadan.
+- Bilangan respons dan penyebut bagi setiap kadar dinyatakan.
+- Output, hasil dan impak tidak dicampuradukkan.
+- Tafsiran tentatif dan jurang bukti dilabel dengan jelas.
+
+### Batasan dan penggunaan bertanggungjawab
+
+Korelasi atau maklum balas selepas program tidak membuktikan sebab atau impak jangka panjang. Pegawai mesti menyemak sumber, privasi, formula dan semua tuntutan hasil sebelum laporan digunakan.
 
 ## English
+
+### What you will get
+
+A report draft that separates delivery, outputs, observed outcomes, tentative interpretation, data limits and follow-up actions without overstating impact.
+
+### Before you begin
+
+Prepare the original plan and targets, delivery records, participation or output data, outcome evidence and follow-up issues. De-identify participant records and confirm that comparison units and periods match.
+
+### How to use it
+
+1. Separate targets, actual activities, outputs and outcome evidence.
+2. Check response counts, missing values, units and reporting periods.
+3. Copy the instruction below and complete only known inputs.
+4. Compare every claim with its source and label insufficient evidence.
+5. Confirm actions, owners, dates and confidentiality before circulation.
 
 ### Copyable instruction
 
@@ -160,6 +203,17 @@ Issues and follow-up: {{ISSUES_FOLLOW_UP}}
 Separate delivery facts, outputs, observed outcomes, tentative interpretation, data limits, issues, lessons and follow-up actions. Compare target with actual only when units and periods match. Do not invent causes, testimonials, counts, rates, savings or impact. Mark unsupported claims [INSUFFICIENT EVIDENCE]. Finish with an action table, owners, dates and confirmation gaps.
 ```
 
-### Example, checks and limitations
+### Worked example
 
-Synthetic example: 38 of 40 targeted participants attended and 30 feedback forms were received. Do not report 95% satisfaction without a valid response count or claim long-term change was caused by the programme. An officer must verify sources, privacy and every outcome claim.
+Synthetic example: 38 of 40 targeted participants attended and 30 feedback forms were received. The report may state actual attendance and response rate, but it must not report 95% satisfaction without a valid response count or claim long-term change was caused by the programme.
+
+### Quality check
+
+- Targets and actuals use matching units and periods.
+- Response counts and denominators accompany every rate.
+- Outputs, outcomes and impact are not conflated.
+- Tentative interpretation and evidence gaps are clearly labelled.
+
+### Limitations and responsible use
+
+Correlation or post-programme feedback does not establish causation or long-term impact. An officer must verify sources, privacy, formulas and every outcome claim before use.

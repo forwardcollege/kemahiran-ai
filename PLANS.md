@@ -139,6 +139,14 @@ The approved first step is a coded vertical slice containing the responsive shel
 
 Make each library immediately useful through a purpose-built detail experience.
 
+**AI Skill checkpoint (2026-10-26):** Howie Chang approved local implementation of the AI Skill detail experience before work on the other Phase 3 templates. The approved direction provides two public paths on every Skill page: copy the complete instruction for immediate use, or download the existing versioned ZIP and upload it through Gemini Customize → Skills → Create → Upload. The interface must use Gemini Skills terminology rather than Gems and retain a copy-to-chat fallback for accounts where Skills is not yet available. Stop for local product-owner review before pushing or deploying this checkpoint.
+
+**Local implementation evidence (2026-10-26):** The shared bilingual Skill action panel is data-driven across all 12 Skill records. Copy behaviour, accessible status feedback, English/Malay switching, a versioned download response and 390px/desktop layouts were checked locally. All 12 new patch-version ZIPs place `SKILL.md` at the archive root and their source-package guides use Gemini Skills terminology. Formatting, lint, TypeScript, 9 unit/content tests, validation of all 36 records and a webpack production build pass. Howie Chang approved the local visual review on 2026-10-26.
+
+**Skill guide consistency checkpoint (2026-10-26):** The product owner approved one predictable seven-section information architecture for all 12 bilingual Skill guides while allowing example depth to vary by workflow. Repeated package prose moves to the shared action panel. GFM table rendering, semantic headers and keyboard-scrollable mobile overflow are required for structured examples such as meeting minutes and RPH.
+
+**Local consistency evidence (2026-10-26):** All 12 Malay and English Skill guides now pass the required seven-section contract. Meeting-minutes and RPH examples render as real tables with column-header semantics and a focusable horizontal-scroll region on narrow screens. Formatting, lint, TypeScript, 11 tests, validation of all 36 resources and a webpack production build pass. Howie Chang approved the local review on 2026-10-26; push and deployment remain separate external actions.
+
 ### Work
 
 - Build the AI Skill template: outcome, audience, prerequisites, steps, examples, copy and optional package download.

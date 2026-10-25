@@ -2,7 +2,11 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { parse as parseYaml } from "yaml";
-import { splitBilingualBody, type BilingualBody } from "./languages";
+import {
+  splitBilingualBody,
+  validateSkillBodyStructure,
+  type BilingualBody,
+} from "./languages";
 import {
   bilingualTaxonomySchema,
   resourceFrontmatterSchema,
@@ -78,6 +82,7 @@ export function loadResources(): Resource[] {
         let body: BilingualBody;
         try {
           body = splitBilingualBody(parsed.content);
+          if (result.data.type === "skill") validateSkillBodyStructure(body);
         } catch (error) {
           issue(
             filePath,

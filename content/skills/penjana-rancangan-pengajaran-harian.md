@@ -51,9 +51,9 @@ review:
   specialist_reviewer: null
   last_reviewed: "2026-10-25"
   next_review_due: "2027-04-25"
-version: 0.4.1
+version: 0.4.2
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [prompt-parent-message-001, visual-education-001]
 featured: true
 search_aliases:
@@ -98,7 +98,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-rph-001/0.4.1/generate-dskp-grounded-rph.zip,
+      path: /downloads/skills/skill-rph-001/0.4.2/generate-dskp-grounded-rph.zip,
       format: skill_md_zip,
       included_files:
         [
@@ -206,7 +206,9 @@ Pastikan jumlah masa realistik. Tandakan `[PERLU SEMAKAN GURU]` pada andaian ata
 Anggap kemudahan dan bahan yang saya sahkan sebagai senarai tertutup untuk semua seksyen, termasuk aktiviti, pentaksiran, pembezaan, persediaan dan refleksi. Setiap bahan nyata atau tersirat mesti datang daripada senarai itu; jangan tambah kad, lembaran kerja, buku nota, kertas, pen, papan putih, telefon, lampu, aplikasi atau bahan lazim lain. Kata kerja seperti menulis, merekod, menanda, melukis, melengkapkan lembaran atau menyusun kad memerlukan bahan dan tidak boleh digunakan jika bahan itu belum disahkan. Gantikan dengan respons lisan, menunjuk pada rajah bercetak yang disahkan, paparan kelas melalui projektor atau penggunaan pembaris. Jika bahan tambahan benar-benar diperlukan, senaraikan di bawah `Cadangan bahan tambahan — belum diluluskan` dan tunggu persetujuan saya; jangan rujuk bahan itu dalam pelan semasa. Semak semua seksyen sebelum menjawab. Jangan arahkan murid menyuluh cahaya ke mata orang lain atau menjalankan ujian pupil tanpa protokol keselamatan yang diluluskan. Nyatakan pembezaan sebagai sokongan atau pengayaan pilihan tanpa melabel murid sebagai lemah, sederhana atau tinggi. Biarkan senarai semak akhir tidak ditanda untuk disahkan oleh guru.
 ```
 
-### Contoh input
+### Contoh penggunaan
+
+#### Contoh input
 
 ```text
 Mata pelajaran dan tahap: Sains, Tahun 5
@@ -217,7 +219,7 @@ Sumber: Ais, cawan lutsinar, projektor dan lembaran kerja
 Format RPH: Jadual masa, aktiviti, catatan
 ```
 
-### Contoh hasil ringkas
+#### Contoh hasil
 
 | Masa     | Aktiviti                                                           | Bukti pembelajaran                    |
 | -------- | ------------------------------------------------------------------ | ------------------------------------- |
@@ -245,10 +247,6 @@ Format RPH: Jadual masa, aktiviti, catatan
 ### Batasan dan penggunaan bertanggungjawab
 
 AI boleh menghasilkan aktiviti yang tidak tepat, tidak selamat atau tidak sesuai dengan kelas. Jangan salin terus tanpa semakan. Kemahiran ini tidak menilai murid dan tidak menggantikan pertimbangan profesional guru.
-
-### Pakej kemahiran
-
-Pakej boleh muat turun tersedia dan mengandungi panduan dwibahasa `README.md`, spesifikasi operasi `SKILL.md`, panduan menambah PDF DSKP, templat manifest sumber dan contoh sintetik—bukan PDF DSKP rasmi. Semua fungsi utama juga boleh digunakan dengan melampirkan PDF sendiri dan menyalin arahan di atas.
 
 ## English
 
@@ -311,7 +309,9 @@ Keep the total timing realistic. Mark assumptions or professional decisions as `
 Treat the facilities and materials I confirm as a closed allowlist across every section, including activities, assessment, differentiation, preparation and reflection. Every explicit or implied item must come from that list; do not add cards, worksheets, notebooks, paper, pens, whiteboards, phones, lights, apps or other common materials. Verbs such as write, record, mark, draw, complete a worksheet or arrange cards require materials and may not be used unless those materials are confirmed. Replace them with oral responses, pointing to a confirmed printed diagram, whole-class projection or use of the ruler. If an additional item is genuinely needed, list it under `Proposed additional material — not approved` and wait for my approval; do not reference it in the current plan. Audit every section before responding. Do not instruct learners to shine a light into another person's eyes or conduct a pupil-response activity without an approved safety protocol. Express differentiation as optional supports or extensions without labelling learners as low, medium or high. Leave the final checklist unchecked for the teacher to verify.
 ```
 
-### Sample input
+### Worked example
+
+#### Sample input
 
 ```text
 Subject and level: Science, Year 5
@@ -322,7 +322,7 @@ Resources: Ice, clear cups, projector and worksheet
 Format: Timing, activity and notes table
 ```
 
-### Short sample output
+#### Sample output
 
 | Time       | Activity                                     | Evidence of learning       |
 | ---------- | -------------------------------------------- | -------------------------- |
@@ -345,7 +345,3 @@ Format: Timing, activity and notes table
 ### Limitations and responsible use
 
 AI may produce inaccurate, unsafe or unsuitable activities. Do not use the draft without review. This Skill does not assess learners and does not replace professional teaching judgement.
-
-### Skill package
-
-A downloadable package is available with a bilingual `README.md`, the operational `SKILL.md` specification, instructions for adding a DSKP PDF, a source-manifest template and a synthetic example—not an official DSKP PDF. The core workflow also remains available by attaching your own PDF and using the instruction above.

@@ -1,6 +1,14 @@
 import { describe, expect, it } from "vitest";
-import { splitBilingualBody } from "./languages";
-import { renderSafeMarkdown } from "./markdown";
+import {
+  skillBodySectionHeadings,
+  splitBilingualBody,
+  validateSkillBodyStructure,
+} from "./languages";
+import {
+  extractFencedCodeBlockAfterHeading,
+  extractFirstFencedCodeBlock,
+  renderSafeMarkdown,
+} from "./markdown";
 import {
   loadResources,
   validateResourceCollection,
@@ -118,5 +126,79 @@ describe("catalogue content", () => {
     expect(html).not.toContain("<script");
     expect(html).not.toContain("onerror");
     expect(html).not.toContain("<img");
+  });
+
+  it("renders GFM tables as semantic, keyboard-scrollable tables", async () => {
+    const html = await renderSafeMarkdown(
+      ["| Item | Owner |", "| --- | --- |", "| Follow up | Aina |"].join("\n"),
+    );
+
+    expect(html).toContain('class="markdown-table-scroll"');
+    expect(html).toContain('role="region"');
+    expect(html).toContain('tabindex="0"');
+    expect(html).toContain("<table>");
+    expect(html).toContain('<th scope="col">Item</th>');
+  });
+
+  it("extracts the primary copyable instruction from Markdown", () => {
+    const markdown = [
+      "### Arahan untuk disalin",
+      "",
+      "```text",
+      "Baris pertama",
+      "Baris kedua: {{INPUT}}",
+      "```",
+      "",
+      "```text",
+      "Contoh lain",
+      "```",
+    ].join("\n");
+
+    expect(extractFirstFencedCodeBlock(markdown)).toBe(
+      "Baris pertama\nBaris kedua: {{INPUT}}",
+    );
+    expect(
+      extractFencedCodeBlockAfterHeading(markdown, "Arahan untuk disalin"),
+    ).toBe("Baris pertama\nBaris kedua: {{INPUT}}");
+    expect(extractFirstFencedCodeBlock("Tiada blok kod")).toBeNull();
+  });
+
+  it("provides a copyable instruction for every approved Skill", () => {
+    const skills = loadResources().filter(
+      (resource) => resource.data.type === "skill",
+    );
+
+    for (const resource of skills) {
+      expect(
+        extractFencedCodeBlockAfterHeading(
+          resource.body.ms,
+          "Arahan untuk disalin",
+        ),
+        `${resource.data.id} is missing a Malay copyable instruction`,
+      ).not.toBeNull();
+      expect(
+        extractFencedCodeBlockAfterHeading(
+          resource.body.en,
+          "Copyable instruction",
+        ),
+        `${resource.data.id} is missing an English copyable instruction`,
+      ).not.toBeNull();
+    }
+  });
+
+  it("keeps every Skill guide on the same bilingual section structure", () => {
+    const skills = loadResources().filter(
+      (resource) => resource.data.type === "skill",
+    );
+
+    for (const resource of skills) {
+      expect(() => validateSkillBodyStructure(resource.body)).not.toThrow();
+      for (const locale of ["ms", "en"] as const) {
+        const headings = [
+          ...resource.body[locale].matchAll(/^###\s+(.+)$/gm),
+        ].map((match) => match[1].trim());
+        expect(headings).toEqual([...skillBodySectionHeadings[locale]]);
+      }
+    }
   });
 });
