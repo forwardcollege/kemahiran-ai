@@ -15,11 +15,11 @@ If documents disagree, stop and raise the conflict instead of silently choosing 
 
 ## 2. Current phase boundary
 
-The repository has completed **Phase 1 — application foundation and content pipeline**, including its first successful hosted CI run. Phase 2 still requires explicit approval.
+The repository has completed **Phase 1 — application foundation and content pipeline**, including its first successful hosted CI run. The user approved beginning **Phase 2 — design system, navigation and discovery** on 2026-10-25.
 
 - Phase 1 application source, tests, content validation and CI may be maintained or repaired.
-- Do not begin Phase 2 discovery/design implementation, configure cloud services, register domains or deploy anything until the user explicitly approves that work.
-- Do not treat completion of Phase 1 or approval of a documentation edit as approval to start a later implementation phase.
+- Build Phase 2 through an initial coded vertical slice for product-owner review before scaling the interface across the full catalogue.
+- Do not configure cloud services, register domains, deploy anything or begin Phase 3 until the user explicitly approves that work.
 
 After implementation begins, complete only the approved phase unless the request clearly expands the scope.
 
@@ -92,7 +92,7 @@ Follow `docs/content-schema.md` and begin from the examples in `docs/content-exa
 ## 8. Accessibility and interface rules
 
 - Target WCAG 2.2 AA.
-- Build common controls from shadcn/ui where suitable, then customise them to the approved Forward Academy theme.
+- Build common controls from shadcn/ui where suitable, then customise them to the approved Forward College theme.
 - All flows must work with keyboard-only navigation.
 - Preserve visible focus, semantic labels, correct heading order and sufficient contrast.
 - Do not communicate meaning through colour alone.

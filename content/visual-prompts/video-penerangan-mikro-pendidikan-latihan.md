@@ -39,7 +39,7 @@ tools:
 difficulty: intermediate
 intended_output: educational_micro_explainer_video
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   {
@@ -89,7 +89,7 @@ visual_prompt:
     provenance:
       {
         kind: original_generated,
-        creator: Forward Academy,
+        creator: Forward College,
         tool: ChatGPT Image,
         generated_on: "2026-10-25",
       }

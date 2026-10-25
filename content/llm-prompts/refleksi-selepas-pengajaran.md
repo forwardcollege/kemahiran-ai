@@ -25,7 +25,7 @@ tools:
 difficulty: beginner
 intended_output: post_lesson_reflection
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   {
@@ -33,8 +33,8 @@ provenance:
     source_urls: [],
     notes:
       {
-        ms: Kandungan asal Forward Academy.,
-        en: Original Forward Academy content.,
+        ms: Kandungan asal Forward College.,
+        en: Original Forward College content.,
       },
   }
 license:

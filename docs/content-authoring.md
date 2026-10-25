@@ -25,7 +25,7 @@ Do not split one bilingual resource into separate Malay and English files.
 8. Record tool compatibility conservatively. `tested` and `limited` require a test date and review evidence; use `expected` when testing has not occurred.
 9. Record provenance, licence, reviewer, version, dates, limitations and related immutable IDs.
 10. Add preview media under `public/media/resources/{resource-id}/` for a visual collection.
-11. Add a portable source package under `packages/skills/{package-name}/` when a Skill is downloadable. Include `SKILL.md` and `LICENSES.md`; include only necessary original or licensed support files.
+11. Add a portable source package under `packages/skills/{package-name}/` when a Skill is downloadable. Include a Malay-first bilingual `README.md`, the operational `SKILL.md` and `LICENSES.md`; include only necessary original or licensed support files.
 12. Publish the versioned archive under `public/downloads/skills/{resource-id}/{version}/` only after its manifest and distribution rights are confirmed.
 
 The complete field contract and status lifecycle are defined in `docs/content-schema.md`.
@@ -65,6 +65,13 @@ Edit the existing record; do not replace it with a new identity.
 - Add a redirect before changing a published slug.
 
 ## Skill-package boundaries
+
+Use one bilingual package per Skill. Do not create separate Malay and English archives.
+
+- `README.md` is the human-facing entry point. It starts in Bahasa Melayu and includes an English section covering setup, required inputs, safe use and the relationship between the package files.
+- `SKILL.md` is the concise operational specification for compatible AI tools. It may remain in English for portability, but must instruct the tool to produce Bahasa Melayu by default and switch to English when requested.
+- `LICENSES.md` records the provenance and licence status of every included file, including `README.md`.
+- The resource record's `included_files` list must match the archive contents, and any package-content change requires a matching version bump and new immutable archive path.
 
 A public package may contain generic instructions, synthetic examples, blank manifests and original templates. It must not contain:
 

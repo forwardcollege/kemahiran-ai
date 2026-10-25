@@ -119,7 +119,7 @@ languages:
   - en
 
 author:
-  name: Forward Academy
+  name: Forward College
   url: https://forward.edu.my
 curator:
   name: Forward Labs
@@ -128,8 +128,8 @@ provenance:
   kind: original # original | adapted_open_source | community_contributed | externally_referenced
   source_urls: []
   notes:
-    ms: Kandungan asal Forward Academy.
-    en: Original Forward Academy content.
+    ms: Kandungan asal Forward College.
+    en: Original Forward College content.
 
 license:
   id: pending
@@ -202,7 +202,9 @@ skill:
     path: /downloads/skills/skill-rph-001/1.0.0/penjana-rph.zip
     format: skill_md_zip
     included_files:
+      - README.md
       - SKILL.md
+      - LICENSES.md
       - references/contoh-rph.md
   knowledge:
     requirement: required # required | optional | none
@@ -236,6 +238,16 @@ The body should contain, in each language:
 - example input and output;
 - limitations/responsible-use guidance; and
 - package explanation where applicable.
+
+### Downloadable Skill package convention
+
+A downloadable Skill uses one package for both languages:
+
+- `README.md` is required as the Malay-first bilingual guide for non-technical users.
+- `SKILL.md` is the compact operational specification and may be written in English for compatibility across AI tools. It must direct the tool to answer in Bahasa Melayu by default and in English when the user requests it.
+- `LICENSES.md` is required and must list every packaged file, its provenance and its licence status.
+- Do not create separate Malay and English archives. Website copy remains fully bilingual, while the package shares one identity and version.
+- `skill.package.included_files` must describe the real archive contents exactly.
 
 ### Skill knowledge rules
 
@@ -318,7 +330,7 @@ visual_prompt:
       en: Example community programme poster with clear title space.
     provenance:
       kind: original_generated
-      creator: Forward Academy
+      creator: Forward College
       tool: ChatGPT Image
       generated_on: "2026-10-15"
   styles:

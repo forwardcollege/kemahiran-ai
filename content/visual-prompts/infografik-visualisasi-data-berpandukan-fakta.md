@@ -46,7 +46,7 @@ tools:
 difficulty: intermediate
 intended_output: evidence_grounded_infographic_layout
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   {
@@ -100,7 +100,7 @@ visual_prompt:
     provenance:
       {
         kind: original_generated,
-        creator: Forward Academy,
+        creator: Forward College,
         tool: ChatGPT Image,
         generated_on: "2026-10-25",
       }

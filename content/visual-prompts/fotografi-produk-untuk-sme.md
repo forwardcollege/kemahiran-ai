@@ -33,7 +33,7 @@ tools:
 difficulty: intermediate
 intended_output: product_marketing_image
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   kind: original
@@ -84,7 +84,7 @@ visual_prompt:
       en: Synthetic catalogue photo of a fictional teal ceramic tumbler with a sand-coloured base band and cream crescent mark.
     provenance:
       kind: original_generated
-      creator: Forward Academy
+      creator: Forward College
       tool: ChatGPT Image
       generated_on: "2026-10-25"
   styles: [clean_commercial, natural_lifestyle]

@@ -188,7 +188,7 @@ SEO requirements include canonical URLs, `hreflang` alternates for `ms-MY` and `
 
 - **Framework:** Current stable Next.js with App Router and TypeScript, pinned at implementation time
 - **UI:** shadcn/ui as the primary component system
-- **Styling:** Tailwind CSS with a custom Forward Academy theme
+- **Styling:** Tailwind CSS with a custom Forward College theme
 - **Content rendering:** Markdown parsed through a controlled remark/rehype pipeline; raw HTML disabled unless explicitly sanitised
 - **Content validation:** Zod schemas plus repository checks
 - **Search:** A build-generated bilingual index with a small in-browser search library such as MiniSearch
@@ -572,7 +572,7 @@ The MVP succeeds when a non-technical Malaysian user can:
 - retrieve favourites on another device; and
 - complete these tasks comfortably on a mobile device and with keyboard navigation.
 
-Forward Academy succeeds when its team can add, revise, test and review resources through Markdown without duplicating shared bilingual metadata or editing application code.
+Forward College succeeds when its team can add, revise, test and review resources through Markdown without duplicating shared bilingual metadata or editing application code.
 
 ## 15. Verified findings and assumptions
 
@@ -589,7 +589,7 @@ Forward Academy succeeds when its team can add, revise, test and review resource
 ### Based on the supplied product brief
 
 - AI Black Magic interaction patterns were previously inspected through an authorised signed-in session. Its protected prompts and assets are not available for reuse.
-- The initial audiences and content priorities reflect Forward Academy’s stated training ecosystem.
+- The initial audiences and content priorities reflect Forward College’s stated training ecosystem.
 
 ### Assumptions requiring confirmation before launch
 
@@ -599,7 +599,7 @@ Forward Academy succeeds when its team can add, revise, test and review resource
 - Forward College is the default internal review organisation and Howie Chang is the accountable internal reviewer for MVP publication approvals. Specialist review is optional and its absence is disclosed where relevant.
 - Forward Labs will choose the default licence for original public resources and Skill packages.
 - A transactional email sender/domain will be available for production magic links.
-- The visual identity and approved Forward Academy brand assets will be supplied before UI theming is finalised.
+- The visual identity and approved Forward College brand assets will be supplied before UI theming is finalised.
 
 ## 16. Open decisions
 

@@ -153,6 +153,6 @@ Assessment:
 
 ## Provenance and publication decision
 
-The prompts and generated assets are original Forward Academy pilot materials curated by Forward Labs. ChatGPT Image generated the pixels on 25 October 2026. The repository retains the output dimensions, asset paths, generator and date.
+The prompts and generated assets are original Forward College pilot materials curated by Forward Labs. ChatGPT Image generated the pixels on 25 October 2026. The repository retains the output dimensions, asset paths, generator and date.
 
 This test evidence supports recording ChatGPT Image as `tested` for the three image collections. It does not support a tested claim for Gemini Image, Adobe Firefly or Veo. The video record retains only `expected` Veo compatibility. All assets require Howie Chang's conscious Forward College editorial decision and licence confirmation before any record or preview is published.

@@ -33,15 +33,15 @@ tools:
 difficulty: beginner
 intended_output: formal_meeting_minutes
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   kind: original
   source_urls: []
   notes:
     {
-      ms: Kandungan asal Forward Academy.,
-      en: Original Forward Academy content.,
+      ms: Kandungan asal Forward College.,
+      en: Original Forward College content.,
     }
 license:
   { id: pending, label: Licence to be confirmed before publication, url: null }
@@ -55,7 +55,7 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.2.0
+version: 0.2.1
 created_at: "2026-10-25"
 updated_at: "2026-10-25"
 related_ids: [prompt-official-letter-001, prompt-meeting-actions-001]
@@ -95,9 +95,10 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-meeting-minutes-001/0.2.0/draft-formal-meeting-minutes.zip,
+      path: /downloads/skills/skill-meeting-minutes-001/0.2.1/draft-formal-meeting-minutes.zip,
       format: skill_md_zip,
-      included_files: [SKILL.md, LICENSES.md, references/template-setup.md],
+      included_files:
+        [README.md, SKILL.md, LICENSES.md, references/template-setup.md],
     }
   knowledge:
     requirement: optional
@@ -204,7 +205,7 @@ AI tidak mengetahui apa yang benar-benar dipersetujui selain input yang diberika
 
 ### Pakej kemahiran
 
-Pakej boleh muat turun belum tersedia. Arahan di atas boleh digunakan terus tanpa pemasangan.
+Pakej boleh muat turun tersedia dan mengandungi panduan dwibahasa `README.md`, spesifikasi operasi `SKILL.md`, panduan templat dan manifest lesen. Arahan di atas juga boleh digunakan terus tanpa pemasangan.
 
 ## English
 
@@ -275,4 +276,4 @@ AI does not know what was actually agreed beyond the supplied input. Never treat
 
 ### Skill package
 
-A downloadable package is not yet available. The instruction above works without installation.
+A downloadable package is available with a bilingual `README.md`, the operational `SKILL.md` specification, template guidance and a licence manifest. The instruction above also works without installation.

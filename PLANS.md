@@ -1,9 +1,9 @@
 # Kemahiran.AI — Phased Implementation Plan
 
-Status: Phase 1 complete; awaiting explicit Phase 2 approval  
+Status: Phase 1 complete; Phase 2 preview approved  
 Last updated: 2026-10-25
 
-This plan turns the product definition in `PROJECT.md` into reviewable phases. The user approved the 36-resource catalogue and authorised Phase 1 on 2026-10-25. Later implementation phases still require their own approval.
+This plan turns the product definition in `PROJECT.md` into reviewable phases. The user approved the 36-resource catalogue and authorised Phase 1 and an initial Phase 2 coded preview on 2026-10-25. Phase 2 will first deliver a reviewable vertical slice before the full discovery interface is expanded. Later implementation phases still require their own approval.
 
 ## Guiding delivery rules
 
@@ -46,7 +46,7 @@ Resolve decisions that affect public identity, accounts, publishing and operatio
 - Choose the default licence for original resources and downloadable packages.
 - Record Howie Chang as the accountable Forward College internal reviewer. Record specialist reviewers only when available.
 - Identify the production email sender/domain for magic links.
-- Supply approved Forward Academy/Forward Labs logos, colours, type guidance and usage rules.
+- Supply approved Forward College/Forward Labs logos, colours, type guidance and usage rules.
 - Initialise the GitHub repository and branch protections when authorised.
 
 ### Acceptance criteria
@@ -99,7 +99,9 @@ Deliver the public catalogue experience, with the three libraries clearly differ
 
 ### Work
 
-- Apply the approved Forward Academy theme to shadcn components.
+The approved first step is a coded vertical slice containing the responsive shell, homepage direction, representative resource cards, a sample discovery/filter treatment and one library index. Stop for product-owner review before applying the direction across every Phase 2 page.
+
+- Apply the approved Forward College theme to shadcn components.
 - Build responsive header, mobile navigation, footer and language switcher.
 - Build the homepage entry points and explanations.
 - Build outcome-focused resource cards with clear content-type treatments.
@@ -281,3 +283,6 @@ These are not implied by MVP approval.
 | 2026-10-25 | Use Forward College as the internal review organisation and Howie Chang as the accountable MVP reviewer; specialist review remains optional and disclosed       | Approved                          |
 | 2026-10-25 | Approve all 36 completed resource records for application integration and begin Phase 1; publication, licensing and outstanding tool-test gates remain separate | Approved                          |
 | 2026-10-25 | Approve the 10-resource anchor batch as the pattern for producing the remaining catalogue; this is not publication approval                                     | Approved                          |
+| 2026-10-25 | Use one bilingual Skill package with a Malay-first `README.md` and an English operational `SKILL.md` that defaults output to Bahasa Melayu                      | Approved                          |
+| 2026-10-25 | Use Forward College for institutional and original-content provenance; remove Forward Academy references                                                        | Approved                          |
+| 2026-10-25 | Begin Phase 2 with a coded vertical slice and stop for product-owner review before scaling the complete interface                                               | Approved                          |

@@ -25,15 +25,15 @@ tools:
 difficulty: beginner
 intended_output: business_proposal
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   kind: original
   source_urls: []
   notes:
     {
-      ms: Kandungan asal Forward Academy.,
-      en: Original Forward Academy content.,
+      ms: Kandungan asal Forward College.,
+      en: Original Forward College content.,
     }
 license:
   { id: pending, label: Licence to be confirmed before publication, url: null }
@@ -47,7 +47,7 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.2.0
+version: 0.2.1
 created_at: "2026-10-25"
 updated_at: "2026-10-25"
 related_ids: [prompt-customer-response-001, visual-product-photo-001]
@@ -88,9 +88,9 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-business-proposal-001/0.2.0/draft-business-proposal.zip,
+      path: /downloads/skills/skill-business-proposal-001/0.2.1/draft-business-proposal.zip,
       format: skill_md_zip,
-      included_files: [SKILL.md, LICENSES.md],
+      included_files: [README.md, SKILL.md, LICENSES.md],
     }
   knowledge:
     requirement: optional
@@ -204,7 +204,7 @@ Ini bukan nasihat undang-undang, kewangan atau cukai. Jangan masukkan data sulit
 
 ### Pakej kemahiran
 
-Pakej boleh muat turun belum tersedia. Arahan boleh disalin dan digunakan terus.
+Pakej boleh muat turun tersedia dan mengandungi panduan dwibahasa `README.md`, spesifikasi operasi `SKILL.md` dan manifest lesen. Arahan di atas juga boleh disalin dan digunakan terus tanpa pemasangan.
 
 ## English
 
@@ -274,4 +274,4 @@ This is not legal, financial or tax advice. Do not enter confidential client dat
 
 ### Skill package
 
-A downloadable package is not yet available. The instruction can be copied and used directly.
+A downloadable package is available with a bilingual `README.md`, the operational `SKILL.md` specification and a licence manifest. The instruction above can also be copied and used directly without installation.

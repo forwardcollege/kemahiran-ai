@@ -57,7 +57,7 @@ languages:
   - en
 
 author:
-  name: Forward Academy
+  name: Forward College
   url: null
 curator:
   name: Forward Labs
@@ -122,7 +122,7 @@ visual_prompt:
       en: Example vertical poster visual featuring a Malaysian community in an educational programme setting.
     provenance:
       kind: planned_original_generated
-      creator: Forward Academy
+      creator: Forward College
       tool: null
       generated_on: null
   styles:

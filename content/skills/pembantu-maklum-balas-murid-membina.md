@@ -35,7 +35,7 @@ tools:
 difficulty: intermediate
 intended_output: constructive_student_feedback
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   {
@@ -43,8 +43,8 @@ provenance:
     source_urls: [],
     notes:
       {
-        ms: Kandungan asal Forward Academy.,
-        en: Original Forward Academy content.,
+        ms: Kandungan asal Forward College.,
+        en: Original Forward College content.,
       },
   }
 license:
@@ -59,7 +59,7 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.1.0
+version: 0.1.1
 created_at: "2026-10-25"
 updated_at: "2026-10-25"
 related_ids: [skill-rubric-001, prompt-parent-message-001]
@@ -100,9 +100,9 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-student-feedback-001/0.1.0/draft-constructive-student-feedback.zip,
+      path: /downloads/skills/skill-student-feedback-001/0.1.1/draft-constructive-student-feedback.zip,
       format: skill_md_zip,
-      included_files: [SKILL.md, LICENSES.md],
+      included_files: [README.md, SKILL.md, LICENSES.md],
     }
   knowledge:
     {

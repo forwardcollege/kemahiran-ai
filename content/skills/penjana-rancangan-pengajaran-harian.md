@@ -27,15 +27,15 @@ tools:
 difficulty: beginner
 intended_output: daily_lesson_plan
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   kind: original
   source_urls: []
   notes:
     {
-      ms: Kandungan asal Forward Academy.,
-      en: Original Forward Academy content.,
+      ms: Kandungan asal Forward College.,
+      en: Original Forward College content.,
     }
 license:
   { id: pending, label: Licence to be confirmed before publication, url: null }
@@ -47,7 +47,7 @@ review:
   specialist_reviewer: null
   last_reviewed: "2026-10-25"
   next_review_due: "2027-04-25"
-version: 0.4.0
+version: 0.4.1
 created_at: "2026-10-25"
 updated_at: "2026-10-25"
 related_ids: [prompt-parent-message-001, visual-education-001]
@@ -94,10 +94,11 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-rph-001/0.4.0/generate-dskp-grounded-rph.zip,
+      path: /downloads/skills/skill-rph-001/0.4.1/generate-dskp-grounded-rph.zip,
       format: skill_md_zip,
       included_files:
         [
+          README.md,
           SKILL.md,
           LICENSES.md,
           references/knowledge-setup.md,
@@ -243,7 +244,7 @@ AI boleh menghasilkan aktiviti yang tidak tepat, tidak selamat atau tidak sesuai
 
 ### Pakej kemahiran
 
-Versi boleh muat turun belum tersedia untuk draf ini. Pakej generik yang dirancang akan mengandungi `SKILL.md`, panduan menambah PDF DSKP, templat manifest sumber dan contoh sintetik—bukan PDF DSKP rasmi. Semua fungsi utama masih boleh digunakan dengan melampirkan PDF sendiri dan menyalin arahan di atas.
+Pakej boleh muat turun tersedia dan mengandungi panduan dwibahasa `README.md`, spesifikasi operasi `SKILL.md`, panduan menambah PDF DSKP, templat manifest sumber dan contoh sintetik—bukan PDF DSKP rasmi. Semua fungsi utama juga boleh digunakan dengan melampirkan PDF sendiri dan menyalin arahan di atas.
 
 ## English
 
@@ -343,4 +344,4 @@ AI may produce inaccurate, unsafe or unsuitable activities. Do not use the draft
 
 ### Skill package
 
-A downloadable package is not yet available for this draft. The planned generic package will contain `SKILL.md`, instructions for adding a DSKP PDF, a source-manifest template and a synthetic example—not an official DSKP PDF. The core workflow remains available by attaching your own PDF and using the instruction above.
+A downloadable package is available with a bilingual `README.md`, the operational `SKILL.md` specification, instructions for adding a DSKP PDF, a source-manifest template and a synthetic example—not an official DSKP PDF. The core workflow also remains available by attaching your own PDF and using the instruction above.

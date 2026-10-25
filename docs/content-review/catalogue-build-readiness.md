@@ -20,22 +20,22 @@ Every record has one shared identity, Malay and English content, controlled taxo
 
 ## Skill downloads
 
-All 12 Skills now have a versioned ZIP at the exact public path declared in the resource record. Each archive opens into one named Skill folder and contains `SKILL.md`, `LICENSES.md` and only the supporting reference files declared by that package.
+All 12 Skills now have a versioned ZIP at the exact public path declared in the resource record. Each archive opens into one named Skill folder and contains a Malay-first bilingual `README.md`, the operational `SKILL.md`, `LICENSES.md` and only the supporting reference files declared by that package. One package serves both language variants; there are no duplicated Malay and English archives.
 
 | Resource ID                           | Version | Archive                                     |
 | ------------------------------------- | ------- | ------------------------------------------- |
-| `skill-rph-001`                       | 0.4.0   | `generate-dskp-grounded-rph.zip`            |
-| `skill-dskp-activity-001`             | 0.2.0   | `design-dskp-aligned-activities.zip`        |
-| `skill-assessment-set-001`            | 0.2.0   | `build-assessment-materials.zip`            |
-| `skill-rubric-001`                    | 0.1.0   | `design-moderate-rubrics.zip`               |
-| `skill-student-feedback-001`          | 0.1.0   | `draft-constructive-student-feedback.zip`   |
-| `skill-meeting-minutes-001`           | 0.2.0   | `draft-formal-meeting-minutes.zip`          |
-| `skill-policy-analysis-001`           | 0.1.0   | `analyse-circular-policy-document.zip`      |
-| `skill-programme-paper-001`           | 0.1.0   | `draft-programme-paper.zip`                 |
-| `skill-activity-report-001`           | 0.1.0   | `build-activity-outcome-report.zip`         |
-| `skill-business-proposal-001`         | 0.2.0   | `draft-business-proposal.zip`               |
-| `skill-management-report-001`         | 0.1.0   | `build-data-informed-management-report.zip` |
-| `skill-customer-service-playbook-001` | 0.1.0   | `build-customer-service-playbook.zip`       |
+| `skill-rph-001`                       | 0.4.1   | `generate-dskp-grounded-rph.zip`            |
+| `skill-dskp-activity-001`             | 0.2.1   | `design-dskp-aligned-activities.zip`        |
+| `skill-assessment-set-001`            | 0.2.1   | `build-assessment-materials.zip`            |
+| `skill-rubric-001`                    | 0.1.1   | `design-moderate-rubrics.zip`               |
+| `skill-student-feedback-001`          | 0.1.1   | `draft-constructive-student-feedback.zip`   |
+| `skill-meeting-minutes-001`           | 0.2.1   | `draft-formal-meeting-minutes.zip`          |
+| `skill-policy-analysis-001`           | 0.1.1   | `analyse-circular-policy-document.zip`      |
+| `skill-programme-paper-001`           | 0.1.1   | `draft-programme-paper.zip`                 |
+| `skill-activity-report-001`           | 0.1.1   | `build-activity-outcome-report.zip`         |
+| `skill-business-proposal-001`         | 0.2.1   | `draft-business-proposal.zip`               |
+| `skill-management-report-001`         | 0.1.1   | `build-data-informed-management-report.zip` |
+| `skill-customer-service-playbook-001` | 0.1.1   | `build-customer-service-playbook.zip`       |
 
 The archives are suitable for local and authenticated preview testing. They must not be offered publicly until the distribution licence is chosen and every `LICENSES.md` manifest is updated.
 
@@ -68,7 +68,7 @@ The website may display `tested`, `limited` and `expected` distinctly. It must n
 - Every `tested` or `limited` tool claim has a date.
 - Every visual preview path resolves to an image with recorded bilingual alternative text and provenance.
 - All 12 declared Skill download paths resolve to readable ZIP files.
-- Every Skill source package contains `SKILL.md` and `LICENSES.md`.
+- Every Skill source package contains `README.md`, `SKILL.md` and `LICENSES.md`.
 - Package names match their `SKILL.md` frontmatter names.
 - Archives contain no executable files, official source documents, real user data or unexpected hidden metadata.
 - Repository scans found no embedded credentials, private keys, passwords or personal Gmail addresses.

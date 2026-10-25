@@ -50,7 +50,7 @@ languages:
   - en
 
 author:
-  name: Forward Academy
+  name: Forward College
   url: null
 curator:
   name: Forward Labs
@@ -135,7 +135,9 @@ skill:
     path: /downloads/skills/skill-rph-001/0.1.0/penjana-rph.zip
     format: skill_md_zip
     included_files:
+      - README.md
       - SKILL.md
+      - LICENSES.md
       - references/contoh-rph.md
   limitations:
     ms:

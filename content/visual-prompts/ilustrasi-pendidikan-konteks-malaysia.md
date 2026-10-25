@@ -41,7 +41,7 @@ tools:
 difficulty: beginner
 intended_output: educational_illustration
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   kind: original
@@ -87,7 +87,7 @@ visual_prompt:
       en: Synthetic illustration of four learners sorting paper, cans and plastic bottles in a Malaysian classroom with blank title space.
     provenance:
       kind: original_generated
-      creator: Forward Academy
+      creator: Forward College
       tool: ChatGPT Image
       generated_on: "2026-10-25"
   styles: [clean_editorial_illustration, flat_educational]

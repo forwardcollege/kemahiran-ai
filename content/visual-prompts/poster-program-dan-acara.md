@@ -40,7 +40,7 @@ tools:
 difficulty: beginner
 intended_output: event_poster_key_visual
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   kind: original
@@ -86,7 +86,7 @@ visual_prompt:
       en: Synthetic vertical poster visual with four adult educators collaborating in the lower right and blank title space in the upper left.
     provenance:
       kind: original_generated
-      creator: Forward Academy
+      creator: Forward College
       tool: ChatGPT Image
       generated_on: "2026-10-25"
   styles: [modern_editorial, optimistic_documentary]

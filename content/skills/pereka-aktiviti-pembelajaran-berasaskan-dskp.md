@@ -33,15 +33,15 @@ tools:
 difficulty: intermediate
 intended_output: classroom_activity_options
 languages: [ms, en]
-author: { name: Forward Academy, url: null }
+author: { name: Forward College, url: null }
 curator: { name: Forward Labs }
 provenance:
   kind: original
   source_urls: []
   notes:
     {
-      ms: Kandungan asal Forward Academy.,
-      en: Original Forward Academy content.,
+      ms: Kandungan asal Forward College.,
+      en: Original Forward College content.,
     }
 license:
   { id: pending, label: Licence to be confirmed before publication, url: null }
@@ -55,7 +55,7 @@ review:
     last_reviewed: "2026-10-25",
     next_review_due: "2027-04-25",
   }
-version: 0.2.0
+version: 0.2.1
 created_at: "2026-10-25"
 updated_at: "2026-10-25"
 related_ids:
@@ -104,9 +104,9 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-dskp-activity-001/0.2.0/design-dskp-aligned-activities.zip,
+      path: /downloads/skills/skill-dskp-activity-001/0.2.1/design-dskp-aligned-activities.zip,
       format: skill_md_zip,
-      included_files: [SKILL.md, LICENSES.md],
+      included_files: [README.md, SKILL.md, LICENSES.md],
     }
   knowledge:
     requirement: required

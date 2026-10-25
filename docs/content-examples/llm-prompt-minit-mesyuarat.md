@@ -61,7 +61,7 @@ languages:
   - en
 
 author:
-  name: Forward Academy
+  name: Forward College
   url: null
 curator:
   name: Forward Labs
