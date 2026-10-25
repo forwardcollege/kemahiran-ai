@@ -1,7 +1,7 @@
 # Kemahiran.AI — Phased Implementation Plan
 
 Status: Phase 1 complete; Phase 2 catalogue-first direction approved
-Last updated: 2026-10-25
+Last updated: 2026-10-26
 
 This plan turns the product definition in `PROJECT.md` into reviewable phases. The user approved the 36-resource catalogue and authorised Phase 1 and an initial Phase 2 coded preview on 2026-10-25. Phase 2 will first deliver a reviewable vertical slice before the full discovery interface is expanded. Later implementation phases still require their own approval.
 
@@ -52,9 +52,9 @@ Resolve decisions that affect public identity, accounts, publishing and operatio
 ### Acceptance criteria
 
 - [x] Planning documents are approved or have an explicit list of requested revisions.
-- [ ] Product name and primary domain are confirmed.
-- [ ] Hosting decision and account-access policy are recorded.
-- [ ] Content and package licence policy is recorded.
+- [x] Product name and primary domain are confirmed.
+- [x] Hosting decision and account-access policy are recorded.
+- [x] Content and package licence policy is recorded.
 - [x] Forward College is recorded as the internal review organisation and Howie Chang is the accountable internal reviewer.
 - [ ] Brand assets are available or an interim visual direction is approved.
 - [x] No unresolved decision blocks Phase 1 architecture.
@@ -200,7 +200,7 @@ Add secure, low-friction accounts without putting the public catalogue behind a 
 
 Publish a deliberately small, tested and balanced set of 36 original resources.
 
-**Current evidence:** All 36 approved concepts now have bilingual Markdown records: 12 Skills, 14 LLM Prompts, 7 Image collections and 3 Video collections. Howie Chang approved all 36 records on behalf of Forward College on 2026-10-25; each record is now `status: approved` with `review.status: internal_approved`. Twelve source-only Skill packages and their matching versioned ZIP artifacts have been created and structurally verified. A non-developer authoring guide documents additions and revisions. Existing tool evidence remains deliberately conservative: some records are `tested` or `limited`, while later text records and all video-generator claims remain `expected` pending behavioural testing. The default distribution licence, outstanding tool tests and publication approval remain open. Specialist review is optional and its absence is disclosed where relevant.
+**Current evidence:** All 36 approved concepts now have bilingual Markdown records: 12 Skills, 14 LLM Prompts, 7 Image collections and 3 Video collections. Howie Chang approved all 36 records on behalf of Forward College on 2026-10-25; each record is now `status: approved` with `review.status: internal_approved`. Twelve source-only Skill packages and their matching versioned ZIP artifacts have been created and structurally verified. A non-developer authoring guide documents additions and revisions. Original resource content and Skill packages are licensed under CC BY 4.0, while application code uses MIT. Existing tool evidence remains deliberately conservative: some records are `tested` or `limited`, while later text records and all video-generator claims remain `expected` pending behavioural testing. Outstanding tool tests and publication approval remain open. Specialist review is optional and its absence is disclosed where relevant.
 
 ### Work
 
@@ -296,3 +296,5 @@ These are not implied by MVP approval.
 | 2026-10-25 | Use one bilingual Skill package with a Malay-first `README.md` and an English operational `SKILL.md` that defaults output to Bahasa Melayu                      | Approved                          |
 | 2026-10-25 | Use Forward College exclusively for institutional and original-content provenance                                                                               | Approved                          |
 | 2026-10-25 | Begin Phase 2 with a coded vertical slice and stop for product-owner review before scaling the complete interface                                               | Approved                          |
+| 2026-10-26 | Confirm `kemahiran.ai` with Cloudflare DNS, Vercel hosting, public catalogue access and apex-domain canonicalisation                                            | Approved                          |
+| 2026-10-26 | License original resources and Skill packages under CC BY 4.0 and application code under MIT; use Forward College (Malaysia) in licence attribution             | Approved                          |

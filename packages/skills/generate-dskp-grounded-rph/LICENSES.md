@@ -1,17 +1,17 @@
 # Licence and attribution manifest
 
 Package: `generate-dskp-grounded-rph`  
-Version: draft 0.4.1  
-Status: Not approved for public distribution
+Version: 0.4.1
+Status: Licensed for public distribution
 
-| Path                                      | Origin                                     | Licence/status                     |
-| ----------------------------------------- | ------------------------------------------ | ---------------------------------- |
-| `README.md`                               | Original Forward College content           | Licence pending before publication |
-| `SKILL.md`                                | Original Forward College content           | Licence pending before publication |
-| `references/knowledge-setup.md`           | Original Forward College content           | Licence pending before publication |
-| `references/source-manifest.template.yml` | Original Forward College content           | Licence pending before publication |
-| `references/example-dskp-extract.md`      | Original synthetic Forward College example | Licence pending before publication |
-| `references/sample-input-output.md`       | Original synthetic Forward College example | Licence pending before publication |
+| Path                                      | Origin                                                | Licence/status                                            |
+| ----------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------- |
+| `README.md`                               | Original Forward College (Malaysia) content           | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `SKILL.md`                                | Original Forward College (Malaysia) content           | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `references/knowledge-setup.md`           | Original Forward College (Malaysia) content           | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `references/source-manifest.template.yml` | Original Forward College (Malaysia) content           | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `references/example-dskp-extract.md`      | Original synthetic Forward College (Malaysia) example | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `references/sample-input-output.md`       | Original synthetic Forward College (Malaysia) example | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 
 No official DSKP PDF, third-party curriculum content, confidential information, executable file or external dependency is included in this draft.
 

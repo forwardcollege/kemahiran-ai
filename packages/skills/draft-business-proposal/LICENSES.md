@@ -1,13 +1,13 @@
 # Licence and attribution manifest
 
 Package: `draft-business-proposal`  
-Version: draft 0.2.1  
-Status: Not approved for public distribution
+Version: 0.2.1
+Status: Licensed for public distribution
 
-| Path        | Origin                           | Licence/status                     |
-| ----------- | -------------------------------- | ---------------------------------- |
-| `README.md` | Original Forward College content | Licence pending before publication |
-| `SKILL.md`  | Original Forward College content | Licence pending before publication |
+| Path        | Origin                                      | Licence/status                                            |
+| ----------- | ------------------------------------------- | --------------------------------------------------------- |
+| `README.md` | Original Forward College (Malaysia) content | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `SKILL.md`  | Original Forward College (Malaysia) content | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 
 No client brief, company profile, pricing file, contract, template, personal data, executable file or external dependency is included.
 

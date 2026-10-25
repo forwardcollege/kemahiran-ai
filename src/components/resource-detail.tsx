@@ -30,8 +30,8 @@ export async function ResourceDetail({
   const licenseLabel =
     data.license.id === "pending"
       ? locale === "ms"
-        ? "Lesen akan disahkan sebelum penerbitan"
-        : "Licence to be confirmed before publication"
+        ? "Lesen belum disahkan"
+        : "Licence not confirmed"
       : data.license.label;
 
   return (
@@ -144,7 +144,19 @@ export async function ResourceDetail({
             <dt className="font-semibold">
               {locale === "ms" ? "Lesen" : "Licence"}
             </dt>
-            <dd>{licenseLabel}</dd>
+            <dd>
+              {data.license.url ? (
+                <a
+                  href={data.license.url}
+                  className="underline decoration-border underline-offset-4 hover:text-primary"
+                  rel="license"
+                >
+                  {licenseLabel}
+                </a>
+              ) : (
+                licenseLabel
+              )}
+            </dd>
           </div>
           <div>
             <dt className="font-semibold">

@@ -4,7 +4,7 @@ Kemahiran.AI is Forward Labs’ Malay-first bilingual library of practical AI Sk
 
 ## Current status
 
-Phase 1 is in progress. The repository contains 36 internally approved resources and a production-shaped Next.js content pipeline. The records are not yet publicly published: licence selection, outstanding tool tests and the explicit publication gate remain open.
+The repository contains 36 internally approved resources, the Phase 1 content pipeline and the approved Phase 2 catalogue interface. The records are available for preview, while outstanding tool tests and the explicit publication gate remain open.
 
 ## Local development
 
@@ -48,3 +48,11 @@ This checks formatting, lint, TypeScript, tests, content validation and the prod
 ## Secrets
 
 Never commit `.env` files or credentials. `.env.example` contains names only. Supabase is planned for Phase 4 and is not required for the Phase 1 content pipeline.
+
+## Licensing
+
+- Application source code, tests, build scripts and configuration are licensed under the [MIT License](LICENSE).
+- Original catalogue resources, prompts, Skill packages, editorial documentation and original media are licensed under [CC BY 4.0](LICENSE-CONTENT.md), except where a resource or attribution manifest states otherwise.
+- Recommended attribution: “Kemahiran.AI by Forward Labs, powered by Forward College (Malaysia) — https://kemahiran.ai.”
+
+The location in the attribution distinguishes the Malaysian institution from unrelated organisations with the same name. Brand names and logos are not included in the open-content licence.

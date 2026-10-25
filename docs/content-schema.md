@@ -129,13 +129,13 @@ provenance:
   kind: original # original | adapted_open_source | community_contributed | externally_referenced
   source_urls: []
   notes:
-    ms: Kandungan asal Forward College.
-    en: Original Forward College content.
+    ms: Kandungan asal Forward College (Malaysia).
+    en: Original Forward College (Malaysia) content.
 
 license:
-  id: pending
-  label: Licence to be confirmed before publication
-  url: null
+  id: cc-by-4.0
+  label: Creative Commons Attribution 4.0 International (CC BY 4.0)
+  url: https://creativecommons.org/licenses/by/4.0/
 
 review:
   status: pending
@@ -459,4 +459,4 @@ Specialist review is optional. When `specialist_review_status: not_obtained` is 
 - [LLM Prompt example](content-examples/llm-prompt-minit-mesyuarat.md)
 - [Visual Prompt example](content-examples/visual-prompt-poster-program.md)
 
-These examples are schema demonstrations, not publication-ready resources. They intentionally use `status: draft`, pending licences and abbreviated sample content.
+These examples are schema demonstrations, not publication-ready resources. They intentionally use `status: draft` and abbreviated sample content, while demonstrating the approved CC BY 4.0 content licence.

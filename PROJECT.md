@@ -27,10 +27,13 @@ The catalogue contains three related but visibly distinct libraries:
 ### Decision
 
 - Product name: **Kemahiran.AI**
-- Primary domain: `kemahiran.ai`, subject to successful registration
+- Primary domain: `kemahiran.ai`, registered through Cloudflare on 2026-10-25
+- Canonical URL: `https://kemahiran.ai`; `https://www.kemahiran.ai` redirects to the apex domain
+- DNS provider: Cloudflare; domain email is not configured for the initial deployment
 - Recommended defensive domains: `kemahiranai.com` and `kemahiranai.my`, redirected to the primary domain
 - Brand attribution: **Kemahiran.AI by Forward Labs**
 - Institutional line: **Powered by Forward College**
+- Open-content attribution: **Kemahiran.AI by Forward Labs, powered by Forward College (Malaysia)**
 
 “Kemahiran” describes the capability users gain from the whole product, not only the AI Skills library. The descriptor must appear prominently during launch so that the product is understood as a resource library rather than only a course platform.
 
@@ -501,6 +504,10 @@ Target WCAG 2.2 AA.
 
 ### Copyright and licensing
 
+- Application source code, tests, build scripts and configuration use the MIT License.
+- Original catalogue resources, prompts, Skill packages, editorial documentation and original media use Creative Commons Attribution 4.0 International (CC BY 4.0), except where a resource or attribution manifest states otherwise.
+- The preferred attribution is: “Kemahiran.AI by Forward Labs, powered by Forward College (Malaysia) — https://kemahiran.ai.” The location distinguishes the Malaysian institution from unrelated organisations with the same name.
+- Brand names, logos and trade dress are excluded from the open-content licence. Third-party and user-supplied material retains its own rights and is not licensed merely because it is referenced by a resource.
 - Publish only original, licensed or permissioned content.
 - Do not reproduce protected prompt collections, assets or examples from reference products.
 - Record provenance for every resource and preview asset.
@@ -597,11 +604,8 @@ Forward College succeeds when its team can add, revise, test and review resource
 
 ### Assumptions requiring confirmation before launch
 
-- Kemahiran.AI and the intended domains are approved and successfully registered.
 - Public browsing remains available without login; accounts protect personalisation rather than catalogue access.
-- Vercel is accepted as the initial host, with Railway retained as the portability target.
 - Forward College is the default internal review organisation and Howie Chang is the accountable internal reviewer for MVP publication approvals. Specialist review is optional and its absence is disclosed where relevant.
-- Forward Labs will choose the default licence for original public resources and Skill packages.
 - A transactional email sender/domain will be available for production magic links.
 - The visual identity and approved Forward College brand assets will be supplied before UI theming is finalised.
 
@@ -611,10 +615,10 @@ These decisions do not prevent architecture planning but must be resolved at the
 
 | Decision                         | Recommended default                                                          | Required by                    |
 | -------------------------------- | ---------------------------------------------------------------------------- | ------------------------------ |
-| Domain purchase                  | `kemahiran.ai` plus defensive redirects                                      | Before public preview          |
-| Frontend host                    | Vercel                                                                       | Before deployment setup        |
-| Catalogue access                 | Public; sign-in for personal actions                                         | Before auth UX implementation  |
-| Default original-content licence | Explicit Forward Labs licence chosen with counsel                            | Before first publication       |
+| Domain purchase                  | `kemahiran.ai`; Cloudflare DNS; apex canonical                               | Confirmed                      |
+| Frontend host                    | Vercel, while retaining Railway portability                                  | Confirmed                      |
+| Catalogue access                 | Public; sign-in for personal actions                                         | Confirmed                      |
+| Default original-content licence | CC BY 4.0 for resources; MIT for application code                            | Confirmed                      |
 | Review ownership                 | Howie Chang for Forward College internal review; specialist status disclosed | Confirmed                      |
 | Transactional email              | Custom-domain SMTP/provider                                                  | Before production auth testing |
 | Analytics                        | Privacy-conscious, minimal events only                                       | Before launch QA               |

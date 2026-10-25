@@ -84,6 +84,11 @@ describe("catalogue content", () => {
     const result = resourceFrontmatterSchema.safeParse({
       ...resource,
       status: "published",
+      license: {
+        id: "pending",
+        label: "Licence not confirmed",
+        url: null,
+      },
     });
     expect(result.success).toBe(false);
     if (!result.success) {

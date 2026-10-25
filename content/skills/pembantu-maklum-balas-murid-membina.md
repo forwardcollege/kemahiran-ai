@@ -43,12 +43,16 @@ provenance:
     source_urls: [],
     notes:
       {
-        ms: Kandungan asal Forward College.,
-        en: Original Forward College content.,
+        ms: Kandungan asal Forward College (Malaysia).,
+        en: Original Forward College (Malaysia) content.,
       },
   }
 license:
-  { id: pending, label: Licence to be confirmed before publication, url: null }
+  {
+    id: cc-by-4.0,
+    label: Creative Commons Attribution 4.0 International (CC BY 4.0),
+    url: "https://creativecommons.org/licenses/by/4.0/",
+  }
 review:
   {
     status: internal_approved,

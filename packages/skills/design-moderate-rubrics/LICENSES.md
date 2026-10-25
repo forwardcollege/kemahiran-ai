@@ -1,11 +1,11 @@
 # Licence and attribution manifest
 
 Package version: 0.1.1  
-Status: Draft; distribution licence pending
+Status: Licensed for public distribution
 
-| File        | Provenance                       | Licence status             |
-| ----------- | -------------------------------- | -------------------------- |
-| `README.md` | Original Forward College content | Pending before publication |
-| `SKILL.md`  | Original Forward College content | Pending before publication |
+| File        | Provenance                                  | Licence status                                            |
+| ----------- | ------------------------------------------- | --------------------------------------------------------- |
+| `README.md` | Original Forward College (Malaysia) content | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `SKILL.md`  | Original Forward College (Malaysia) content | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
 
 No student work, policy document or third-party rubric is bundled.
