@@ -21,18 +21,16 @@ Skill-package ZIP archives.
 - No credential, private-key or high-confidence token signature was found.
 - No unexpected executable, private-key or environment file was found inside a
   downloadable archive.
-- The Git history contains one contributor identity. Its commit metadata uses a
-  personal email address. Making the repository public will expose that address
-  through the Git commit history unless the history is rewritten first.
+- The Git history contains one contributor identity. The original seven commits
+  used a personal email address; the product owner authorised rewriting that
+  metadata to Howie Chang's GitHub no-reply address before publication.
+- The rewritten `main` history was force-pushed with a lease on 2026-10-26. All
+  author and committer addresses reachable from the published branch now use
+  `howiec@users.noreply.github.com`.
 
 ## Release decision
 
-Repository visibility must not be changed until the product owner either:
-
-1. explicitly accepts publication of the existing commit email; or
-2. authorises a history rewrite to replace it with an appropriate GitHub
-   no-reply address and a force-push of the rewritten `main` branch.
-
-Future commits should use an approved organisational or GitHub no-reply address.
-The repository-local Git configuration was updated to use Howie Chang's GitHub
-no-reply address for new commits; this does not alter existing history.
+The repository is ready to be made public from the history and secret-scanning
+perspective covered by this audit. Future commits must continue to use an
+approved organisational or GitHub no-reply address. The repository-local Git
+configuration is set to Howie Chang's GitHub no-reply address.
