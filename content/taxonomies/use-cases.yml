@@ -1,0 +1,20 @@
+schema_version: 1
+items:
+  - id: teaching_learning
+    label: { ms: Pengajaran dan Pembelajaran, en: Teaching and Learning }
+  - id: administration
+    label: { ms: Pentadbiran, en: Administration }
+  - id: writing_documents
+    label: { ms: Penulisan dan Dokumen, en: Writing and Documents }
+  - id: communication
+    label: { ms: Komunikasi, en: Communication }
+  - id: marketing
+    label: { ms: Pemasaran, en: Marketing }
+  - id: visual_content
+    label: { ms: Kandungan Visual, en: Visual Content }
+  - id: research
+    label: { ms: Penyelidikan, en: Research }
+  - id: data_analysis
+    label: { ms: Analisis Data, en: Data Analysis }
+  - id: productivity
+    label: { ms: Produktiviti, en: Productivity }

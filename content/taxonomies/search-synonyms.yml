@@ -1,0 +1,60 @@
+schema_version: 1
+groups:
+  - terms:
+      [rph, rancangan pengajaran harian, daily lesson plan, lesson planning]
+  - terms: [minit mesyuarat, meeting minutes, minutes of meeting]
+  - terms: [kertas cadangan, cadangan perniagaan, business proposal]
+  - terms: [surat rasmi, official letter, formal letter]
+  - terms: [aduan pelanggan, customer complaint, customer response]
+  - terms: [poster acara, poster program, event poster]
+  - terms: [fotografi produk, product photography, product photo]
+  - terms:
+      [
+        aktiviti dskp,
+        aktiviti pembelajaran,
+        learning activity,
+        classroom activity,
+      ]
+  - terms: [kuiz, lembaran kerja, quiz, worksheet, skema jawapan, answer scheme]
+  - terms:
+      [
+        objektif pembelajaran,
+        learning objective,
+        kriteria kejayaan,
+        success criteria,
+      ]
+  - terms: [kbat, higher order thinking, higher-order question, aras pemikiran]
+  - terms:
+      [
+        pembezaan,
+        differentiated learning,
+        differentiated instruction,
+        sokongan murid,
+      ]
+  - terms:
+      [
+        refleksi pengajaran,
+        refleksi guru,
+        lesson reflection,
+        teaching reflection,
+      ]
+  - terms: [rubrik, pemarkahan, rubric, marking criteria, moderation]
+  - terms: [maklum balas murid, student feedback, feedback pelajar]
+  - terms: [pekeliling, dasar, circular, policy, arahan rasmi]
+  - terms: [kertas kerja program, programme paper, program proposal]
+  - terms: [laporan aktiviti, laporan impak, activity report, outcome report]
+  - terms: [laporan pengurusan, management report, executive report]
+  - terms: [panduan khidmat pelanggan, customer service playbook, skrip respons]
+  - terms: [tindakan mesyuarat, action register, keputusan mesyuarat]
+  - terms: [hasil program, petunjuk program, programme outcomes, indicators]
+  - terms: [nota taklimat, briefing note, management brief]
+  - terms: [kalendar media sosial, content calendar, social media plan]
+  - terms: [analisis jualan, sales analysis, prestasi jualan]
+  - terms:
+      [kemas kini pengurusan, management update, weekly update, monthly update]
+  - terms: [visual latihan, classroom visual, training visual]
+  - terms: [imej pembentangan, pitch deck image, presentation hero]
+  - terms: [infografik, data visual, infographic, evidence visual]
+  - terms: [kempen media sosial, social media campaign, social visual]
+  - terms: [video produk, product video, product promotion]
+  - terms: [video penerangan, micro explainer, educational explainer]

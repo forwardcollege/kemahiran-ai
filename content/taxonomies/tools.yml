@@ -1,0 +1,23 @@
+schema_version: 1
+items:
+  - id: gemini
+    label: Google Gemini
+    kind: language_model
+  - id: chatgpt
+    label: ChatGPT
+    kind: language_model
+  - id: claude
+    label: Claude
+    kind: language_model
+  - id: gemini_image
+    label: Gemini image generation
+    kind: image_generator
+  - id: chatgpt_image
+    label: ChatGPT image generation
+    kind: image_generator
+  - id: adobe_firefly
+    label: Adobe Firefly
+    kind: image_generator
+  - id: veo
+    label: Veo
+    kind: video_generator

@@ -1,0 +1,174 @@
+---
+schema_version: 1
+id: skill-management-report-001
+type: skill
+status: approved
+slug:
+  {
+    ms: pembina-laporan-pengurusan-berasaskan-data,
+    en: data-informed-management-report-builder,
+  }
+title:
+  {
+    ms: Pembina Laporan Pengurusan Berasaskan Data,
+    en: Data-Informed Management Report Builder,
+  }
+summary:
+  {
+    ms: "Tukar jadual disahkan dan nota operasi kepada laporan pengurusan dengan metrik, perbandingan, batas dan tindakan.",
+    en: "Turn verified tables and operating notes into a management report with metrics, comparisons, caveats and actions.",
+  }
+audiences: [sme_entrepreneurs, professionals]
+use_cases: [data_analysis, writing_documents, productivity]
+sectors: [sme_business, cross_sector]
+categories: [management_reporting]
+tags: [management_report, metrics, data_quality, decisions]
+tools:
+  [
+    {
+      id: gemini,
+      compatibility: expected,
+      tested_on: null,
+      notes:
+        {
+          ms: Ujian pengiraan dan semakan pengurus diperlukan.,
+          en: Calculation testing and manager review are required.,
+        },
+    },
+  ]
+difficulty: advanced
+intended_output: data_informed_management_report
+languages: [ms, en]
+author: { name: Forward Academy, url: null }
+curator: { name: Forward Labs }
+provenance:
+  {
+    kind: original,
+    source_urls: [],
+    notes:
+      {
+        ms: Kandungan asal Forward Academy.,
+        en: Original Forward Academy content.,
+      },
+  }
+license:
+  { id: pending, label: Licence to be confirmed before publication, url: null }
+review:
+  {
+    status: internal_approved,
+    organisation: Forward College,
+    editorial_reviewer: Howie Chang,
+    specialist_review_status: not_obtained,
+    specialist_reviewer: null,
+    last_reviewed: "2026-10-25",
+    next_review_due: "2027-04-25",
+  }
+version: 0.1.0
+created_at: "2026-10-25"
+updated_at: "2026-10-25"
+related_ids: [prompt-sales-analysis-001, prompt-management-update-001]
+featured: false
+search_aliases:
+  {
+    ms: [laporan data pengurusan, analisis metrik, laporan prestasi],
+    en: [data management report, metric analysis, performance report],
+  }
+skill:
+  estimated_minutes: 30
+  outcome:
+    {
+      ms: Laporan pengurusan berjejak dengan pengiraan dan batas data.,
+      en: A traceable management report with calculations and data limitations.,
+    }
+  prerequisites:
+    {
+      ms: [Jadual disahkan, Definisi metrik, Tempoh perbandingan],
+      en: [Verified table, Metric definitions, Comparison period],
+    }
+  required_inputs:
+    - {
+        id: data,
+        label: { ms: Data berstruktur, en: Structured data },
+        required: true,
+      }
+    - {
+        id: metric_definitions,
+        label: { ms: Definisi metrik, en: Metric definitions },
+        required: true,
+      }
+  instruction_copy_available: true
+  package:
+    {
+      available: true,
+      path: /downloads/skills/skill-management-report-001/0.1.0/build-data-informed-management-report.zip,
+      format: skill_md_zip,
+      included_files: [SKILL.md, LICENSES.md],
+    }
+  knowledge:
+    {
+      requirement: optional,
+      persistent_references:
+        [
+          {
+            id: metric_dictionary,
+            type: metric_definition,
+            supplied_by: organisation,
+            required: false,
+            sensitive: false,
+            description:
+              {
+                ms: Definisi metrik organisasi.,
+                en: Organisational metric definitions.,
+              },
+          },
+        ],
+      runtime_inputs:
+        [{ id: management_data, type: structured_data, sensitive: true }],
+      missing_reference_behavior: stop_and_request_source,
+    }
+  limitations:
+    {
+      ms: [Tidak membuktikan sebab., Semak formula dan sensitiviti data.],
+      en: [Does not prove causation., Verify formulas and data sensitivity.],
+    }
+---
+
+## Bahasa Melayu
+
+### Arahan untuk disalin
+
+```text
+Sediakan laporan pengurusan daripada jadual dan nota yang dibekalkan sahaja. Mula dengan audit ringkas: tempoh, unit, mata wang, definisi metrik, nilai hilang, pendua dan jumlah kawalan. Jika definisi atau tempoh perbandingan tiada, tanya dan berhenti.
+
+Soalan pengurusan: {{SOALAN}}
+Data: {{DATA}}
+Definisi metrik: {{DEFINISI}}
+Sasaran/perbandingan: {{SASARAN}}
+Nota operasi disahkan: {{NOTA}}
+
+Paparkan ringkasan eksekutif, definisi, pengiraan yang boleh diaudit, perbandingan, pergerakan utama, segmen, anomali, batas data, hipotesis berlabel dan tindakan yang sepadan dengan bukti. Jangan mereka sebab, sasaran, ramalan atau nilai hilang. Bezakan fakta, pengiraan dan hipotesis. Tandakan keputusan yang memerlukan semakan pengurus.
+```
+
+### Contoh dan batasan
+
+Contoh sintetik: jualan bulanan mengikut wilayah dengan satu bulan hilang. Jangan mengisi nilai hilang atau menyimpulkan kempen menyebabkan perubahan. Pengurus mesti mengesahkan formula, konteks operasi, kerahsiaan dan tindakan.
+
+## English
+
+### Copyable instruction
+
+```text
+Prepare a management report from the supplied table and notes only. Start with a short audit of period, units, currency, metric definitions, missing values, duplicates and control totals. If definitions or comparison period are absent, ask and stop.
+
+Management question: {{QUESTION}}
+Data: {{DATA}}
+Metric definitions: {{DEFINITIONS}}
+Targets/comparators: {{TARGETS}}
+Verified operating notes: {{NOTES}}
+
+Provide an executive summary, definitions, auditable calculations, comparisons, major movements, segments, anomalies, data limits, labelled hypotheses and evidence-proportionate actions. Do not invent causes, targets, forecasts or missing values. Separate facts, calculations and hypotheses. Mark decisions requiring manager review.
+```
+
+### Example and limitations
+
+Synthetic example: monthly sales by region with one missing month. Do not impute the gap or conclude a campaign caused a movement. A manager must verify formulas, operational context, confidentiality and actions.

@@ -1,0 +1,83 @@
+schema_version: 1
+items:
+  - id: lesson_planning
+    label: { ms: Perancangan Pengajaran, en: Lesson Planning }
+  - id: meeting_documentation
+    label: { ms: Dokumentasi Mesyuarat, en: Meeting Documentation }
+  - id: business_proposals
+    label: { ms: Cadangan Perniagaan, en: Business Proposals }
+  - id: parent_communication
+    label: { ms: Komunikasi Ibu Bapa, en: Parent Communication }
+  - id: official_correspondence
+    label: { ms: Surat-menyurat Rasmi, en: Official Correspondence }
+  - id: customer_service
+    label: { ms: Khidmat Pelanggan, en: Customer Service }
+  - id: educational_visuals
+    label: { ms: Visual Pendidikan, en: Educational Visuals }
+  - id: event_visuals
+    label: { ms: Visual Program dan Acara, en: Programme and Event Visuals }
+  - id: product_marketing
+    label: { ms: Pemasaran Produk, en: Product Marketing }
+  - id: promotional_video
+    label: { ms: Video Promosi, en: Promotional Video }
+  - id: learning_activity_design
+    label:
+      { ms: Reka Bentuk Aktiviti Pembelajaran, en: Learning Activity Design }
+  - id: assessment_materials
+    label: { ms: Bahan Pentaksiran, en: Assessment Materials }
+  - id: learning_objectives
+    label: { ms: Objektif Pembelajaran, en: Learning Objectives }
+  - id: higher_order_questions
+    label:
+      { ms: Soalan Kemahiran Berfikir Aras Tinggi, en: Higher-Order Questions }
+  - id: learning_differentiation
+    label: { ms: Pembezaan Pembelajaran, en: Learning Differentiation }
+  - id: teaching_reflection
+    label: { ms: Refleksi Pengajaran, en: Teaching Reflection }
+  - id: rubric_design
+    label: { ms: Reka Bentuk Rubrik, en: Rubric Design }
+  - id: student_feedback
+    label: { ms: Maklum Balas Murid, en: Student Feedback }
+  - id: policy_analysis
+    label:
+      { ms: Analisis Pekeliling dan Dasar, en: Circular and Policy Analysis }
+  - id: programme_planning
+    label: { ms: Perancangan Program, en: Programme Planning }
+  - id: outcome_reporting
+    label:
+      { ms: Pelaporan Aktiviti dan Hasil, en: Activity and Outcome Reporting }
+  - id: management_reporting
+    label: { ms: Pelaporan Pengurusan, en: Management Reporting }
+  - id: service_playbooks
+    label: { ms: Panduan Khidmat Pelanggan, en: Customer-Service Playbooks }
+  - id: circular_summaries
+    label: { ms: Ringkasan Pekeliling, en: Circular Summaries }
+  - id: meeting_actions
+    label:
+      {
+        ms: Keputusan dan Tindakan Mesyuarat,
+        en: Meeting Decisions and Actions,
+      }
+  - id: programme_measurement
+    label: { ms: Pengukuran Program, en: Programme Measurement }
+  - id: management_briefings
+    label: { ms: Nota Taklimat Pengurusan, en: Management Briefings }
+  - id: social_media_planning
+    label: { ms: Perancangan Media Sosial, en: Social-Media Planning }
+  - id: sales_analysis
+    label: { ms: Analisis Jualan, en: Sales Analysis }
+  - id: management_updates
+    label: { ms: Kemas Kini Pengurusan, en: Management Updates }
+  - id: training_visuals
+    label: { ms: Visual Latihan, en: Training Visuals }
+  - id: presentation_visuals
+    label: { ms: Visual Pembentangan, en: Presentation Visuals }
+  - id: evidence_infographics
+    label:
+      { ms: Infografik Berpandukan Bukti, en: Evidence-Grounded Infographics }
+  - id: social_media_visuals
+    label: { ms: Visual Media Sosial, en: Social-Media Visuals }
+  - id: product_video
+    label: { ms: Video Produk, en: Product Video }
+  - id: educational_explainers
+    label: { ms: Penerangan Mikro Pendidikan, en: Educational Micro-Explainers }

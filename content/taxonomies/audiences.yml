@@ -1,0 +1,14 @@
+schema_version: 1
+items:
+  - id: teachers_educators
+    label: { ms: Guru dan Pendidik, en: Teachers and Educators }
+  - id: education_officers_jpn
+    label: { ms: Pegawai Pendidikan dan JPN, en: Education Officers and JPN }
+  - id: public_sector
+    label: { ms: Sektor Awam, en: Public Sector }
+  - id: sme_entrepreneurs
+    label: { ms: SME dan Usahawan, en: SMEs and Entrepreneurs }
+  - id: professionals
+    label: { ms: Profesional, en: Professionals }
+  - id: students
+    label: { ms: Pelajar, en: Students }

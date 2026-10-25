@@ -1,0 +1,10 @@
+schema_version: 1
+items:
+  - id: education
+    label: { ms: Pendidikan, en: Education }
+  - id: public_service
+    label: { ms: Perkhidmatan Awam, en: Public Service }
+  - id: sme_business
+    label: { ms: SME dan Perniagaan, en: SMEs and Business }
+  - id: cross_sector
+    label: { ms: Pelbagai Sektor, en: Cross-sector }

@@ -1,0 +1,16 @@
+schema_version: 1
+status: template_not_a_source
+
+document_title: "{{OFFICIAL_DOCUMENT_TITLE}}"
+subject: "{{SUBJECT}}"
+level: "{{YEAR_OR_FORM}}"
+curriculum_edition: "{{EDITION_OR_PUBLICATION_YEAR}}"
+issuing_authority: "{{ISSUING_AUTHORITY}}"
+official_source_url: "{{OFFICIAL_SOURCE_URL}}"
+file_name: "{{PDF_FILE_NAME}}"
+retrieved_on: "{{YYYY-MM-DD}}"
+last_verified: "{{YYYY-MM-DD}}"
+
+redistribution:
+  status: user_supplied_not_redistributed
+  notes: "The user is responsible for access to and lawful use of the source file."
