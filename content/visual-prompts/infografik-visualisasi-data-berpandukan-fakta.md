@@ -18,8 +18,7 @@ summary:
     ms: "Rancang susun atur infografik hanya daripada fakta atau data disahkan, dengan teks akhir ditambah di luar penjana.",
     en: "Plan infographic layouts only from verified facts or data, with final text added outside the generator.",
   }
-audiences:
-  [teachers_educators, education_officers_jpn, public_sector, professionals]
+audiences: [teachers_educators, education_officers_jpn, professionals]
 use_cases: [visual_content, data_analysis, communication]
 sectors: [education, public_service, cross_sector]
 categories: [evidence_infographics]

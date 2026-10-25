@@ -9,13 +9,7 @@ summary:
   ms: Cipta visual utama poster yang fleksibel untuk bengkel, program sekolah, acara komuniti dan inisiatif profesional dengan ruang tipografi yang jelas.
   en: Create flexible poster key visuals for workshops, school programmes, community events and professional initiatives with clear typography space.
 audiences:
-  [
-    teachers_educators,
-    education_officers_jpn,
-    public_sector,
-    sme_entrepreneurs,
-    professionals,
-  ]
+  [teachers_educators, education_officers_jpn, sme_entrepreneurs, professionals]
 use_cases: [visual_content, communication, marketing]
 sectors: [education, public_service, sme_business, cross_sector]
 categories: [event_visuals]

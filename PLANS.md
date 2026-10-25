@@ -1,6 +1,6 @@
 # Kemahiran.AI — Phased Implementation Plan
 
-Status: Phase 1 complete; Phase 2 preview approved  
+Status: Phase 1 complete; Phase 2 catalogue-first direction approved
 Last updated: 2026-10-25
 
 This plan turns the product definition in `PROJECT.md` into reviewable phases. The user approved the 36-resource catalogue and authorised Phase 1 and an initial Phase 2 coded preview on 2026-10-25. Phase 2 will first deliver a reviewable vertical slice before the full discovery interface is expanded. Later implementation phases still require their own approval.
@@ -101,13 +101,21 @@ Deliver the public catalogue experience, with the three libraries clearly differ
 
 The approved first step is a coded vertical slice containing the responsive shell, homepage direction, representative resource cards, a sample discovery/filter treatment and one library index. Stop for product-owner review before applying the direction across every Phase 2 page.
 
-**Preview checkpoint (2026-10-25):** The `phase-2-design-preview` branch now contains the coded vertical slice described in [docs/design/phase-2-preview.md](docs/design/phase-2-preview.md). It has passed formatting, lint, type checking, unit tests, content validation and a production build, plus local desktop/compact-screen visual checks. It remains awaiting product-owner design approval; no Phase 2 acceptance criterion is marked complete yet.
+**Preview checkpoint (2026-10-25):** Howie Chang selected the second catalogue-first design option: a dark library rail, immediate search and filtering, and dense text-led resource rows. The approved rules are recorded in [DESIGN.md](DESIGN.md). The revised vertical slice passed visual QA, responsive browser checks, formatting, lint, TypeScript, unit tests, content validation and a production build; evidence is recorded in [design-qa.md](design-qa.md). Full Phase 2 acceptance criteria remain open until discovery is completed across the planned scope.
+
+**Navigation refinement (2026-10-26):** The locale homepage is the all-resources catalogue with the real total count. The rail no longer duplicates discovery through a separate Explore group, and no editor's-choice treatment is shown until a genuine editorial selection exists.
+
+**Styling and icon refinement (2026-10-26):** The approved catalogue structure now uses the DESIGN.md palette, Inter and JetBrains Mono roles, 8px control geometry, restrained motion and Phosphor interface icons. The pass preserved the existing information architecture and responsive grids and passed desktop, tablet and mobile browser checks. Phase 2 remains open for complete discovery behavior and acceptance coverage.
+
+**Audience-filter refinement (2026-10-26):** The prominent audience control is labelled **Untuk siapa / For whom** and contains person-oriented groups. Public service remains available as a separate sector facet instead of duplicating Education Officers and JPN in the quick-filter row.
+
+**Bilingual-tag refinement (2026-10-26):** Visible resource tags resolve from a controlled bilingual taxonomy rather than a partial interface lookup. Stable tag IDs remain in Markdown, while validation requires Malay and English labels and blocks unknown tag IDs.
 
 - Apply the approved Forward College theme to shadcn components.
 - Build responsive header, mobile navigation, footer and language switcher.
-- Build the homepage entry points and explanations.
+- Build the catalogue-first homepage with immediate cross-library search and browsing across all resources; keep explanatory content contextual rather than using a marketing hero.
 - Build outcome-focused resource cards with clear content-type treatments.
-- Build library indexes and Explore.
+- Build focused library indexes; use the all-resources homepage for cross-library discovery.
 - Generate a bilingual search index from published Markdown.
 - Implement cross-library search, synonyms, facets, sorting and empty states.
 - Persist locale choice and preserve search/filter context where reasonable.

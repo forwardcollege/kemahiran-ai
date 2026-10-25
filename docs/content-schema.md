@@ -28,6 +28,7 @@ content/
     ├── audiences.yml
     ├── categories.yml
     ├── sectors.yml
+    ├── tags.yml
     ├── tools.yml
     ├── use-cases.yml
     └── search-synonyms.yml
@@ -37,7 +38,7 @@ public/
 └── downloads/skills/{resource-id}/{version}/...
 ```
 
-The user-editable catalogue entries are `.md` files. Small taxonomy files are YAML because they define controlled identifiers rather than prose resources.
+The user-editable catalogue entries are `.md` files. Small taxonomy files are YAML because they define controlled identifiers rather than prose resources. Every taxonomy item, including every visible tag, has one stable identifier and required Malay and English labels. Published records fail validation when they reference an identifier that is absent from its taxonomy.
 
 ## 3. One-file bilingual convention
 

@@ -20,6 +20,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             {locale === "ms" ? "Pustaka" : "Library"}
           </p>
           <div className="mt-4 grid gap-2 text-sm">
+            <Link href={`/${locale}`}>
+              {locale === "ms" ? "Semua Sumber" : "All Resources"}
+            </Link>
             <Link href={`/${locale}/skills`}>
               {locale === "ms" ? "Kemahiran AI" : "AI Skills"}
             </Link>
@@ -38,12 +41,16 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             {locale === "ms" ? "Ketahui lanjut" : "Learn more"}
           </p>
           <div className="mt-4 grid gap-2 text-sm">
-            <Link href={`/${locale}/about`}>
-              {locale === "ms" ? "Tentang" : "About"}
-            </Link>
-            <Link href={`/${locale}/request`}>
-              {locale === "ms" ? "Mohon sumber" : "Request a resource"}
-            </Link>
+            <span aria-disabled="true" className="text-background/45">
+              {locale === "ms"
+                ? "Tentang — akan datang"
+                : "About — coming soon"}
+            </span>
+            <span aria-disabled="true" className="text-background/45">
+              {locale === "ms"
+                ? "Mohon sumber — akan datang"
+                : "Request a resource — coming soon"}
+            </span>
           </div>
         </div>
       </div>

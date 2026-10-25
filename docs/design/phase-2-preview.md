@@ -1,53 +1,51 @@
 # Phase 2 coded preview
 
-Status: Awaiting product-owner review  
+Status: Option 2 approved, implemented and verified
 Branch: `phase-2-design-preview`  
-Date: 2026-10-25
+Date: 2026-10-26
 
 ## Purpose
 
 This preview is the visual and interaction checkpoint before the complete Phase 2 interface is expanded. It is deliberately a vertical slice, not a finished website.
 
-## Interim visual direction
+## Approved visual direction
 
-The direction is **warm institutional clarity**:
+The direction is **catalogue-first editorial utility**:
 
-- deep ink typography for confidence and legibility;
-- teal as the principal Kemahiran.AI action colour;
-- amber for LLM Prompts and coral for visual collections;
-- warm off-white surfaces instead of a generic white software dashboard;
-- strong editorial typography, restrained geometry and clear information hierarchy; and
-- Forward Labs ownership with Forward College endorsement.
+- a dark persistent library rail on desktop and compact mobile navigation;
+- an all-resources homepage that exposes the full catalogue count before the three focused libraries;
+- immediate search, filtering and resource access rather than a marketing hero;
+- dense text-led rows for Skills and LLM Prompts without mandatory decorative imagery;
+- Inter-led deep ink typography with JetBrains Mono metadata, vivid green for Skills, indigo for LLM Prompts and amber for visual resources;
+- warm off-white surfaces, precise rules and restrained elevation; and
+- Phosphor interface icons with meaningful regular, bold and filled states; and
+- Forward College endorsement without a redundant ownership byline in the rail.
 
-This is an interim theme until approved Forward College/Forward Labs brand assets and usage guidance are supplied.
+The durable design rules are maintained in the repository-root [DESIGN.md](../../DESIGN.md). Final brand assets may refine the identity without reversing the approved catalogue-first structure.
 
 ## Included in this checkpoint
 
-- responsive shared header and footer;
-- Malay-first homepage with search, library entry points, audience entry points and featured resources;
+- responsive navigation rail/mobile header and compact footer;
+- Malay-first all-resources catalogue as the homepage;
 - clearly differentiated treatments for AI Skills, LLM Prompts and Image & Video Prompts;
-- functional bilingual cross-library keyword search;
-- resource-type and audience filters using shareable URL parameters;
-- library index pages; and
+- functional library search, audience filtering, sorting and a sample advanced filter;
+- text-led library index pages; and
 - representative desktop and compact-screen behaviour.
+
+The 2026-10-26 styling pass applied the approved navy/blue/indigo palette, Inter and JetBrains Mono font roles, 8px control geometry, restrained reveal motion and the Phosphor-only icon system. It preserved the approved shell, catalogue grids, information hierarchy and shadcn/ui component foundation.
+
+The separate Explore rail group and editor's-choice banner were removed after product-owner review because they duplicated the collection model and implied recommendations that had not yet been curated.
 
 ## Intentionally deferred
 
-- the final full facet set, sorting and pagination;
+- cross-library search, the final full facet set and pagination;
 - persistent locale and filter state;
 - active-navigation states and complete mobile-menu behaviour testing;
 - final accessibility audit and Playwright coverage;
 - favourites, authentication and resource requests;
 - redesigned resource-detail templates; and
-- final logos, typography and brand-system application.
+- final logo and favicon assets.
 
-## Review questions
+## Approval record
 
-1. Does the overall tone feel appropriate for teachers, officers and SME/professional users?
-2. Are the three libraries visually distinct without feeling like separate websites?
-3. Is the Malay homepage language clear, direct and non-technical?
-4. Does the homepage offer the right starting points, in the right order?
-5. Are the resource cards informative enough before a user opens one?
-6. Should the visual direction become more institutional, more energetic or remain balanced as shown?
-
-Do not expand the direction across the remaining Phase 2 work until Howie Chang approves it or requests revisions.
+Howie Chang selected Option 2 on 2026-10-25. Expand only the approved catalogue-first direction during Phase 2; material changes to the shell, hierarchy or resource-list pattern require another review checkpoint.

@@ -18,8 +18,7 @@ summary:
     ms: "Jana imej konsep bersih dengan ruang salinan untuk slaid pendidikan, sektor awam dan perniagaan.",
     en: "Generate clean conceptual images with copy space for education, public-sector and business slides.",
   }
-audiences:
-  [education_officers_jpn, public_sector, sme_entrepreneurs, professionals]
+audiences: [education_officers_jpn, sme_entrepreneurs, professionals]
 use_cases: [visual_content, communication]
 sectors: [education, public_service, sme_business, cross_sector]
 categories: [presentation_visuals]

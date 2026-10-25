@@ -3,7 +3,7 @@
 Status: Draft for review  
 Owner: Forward Labs  
 Institutional endorsement: Powered by Forward College, Malaysia  
-Last updated: 2026-10-25
+Last updated: 2026-10-26
 
 ## 1. Product summary
 
@@ -84,29 +84,31 @@ Users should be able to:
 
 Malay labels are shown by default, with equivalent English labels after switching language.
 
-| Malay               | English               | Purpose                                             |
-| ------------------- | --------------------- | --------------------------------------------------- |
-| Utama               | Home                  | Entry points, search, featured and recent resources |
-| Kemahiran AI        | AI Skills             | Multi-step workflows and portable skills            |
-| Prompt LLM          | LLM Prompts           | Copyable text prompts                               |
-| Prompt Imej & Video | Image & Video Prompts | Visual-first collections                            |
-| Teroka              | Explore               | Cross-library browse, audiences and outcomes        |
-| Kegemaran           | Favourites            | Account-backed saved resources                      |
-| Tentang             | About                 | Mission, editorial standards and Forward Labs       |
-| Mohon Sumber        | Request a Resource    | Structured resource request form                    |
+| Malay               | English               | Purpose                                       |
+| ------------------- | --------------------- | --------------------------------------------- |
+| Semua Sumber        | All Resources         | Full catalogue and cross-library discovery    |
+| Kemahiran AI        | AI Skills             | Multi-step workflows and portable skills      |
+| Prompt LLM          | LLM Prompts           | Copyable text prompts                         |
+| Prompt Imej & Video | Image & Video Prompts | Visual-first collections                      |
+| Kegemaran           | Favourites            | Account-backed saved resources                |
+| Tentang             | About                 | Mission, editorial standards and Forward Labs |
+| Mohon Sumber        | Request a Resource    | Structured resource request form              |
 
 The Image and Video content types share one top-level library but must remain independently filterable and switchable.
 
-### Homepage entry points
+### Catalogue-first homepage
 
-- Prominent bilingual cross-library search
-- Three clearly differentiated library cards
-- Browse by audience
-- Browse by desired outcome/use case
-- Featured resources
-- Recently reviewed or added resources
-- Popular Malaysian workflows
-- Short explanation of the difference between Skills and Prompts
+The homepage is not a marketing landing page. It opens directly on the complete catalogue so users see all available resources and the real total count before choosing a focused library.
+
+- Persistent access to the three clearly differentiated libraries
+- Prominent bilingual cross-library search on the homepage, scoped to the selected library on focused index pages
+- Browse by audience and desired outcome/use case
+- Recently reviewed resources; editorial recommendations appear only after a real curated selection exists
+- Dense outcome-focused rows for Skills and LLM Prompts without mandatory decorative images
+- Visual previews reserved for Image and Video Prompt contexts where they materially aid selection
+- Short explanatory guidance available from navigation and contextual help rather than blocking catalogue access
+
+The approved interface direction and component rules are recorded in [DESIGN.md](DESIGN.md).
 
 ### URL structure
 
@@ -163,6 +165,8 @@ SEO requirements include canonical URLs, `hreflang` alternates for `ms-MY` and `
 - Difficulty
 - Intended output
 - Last reviewed
+
+The prominent audience control is labelled **Untuk siapa / For whom** and uses person-oriented groups: Teachers and Educators, Education Officers and JPN, Professionals, and SMEs and Entrepreneurs. Public service remains a separate sector facet rather than appearing as a competing audience option. Student appears only when published resources explicitly target students.
 
 ### Visual-specific facets
 

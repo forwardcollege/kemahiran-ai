@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { parse as parseYaml } from "yaml";
 import { splitBilingualBody, type BilingualBody } from "./languages";
 import {
+  bilingualTaxonomySchema,
   resourceFrontmatterSchema,
   taxonomySchema,
   type Locale,
@@ -17,8 +18,8 @@ const resourceDirectories = [
   "llm-prompts",
   "visual-prompts",
 ] as const;
-type TaxonomyName =
-  "audiences" | "categories" | "sectors" | "tools" | "use-cases";
+export type TaxonomyName =
+  "audiences" | "categories" | "sectors" | "tags" | "tools" | "use-cases";
 
 export type Resource = {
   filePath: string;
@@ -30,14 +31,30 @@ function issue(pathname: string, message: string): never {
   throw new Error(`${path.relative(root, pathname)}: ${message}`);
 }
 
-function readTaxonomyIds(name: TaxonomyName) {
+function readTaxonomy(name: TaxonomyName) {
   const filePath = path.join(contentRoot, "taxonomies", `${name}.yml`);
   const result = taxonomySchema.safeParse(
     parseYaml(readFileSync(filePath, "utf8")),
   );
   if (!result.success)
     issue(filePath, result.error.issues.map((item) => item.message).join("; "));
-  return new Set(result.data.items.map((item) => item.id));
+  return result.data;
+}
+
+function readTaxonomyIds(name: TaxonomyName) {
+  return new Set(readTaxonomy(name).items.map((item) => item.id));
+}
+
+export function getTaxonomyLabels(name: "tags") {
+  const filePath = path.join(contentRoot, "taxonomies", `${name}.yml`);
+  const result = bilingualTaxonomySchema.safeParse(
+    parseYaml(readFileSync(filePath, "utf8")),
+  );
+  if (!result.success)
+    issue(filePath, result.error.issues.map((item) => item.message).join("; "));
+  return Object.fromEntries(
+    result.data.items.map((item) => [item.id, item.label]),
+  );
 }
 
 export function loadResources(): Resource[] {
@@ -82,6 +99,7 @@ export function validateResourceCollection(resources: Resource[]) {
     audiences: readTaxonomyIds("audiences"),
     categories: readTaxonomyIds("categories"),
     sectors: readTaxonomyIds("sectors"),
+    tags: readTaxonomyIds("tags"),
     tools: readTaxonomyIds("tools"),
     use_cases: readTaxonomyIds("use-cases"),
   };
@@ -99,6 +117,7 @@ export function validateResourceCollection(resources: Resource[]) {
       ["audiences", data.audiences],
       ["categories", data.categories],
       ["sectors", data.sectors],
+      ["tags", data.tags],
       ["use_cases", data.use_cases],
     ] as const) {
       for (const value of values)

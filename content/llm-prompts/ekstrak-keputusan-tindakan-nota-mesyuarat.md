@@ -18,7 +18,7 @@ summary:
     ms: Tukar nota dinyahkenal pasti kepada daftar keputusan dan tindakan tanpa menghasilkan minit penuh atau meneka pemilik/tarikh.,
     en: Turn de-identified notes into a decision and action register without drafting full minutes or guessing owners/dates.,
   }
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [administration, productivity]
 sectors: [education, public_service, cross_sector]
 categories: [meeting_actions]

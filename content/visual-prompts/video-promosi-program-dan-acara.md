@@ -16,8 +16,7 @@ title:
 summary:
   ms: Rancang video 10–20 saat yang memperkenalkan program, menunjukkan pengalaman yang dimaksudkan dan menyediakan ruang akhir untuk butiran acara yang disahkan.
   en: Plan a 10–20 second video introducing a programme, showing its intended experience and ending with space for verified event details.
-audiences:
-  [teachers_educators, education_officers_jpn, public_sector, professionals]
+audiences: [teachers_educators, education_officers_jpn, professionals]
 use_cases: [visual_content, communication, marketing]
 sectors: [education, public_service, cross_sector]
 categories: [promotional_video]

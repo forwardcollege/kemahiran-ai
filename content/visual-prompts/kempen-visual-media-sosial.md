@@ -10,8 +10,7 @@ summary:
     ms: "Bina keluarga visual pengumuman, tip, peringatan dan tindakan dengan gaya jenama konsisten merentas format.",
     en: "Build a coherent family of announcement, tip, reminder and action visuals across formats.",
   }
-audiences:
-  [education_officers_jpn, public_sector, sme_entrepreneurs, professionals]
+audiences: [education_officers_jpn, sme_entrepreneurs, professionals]
 use_cases: [visual_content, marketing, communication]
 sectors: [education, public_service, sme_business, cross_sector]
 categories: [social_media_visuals]

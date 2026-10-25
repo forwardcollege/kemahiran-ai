@@ -18,7 +18,7 @@ summary:
     ms: "Organisasikan bukti program kepada laporan yang memisahkan pelaksanaan, output, hasil, tafsiran dan tindakan susulan.",
     en: "Organise programme evidence into a report separating delivery, outputs, outcomes, interpretation and follow-up.",
   }
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [writing_documents, administration, data_analysis]
 sectors: [education, public_service, cross_sector]
 categories: [outcome_reporting]

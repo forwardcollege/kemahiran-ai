@@ -16,7 +16,7 @@ title:
 summary:
   ms: Tukarkan nota yang telah dinyahkenal pasti kepada draf minit formal yang membezakan perbincangan, keputusan dan tindakan untuk pengesahan urus setia.
   en: Turn de-identified notes into formal draft minutes that distinguish discussion, decisions and actions for secretariat verification.
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [administration, writing_documents]
 sectors: [education, public_service, cross_sector]
 categories: [meeting_documentation]

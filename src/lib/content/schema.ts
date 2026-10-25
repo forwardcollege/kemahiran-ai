@@ -252,3 +252,15 @@ export const taxonomySchema = z.object({
   schema_version: z.literal(1),
   items: z.array(z.object({ id: identifier }).passthrough()),
 });
+
+export const bilingualTaxonomySchema = z.object({
+  schema_version: z.literal(1),
+  items: z.array(
+    z
+      .object({
+        id: identifier,
+        label: localizedText,
+      })
+      .passthrough(),
+  ),
+});

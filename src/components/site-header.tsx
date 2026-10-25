@@ -1,134 +1,271 @@
+"use client";
+
 import Link from "next/link";
-import { Heart, Menu, UserRound } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
+import {
+  BookOpenIcon,
+  BooksIcon,
+  ChatTextIcon,
+  CompassIcon,
+  HeartIcon,
+  ImageIcon,
+  ListIcon,
+  PlusCircleIcon,
+  QuestionIcon,
+  SignInIcon,
+  XIcon,
+} from "@phosphor-icons/react/ssr";
 import type { Locale } from "@/lib/content/schema";
 
 const labels = {
   ms: {
-    home: "Utama",
+    collection: "Koleksi",
+    allResources: "Semua sumber",
     skills: "Kemahiran AI",
     prompts: "Prompt LLM",
     visual: "Imej & Video",
-    explore: "Teroka",
     favourites: "Kegemaran",
+    request: "Minta sumber",
+    about: "Tentang",
     signIn: "Log masuk",
     menu: "Buka menu",
+    close: "Tutup menu",
+    openAccess: "Akses terbuka",
+    openAccessBody: "Teroka semua sumber tanpa perlu log masuk.",
   },
   en: {
-    home: "Home",
+    collection: "Collections",
+    allResources: "All resources",
     skills: "AI Skills",
     prompts: "LLM Prompts",
     visual: "Image & Video",
-    explore: "Explore",
     favourites: "Favourites",
+    request: "Request a resource",
+    about: "About",
     signIn: "Sign in",
     menu: "Open menu",
+    close: "Close menu",
+    openAccess: "Open access",
+    openAccessBody: "Explore every resource without signing in.",
   },
 } as const;
 
-export function SiteHeader({ locale }: { locale: Locale }) {
+export function SiteHeader({
+  locale,
+  counts,
+}: {
+  locale: Locale;
+  counts: { skills: number; prompts: number; visual: number };
+}) {
   const copy = labels[locale];
+  const pathname = usePathname();
   const other = locale === "ms" ? "en" : "ms";
-  const links = [
-    [copy.home, `/${locale}`],
-    [copy.skills, `/${locale}/skills`],
-    [copy.prompts, `/${locale}/llm-prompts`],
-    [copy.visual, `/${locale}/visual-prompts`],
-    [copy.explore, `/${locale}/explore`],
-  ] as const;
+  const counterpartPath = pathname.replace(/^\/(ms|en)(?=\/|$)/, `/${other}`);
+  const collectionLinks = [
+    {
+      label: copy.allResources,
+      href: `/${locale}`,
+      count: counts.skills + counts.prompts + counts.visual,
+      icon: BooksIcon,
+      home: true,
+    },
+    {
+      label: copy.skills,
+      href: `/${locale}/skills`,
+      count: counts.skills,
+      icon: BookOpenIcon,
+    },
+    {
+      label: copy.prompts,
+      href: `/${locale}/llm-prompts`,
+      count: counts.prompts,
+      icon: ChatTextIcon,
+    },
+    {
+      label: copy.visual,
+      href: `/${locale}/visual-prompts`,
+      count: counts.visual,
+      icon: ImageIcon,
+    },
+  ];
+  const utilityLinks = [
+    { label: copy.favourites, icon: HeartIcon, disabled: true },
+    { label: copy.request, icon: PlusCircleIcon, disabled: true },
+    { label: copy.about, icon: QuestionIcon, disabled: true },
+  ];
 
-  return (
-    <header className="sticky top-0 z-40 border-b border-foreground/10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/88">
-      <div className="mx-auto flex h-18 max-w-7xl items-center gap-5 px-5 sm:px-8">
-        <Link
-          href={`/${locale}`}
-          className="flex shrink-0 items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/35"
-          aria-label="Kemahiran.AI"
-        >
-          <span className="grid size-9 place-items-center rounded-lg bg-foreground text-sm font-black text-background">
-            K.
-          </span>
-          <span className="text-[1.05rem] font-black tracking-[-0.025em]">
-            Kemahiran<span className="text-primary">.AI</span>
+  const isActive = (href: string, home = false) => {
+    if (home) return pathname === `/${locale}`;
+    return pathname.startsWith(href.split("?")[0]);
+  };
+
+  const navigation = (
+    <>
+      <div className="sidebar-brand">
+        <Link href={`/${locale}`} aria-label="Kemahiran.AI">
+          <span className="brand-mark">K.</span>
+          <span className="brand-name">
+            Kemahiran<span>.AI</span>
           </span>
         </Link>
+        <p>Powered by Forward College</p>
+      </div>
 
-        <nav
-          className="ml-3 hidden items-center gap-1 lg:flex"
-          aria-label={locale === "ms" ? "Navigasi utama" : "Primary navigation"}
-        >
-          {links.slice(1).map(([label, href]) => (
-            <Link
-              key={href}
-              href={href}
-              className="rounded-lg px-3 py-2 text-sm font-semibold text-muted-foreground transition hover:bg-secondary hover:text-foreground focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/30"
-            >
-              {label}
-            </Link>
+      <nav
+        className="sidebar-nav"
+        aria-label={locale === "ms" ? "Navigasi utama" : "Primary navigation"}
+      >
+        <NavGroup label={copy.collection}>
+          {collectionLinks.map(({ icon: Icon, ...link }) => (
+            <NavLink
+              key={link.href}
+              {...link}
+              active={isActive(link.href, link.home)}
+              icon={
+                <Icon
+                  weight={isActive(link.href, link.home) ? "fill" : "regular"}
+                />
+              }
+            />
           ))}
-        </nav>
+        </NavGroup>
+        <div className="sidebar-divider" />
+        <div className="sidebar-links">
+          {utilityLinks.map(({ icon: Icon, ...link }) => (
+            <NavLink
+              key={link.label}
+              {...link}
+              active={false}
+              icon={<Icon weight="regular" />}
+            />
+          ))}
+        </div>
+      </nav>
 
-        <div className="ml-auto hidden items-center gap-2 sm:flex">
-          <Button asChild variant="ghost" size="sm">
-            <Link href={`/${locale}/favourites`}>
-              <Heart aria-hidden="true" className="size-4" />
-              {copy.favourites}
-            </Link>
-          </Button>
-          <Button asChild variant="secondary" size="sm">
-            <Link href={`/${locale}/sign-in`}>
-              <UserRound aria-hidden="true" className="size-4" />
-              {copy.signIn}
-            </Link>
-          </Button>
+      <div className="sidebar-bottom">
+        <div className="access-note">
+          <CompassIcon aria-hidden="true" weight="regular" />
+          <div>
+            <strong>{copy.openAccess}</strong>
+            <p>{copy.openAccessBody}</p>
+          </div>
+        </div>
+        <div className="sidebar-account">
+          <span
+            aria-disabled="true"
+            title={
+              locale === "ms"
+                ? "Akan datang dalam fasa akaun"
+                : "Coming in the account phase"
+            }
+          >
+            <SignInIcon aria-hidden="true" weight="regular" />
+            {copy.signIn}
+          </span>
           <Link
-            href={`/${other}`}
+            href={counterpartPath}
             hrefLang={other === "ms" ? "ms-MY" : "en-MY"}
-            className="rounded-lg border border-border bg-card px-3 py-2 text-xs font-black tracking-wide hover:border-primary/40 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/30"
+            className="language-link"
           >
             {other === "ms" ? "BM" : "EN"}
           </Link>
         </div>
-
-        <details className="group relative ml-auto lg:hidden">
-          <summary className="grid size-11 cursor-pointer list-none place-items-center rounded-xl border border-border bg-card marker:hidden hover:border-primary/40 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/30">
-            <Menu aria-hidden="true" className="size-5" />
-            <span className="sr-only">{copy.menu}</span>
-          </summary>
-          <div className="absolute right-0 mt-3 w-72 border border-border bg-card p-3 shadow-xl">
-            <nav
-              className="grid"
-              aria-label={
-                locale === "ms" ? "Navigasi mudah alih" : "Mobile navigation"
-              }
-            >
-              {links.map(([label, href]) => (
-                <Link
-                  key={href}
-                  href={href}
-                  className="rounded-lg px-3 py-3 text-sm font-bold hover:bg-secondary focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/30"
-                >
-                  {label}
-                </Link>
-              ))}
-              <Link
-                href={`/${locale}/favourites`}
-                className="rounded-lg px-3 py-3 text-sm font-bold hover:bg-secondary focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/30"
-              >
-                {copy.favourites}
-              </Link>
-            </nav>
-            <div className="mt-2 grid grid-cols-2 gap-2 border-t pt-3">
-              <Button asChild variant="secondary" size="sm">
-                <Link href={`/${locale}/sign-in`}>{copy.signIn}</Link>
-              </Button>
-              <Button asChild variant="ghost" size="sm">
-                <Link href={`/${other}`}>{other === "ms" ? "BM" : "EN"}</Link>
-              </Button>
-            </div>
-          </div>
-        </details>
       </div>
-    </header>
+    </>
+  );
+
+  return (
+    <>
+      <aside className="desktop-sidebar">{navigation}</aside>
+      <header className="mobile-header">
+        <Link
+          href={`/${locale}`}
+          className="mobile-brand"
+          aria-label="Kemahiran.AI"
+        >
+          <span className="brand-mark">K.</span>
+          <span className="brand-name">
+            Kemahiran<span>.AI</span>
+          </span>
+        </Link>
+        <div className="mobile-header-actions">
+          <Link href={counterpartPath} className="mobile-language">
+            {other === "ms" ? "BM" : "EN"}
+          </Link>
+          <details className="mobile-menu">
+            <summary>
+              <ListIcon
+                className="menu-open-icon"
+                aria-hidden="true"
+                weight="bold"
+              />
+              <XIcon
+                className="menu-close-icon"
+                aria-hidden="true"
+                weight="bold"
+              />
+              <span className="sr-only">{copy.menu}</span>
+            </summary>
+            <div className="mobile-menu-panel">{navigation}</div>
+          </details>
+        </div>
+      </header>
+    </>
+  );
+}
+
+function NavGroup({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="sidebar-group">
+      <p>{label}</p>
+      <div className="sidebar-links">{children}</div>
+    </section>
+  );
+}
+
+function NavLink({
+  label,
+  href,
+  icon,
+  count,
+  active,
+  disabled = false,
+}: {
+  label: string;
+  href?: string;
+  icon: React.ReactNode;
+  count?: number;
+  active: boolean;
+  home?: boolean;
+  disabled?: boolean;
+}) {
+  if (disabled || !href) {
+    return (
+      <span className="nav-disabled" aria-disabled="true" title="Akan datang">
+        <span className="nav-icon" aria-hidden="true">
+          {icon}
+        </span>
+        <span>{label}</span>
+      </span>
+    );
+  }
+  return (
+    <Link
+      href={href}
+      className={active ? "is-active" : ""}
+      aria-current={active ? "page" : undefined}
+    >
+      <span className="nav-icon" aria-hidden="true">
+        {icon}
+      </span>
+      <span>{label}</span>
+      {count !== undefined ? <span className="nav-count">{count}</span> : null}
+    </Link>
   );
 }

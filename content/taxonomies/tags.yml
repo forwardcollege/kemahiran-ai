@@ -1,0 +1,232 @@
+schema_version: 1
+items:
+  - id: accessibility
+    label: { ms: Kebolehcapaian, en: Accessibility }
+  - id: action_brief
+    label: { ms: Ringkasan tindakan, en: Action Brief }
+  - id: action_register
+    label: { ms: Daftar tindakan, en: Action Register }
+  - id: activity_report
+    label: { ms: Laporan aktiviti, en: Activity Report }
+  - id: analysis
+    label: { ms: Analisis, en: Analysis }
+  - id: anomalies
+    label: { ms: Anomali, en: Anomalies }
+  - id: answer_guidance
+    label: { ms: Panduan jawapan, en: Answer Guidance }
+  - id: answer_scheme
+    label: { ms: Skema jawapan, en: Answer Scheme }
+  - id: assessment
+    label: { ms: Pentaksiran, en: Assessment }
+  - id: brand_consistency
+    label: { ms: Konsistensi jenama, en: Brand Consistency }
+  - id: briefing_note
+    label: { ms: Nota taklimat, en: Briefing Note }
+  - id: budget
+    label: { ms: Bajet, en: Budget }
+  - id: campaign
+    label: { ms: Kempen, en: Campaign }
+  - id: capacity
+    label: { ms: Kapasiti, en: Capacity }
+  - id: catalogue
+    label: { ms: Katalog, en: Catalogue }
+  - id: circular
+    label: { ms: Pekeliling, en: Circular }
+  - id: classroom
+    label: { ms: Bilik darjah, en: Classroom }
+  - id: classroom_activity
+    label: { ms: Aktiviti bilik darjah, en: Classroom Activity }
+  - id: client_brief
+    label: { ms: Keperluan pelanggan, en: Client Brief }
+  - id: complaint
+    label: { ms: Aduan, en: Complaint }
+  - id: content_calendar
+    label: { ms: Kalendar kandungan, en: Content Calendar }
+  - id: copy_space
+    label: { ms: Ruang teks, en: Copy Space }
+  - id: customer_enquiry
+    label: { ms: Pertanyaan pelanggan, en: Customer Enquiry }
+  - id: customer_service
+    label: { ms: Khidmat pelanggan, en: Customer Service }
+  - id: data_quality
+    label: { ms: Kualiti data, en: Data Quality }
+  - id: data_visualisation
+    label: { ms: Visualisasi data, en: Data Visualisation }
+  - id: deadlines
+    label: { ms: Tarikh akhir, en: Deadlines }
+  - id: decision_support
+    label: { ms: Sokongan keputusan, en: Decision Support }
+  - id: decisions
+    label: { ms: Keputusan, en: Decisions }
+  - id: differentiation
+    label: { ms: Pembezaan, en: Differentiation }
+  - id: documentary
+    label: { ms: Dokumentari, en: Documentary }
+  - id: dskp
+    label: { ms: DSKP, en: DSKP }
+  - id: ecommerce
+    label: { ms: E-dagang, en: E-commerce }
+  - id: education_video
+    label: { ms: Video pendidikan, en: Education Video }
+  - id: escalation
+    label: { ms: Eskalasi, en: Escalation }
+  - id: event
+    label: { ms: Acara, en: Event }
+  - id: event_video
+    label: { ms: Video acara, en: Event Video }
+  - id: evidence
+    label: { ms: Bukti, en: Evidence }
+  - id: evidence_of_learning
+    label: { ms: Bukti pembelajaran, en: Evidence of Learning }
+  - id: extension
+    label: { ms: Pengayaan, en: Extension }
+  - id: fairness
+    label: { ms: Keadilan, en: Fairness }
+  - id: formal_malay
+    label: { ms: Bahasa Melayu rasmi, en: Formal Malay }
+  - id: formative_assessment
+    label: { ms: Pentaksiran formatif, en: Formative Assessment }
+  - id: governance
+    label: { ms: Tadbir urus, en: Governance }
+  - id: government_correspondence
+    label: { ms: Surat-menyurat kerajaan, en: Government Correspondence }
+  - id: guardians
+    label: { ms: Penjaga, en: Guardians }
+  - id: hero_image
+    label: { ms: Imej utama, en: Hero Image }
+  - id: higher_order_thinking
+    label: { ms: Pemikiran aras tinggi, en: Higher-Order Thinking }
+  - id: illustration
+    label: { ms: Ilustrasi, en: Illustration }
+  - id: impact
+    label: { ms: Impak, en: Impact }
+  - id: indicators
+    label: { ms: Petunjuk, en: Indicators }
+  - id: infographic
+    label: { ms: Infografik, en: Infographic }
+  - id: kbat
+    label: { ms: KBAT, en: KBAT }
+  - id: kertas_kerja
+    label: { ms: Kertas kerja, en: Programme Paper }
+  - id: key_actions
+    label: { ms: Tindakan utama, en: Key Actions }
+  - id: key_visual
+    label: { ms: Visual utama, en: Key Visual }
+  - id: learning_objective
+    label: { ms: Objektif pembelajaran, en: Learning Objective }
+  - id: lesson_improvement
+    label: { ms: Penambahbaikan pengajaran, en: Lesson Improvement }
+  - id: lesson_planning
+    label: { ms: Perancangan pengajaran, en: Lesson Planning }
+  - id: lifestyle
+    label: { ms: Gaya hidup, en: Lifestyle }
+  - id: malaysia
+    label: { ms: Malaysia, en: Malaysia }
+  - id: management_report
+    label: { ms: Laporan pengurusan, en: Management Report }
+  - id: measurement
+    label: { ms: Pengukuran, en: Measurement }
+  - id: meeting_actions
+    label: { ms: Tindakan mesyuarat, en: Meeting Actions }
+  - id: meeting_minutes
+    label: { ms: Minit mesyuarat, en: Meeting Minutes }
+  - id: metrics
+    label: { ms: Metrik, en: Metrics }
+  - id: micro_explainer
+    label: { ms: Penerangan mikro, en: Micro Explainer }
+  - id: moderation
+    label: { ms: Penyelarasan, en: Moderation }
+  - id: monthly_update
+    label: { ms: Kemas kini bulanan, en: Monthly Update }
+  - id: next_steps
+    label: { ms: Langkah seterusnya, en: Next Steps }
+  - id: official_letter
+    label: { ms: Surat rasmi, en: Official Letter }
+  - id: outcome_report
+    label: { ms: Laporan hasil, en: Outcome Report }
+  - id: outcomes
+    label: { ms: Hasil, en: Outcomes }
+  - id: parents
+    label: { ms: Ibu bapa, en: Parents }
+  - id: pitch_deck
+    label: { ms: Dek pembentangan, en: Pitch Deck }
+  - id: playbook
+    label: { ms: Panduan operasi, en: Playbook }
+  - id: policy
+    label: { ms: Dasar, en: Policy }
+  - id: poster
+    label: { ms: Poster, en: Poster }
+  - id: presentation
+    label: { ms: Pembentangan, en: Presentation }
+  - id: pricing
+    label: { ms: Penetapan harga, en: Pricing }
+  - id: privacy
+    label: { ms: Privasi, en: Privacy }
+  - id: product_photo
+    label: { ms: Foto produk, en: Product Photo }
+  - id: product_video
+    label: { ms: Video produk, en: Product Video }
+  - id: programme
+    label: { ms: Program, en: Programme }
+  - id: programme_objectives
+    label: { ms: Objektif program, en: Programme Objectives }
+  - id: programme_paper
+    label: { ms: Kertas kerja program, en: Programme Paper }
+  - id: programme_promo
+    label: { ms: Promosi program, en: Programme Promotion }
+  - id: proposal
+    label: { ms: Cadangan, en: Proposal }
+  - id: questions
+    label: { ms: Soalan, en: Questions }
+  - id: quiz
+    label: { ms: Kuiz, en: Quiz }
+  - id: recommendation
+    label: { ms: Syor, en: Recommendation }
+  - id: reflection
+    label: { ms: Refleksi, en: Reflection }
+  - id: risks
+    label: { ms: Risiko, en: Risks }
+  - id: rph
+    label: { ms: RPH, en: RPH }
+  - id: rubric
+    label: { ms: Rubrik, en: Rubric }
+  - id: sales
+    label: { ms: Jualan, en: Sales }
+  - id: school_message
+    label: { ms: Mesej sekolah, en: School Message }
+  - id: scope
+    label: { ms: Skop, en: Scope }
+  - id: service_recovery
+    label: { ms: Pemulihan perkhidmatan, en: Service Recovery }
+  - id: sme
+    label: { ms: SME, en: SME }
+  - id: social_ad
+    label: { ms: Iklan media sosial, en: Social Advertisement }
+  - id: social_campaign
+    label: { ms: Kempen media sosial, en: Social Campaign }
+  - id: social_media
+    label: { ms: Media sosial, en: Social Media }
+  - id: social_video
+    label: { ms: Video media sosial, en: Social Video }
+  - id: source_citation
+    label: { ms: Sitasi sumber, en: Source Citation }
+  - id: source_reference
+    label: { ms: Rujukan sumber, en: Source Reference }
+  - id: storyboard
+    label: { ms: Papan cerita, en: Storyboard }
+  - id: student_feedback
+    label: { ms: Maklum balas murid, en: Student Feedback }
+  - id: success_criteria
+    label: { ms: Kriteria kejayaan, en: Success Criteria }
+  - id: support
+    label: { ms: Sokongan, en: Support }
+  - id: training
+    label: { ms: Latihan, en: Training }
+  - id: training_video
+    label: { ms: Video latihan, en: Training Video }
+  - id: visual_system
+    label: { ms: Sistem visual, en: Visual System }
+  - id: weekly_update
+    label: { ms: Kemas kini mingguan, en: Weekly Update }
+  - id: worksheet
+    label: { ms: Lembaran kerja, en: Worksheet }

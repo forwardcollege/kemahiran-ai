@@ -18,7 +18,7 @@ summary:
     ms: "Hasilkan taklimat berjejak tentang tujuan, pihak terlibat, kewajipan, tarikh dan tindakan daripada dokumen rasmi yang dibekalkan.",
     en: "Produce a traceable briefing on purpose, affected parties, obligations, dates and actions from a supplied official document.",
   }
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [administration, research, writing_documents]
 sectors: [education, public_service]
 categories: [policy_analysis]

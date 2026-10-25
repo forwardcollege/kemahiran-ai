@@ -18,8 +18,7 @@ summary:
     ms: "Cipta visual dokumentari persekitaran pembelajaran dan latihan Malaysia yang kredibel, pelbagai dan tidak stereotaip.",
     en: "Create credible, diverse and non-stereotyped documentary visuals of Malaysian learning and training environments.",
   }
-audiences:
-  [teachers_educators, education_officers_jpn, public_sector, professionals]
+audiences: [teachers_educators, education_officers_jpn, professionals]
 use_cases: [visual_content, communication]
 sectors: [education, public_service, cross_sector]
 categories: [training_visuals]

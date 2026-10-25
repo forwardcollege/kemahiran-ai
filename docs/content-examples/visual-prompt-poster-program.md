@@ -18,7 +18,6 @@ summary:
 
 audiences:
   - education_officers_jpn
-  - public_sector
   - sme_entrepreneurs
   - professionals
 use_cases:

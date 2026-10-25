@@ -18,7 +18,7 @@ summary:
     ms: "Susun maklumat disahkan menjadi nota satu halaman dengan isu, implikasi, pilihan, syor dan keputusan diperlukan.",
     en: "Structure verified information into a one-page note covering issue, implications, options, recommendation and decisions required.",
   }
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [writing_documents, administration, productivity]
 sectors: [education, public_service, cross_sector]
 categories: [management_briefings]

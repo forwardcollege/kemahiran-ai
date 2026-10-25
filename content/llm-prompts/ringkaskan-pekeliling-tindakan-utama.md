@@ -18,7 +18,7 @@ summary:
     ms: "Tukar petikan pekeliling kepada tujuan, pihak terlibat, tindakan, tarikh dan soalan penjelasan dengan rujukan sumber.",
     en: "Turn a circular extract into purpose, affected parties, actions, dates and clarification questions with source references.",
   }
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [administration, writing_documents]
 sectors: [education, public_service]
 categories: [circular_summaries]

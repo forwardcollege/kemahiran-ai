@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Search, SlidersHorizontal, X } from "lucide-react";
+import {
+  MagnifyingGlassIcon,
+  SlidersHorizontalIcon,
+  XIcon,
+} from "@phosphor-icons/react/ssr";
 import { ResourceCard } from "@/components/resource-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -13,7 +17,6 @@ const audienceLabels = {
     ms: "Pegawai Pendidikan dan JPN",
     en: "Education Officers and JPN",
   },
-  public_sector: { ms: "Sektor Awam", en: "Public Sector" },
   sme_entrepreneurs: { ms: "SME dan Usahawan", en: "SMEs and Entrepreneurs" },
   professionals: { ms: "Profesional", en: "Professionals" },
   students: { ms: "Pelajar", en: "Students" },
@@ -72,7 +75,7 @@ export default async function ExplorePage({
 
       <section className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
         <form
-          className="border border-foreground/12 bg-card p-4 shadow-sm sm:p-5"
+          className="border border-foreground/12 bg-card p-4 sm:p-5"
           role="search"
         >
           <div className="grid gap-4 lg:grid-cols-[minmax(18rem,1fr)_14rem_16rem_auto] lg:items-end">
@@ -86,9 +89,10 @@ export default async function ExplorePage({
                   : "What do you want to produce?"}
               </label>
               <div className="relative">
-                <Search
+                <MagnifyingGlassIcon
                   aria-hidden="true"
                   className="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground"
+                  weight="regular"
                 />
                 <Input
                   id="explore-search"
@@ -121,12 +125,10 @@ export default async function ExplorePage({
             <FilterSelect
               id="audience"
               name="audience"
-              label={locale === "ms" ? "Pengguna" : "Audience"}
+              label={locale === "ms" ? "Untuk siapa" : "For whom"}
               defaultValue={audience}
             >
-              <option value="">
-                {locale === "ms" ? "Semua pengguna" : "All audiences"}
-              </option>
+              <option value="">{locale === "ms" ? "Semua" : "All"}</option>
               {Object.entries(audienceLabels).map(([id, labels]) => (
                 <option value={id} key={id}>
                   {labels[locale]}
@@ -134,7 +136,11 @@ export default async function ExplorePage({
               ))}
             </FilterSelect>
             <Button type="submit" className="lg:min-w-28">
-              <SlidersHorizontal aria-hidden="true" className="size-4" />
+              <SlidersHorizontalIcon
+                aria-hidden="true"
+                className="size-4"
+                weight="regular"
+              />
               {locale === "ms" ? "Tapis" : "Filter"}
             </Button>
           </div>
@@ -156,7 +162,7 @@ export default async function ExplorePage({
           {hasFilters ? (
             <Button asChild variant="ghost" size="sm">
               <Link href={`/${locale}/explore`}>
-                <X aria-hidden="true" className="size-4" />
+                <XIcon aria-hidden="true" className="size-4" weight="bold" />
                 {locale === "ms" ? "Kosongkan penapis" : "Clear filters"}
               </Link>
             </Button>
@@ -219,7 +225,7 @@ function FilterSelect({
         id={id}
         name={name}
         defaultValue={defaultValue}
-        className="h-12 w-full rounded-xl border border-border bg-card px-3 text-sm font-semibold outline-none focus-visible:border-primary focus-visible:ring-3 focus-visible:ring-ring/25"
+        className="h-12 w-full rounded-lg border border-border bg-card px-3 text-sm font-semibold outline-none focus-visible:border-primary focus-visible:ring-3 focus-visible:ring-ring/25"
       >
         {children}
       </select>

@@ -8,7 +8,7 @@ title: { ms: Draf Surat Rasmi, en: Draft a Formal Official Letter }
 summary:
   ms: Sediakan draf surat rasmi Bahasa Melayu daripada fakta, tujuan, penerima dan tindakan yang telah disahkan tanpa meneka rujukan atau kelulusan.
   en: Prepare a formal Malay-language letter from verified facts, purpose, recipient and action without guessing references or approvals.
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [writing_documents, administration, communication]
 sectors: [education, public_service, cross_sector]
 categories: [official_correspondence]

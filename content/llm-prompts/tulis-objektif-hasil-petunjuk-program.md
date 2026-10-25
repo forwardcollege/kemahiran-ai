@@ -18,7 +18,7 @@ summary:
     ms: "Bezakan aktiviti, output dan hasil lalu bina petunjuk yang realistik berdasarkan bukti yang benar-benar tersedia.",
     en: "Separate activities, outputs and outcomes, then create realistic indicators from evidence that is actually available.",
   }
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [administration, data_analysis]
 sectors: [education, public_service, cross_sector]
 categories: [programme_measurement]

@@ -10,7 +10,7 @@ summary:
     ms: "Susun maklumat program yang disahkan menjadi draf kertas kerja dengan tadbir urus, jadual, bajet, risiko dan gerbang kelulusan.",
     en: "Structure verified programme information into a paper covering governance, schedule, budget, risks and approval gates.",
   }
-audiences: [education_officers_jpn, public_sector, professionals]
+audiences: [education_officers_jpn, professionals]
 use_cases: [administration, writing_documents]
 sectors: [education, public_service, cross_sector]
 categories: [programme_planning]

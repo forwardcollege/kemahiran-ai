@@ -63,6 +63,22 @@ describe("catalogue content", () => {
     ).toThrow("unknown related resource ID");
   });
 
+  it("rejects tags without bilingual taxonomy labels", () => {
+    const resources = loadResources();
+    const unknownTag: Resource = {
+      ...resources[0],
+      filePath: "unknown-tag-fixture.md",
+      data: {
+        ...resources[0].data,
+        tags: [...resources[0].data.tags, "missing_bilingual_tag"],
+      },
+    };
+
+    expect(() =>
+      validateResourceCollection([unknownTag, ...resources.slice(1)]),
+    ).toThrow("unknown tags ID missing_bilingual_tag");
+  });
+
   it("blocks publication while the licence is pending", () => {
     const resource = loadResources()[0].data;
     const result = resourceFrontmatterSchema.safeParse({

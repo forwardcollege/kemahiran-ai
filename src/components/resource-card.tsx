@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowUpRight,
+  ArrowUpRightIcon,
+  ChatTextIcon,
   ImageIcon,
-  MessageSquareText,
-  Sparkles,
-  Video,
-} from "lucide-react";
+  SparkleIcon,
+  VideoCameraIcon,
+} from "@phosphor-icons/react/ssr";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -40,7 +40,6 @@ const audienceLabel = {
   ms: {
     teachers_educators: "Guru & Pendidik",
     education_officers_jpn: "Pegawai Pendidikan & JPN",
-    public_sector: "Sektor Awam",
     sme_entrepreneurs: "SME & Usahawan",
     professionals: "Profesional",
     students: "Pelajar",
@@ -48,7 +47,6 @@ const audienceLabel = {
   en: {
     teachers_educators: "Teachers & Educators",
     education_officers_jpn: "Education Officers & JPN",
-    public_sector: "Public Sector",
     sme_entrepreneurs: "SMEs & Entrepreneurs",
     professionals: "Professionals",
     students: "Students",
@@ -66,20 +64,20 @@ export function ResourceCard({
   const visual = data.type === "visual_prompt" ? data.visual_prompt : null;
   const icon =
     data.type === "skill" ? (
-      <Sparkles aria-hidden="true" className="size-4" />
+      <SparkleIcon aria-hidden="true" className="size-4" weight="regular" />
     ) : data.type === "llm_prompt" ? (
-      <MessageSquareText aria-hidden="true" className="size-4" />
+      <ChatTextIcon aria-hidden="true" className="size-4" weight="regular" />
     ) : visual?.media_type === "video" ? (
-      <Video aria-hidden="true" className="size-4" />
+      <VideoCameraIcon aria-hidden="true" className="size-4" weight="regular" />
     ) : (
-      <ImageIcon aria-hidden="true" className="size-4" />
+      <ImageIcon aria-hidden="true" className="size-4" weight="regular" />
     );
   return (
     <Link
       href={`/${locale}/${libraryPath[data.type]}/${data.slug[locale]}`}
       className="group block focus-visible:outline-none"
     >
-      <Card className="h-full overflow-hidden transition duration-200 group-hover:-translate-y-1 group-hover:border-primary/45 group-hover:shadow-[0_18px_45px_rgba(20,44,55,0.1)] group-focus-visible:ring-3 group-focus-visible:ring-ring/40">
+      <Card className="h-full overflow-hidden transition duration-150 group-hover:border-primary/55 group-focus-visible:ring-3 group-focus-visible:ring-ring/40">
         {visual ? (
           <div className="relative aspect-[16/9] overflow-hidden border-b bg-secondary">
             <Image
@@ -95,14 +93,14 @@ export function ResourceCard({
           </div>
         ) : (
           <div
-            className={`h-1.5 ${data.type === "skill" ? "bg-primary" : "bg-prompt"}`}
+            className={`h-1.5 ${data.type === "skill" ? "bg-skill" : "bg-prompt"}`}
             aria-hidden="true"
           />
         )}
         <CardHeader className="flex h-full flex-col">
           <div className="flex flex-wrap items-center gap-2">
             <Badge
-              className={`gap-1.5 ${data.type === "llm_prompt" ? "bg-prompt text-accent-foreground" : data.type === "visual_prompt" ? "bg-visual text-white" : ""}`}
+              className={`gap-1.5 ${data.type === "skill" ? "bg-skill text-skill-foreground" : data.type === "llm_prompt" ? "bg-prompt text-accent-foreground" : "bg-visual text-foreground"}`}
             >
               {icon}
               {typeLabel[locale][data.type]}
@@ -127,9 +125,10 @@ export function ResourceCard({
                 {data.review.last_reviewed ?? "—"}
               </p>
             </div>
-            <ArrowUpRight
+            <ArrowUpRightIcon
               aria-hidden="true"
               className="size-5 shrink-0 text-primary transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              weight="bold"
             />
           </div>
         </CardHeader>
