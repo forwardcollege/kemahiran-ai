@@ -15,7 +15,7 @@ If documents disagree, stop and raise the conflict instead of silently choosing 
 
 ## 2. Current phase boundary
 
-The repository has implemented **Phase 1 — application foundation and content pipeline** locally. Phase 1 awaits its first hosted CI run after the GitHub repository is connected; Phase 2 still requires explicit approval.
+The repository has completed **Phase 1 — application foundation and content pipeline**, including its first successful hosted CI run. Phase 2 still requires explicit approval.
 
 - Phase 1 application source, tests, content validation and CI may be maintained or repaired.
 - Do not begin Phase 2 discovery/design implementation, configure cloud services, register domains or deploy anything until the user explicitly approves that work.

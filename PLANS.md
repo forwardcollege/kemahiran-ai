@@ -1,6 +1,6 @@
 # Kemahiran.AI — Phased Implementation Plan
 
-Status: Phase 1 implemented locally; awaiting first hosted CI run  
+Status: Phase 1 complete; awaiting explicit Phase 2 approval  
 Last updated: 2026-10-25
 
 This plan turns the product definition in `PROJECT.md` into reviewable phases. The user approved the 36-resource catalogue and authorised Phase 1 on 2026-10-25. Later implementation phases still require their own approval.
@@ -87,9 +87,9 @@ Create the smallest production-shaped foundation that can validate and render on
 - [x] Malay is served by default and the English counterpart maps through the same resource ID.
 - [x] Adding a valid fourth Markdown record requires no application-code change.
 - [x] Raw/unsafe HTML is not rendered from content.
-- [ ] CI and a local production build pass. The full local check passes; the first hosted GitHub Actions run awaits the repository push.
+- [x] CI and a local production build pass.
 
-**Implementation evidence (2026-10-25):** The lockfile install and complete local `pnpm check` passed on Node.js 22. The validator loaded all 36 records (12 Skills, 14 LLM Prompts and 10 visual collections). Automated tests cover type-specific failures, bilingual-section structure, duplicate IDs and slugs, broken relationships, publication gating and unsafe HTML removal. Local HTTP smoke tests returned 200 for representative Skill, LLM Prompt and visual routes; `/` redirects to `/ms`, and paired Skill routes render `ms-MY` and `en-MY` from the same record. The GitHub Actions workflow is committed locally but cannot run until the Forward College remote repository exists.
+**Implementation evidence (2026-10-25):** The lockfile install and complete local `pnpm check` passed on Node.js 22. The validator loaded all 36 records (12 Skills, 14 LLM Prompts and 10 visual collections). Automated tests cover type-specific failures, bilingual-section structure, duplicate IDs and slugs, broken relationships, publication gating and unsafe HTML removal. Local HTTP smoke tests returned 200 for representative Skill, LLM Prompt and visual routes; `/` redirects to `/ms`, and paired Skill routes render `ms-MY` and `en-MY` from the same record. GitHub Actions CI run `40163210030` completed successfully against commit `2fc29ec` in the Forward College repository.
 
 ## Phase 2 — Design system, navigation and discovery
 
