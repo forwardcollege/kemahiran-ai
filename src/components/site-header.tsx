@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import {
   BookOpenIcon,
   BooksIcon,
@@ -62,6 +63,7 @@ export function SiteHeader({
 }) {
   const copy = labels[locale];
   const pathname = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const other = locale === "ms" ? "en" : "ms";
   const counterpartPath = pathname.replace(/^\/(ms|en)(?=\/|$)/, `/${other}`);
   const collectionLinks = [
@@ -189,6 +191,7 @@ export function SiteHeader({
           href={`/${locale}`}
           className="mobile-brand"
           aria-label="Kemahiran.AI"
+          onNavigate={() => setMobileMenuOpen(false)}
         >
           <span className="brand-mark" aria-hidden="true">
             <MagicWandIcon weight="bold" />
@@ -198,10 +201,18 @@ export function SiteHeader({
           </span>
         </Link>
         <div className="mobile-header-actions">
-          <Link href={counterpartPath} className="mobile-language">
+          <Link
+            href={counterpartPath}
+            className="mobile-language"
+            onNavigate={() => setMobileMenuOpen(false)}
+          >
             {other === "ms" ? "BM" : "EN"}
           </Link>
-          <details className="mobile-menu">
+          <details
+            className="mobile-menu"
+            open={mobileMenuOpen}
+            onToggle={(event) => setMobileMenuOpen(event.currentTarget.open)}
+          >
             <summary>
               <ListIcon
                 className="menu-open-icon"
@@ -213,9 +224,21 @@ export function SiteHeader({
                 aria-hidden="true"
                 weight="bold"
               />
-              <span className="sr-only">{copy.menu}</span>
+              <span className="sr-only">
+                {mobileMenuOpen ? copy.close : copy.menu}
+              </span>
             </summary>
-            <div className="mobile-menu-panel">{navigation}</div>
+            <div
+              className="mobile-menu-panel"
+              onClickCapture={(event) => {
+                const target = event.target;
+                if (target instanceof Element && target.closest("a, button")) {
+                  setMobileMenuOpen(false);
+                }
+              }}
+            >
+              {navigation}
+            </div>
           </details>
         </div>
       </header>
