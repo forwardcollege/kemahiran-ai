@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { getVisibleResources } from "@/lib/content/repository";
 import { localeSchema } from "@/lib/content/schema";
 import { getAuthenticatedUser } from "@/lib/supabase/server";
+import { isSearchIndexingEnabled, siteName, siteUrl } from "@/lib/seo";
 import "../globals.css";
 
 const libraryPaths = {
@@ -26,17 +27,55 @@ const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-export const metadata: Metadata = {
-  title: { default: "Kemahiran.AI", template: "%s | Kemahiran.AI" },
-  description: "Pustaka kemahiran dan prompt AI dwibahasa untuk Malaysia.",
-  robots:
-    process.env.NODE_ENV === "production"
-      ? { index: false, follow: false }
-      : undefined,
-};
-
 export function generateStaticParams() {
   return [{ locale: "ms" }, { locale: "en" }];
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const parsed = localeSchema.safeParse((await params).locale);
+  if (!parsed.success) return {};
+  const locale = parsed.data;
+  const indexable = isSearchIndexingEnabled();
+  const description =
+    locale === "ms"
+      ? "Pustaka sumber AI praktikal dwibahasa untuk Malaysia."
+      : "A bilingual library of practical AI resources for Malaysia.";
+
+  return {
+    metadataBase: siteUrl,
+    applicationName: siteName,
+    title: {
+      default:
+        locale === "ms"
+          ? "Kemahiran.AI — Sumber AI praktikal untuk Malaysia"
+          : "Kemahiran.AI — Practical AI resources for Malaysia",
+      template: `%s | ${siteName}`,
+    },
+    description,
+    authors: [{ name: "Forward Labs" }],
+    creator: "Forward Labs",
+    publisher: "Forward Labs",
+    category: "Artificial intelligence resources",
+    referrer: "origin-when-cross-origin",
+    robots: indexable
+      ? {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            noimageindex: false,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+          },
+        }
+      : { index: false, follow: false, noarchive: true },
+  };
 }
 
 export default async function LocaleLayout({

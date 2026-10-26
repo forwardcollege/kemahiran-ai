@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ShieldCheckIcon } from "@phosphor-icons/react/ssr";
@@ -6,6 +7,7 @@ import { GoogleSignInButton } from "@/components/google-sign-in-button";
 import { Button } from "@/components/ui/button";
 import { safeRedirectPath } from "@/lib/auth/redirects";
 import { localeSchema } from "@/lib/content/schema";
+import { privatePageMetadata } from "@/lib/seo";
 import { getAuthenticatedUser } from "@/lib/supabase/server";
 
 const copy = {
@@ -38,6 +40,25 @@ const copy = {
       "Google sign-in has not been configured for this environment.",
   },
 } as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const parsed = localeSchema.safeParse((await params).locale);
+  if (!parsed.success) return {};
+  const locale = parsed.data;
+  return privatePageMetadata({
+    locale,
+    title: locale === "ms" ? "Log masuk" : "Sign in",
+    description:
+      locale === "ms"
+        ? "Log masuk ke Kemahiran.AI untuk menyimpan kegemaran."
+        : "Sign in to Kemahiran.AI to save favourites.",
+    path: "/sign-in",
+  });
+}
 
 export default async function SignInPage({
   params,

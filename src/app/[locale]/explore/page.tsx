@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -10,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { getVisibleResources, type Resource } from "@/lib/content/repository";
 import { localeSchema } from "@/lib/content/schema";
+import { buildLocalizedMetadata } from "@/lib/seo";
 
 const audienceLabels = {
   teachers_educators: { ms: "Guru dan Pendidik", en: "Teachers and Educators" },
@@ -21,6 +23,31 @@ const audienceLabels = {
   professionals: { ms: "Profesional", en: "Professionals" },
   students: { ms: "Pelajar", en: "Students" },
 } as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const parsed = localeSchema.safeParse((await params).locale);
+  if (!parsed.success) return {};
+  const locale = parsed.data;
+  const metadata = buildLocalizedMetadata({
+    locale,
+    title: locale === "ms" ? "Teroka Sumber" : "Explore Resources",
+    description:
+      locale === "ms"
+        ? "Cari dan tapis sumber AI praktikal dalam Bahasa Melayu atau Inggeris."
+        : "Search and filter practical AI resources in Malay or English.",
+    msPath: "/ms",
+    enPath: "/en",
+  });
+
+  return {
+    ...metadata,
+    robots: { index: false, follow: true },
+  };
+}
 
 const typeLabels = {
   skill: { ms: "Kemahiran AI", en: "AI Skills" },

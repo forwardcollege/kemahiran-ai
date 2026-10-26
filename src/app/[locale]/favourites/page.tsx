@@ -1,10 +1,31 @@
+import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { LibraryLanding } from "@/components/library-landing";
 import { getVisibleResources } from "@/lib/content/repository";
 import { localeSchema } from "@/lib/content/schema";
+import { privatePageMetadata } from "@/lib/seo";
 import { getAuthenticatedUser, getFavouriteIds } from "@/lib/supabase/server";
 
 export const dynamic = "force-dynamic";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const parsed = localeSchema.safeParse((await params).locale);
+  if (!parsed.success) return {};
+  const locale = parsed.data;
+  return privatePageMetadata({
+    locale,
+    title: locale === "ms" ? "Kegemaran" : "Favourites",
+    description:
+      locale === "ms"
+        ? "Koleksi peribadi sumber Kemahiran.AI yang disimpan."
+        : "Your private collection of saved Kemahiran.AI resources.",
+    path: "/favourites",
+  });
+}
 
 export default async function FavouritesPage({
   params,

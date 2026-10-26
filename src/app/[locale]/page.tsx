@@ -1,13 +1,16 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import {
   CatalogueBrowser,
   type CatalogueItem,
 } from "@/components/catalogue-browser";
+import { JsonLd } from "@/components/json-ld";
 import {
   getTaxonomyLabels,
   getVisibleResources,
 } from "@/lib/content/repository";
 import { localeSchema } from "@/lib/content/schema";
+import { buildLocalizedMetadata, siteJsonLd } from "@/lib/seo";
 import { getAuthenticatedUser, getFavouriteIds } from "@/lib/supabase/server";
 
 const copy = {
@@ -24,6 +27,28 @@ const copy = {
       "Explore every practical AI skill and prompt curated for Malaysian contexts.",
   },
 } as const;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const parsed = localeSchema.safeParse((await params).locale);
+  if (!parsed.success) return {};
+  const locale = parsed.data;
+  const text = copy[locale];
+
+  return buildLocalizedMetadata({
+    locale,
+    title:
+      locale === "ms"
+        ? "Semua Sumber AI Praktikal"
+        : "All Practical AI Resources",
+    description: text.summary,
+    msPath: "/ms",
+    enPath: "/en",
+  });
+}
 
 export default async function LocaleHome({
   params,
@@ -70,17 +95,20 @@ export default async function LocaleHome({
   const favouriteIds = await getFavouriteIds(user?.id ?? null);
 
   return (
-    <CatalogueBrowser
-      locale={locale}
-      items={items}
-      tagLabels={tagLabels}
-      title={text.title}
-      summary={text.summary}
-      eyebrow={text.eyebrow}
-      initialQuery={query}
-      tone="all"
-      userId={user?.id ?? null}
-      initialSavedIds={favouriteIds}
-    />
+    <>
+      <JsonLd data={siteJsonLd(locale)} />
+      <CatalogueBrowser
+        locale={locale}
+        items={items}
+        tagLabels={tagLabels}
+        title={text.title}
+        summary={text.summary}
+        eyebrow={text.eyebrow}
+        initialQuery={query}
+        tone="all"
+        userId={user?.id ?? null}
+        initialSavedIds={favouriteIds}
+      />
+    </>
   );
 }
