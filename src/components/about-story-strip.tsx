@@ -159,10 +159,10 @@ export function AboutStoryStrip({
       const followingCycleStart = track.querySelector<HTMLElement>(
         '.about-story-frame[data-cycle="4"][data-image-index="0"]',
       );
-      const centreFrame = track.querySelector<HTMLElement>(
-        '.about-story-frame[data-cycle="3"][data-image-index="2"]',
+      const initialFrame = track.querySelector<HTMLElement>(
+        '.about-story-frame[data-cycle="3"][data-image-index="0"]',
       );
-      if (!middleCycleStart || !followingCycleStart || !centreFrame) return;
+      if (!middleCycleStart || !followingCycleStart || !initialFrame) return;
 
       const previousCycleWidth = cycleWidthRef.current;
       const cycleWidth =
@@ -176,7 +176,7 @@ export function AboutStoryStrip({
       if (!initializedRef.current || !previousCycleWidth) {
         const initialX =
           strip.clientWidth / 2 -
-          (centreFrame.offsetLeft + centreFrame.offsetWidth / 2);
+          (initialFrame.offsetLeft + initialFrame.offsetWidth / 2);
         setTrackX(initialX);
         initializedRef.current = true;
         setIsReady(true);
