@@ -67,7 +67,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-meeting-minutes-001]
@@ -145,7 +145,14 @@ Nota sintetik: Tarikh bengkel dicadangkan pada 12 November tertakluk pada penges
 
 #### Contoh hasil
 
-Daftar membezakan cadangan daripada keputusan: tarikh belum diluluskan, manakala tindakan yang jelas ialah Aina menyemak dewan sebelum 30 Oktober.
+| Item               | Klasifikasi | Keputusan atau tindakan                                                                  | Pemilik | Tarikh akhir | Status bukti            |
+| ------------------ | ----------- | ---------------------------------------------------------------------------------------- | ------- | ------------ | ----------------------- |
+| Tarikh bengkel     | Cadangan    | 12 November dicadangkan, tetapi belum diluluskan kerana tertakluk pada pengesahan dewan. | —       | —            | Belum menjadi keputusan |
+| Ketersediaan dewan | Tindakan    | Semak dan sahkan ketersediaan dewan.                                                     | Aina    | 30 Oktober   | Disokong oleh nota      |
+
+**Perkara yang belum dapat dipastikan:** Nota tidak menyatakan siapa yang mempunyai kuasa meluluskan tarikh bengkel atau bila keputusan akhir perlu dibuat.
+
+**Soalan susulan:** Siapakah pemilik keputusan akhir bagi tarikh bengkel selepas status dewan disahkan?
 
 ### Semakan kualiti
 
@@ -196,7 +203,14 @@ Synthetic note: The workshop is proposed for 12 November, subject to venue confi
 
 #### Sample output
 
-The register separates proposal from decision: the date is not approved, while the clear action is for Aina to check the venue by 30 October.
+| Item               | Classification | Decision or action                                                                 | Owner | Due date   | Evidence status       |
+| ------------------ | -------------- | ---------------------------------------------------------------------------------- | ----- | ---------- | --------------------- |
+| Workshop date      | Proposal       | 12 November is proposed but not approved because it depends on venue confirmation. | —     | —          | Not a decision yet    |
+| Venue availability | Action         | Check and confirm whether the hall is available.                                   | Aina  | 30 October | Supported by the note |
+
+**Unresolved matter:** The note does not identify who has authority to approve the workshop date or when the final decision must be made.
+
+**Follow-up question:** Who owns the final decision on the workshop date after the venue status is confirmed?
 
 ### Quality check
 

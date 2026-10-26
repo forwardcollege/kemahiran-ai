@@ -49,9 +49,9 @@ review:
   editorial_reviewer: Howie Chang
   specialist_review_status: not_obtained
   specialist_reviewer: null
-  last_reviewed: "2026-10-25"
-  next_review_due: "2027-04-25"
-version: 0.4.2
+  last_reviewed: "2026-10-26"
+  next_review_due: "2027-04-26"
+version: 0.5.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-parent-message-001, visual-education-001]
@@ -98,7 +98,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-rph-001/0.4.2/generate-dskp-grounded-rph.zip,
+      path: /downloads/skills/skill-rph-001/0.5.0/generate-dskp-grounded-rph.zip,
       format: skill_md_zip,
       included_files:
         [
@@ -221,14 +221,21 @@ Format RPH: Jadual masa, aktiviti, catatan
 
 #### Contoh hasil
 
-| Masa     | Aktiviti                                                           | Bukti pembelajaran                    |
-| -------- | ------------------------------------------------------------------ | ------------------------------------- |
-| 5 minit  | Murid memerhati ais dan meramal perubahan                          | Respons lisan awal                    |
-| 35 minit | Pemerhatian berpandu dan pengelasan contoh pepejal, cecair dan gas | Jadual pengelasan kumpulan            |
-| 15 minit | Soalan semak kefahaman dan pembetulan konsep                       | Tiga jawapan individu                 |
-| 5 minit  | Rumusan dan tiket keluar                                           | Satu contoh bagi setiap keadaan jirim |
+**Status sumber:** Cadangan generik berdasarkan objektif yang diberikan. Penjajaran kepada DSKP belum boleh dituntut kerana petikan standard rasmi tidak disertakan.
 
-`[PERLU SEMAKAN GURU]` Pastikan aktiviti ais mematuhi prosedur keselamatan sekolah dan sesuai dengan kemudahan kelas.
+**Objektif pembelajaran:** Pada akhir pelajaran, murid dapat menerangkan tiga keadaan jirim dan mengelaskan sekurang-kurangnya lima daripada enam contoh harian dengan alasan yang sesuai.
+
+**Kriteria kejayaan:** “Saya boleh menamakan pepejal, cecair dan gas; mengelaskan sekurang-kurangnya 5/6 contoh; dan menerangkan satu ciri bagi setiap keadaan.”
+
+| Masa     | Aktiviti guru dan murid                                                                                                          | Pentaksiran formatif/bukti                                                             | Sokongan dan pengayaan                                                                                   |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 5 minit  | Murid memerhati ais dalam cawan dan menulis satu ramalan perubahan. Guru mengumpul dua respons berbeza tanpa membetulkan dahulu. | Ramalan individu menunjukkan idea awal tentang perubahan jirim.                        | Sediakan pilihan kata “kekal/berubah” dan ruang lakaran.                                                 |
+| 10 minit | Guru memodelkan ciri pepejal, cecair dan gas menggunakan imej serta contoh kelas. Murid membina jadual tiga lajur.               | Soal jawab pantas: bentuk tetap, isi padu dan kebolehan memenuhi ruang.                | Pengayaan: minta murid jelaskan contoh yang mudah dikelirukan.                                           |
+| 20 minit | Kumpulan mengelaskan enam contoh dan menulis alasan bagi dua pilihan.                                                            | Jadual kumpulan; guru menandakan alasan yang menggunakan ciri, bukan nama semata-mata. | Beri kad ciri untuk sokongan; minta pengayaan menilai satu klasifikasi rakan.                            |
+| 15 minit | Murid menjawab tiga soalan individu. Guru membincangkan satu salah faham umum berdasarkan respons sebenar.                       | Tiga respons individu menjadi semakan objektif.                                        | Soalan lisan alternatif disediakan jika penulisan menjadi halangan yang tidak berkaitan dengan objektif. |
+| 10 minit | Rumusan dan tiket keluar: satu contoh bagi setiap keadaan serta satu ayat tentang perubahan ais.                                 | Tiket keluar individu untuk menentukan pengajaran susulan.                             | Murid yang siap awal menerangkan urutan pepejal → cecair menggunakan istilah yang tepat.                 |
+
+`[PERLU SEMAKAN GURU]` Sahkan istilah dan skop dengan DSKP semasa. Pastikan aktiviti ais mematuhi prosedur keselamatan, dan gunakan respons tiket keluar untuk memutuskan sama ada konsep perlu diajar semula.
 
 ### Semakan kualiti
 
@@ -324,14 +331,21 @@ Format: Timing, activity and notes table
 
 #### Sample output
 
-| Time       | Activity                                     | Evidence of learning       |
-| ---------- | -------------------------------------------- | -------------------------- |
-| 5 minutes  | Observe ice and predict change               | Initial oral responses     |
-| 35 minutes | Guided observation and classification        | Group classification table |
-| 15 minutes | Check questions and misconception correction | Three individual answers   |
-| 5 minutes  | Summary and exit ticket                      | One example for each state |
+**Source status:** A generic suggestion based on the supplied objective. DSKP alignment cannot be claimed because no official standards extract was supplied.
 
-`[TEACHER REVIEW REQUIRED]` Confirm the ice activity follows school safety procedures and suits the available facilities.
+**Learning objective:** By the end of the lesson, learners can explain the three states of matter and classify at least five of six everyday examples with an appropriate reason.
+
+**Success criteria:** “I can name solids, liquids and gases; classify at least 5/6 examples; and explain one property of each state.”
+
+| Time       | Teacher and learner activity                                                                                                                     | Formative assessment/evidence                                                      | Support and extension                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| 5 minutes  | Learners observe ice in a cup and write one prediction about change. The teacher collects two contrasting responses without correcting them yet. | Individual predictions reveal initial ideas about changes of state.                | Provide “stays the same/changes” vocabulary choices and a drawing space.                 |
+| 10 minutes | The teacher models properties of solids, liquids and gases using images and classroom examples. Learners build a three-column table.             | Quick questions check fixed shape, volume and filling available space.             | Extension: explain an example that is easy to misclassify.                               |
+| 20 minutes | Groups classify six examples and write reasons for two choices.                                                                                  | Group table; teacher notes whether reasons use properties rather than names alone. | Provide property cards for support; extension learners evaluate one peer classification. |
+| 15 minutes | Learners answer three individual questions. The teacher addresses one common misconception from the actual responses.                            | Three individual responses provide an objective check.                             | Offer an oral-response alternative when writing is a barrier unrelated to the objective. |
+| 10 minutes | Summary and exit ticket: one example for each state and one sentence about the change in ice.                                                    | Individual exit tickets guide the next teaching decision.                          | Early finishers explain the solid → liquid sequence using accurate terms.                |
+
+`[TEACHER REVIEW REQUIRED]` Verify terminology and scope against the current DSKP. Confirm that the ice activity follows school safety procedures, and use exit-ticket evidence to decide whether the concept needs reteaching.
 
 ### Quality check
 

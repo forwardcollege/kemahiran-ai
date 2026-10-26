@@ -67,7 +67,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [visual-product-photo-001]
@@ -166,6 +166,8 @@ visual_prompt:
 
 ### Kegunaan koleksi
 
+> **Pratonton contoh:** Imej di atas ialah papan cerita sintetik untuk menunjukkan urutan syot. Ia bukan klip video janaan dan bukan gambaran prestasi penjana video yang telah diuji.
+
 Rancang video produk ringkas dengan pergerakan kamera, pencahayaan dan bingkai akhir yang terkawal tanpa mencipta ciri produk.
 
 ### Sebelum menjana
@@ -195,10 +197,11 @@ Cipta video produk {{NISBAH_ASPEK}} selama 12 saat menggunakan rujukan {{PRODUK}
 
 ### Cadangan penggunaan
 
-1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
-2. Jana draf tanpa teks atau logo rasmi supaya visual boleh disemak terlebih dahulu.
-3. Semak kesinambungan bingkai demi bingkai, kemudian jana semula bahagian yang bermasalah.
-4. Tambah sari kata, audio berlesen, logo dan butiran disahkan semasa penyuntingan.
+1. Sediakan foto rujukan produk yang dibenarkan dan senaraikan ciri yang tidak boleh berubah: bentuk, warna, label, kuantiti serta aksesori.
+2. Rancang urutan syot—pengenalan, butiran, aksi penggunaan yang benar dan bingkai akhir—sebelum menjana video.
+3. Jana klip pendek tanpa teks, harga atau logo. Bandingkan bingkai utama dengan produk sebenar dan tolak klip yang mengubah ciri.
+4. Semak kesinambungan produk, tangan, pantulan, pembungkusan dan latar bingkai demi bingkai; jana semula segmen bermasalah.
+5. Tambah harga, promosi, tuntutan, logo sebenar, sari kata dan audio berlesen hanya selepas semua butiran disahkan manusia.
 
 ### Semakan hasil
 
@@ -216,6 +219,8 @@ Semak setiap bingkai terhadap foto produk. Tambah harga, promosi dan tuntutan ha
 ## English
 
 ### What this collection is for
+
+> **Representative preview:** The image above is a synthetic storyboard showing the shot sequence. It is not a generated video clip and does not represent tested video-generator performance.
 
 Plan short product videos with controlled camera, lighting and end frames without inventing product features.
 
@@ -246,10 +251,11 @@ Create a 12-second {{ASPECT_RATIO}} product video using {{PRODUCT}} reference im
 
 ### Suggested workflow
 
-1. Choose one prompt and replace every variable using the verified brief.
-2. Generate a draft without official text or logos so the visuals can be reviewed first.
-3. Review continuity frame by frame, then regenerate any problematic segment.
-4. Add captions, licensed audio, logos and verified details during editing.
+1. Supply authorised product photographs and list immutable features: shape, colour, label, quantity and included accessories.
+2. Plan the shot sequence—introduction, detail, truthful use action and end frame—before generating video.
+3. Generate short clips without copy, prices or logos. Compare key frames with the real product and reject clips that alter its features.
+4. Review product, hands, reflections, packaging and background frame by frame; regenerate problematic segments.
+5. Add prices, promotions, claims, genuine logos, captions and licensed audio only after every detail has been human-verified.
 
 ### Output checks
 

@@ -51,7 +51,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-meeting-minutes-001]
@@ -186,7 +186,30 @@ Penerima: Pegawai Pendidikan Daerah. Tujuan: memohon penggunaan dewan bagi bengk
 
 #### Contoh hasil
 
-Draf surat menggunakan Bahasa Melayu rasmi, menandakan nombor rujukan sebagai belum disahkan dan meninggalkan tandatangan kepada pegawai yang diberi kuasa.
+| Butiran surat | Nilai                             |
+| ------------- | --------------------------------- |
+| Ruj. Kami     | `[NOMBOR RUJUKAN BELUM DISAHKAN]` |
+| Tarikh        | `[TARIKH SURAT]`                  |
+
+**Kepada:** Pegawai Pendidikan Daerah, `[NAMA DAERAH]`
+
+Tuan/Puan,
+
+**PERMOHONAN PENGGUNAAN DEWAN BAGI PELAKSANAAN BENGKEL PADA 12 NOVEMBER**
+
+Dengan hormatnya perkara di atas dirujuk.
+
+2. Kami memohon pertimbangan pihak tuan/puan untuk menggunakan dewan bagi pelaksanaan bengkel pada 12 November yang melibatkan **80 peserta**. Jadual program dilampirkan untuk rujukan dan penelitian pihak tuan/puan.
+
+3. Sehubungan itu, kami amat menghargai pengesahan bertulis selewat-lewatnya pada **30 Oktober** bagi membolehkan urusan logistik dimuktamadkan. Permohonan ini tertakluk pada syarat penggunaan dewan yang ditetapkan oleh pihak tuan/puan.
+
+Sekian, terima kasih.
+
+“BERKHIDMAT UNTUK NEGARA”
+
+Saya yang menjalankan amanah,
+
+**`[NAMA DAN JAWATAN PEGAWAI YANG DIBERI KUASA]`**, `[ORGANISASI]`
 
 ### Semakan kualiti
 
@@ -255,7 +278,28 @@ Recipient: District Education Officer. Purpose: request use of a hall for a work
 
 #### Sample output
 
-The draft uses formal language, marks the reference number as unconfirmed and leaves sign-off to an authorised officer.
+| Letter detail | Value                                  |
+| ------------- | -------------------------------------- |
+| Our Ref.      | `[REFERENCE NUMBER NOT YET CONFIRMED]` |
+| Date          | `[LETTER DATE]`                        |
+
+**To:** District Education Officer, `[DISTRICT NAME]`
+
+Sir/Madam,
+
+**REQUEST TO USE THE HALL FOR A WORKSHOP ON 12 NOVEMBER**
+
+We respectfully refer to the matter above.
+
+2. We seek your consideration to use the hall for a workshop on 12 November involving **80 participants**. The programme schedule is attached for your review.
+
+3. We would appreciate written confirmation by **30 October** so that logistical arrangements can be finalised. This request remains subject to the venue conditions determined by your office.
+
+Thank you.
+
+Yours faithfully,
+
+**`[NAME AND TITLE OF AUTHORISED OFFICER]`**, `[ORGANISATION]`
 
 ### Quality check
 

@@ -71,7 +71,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [visual-education-001, visual-presentation-hero-001]
@@ -191,10 +191,11 @@ Hasilkan fotografi editorial semula jadi {{NISBAH_ASPEK}} di {{LOKASI}}. Paparka
 
 ### Cadangan penggunaan
 
-1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
-2. Jana beberapa draf tanpa teks atau logo rasmi.
-3. Pilih draf yang paling tepat, kemudian semak fakta, representasi dan kecacatan visual.
-4. Tambah salinan, data, logo dan butiran rasmi dalam alat reka bentuk yang boleh diakses.
+1. Nyatakan jenis ruang sebenar—bilik darjah, bengkel pegawai atau latihan SME—berserta aktiviti, saiz kumpulan dan peralatan yang munasabah.
+2. Gunakan rujukan ruang atau pakaian hanya jika anda mempunyai hak dan kebenaran; jangan muat naik foto murid atau peserta sebenar tanpa asas yang sah.
+3. Jana beberapa draf tanpa teks atau logo, kemudian semak susun atur perabot, keselamatan, anatomi, interaksi dan kepelbagaian yang tidak stereotaip.
+4. Pilih visual yang menunjukkan aktiviti yang boleh dipercayai, bukan sekadar peserta tersenyum menghadap kamera. Tandakan ia sebagai ilustrasi sintetik.
+5. Tambah kapsyen, butiran rasmi dan teks alternatif dalam alat reka bentuk serta pastikan ia tidak didakwa sebagai dokumentasi acara sebenar.
 
 ### Semakan hasil
 
@@ -237,10 +238,11 @@ Create a natural editorial {{ASPECT_RATIO}} photograph in {{SETTING}}. Show a sm
 
 ### Suggested workflow
 
-1. Choose one prompt and replace every variable using the verified brief.
-2. Generate several drafts without official text or logos.
-3. Select the most accurate draft, then check facts, representation and visual defects.
-4. Add copy, data, logos and official details in an accessible design tool.
+1. Specify the real setting type—classroom, officer workshop or SME training—together with a plausible activity, group size and equipment.
+2. Use room or clothing references only when you have rights and permission; do not upload photographs of real learners or participants without a valid basis.
+3. Generate several drafts without text or logos, then review furniture layout, safety, anatomy, interaction and non-stereotyped diversity.
+4. Select a visual that shows a credible activity rather than participants merely smiling at the camera. Label it as a synthetic illustration.
+5. Add captions, official details and alternative text in a design tool, and never present it as documentation of a real event.
 
 ### Output checks
 

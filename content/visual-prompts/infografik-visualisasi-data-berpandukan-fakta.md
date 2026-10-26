@@ -73,7 +73,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-activity-report-001, skill-management-report-001]
@@ -200,10 +200,11 @@ Reka susun atur infografik 4:5 tanpa teks berdasarkan hierarki {{HIERARKI}} untu
 
 ### Cadangan penggunaan
 
-1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
-2. Jana beberapa draf tanpa teks atau logo rasmi.
-3. Pilih draf yang paling tepat, kemudian semak fakta, representasi dan kecacatan visual.
-4. Tambah salinan, data, logo dan butiran rasmi dalam alat reka bentuk yang boleh diakses.
+1. Sahkan soalan analisis, set data, unit, tempoh dan sumber sebelum memilih jenis carta.
+2. Gunakan prompt untuk menjana arah seni atau struktur visual sahaja—tanpa nombor, label, paksi atau sumber rekaan.
+3. Bina semula carta daripada data sebenar dalam alat visualisasi atau reka bentuk yang menyokong nilai tepat.
+4. Bandingkan setiap nilai, jumlah dan peratus dengan sumber; paparkan penyebut, tempoh dan pembundaran dengan jelas.
+5. Tambah tajuk, label, sumber dan teks alternatif. Gunakan bentuk atau corak selain warna supaya siri masih dapat dibezakan.
 
 ### Semakan hasil
 
@@ -247,10 +248,11 @@ Design a text-free 4:5 infographic layout using {{HIERARCHY}} for {{VERIFIED_DAT
 
 ### Suggested workflow
 
-1. Choose one prompt and replace every variable using the verified brief.
-2. Generate several drafts without official text or logos.
-3. Select the most accurate draft, then check facts, representation and visual defects.
-4. Add copy, data, logos and official details in an accessible design tool.
+1. Verify the analytical question, dataset, units, period and source before choosing a chart type.
+2. Use the prompt to generate art direction or visual structure only—without invented numbers, labels, axes or sources.
+3. Rebuild the chart from the real data in a visualisation or design tool that supports exact values.
+4. Reconcile every value, total and percentage with the source; show denominators, periods and rounding clearly.
+5. Add the title, labels, source and alternative text. Use shape or pattern as well as colour so series remain distinguishable.
 
 ### Output checks
 

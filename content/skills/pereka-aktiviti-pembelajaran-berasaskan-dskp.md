@@ -56,10 +56,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.2
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids:
@@ -108,7 +108,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-dskp-activity-001/0.2.2/design-dskp-aligned-activities.zip,
+      path: /downloads/skills/skill-dskp-activity-001/0.3.0/design-dskp-aligned-activities.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -187,7 +187,19 @@ Perkataan seperti menulis, mencatat, melengkapkan lembaran, menggunakan kad, mer
 
 ### Contoh penggunaan
 
-Input sintetik: Sains Tingkatan 1, standard yang disahkan tentang ketumpatan, 40 minit, penimbang, silinder penyukat, air dan tiga objek selamat. Hasil sepatutnya membandingkan demonstrasi berpandu, siasatan kumpulan kecil dan analisis data yang diberikan tanpa menambah bahan lain.
+#### Contoh input
+
+Sains Tingkatan 1. Petikan standard yang disahkan meminta murid menentukan ketumpatan menggunakan jisim dan isi padu serta mentafsir keputusan. Masa: 40 minit. Sumber: penimbang, silinder penyukat, air dan tiga objek selamat. Bukti akhir: jadual data, satu pengiraan dan kesimpulan berasaskan bukti.
+
+#### Contoh hasil
+
+| Pilihan aktiviti             | Aliran 40 minit                                                                                                                                                                                   | Bukti pembelajaran                                                     | Kekuatan dan batas                                                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| A — Demonstrasi berpandu     | Guru memodelkan ukuran satu objek (10 minit); kelas melengkapkan pengiraan bersama (10 minit); murid menganalisis data dua objek lain (15 minit); tiket keluar (5 minit).                         | Jadual separa lengkap, satu pengiraan individu dan penerangan ringkas. | Sesuai jika set peralatan terhad; kurang peluang mengendalikan alat.           |
+| B — Siasatan kumpulan kecil  | Taklimat keselamatan (5 minit); kumpulan mengukur tiga objek (20 minit); mengira dan membandingkan (10 minit); rumusan (5 minit).                                                                 | Jadual ukuran kumpulan, pengiraan individu dan kesimpulan.             | Bukti proses lebih kaya; memerlukan peralatan mencukupi dan pemantauan ukuran. |
+| C — Analisis data dibekalkan | Guru menunjukkan cara membaca jadual (5 minit); murid mengira ketumpatan daripada set data (20 minit); membandingkan keputusan dan menilai satu bacaan ganjil (10 minit); tiket keluar (5 minit). | Tiga pengiraan, pengesanan anomali dan kesimpulan berasaskan data.     | Mengutamakan penaakulan data; tidak menilai kemahiran mengendalikan alat.      |
+
+**Syor bersyarat:** Pilih B jika nisbah peralatan dan pengawasan selamat mencukupi; gunakan A jika peralatan terhad; gunakan C jika objektif utama ialah pengiraan dan tafsiran. Jangan tuntut penjajaran kepada kod standard tertentu tanpa menyemak petikan DSKP dan konteks kelas sebenar.
 
 ### Semakan kualiti
 
@@ -243,7 +255,19 @@ Words such as write, record, complete a worksheet, use cards, consult a picture 
 
 ### Worked example
 
-Synthetic input: Form 1 Science, a confirmed density standard, 40 minutes, a scale, measuring cylinder, water and three safe objects. The result should compare a guided demonstration, small-group investigation and supplied-data analysis without adding materials.
+#### Sample input
+
+Form 1 Science. A verified standards extract asks learners to determine density from mass and volume and interpret the result. Time: 40 minutes. Resources: a scale, measuring cylinder, water and three safe objects. Final evidence: a data table, one calculation and an evidence-based conclusion.
+
+#### Sample output
+
+| Activity option               | 40-minute flow                                                                                                                                                                   | Evidence of learning                                                      | Strength and limitation                                                         |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| A — Guided demonstration      | Teacher models measurement for one object (10 min); class completes one calculation together (10 min); learners analyse data for two more objects (15 min); exit ticket (5 min). | Part-completed table, one individual calculation and a short explanation. | Suitable when equipment is limited; less opportunity to handle apparatus.       |
+| B — Small-group investigation | Safety briefing (5 min); groups measure three objects (20 min); calculate and compare (10 min); conclusion (5 min).                                                              | Group measurement table, individual calculation and conclusion.           | Richer process evidence; requires enough equipment and measurement supervision. |
+| C — Supplied-data analysis    | Teacher models table reading (5 min); learners calculate density from a dataset (20 min); compare results and evaluate one anomalous reading (10 min); exit ticket (5 min).      | Three calculations, anomaly identification and data-based conclusion.     | Prioritises data reasoning; does not assess apparatus handling.                 |
+
+**Conditional recommendation:** Select B when equipment ratios and safe supervision are sufficient; use A when equipment is limited; use C when calculation and interpretation are the main focus. Do not claim alignment to a particular standards code without checking the supplied DSKP extract and actual class context.
 
 ### Quality check
 

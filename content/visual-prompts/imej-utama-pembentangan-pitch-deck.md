@@ -73,7 +73,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [visual-training-scene-001, visual-event-poster-001]
@@ -178,10 +178,11 @@ Cipta visual utama mendatar 16:9 untuk slaid tentang {{KONSEP}}. Gunakan metafor
 
 ### Cadangan penggunaan
 
-1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
-2. Jana beberapa draf tanpa teks atau logo rasmi.
-3. Pilih draf yang paling tepat, kemudian semak fakta, representasi dan kecacatan visual.
-4. Tambah salinan, data, logo dan butiran rasmi dalam alat reka bentuk yang boleh diakses.
+1. Tentukan satu mesej utama slaid dan metafora visual yang tidak melebih-lebihkan kejayaan, skala atau impak.
+2. Gantikan semua pemboleh ubah, termasuk subjek, konteks dan kawasan kosong yang diperlukan untuk tajuk.
+3. Jana beberapa draf tanpa teks, angka atau logo rasmi; pilih berdasarkan kejelasan fokus dan ruang salinan, bukan hiasan semata-mata.
+4. Uji draf dengan tajuk sebenar dalam nisbah slaid akhir. Pastikan subjek tidak terlindung apabila imej dipotong atau dipaparkan pada skrin kecil.
+5. Tambah tajuk, data, sumber dan logo sebenar dalam perisian pembentangan, kemudian semak kontras dan teks alternatif.
 
 ### Semakan hasil
 
@@ -223,10 +224,11 @@ Create a 16:9 landscape hero visual for a slide about {{CONCEPT}}. Use a simple 
 
 ### Suggested workflow
 
-1. Choose one prompt and replace every variable using the verified brief.
-2. Generate several drafts without official text or logos.
-3. Select the most accurate draft, then check facts, representation and visual defects.
-4. Add copy, data, logos and official details in an accessible design tool.
+1. Define one slide message and a visual metaphor that does not exaggerate success, scale or impact.
+2. Replace every variable, including the subject, context and safe space needed for the title.
+3. Generate several drafts without official text, figures or logos; select for focal clarity and copy space rather than decoration alone.
+4. Test the draft with the real title in the final slide ratio. Confirm that the subject survives cropping and small-screen display.
+5. Add the title, data, sources and genuine logo in presentation software, then check contrast and alternative text.
 
 ### Output checks
 

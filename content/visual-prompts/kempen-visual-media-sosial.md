@@ -65,7 +65,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-social-calendar-001, visual-event-poster-001]
@@ -185,10 +185,11 @@ Cipta helaian konsep 1:1 yang menunjukkan empat jubin visual tanpa teks untuk ke
 
 ### Cadangan penggunaan
 
-1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
-2. Jana beberapa draf tanpa teks atau logo rasmi.
-3. Pilih draf yang paling tepat, kemudian semak fakta, representasi dan kecacatan visual.
-4. Tambah salinan, data, logo dan butiran rasmi dalam alat reka bentuk yang boleh diakses.
+1. Tetapkan satu idea kempen, audiens, nada, palet dan unsur visual yang mesti konsisten merentas semua saluran.
+2. Jana visual induk tanpa teks, seruan tindakan atau logo; semak ketepatan objek, manusia dan konteks sebelum menghasilkan variasi.
+3. Jana setiap nisbah sebagai komposisi tersendiri, bukan sekadar memotong satu imej. Kekalkan subjek, pencahayaan dan bahasa visual yang sama.
+4. Susun variasi bersebelahan untuk mengesan perubahan wajah, produk, pakaian, warna atau mesej yang tidak disengajakan.
+5. Tambah salinan, seruan tindakan, tarikh dan logo yang diluluskan dalam alat reka bentuk; semak zon selamat serta kebolehbacaan pada telefon.
 
 ### Semakan hasil
 
@@ -232,10 +233,11 @@ Create a 1:1 concept sheet showing four text-free visual tiles for a {{THEME}} c
 
 ### Suggested workflow
 
-1. Choose one prompt and replace every variable using the verified brief.
-2. Generate several drafts without official text or logos.
-3. Select the most accurate draft, then check facts, representation and visual defects.
-4. Add copy, data, logos and official details in an accessible design tool.
+1. Define one campaign idea, audience, tone, palette and set of visual elements that must remain consistent across channels.
+2. Generate a master visual without copy, calls to action or logos; verify objects, people and context before producing variants.
+3. Generate each ratio as its own composition rather than simply cropping one image. Preserve the same subject, lighting and visual language.
+4. Review variants side by side for unintended changes to faces, products, clothing, colour or message.
+5. Add approved copy, calls to action, dates and logos in a design tool; check safe zones and phone-size readability.
 
 ### Output checks
 

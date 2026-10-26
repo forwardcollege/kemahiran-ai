@@ -61,7 +61,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.6.0
+version: 0.7.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-dskp-activity-001, skill-rph-001]
@@ -173,7 +173,13 @@ Objektif: membandingkan dua sumber tenaga. Aktiviti asal: membaca petikan dan me
 
 #### Contoh hasil
 
-Tiga pilihan sokongan, teras dan pengayaan mengekalkan objektif serta bukti pembelajaran yang sama tanpa melabel atau mendiagnosis murid.
+| Pilihan                 | Pengalaman pembelajaran                                                                                              | Sokongan atau cabaran                                                                           | Bukti pembelajaran yang sama                                                         |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| A — Arahan berperingkat | Murid membaca petikan yang dipecahkan kepada dua bahagian, kemudian melengkapkan jadual “persamaan–perbezaan–bukti”. | Arahan satu langkah pada satu masa, dua istilah utama diterangkan dan satu contoh baris diberi. | Perbandingan dua sumber tenaga dengan sekurang-kurangnya dua bukti daripada petikan. |
+| B — Teras               | Murid membaca petikan penuh secara berpasangan dan menghasilkan rajah Venn sebelum penerangan lisan 60 saat.         | Senarai semak kendiri: ciri, manfaat, batas dan bukti.                                          | Perbandingan dua sumber tenaga dengan sekurang-kurangnya dua bukti daripada petikan. |
+| C — Pengayaan           | Murid menilai sumber tenaga yang lebih sesuai untuk satu situasi rekaan dan mempertahankan pilihan.                  | Mesti menyatakan satu pertukaran atau batas pada cadangan sendiri.                              | Perbandingan dua sumber tenaga dengan sekurang-kurangnya dua bukti daripada petikan. |
+
+**Aliran 30 minit:** 4 minit penerangan bersama, 14 minit aktiviti pilihan, 7 minit perkongsian, 5 minit tiket keluar. Murid boleh memilih atau guru boleh menawarkan pilihan tanpa melabel keupayaan mereka.
 
 ### Semakan kualiti
 
@@ -237,7 +243,13 @@ Objective: compare two energy sources. Original activity: read a passage and exp
 
 #### Sample output
 
-Three support, core and extension options retain the same objective and learning evidence without labelling or diagnosing learners.
+| Option                  | Learning experience                                                                                    | Support or challenge                                                        | Common evidence of learning                                                                       |
+| ----------------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| A — Staged instructions | Learners read the passage in two sections, then complete a “similarity–difference–evidence” table.     | One instruction at a time, two key terms explained and one worked row.      | A comparison of two energy sources supported by at least two pieces of evidence from the passage. |
+| B — Core                | Learners read the full passage in pairs and create a Venn diagram before a 60-second oral explanation. | Self-check list: feature, benefit, limitation and evidence.                 | A comparison of two energy sources supported by at least two pieces of evidence from the passage. |
+| C — Extension           | Learners decide which source suits a fictional situation and defend their choice.                      | They must identify one trade-off or limitation in their own recommendation. | A comparison of two energy sources supported by at least two pieces of evidence from the passage. |
+
+**30-minute flow:** 4 minutes shared explanation, 14 minutes selected activity, 7 minutes sharing, 5 minutes exit ticket. Learners may choose, or the teacher may offer options without labelling ability.
 
 ### Quality check
 

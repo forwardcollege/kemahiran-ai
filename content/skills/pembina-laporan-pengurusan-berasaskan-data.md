@@ -64,10 +64,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.2
+version: 0.2.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-sales-analysis-001, prompt-management-update-001]
@@ -104,7 +104,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-management-report-001/0.1.2/build-data-informed-management-report.zip,
+      path: /downloads/skills/skill-management-report-001/0.2.0/build-data-informed-management-report.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -171,7 +171,22 @@ Paparkan ringkasan eksekutif, definisi, pengiraan yang boleh diaudit, perbanding
 
 ### Contoh penggunaan
 
-Contoh sintetik: jualan bulanan mengikut wilayah dengan satu bulan hilang. Laporan perlu menunjukkan jurang tersebut, mengira hanya perbandingan yang sah dan melabel kemungkinan kesan kempen sebagai hipotesis, bukannya sebab yang telah dibuktikan.
+#### Contoh input
+
+Data jualan sintetik (RM'000): Utara — Jan 120, Feb 126, Mac 132; Selatan — Jan 110, Feb tiada data, Mac 128. Kempen pemasaran bermula pada awal Mac. Tiada sasaran, kos kempen atau bilangan transaksi diberikan.
+
+#### Contoh hasil
+
+**Ringkasan pengurusan**
+Jualan Utara meningkat secara konsisten daripada RM120,000 kepada RM132,000 (**+10.0% Jan–Mac**). Jualan Selatan meningkat daripada RM110,000 kepada RM128,000 (**+16.4% Jan–Mac**), tetapi data Februari tiada; oleh itu trend bulanan Selatan dan jumlah suku keseluruhan tidak boleh dikira dengan lengkap.
+
+| Pemerhatian                                  | Pengiraan yang sah                                           | Batas tafsiran                                                                             |
+| -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| Utara meningkat setiap bulan                 | Jan–Feb +5.0%; Feb–Mac +4.8%                                 | Tiada sasaran untuk menilai sama ada prestasi memenuhi jangkaan.                           |
+| Selatan lebih tinggi pada Mac berbanding Jan | +RM18,000; +16.4%                                            | Data Februari hilang, jadi corak pertumbuhan tidak diketahui.                              |
+| Kedua-dua wilayah meningkat pada Mac         | Utara +RM6,000 dari Feb; perbandingan Selatan tidak tersedia | Kempen bermula pada Mac, tetapi data ini tidak membuktikan kempen menyebabkan peningkatan. |
+
+**Keputusan yang dicadangkan:** Jangan buat keputusan pelaburan kempen berdasarkan set ini sahaja. Dapatkan data Selatan Februari, sasaran wilayah, kos kempen dan bilangan transaksi; kemudian bandingkan perubahan dengan tempoh atau kumpulan yang munasabah.
 
 ### Semakan kualiti
 
@@ -218,7 +233,22 @@ Provide an executive summary, definitions, auditable calculations, comparisons, 
 
 ### Worked example
 
-Synthetic example: monthly sales by region with one missing month. The report should display the gap, calculate only valid comparisons and label a possible campaign effect as a hypothesis rather than a proven cause.
+#### Sample input
+
+Synthetic sales data (RM'000): North — Jan 120, Feb 126, Mar 132; South — Jan 110, Feb missing, Mar 128. A marketing campaign began at the start of March. No targets, campaign costs or transaction counts are supplied.
+
+#### Sample output
+
+**Management summary**
+North sales rose consistently from RM120,000 to RM132,000 (**+10.0% Jan–Mar**). South sales rose from RM110,000 to RM128,000 (**+16.4% Jan–Mar**), but February is missing; therefore South’s monthly trend and the complete quarterly total cannot be calculated.
+
+| Observation                           | Valid calculation                                          | Interpretation limit                                                                     |
+| ------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| North increased each month            | Jan–Feb +5.0%; Feb–Mar +4.8%                               | No target is supplied, so performance against expectation cannot be assessed.            |
+| South is higher in March than January | +RM18,000; +16.4%                                          | February is missing, so the growth pattern is unknown.                                   |
+| Both regions are higher in March      | North +RM6,000 from February; South comparison unavailable | The campaign began in March, but these figures do not prove that it caused the increase. |
+
+**Recommended decision:** Do not make a campaign-investment decision from this dataset alone. Obtain South’s February data, regional targets, campaign cost and transaction counts, then compare change against a reasonable period or group.
 
 ### Quality check
 

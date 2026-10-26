@@ -64,10 +64,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.2
+version: 0.2.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-customer-response-001]
@@ -114,7 +114,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-customer-service-playbook-001/0.1.2/build-customer-service-playbook.zip,
+      path: /downloads/skills/skill-customer-service-playbook-001/0.2.0/build-customer-service-playbook.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -182,7 +182,26 @@ Hasilkan prinsip respons, struktur mesej, perkara wajib/dilarang, matriks senari
 
 ### Contoh penggunaan
 
-Contoh sintetik: pesanan lewat dengan polisi hanya membenarkan siasatan penghantaran, bukan bayaran balik automatik. Respons mesti mengakui isu, menerangkan langkah siasatan dan mengelakkan janji bayaran balik atau tarikh penyelesaian yang tidak diluluskan.
+#### Contoh input
+
+Kes sintetik: pelanggan melaporkan pesanan lewat dua hari. Status disahkan: masih dalam transit. Polisi hanya membenarkan siasatan penghantaran pada peringkat ini; tiada bayaran balik automatik. Pasukan khidmat pelanggan mesti memberi kemas kini dalam satu hari bekerja.
+
+#### Contoh hasil
+
+**Respons yang dicadangkan**
+
+Salam sejahtera,
+
+Kami mohon maaf kerana pesanan anda belum tiba seperti dijangka. Semakan terkini menunjukkan bungkusan masih dalam transit. Kami telah membuka siasatan dengan penyedia penghantaran dan pasukan kami akan memberi kemas kini dalam tempoh **satu hari bekerja**.
+
+Pada peringkat ini kami belum dapat mengesahkan tarikh serahan baharu atau bayaran balik kerana perkara tersebut bergantung pada hasil siasatan dan polisi yang berkuat kuasa. Terima kasih atas kesabaran anda; kami akan menghubungi anda melalui saluran ini sebaik sahaja maklumat disahkan.
+
+**Panduan keputusan dalaman**
+
+- Jika bungkusan masih dalam transit dan dalam tempoh siasatan: kemas kini pelanggan dan kekalkan kes terbuka.
+- Jika status tidak berubah selepas tempoh siasatan: eskalasi kepada pemilik polisi; jangan janji pampasan.
+- Jika pelanggan berkongsi data pembayaran sensitif: hentikan perbualan pada saluran biasa dan arahkan kepada saluran selamat yang diluluskan.
+- Rekod pemilik, masa kemas kini seterusnya dan fakta yang telah disahkan.
 
 ### Semakan kualiti
 
@@ -230,7 +249,26 @@ Provide response principles, message structure, required/prohibited content, a s
 
 ### Worked example
 
-Synthetic example: a late order where policy allows only a delivery investigation, not an automatic refund. The response must acknowledge the issue, explain the investigation step and avoid promising an unapproved refund or resolution date.
+#### Sample input
+
+Synthetic case: a customer reports that an order is two days late. Verified status: still in transit. Policy allows a delivery investigation at this stage but no automatic refund. Customer service must provide an update within one working day.
+
+#### Sample output
+
+**Suggested response**
+
+Hello,
+
+We are sorry that your order has not arrived as expected. Our latest check shows that the parcel is still in transit. We have opened an investigation with the delivery provider and our team will update you within **one working day**.
+
+At this stage, we cannot confirm a revised delivery date or refund because those depend on the investigation outcome and the applicable policy. Thank you for your patience; we will contact you through this channel as soon as the information is verified.
+
+**Internal decision guidance**
+
+- If the parcel remains in transit and within the investigation window: update the customer and keep the case open.
+- If status has not changed after the investigation window: escalate to the policy owner; do not promise compensation.
+- If the customer shares sensitive payment data: stop the ordinary-channel exchange and direct them to an approved secure channel.
+- Record the owner, next-update time and verified facts.
 
 ### Quality check
 

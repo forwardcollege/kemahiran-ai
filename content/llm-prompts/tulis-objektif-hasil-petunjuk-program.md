@@ -67,7 +67,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-programme-paper-001, skill-activity-report-001]
@@ -170,7 +170,16 @@ Idea: bengkel literasi digital untuk 40 guru selama satu hari. Aktiviti: demonst
 
 #### Contoh hasil
 
-Rangka membezakan objektif, output dan hasil, kemudian memadankan setiap petunjuk dengan sumber bukti tanpa mendakwa perubahan tempat kerja yang belum diukur.
+**Objektif program**
+Meningkatkan keupayaan 40 guru menggunakan amalan asas literasi digital untuk menghasilkan satu bahan pengajaran yang sesuai digunakan dalam konteks kelas masing-masing.
+
+| Aras                           | Pernyataan                                                                                                       | Petunjuk                                                                            | Sumber bukti                                                                  |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Output                         | Bengkel sehari dengan demonstrasi dan latihan amali disampaikan kepada kumpulan sasaran.                         | Bilangan peserta hadir; bilangan peserta yang menyiapkan tugasan amali.             | Rekod kehadiran; fail tugasan.                                                |
+| Hasil segera                   | Peserta dapat menerangkan prinsip asas dan menghasilkan bahan yang memenuhi kriteria minimum pada akhir bengkel. | Perubahan skor soal selidik pra/pasca; peratus tugasan yang memenuhi senarai semak. | Soal selidik pra/pasca; semakan tugasan menggunakan kriteria yang diluluskan. |
+| Hasil susulan yang dicadangkan | Peserta mencuba bahan tersebut dalam pengajaran selepas bengkel.                                                 | Peratus peserta yang melaporkan percubaan dalam tempoh yang ditetapkan.             | Soal selidik susulan atau log penggunaan **jika kutipan susulan diluluskan**. |
+
+**Batas tuntutan:** Kehadiran dan tugasan akhir tidak membuktikan perubahan amalan tempat kerja atau impak terhadap murid. Hasil susulan hanya boleh dilaporkan jika data susulan benar-benar dikumpulkan.
 
 ### Semakan kualiti
 
@@ -225,7 +234,16 @@ Idea: a one-day digital-literacy workshop for 40 teachers. Activities: demonstra
 
 #### Sample output
 
-The framework separates objective, outputs and outcomes, then matches each indicator to an evidence source without claiming unmeasured workplace change.
+**Programme objective**
+Build the capacity of 40 teachers to apply foundational digital-literacy practices by producing one teaching resource suitable for their own classroom context.
+
+| Level                      | Statement                                                                                                                   | Indicator                                                                   | Evidence source                                                        |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Output                     | A one-day workshop with demonstration and hands-on practice is delivered to the target group.                               | Number attending; number completing the practical task.                     | Attendance record; task files.                                         |
+| Immediate outcome          | Participants can explain the core principles and produce a resource that meets minimum criteria by the end of the workshop. | Change in pre/post survey score; percentage of tasks meeting the checklist. | Pre/post survey; task review using approved criteria.                  |
+| Proposed follow-up outcome | Participants try the resource in their teaching after the workshop.                                                         | Percentage reporting a trial within the defined period.                     | Follow-up survey or usage log **if follow-up collection is approved**. |
+
+**Claim boundary:** Attendance and end-of-workshop tasks do not prove workplace-practice change or learner impact. The follow-up outcome may be reported only if follow-up data is actually collected.
 
 ### Quality check
 

@@ -56,7 +56,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-rph-001]
@@ -181,7 +181,17 @@ Tujuan: peringatan bengkel STEM. Fakta: 12 November, 2.00–4.00 petang, Makmal 
 
 #### Contoh hasil
 
-Mesej ringkas dan mesra menyatakan tujuan, tarikh, tempat, tindakan yang diminta dan saluran rasmi tanpa memasukkan maklumat murid yang tidak perlu.
+**Versi utama**
+
+Salam sejahtera ibu bapa dan penjaga,
+
+Ini ialah peringatan mengenai Bengkel STEM yang akan berlangsung pada **12 November, 2.00–4.00 petang di Makmal Sains**. Mohon sahkan kehadiran sebelum **8 November** supaya persediaan tempat dapat dibuat.
+
+Untuk sebarang pertanyaan, sila hubungi nombor pejabat sekolah. Terima kasih atas kerjasama anda.
+
+**Versi sangat ringkas**
+
+Peringatan: Bengkel STEM berlangsung pada 12 November, 2.00–4.00 petang di Makmal Sains. Mohon sahkan kehadiran sebelum 8 November. Pertanyaan boleh diajukan melalui nombor pejabat sekolah. Terima kasih.
 
 ### Semakan kualiti
 
@@ -248,7 +258,17 @@ Purpose: STEM workshop reminder. Facts: 12 November, 2:00–4:00 p.m., Science L
 
 #### Sample output
 
-A concise, warm message states the purpose, date, venue, requested action and official channel without including unnecessary student information.
+**Main version**
+
+Hello parents and guardians,
+
+This is a reminder about the STEM Workshop taking place on **12 November from 2:00–4:00 p.m. in the Science Lab**. Please confirm attendance by **8 November** so that venue arrangements can be completed.
+
+For enquiries, please contact the school office number. Thank you for your cooperation.
+
+**Very short version**
+
+Reminder: The STEM Workshop will be held on 12 November, 2:00–4:00 p.m. in the Science Lab. Please confirm attendance by 8 November. Direct enquiries to the school office number. Thank you.
 
 ### Quality check
 

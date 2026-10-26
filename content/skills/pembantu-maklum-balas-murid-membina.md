@@ -60,10 +60,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.2
+version: 0.2.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-rubric-001, prompt-parent-message-001]
@@ -104,7 +104,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-student-feedback-001/0.1.2/draft-constructive-student-feedback.zip,
+      path: /downloads/skills/skill-student-feedback-001/0.2.0/draft-constructive-student-feedback.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -169,7 +169,22 @@ Pisahkan: (1) bukti yang diperhatikan, (2) satu kekuatan yang disokong bukti, (3
 
 ### Contoh penggunaan
 
-Daripada petikan hujah sintetik dan kriteria penggunaan bukti, maklum balas menyebut bukti sebenar, satu jurang hubungan alasan-bukti dan satu tindakan semakan ayat.
+#### Contoh input
+
+Petikan kerja sintetik: “Kempen kitar semula sekolah berjaya kerana tong kitar semula lebih penuh pada minggu kedua.” Kriteria: nyatakan tuntutan, gunakan bukti yang boleh diperiksa dan jelaskan bagaimana bukti menyokong tuntutan.
+
+#### Contoh hasil
+
+**Kekuatan yang dapat dilihat**
+Anda telah menyatakan tuntutan yang jelas bahawa kempen kitar semula berjaya dan menggunakan pemerhatian khusus—tong lebih penuh pada minggu kedua—sebagai bukti awal.
+
+**Bahagian yang perlu diperkukuh**
+Bukti itu belum menunjukkan berapa banyak bahan dikitar semula atau sama ada peningkatan disebabkan kempen. Tong yang lebih penuh juga mungkin dipengaruhi oleh bilangan murid, jadual kutipan atau jenis bahan. Hubungan antara bukti dan tuntutan perlu diterangkan dengan lebih berhati-hati.
+
+**Langkah seterusnya**
+Semak ayat kesimpulan supaya sepadan dengan kekuatan bukti. Contohnya: “Tong kitar semula yang lebih penuh pada minggu kedua menunjukkan penyertaan mungkin meningkat, tetapi data berat atau jumlah bahan diperlukan untuk menilai kejayaan kempen.” Tambah satu data yang boleh diukur jika tersedia.
+
+**Semakan guru:** Maklum balas ini tidak memberikan markah akhir dan tidak membuat andaian tentang usaha atau kebolehan murid.
 
 ### Semakan kualiti
 
@@ -214,7 +229,22 @@ Separate: (1) observed evidence, (2) one evidence-supported strength, (3) one ga
 
 ### Worked example
 
-From a synthetic argument extract and an evidence-use criterion, the feedback identifies actual evidence, one reasoning gap and one sentence-revision action.
+#### Sample input
+
+Synthetic work extract: “The school recycling campaign succeeded because the recycling bins were fuller in the second week.” Criterion: state a claim, use checkable evidence and explain how the evidence supports the claim.
+
+#### Sample output
+
+**Visible strength**
+You make a clear claim that the recycling campaign succeeded and use a specific observation—the fuller bins in the second week—as initial evidence.
+
+**What needs strengthening**
+The evidence does not yet show how much material was recycled or whether the campaign caused the increase. Fuller bins could also be affected by student numbers, collection timing or material type. The link between evidence and claim needs more cautious explanation.
+
+**Next step**
+Revise the conclusion so it matches the strength of the evidence. For example: “Fuller recycling bins in the second week suggest that participation may have increased, but weight or volume data is needed to evaluate the campaign’s success.” Add one measurable data point if available.
+
+**Teacher check:** This feedback does not assign a final mark or infer the learner’s effort or ability.
 
 ### Quality check
 

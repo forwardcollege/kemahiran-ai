@@ -1,6 +1,6 @@
 # Catalogue Build Readiness
 
-Status: Ready for application integration; publication gates remain open  
+Status: Ready for application integration; publication gates remain open
 Date: 2026-10-26
 Scope: All 36 MVP resources
 
@@ -24,18 +24,18 @@ All 12 Skills now have a versioned ZIP at the exact public path declared in the 
 
 | Resource ID                           | Version | Archive                                     |
 | ------------------------------------- | ------- | ------------------------------------------- |
-| `skill-rph-001`                       | 0.4.2   | `generate-dskp-grounded-rph.zip`            |
-| `skill-dskp-activity-001`             | 0.2.2   | `design-dskp-aligned-activities.zip`        |
-| `skill-assessment-set-001`            | 0.2.2   | `build-assessment-materials.zip`            |
-| `skill-rubric-001`                    | 0.1.2   | `design-moderate-rubrics.zip`               |
-| `skill-student-feedback-001`          | 0.1.2   | `draft-constructive-student-feedback.zip`   |
-| `skill-meeting-minutes-001`           | 0.2.2   | `draft-formal-meeting-minutes.zip`          |
-| `skill-policy-analysis-001`           | 0.1.2   | `analyse-circular-policy-document.zip`      |
-| `skill-programme-paper-001`           | 0.1.2   | `draft-programme-paper.zip`                 |
-| `skill-activity-report-001`           | 0.1.2   | `build-activity-outcome-report.zip`         |
-| `skill-business-proposal-001`         | 0.2.2   | `draft-business-proposal.zip`               |
-| `skill-management-report-001`         | 0.1.2   | `build-data-informed-management-report.zip` |
-| `skill-customer-service-playbook-001` | 0.1.2   | `build-customer-service-playbook.zip`       |
+| `skill-rph-001`                       | 0.5.0   | `generate-dskp-grounded-rph.zip`            |
+| `skill-dskp-activity-001`             | 0.3.0   | `design-dskp-aligned-activities.zip`        |
+| `skill-assessment-set-001`            | 0.3.0   | `build-assessment-materials.zip`            |
+| `skill-rubric-001`                    | 0.2.0   | `design-moderate-rubrics.zip`               |
+| `skill-student-feedback-001`          | 0.2.0   | `draft-constructive-student-feedback.zip`   |
+| `skill-meeting-minutes-001`           | 0.3.0   | `draft-formal-meeting-minutes.zip`          |
+| `skill-policy-analysis-001`           | 0.2.0   | `analyse-circular-policy-document.zip`      |
+| `skill-programme-paper-001`           | 0.2.0   | `draft-programme-paper.zip`                 |
+| `skill-activity-report-001`           | 0.2.0   | `build-activity-outcome-report.zip`         |
+| `skill-business-proposal-001`         | 0.3.0   | `draft-business-proposal.zip`               |
+| `skill-management-report-001`         | 0.2.0   | `build-data-informed-management-report.zip` |
+| `skill-customer-service-playbook-001` | 0.2.0   | `build-customer-service-playbook.zip`       |
 
 The archives use the approved CC BY 4.0 resource licence and retain their `LICENSES.md` manifests. Public availability still follows each resource's publication status and release gates.
 

@@ -56,10 +56,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.2
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-official-letter-001, prompt-meeting-actions-001]
@@ -99,7 +99,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-meeting-minutes-001/0.2.2/draft-formal-meeting-minutes.zip,
+      path: /downloads/skills/skill-meeting-minutes-001/0.3.0/draft-formal-meeting-minutes.zip,
       format: skill_md_zip,
       included_files:
         [README.md, SKILL.md, LICENSES.md, references/template-setup.md],
@@ -189,13 +189,22 @@ Kekalkan istilah rasmi. Jangan menambah dasar, komitmen atau pendapat tentang in
 
 #### Contoh input
 
-Input sintetik: “Agenda 2: Tarikh bengkel dicadang 12 November. Ahli bersetuju selepas dewan disahkan. Aina semak dewan sebelum 30 Oktober.”
+Input sintetik: “Agenda 2: Tarikh bengkel dicadang 12 November. Ahli bersetuju meneruskan tarikh itu hanya selepas dewan disahkan. Aina semak dewan sebelum 30 Oktober. Agenda 3: Had RM1,200 untuk bahan diluluskan. Kumar mendapatkan dua sebut harga sebelum 2 November. Butiran kehadiran dan masa tamat tidak diberikan.”
 
 #### Contoh hasil
 
-| Agenda            | Keputusan                                              | Tindakan                 | Pemilik | Tarikh     |
-| ----------------- | ------------------------------------------------------ | ------------------------ | ------- | ---------- |
-| 2. Tarikh bengkel | Cadangan 12 November tertakluk kepada pengesahan dewan | Semak ketersediaan dewan | Aina    | 30 Oktober |
+**Butiran mesyuarat:** Tarikh, masa, tempat, pengerusi, kehadiran dan masa tamat — `[TIDAK DIBERIKAN]`.
+
+| Agenda            | Ringkasan perbincangan                                                   | Keputusan                                                                  | Tindakan                                                      | Pemilik | Tarikh akhir |
+| ----------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------- | ------- | ------------ |
+| 2. Tarikh bengkel | 12 November dicadangkan; pelaksanaan bergantung pada ketersediaan dewan. | Teruskan 12 November **hanya jika** dewan disahkan. Tarikh belum muktamad. | Semak ketersediaan dewan dan laporkan untuk pengesahan akhir. | Aina    | 30 Oktober   |
+| 3. Bahan bengkel  | Keperluan bahan dibincangkan dalam had perbelanjaan RM1,200.             | Had RM1,200 diluluskan; pemilihan pembekal belum diputuskan.               | Dapatkan dua sebut harga untuk semakan.                       | Kumar   | 2 November   |
+
+**Perkara untuk pengesahan urus setia**
+
+- Sahkan butiran mesyuarat, senarai kehadiran dan masa tamat sebelum minit diedarkan.
+- Jangan merekod 12 November sebagai tarikh muktamad sehingga pengesahan dewan diterima.
+- Lampirkan atau rujuk sebut harga hanya selepas dokumen sebenar diterima.
 
 ### Semakan kualiti
 
@@ -260,13 +269,22 @@ Preserve official terminology. Do not add policies, commitments or opinions abou
 
 #### Sample input
 
-Synthetic input: “Item 2: Workshop proposed for 12 November. Members agreed subject to venue confirmation. Aina to check the hall by 30 October.”
+Synthetic input: “Item 2: Workshop proposed for 12 November. Members agreed to proceed with that date only after the hall is confirmed. Aina to check the hall by 30 October. Item 3: A RM1,200 materials ceiling was approved. Kumar will obtain two quotations by 2 November. Attendance details and closing time were not supplied.”
 
 #### Sample output
 
-| Item             | Decision                                            | Action                  | Owner | Due date   |
-| ---------------- | --------------------------------------------------- | ----------------------- | ----- | ---------- |
-| 2. Workshop date | Proposed 12 November, subject to venue confirmation | Check hall availability | Aina  | 30 October |
+**Meeting details:** Date, time, venue, chair, attendance and closing time — `[NOT SUPPLIED]`.
+
+| Item                  | Discussion summary                                               | Decision                                                                           | Action                                                     | Owner | Due date   |
+| --------------------- | ---------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------- | ----- | ---------- |
+| 2. Workshop date      | 12 November was proposed; delivery depends on hall availability. | Proceed with 12 November **only if** the hall is confirmed. The date is not final. | Check hall availability and report for final confirmation. | Aina  | 30 October |
+| 3. Workshop materials | Material needs were discussed within a RM1,200 spending ceiling. | The RM1,200 ceiling was approved; no supplier was selected.                        | Obtain two quotations for review.                          | Kumar | 2 November |
+
+**Items for secretariat verification**
+
+- Confirm meeting details, attendance and closing time before circulation.
+- Do not record 12 November as final until venue confirmation is received.
+- Attach or reference quotations only after the real documents are received.
 
 ### Quality check
 

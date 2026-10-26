@@ -67,7 +67,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [visual-education-001]
@@ -162,6 +162,8 @@ visual_prompt:
 
 ### Kegunaan koleksi
 
+> **Pratonton contoh:** Imej di atas ialah papan cerita sintetik untuk menunjukkan urutan dan komposisi. Ia bukan klip video janaan atau bukti hasil penjana video.
+
 Rancang urutan visual pendek bagi satu konsep dengan sumber fakta, tempo mudah diikuti dan teks ditambah pascaproduksi.
 
 ### Sebelum menjana
@@ -189,10 +191,11 @@ Cipta video penerangan 15 saat {{NISBAH_ASPEK}} untuk {{AUDIENS}} tentang {{KONS
 
 ### Cadangan penggunaan
 
-1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
-2. Jana draf tanpa teks atau logo rasmi supaya visual boleh disemak terlebih dahulu.
-3. Semak kesinambungan bingkai demi bingkai, kemudian jana semula bahagian yang bermasalah.
-4. Tambah sari kata, audio berlesen, logo dan butiran disahkan semasa penyuntingan.
+1. Pecahkan konsep yang telah disahkan kepada tiga hingga lima rentak visual; setiap rentak mesti mempunyai satu tujuan pembelajaran yang jelas.
+2. Jana papan cerita pegun terlebih dahulu dan semak urutan, ketepatan konsep, objek serta representasi dengan sumber atau penyemak subjek.
+3. Jana klip pendek bagi setiap rentak tanpa teks, logo atau suara rasmi. Semak gerakan dan kesinambungan sebelum menggabungkannya.
+4. Bandingkan setiap bingkai penting dengan sumber; jana semula segmen yang mengubah fakta, label, bentuk atau urutan proses.
+5. Tambah narasi yang diluluskan, sari kata, audio berlesen dan penerangan alternatif semasa penyuntingan. Pastikan versi tanpa bunyi masih dapat difahami.
 
 ### Semakan hasil
 
@@ -210,6 +213,8 @@ Guru atau pakar kandungan mesti menyemak setiap bingkai terhadap sumber. Tambah 
 ## English
 
 ### What this collection is for
+
+> **Representative preview:** The image above is a synthetic storyboard showing sequence and composition. It is not a generated video clip or evidence of video-generator performance.
 
 Plan a short visual sequence for one sourced concept with accessible pacing and post-produced text.
 
@@ -238,10 +243,11 @@ Create a 15-second {{ASPECT_RATIO}} explainer for {{AUDIENCE}} about {{CONCEPT}}
 
 ### Suggested workflow
 
-1. Choose one prompt and replace every variable using the verified brief.
-2. Generate a draft without official text or logos so the visuals can be reviewed first.
-3. Review continuity frame by frame, then regenerate any problematic segment.
-4. Add captions, licensed audio, logos and verified details during editing.
+1. Break the verified concept into three to five visual beats, each with one clear learning purpose.
+2. Generate a still storyboard first and check sequence, concept accuracy, objects and representation against the source or subject reviewer.
+3. Generate a short clip for each beat without official text, logos or voice-over. Review motion and continuity before combining segments.
+4. Compare key frames against the source; regenerate any segment that changes facts, labels, shapes or process sequence.
+5. Add approved narration, captions, licensed audio and alternative description during editing. Ensure that the muted version remains understandable.
 
 ### Output checks
 

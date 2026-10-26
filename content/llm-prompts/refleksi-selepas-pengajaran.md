@@ -53,7 +53,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.6.0
+version: 0.7.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-rph-001, prompt-learning-objectives-001]
@@ -166,7 +166,17 @@ Objektif: murid menerangkan dua sebab hakisan. Pemerhatian: ramai mengenal pasti
 
 #### Contoh hasil
 
-Refleksi memisahkan pemerhatian daripada tafsiran tentatif dan mencadangkan satu pelarasan pelajaran seterusnya yang boleh diperiksa.
+**Pemerhatian berasaskan bukti**
+Dalam respons lisan dan tiga contoh anonim, kebanyakan murid dapat menamakan contoh hakisan. Namun, penjelasan mereka belum menghubungkan contoh itu dengan bukti tentang pergerakan air, angin atau perubahan permukaan.
+
+**Tafsiran tentatif**
+Murid mungkin mengenali istilah dan contoh tetapi belum mempunyai rangka ayat untuk menghubungkan sebab, proses dan bukti. Ini ialah hipotesis pengajaran, bukan kesimpulan tentang kebolehan murid.
+
+**Pelarasan pelajaran seterusnya**
+Mulakan dengan satu contoh bergambar dan modelkan ayat: “Hakisan berlaku apabila ___; buktinya ialah ___.” Kemudian minta murid membandingkan dua contoh dan menandakan bahagian ayat yang menyatakan sebab serta bukti.
+
+**Bukti untuk dikumpulkan**
+Gunakan tiket keluar dua ayat. Kejayaan awal: sekurang-kurangnya satu sebab yang munasabah dan satu bukti yang berkaitan. Semak respons secara anonim untuk menentukan sama ada pemodelan perlu diulang.
 
 ### Semakan kualiti
 
@@ -236,7 +246,17 @@ Objective: learners explain two causes of erosion. Observation: many identify ex
 
 #### Sample output
 
-The reflection separates observation from tentative interpretation and proposes one checkable adjustment for the next lesson.
+**Evidence-based observation**
+Across oral responses and three anonymous examples, most learners could name examples of erosion. Their explanations did not yet connect those examples to evidence about moving water, wind or surface change.
+
+**Tentative interpretation**
+Learners may recognise the terms and examples but lack a sentence structure that connects cause, process and evidence. This is a teaching hypothesis, not a conclusion about learner ability.
+
+**Next-lesson adjustment**
+Begin with one visual example and model the sentence: “Erosion happens when ___; the evidence is ___.” Learners then compare two examples and mark the clause that states the cause and the clause that supplies evidence.
+
+**Evidence to collect**
+Use a two-sentence exit ticket. Initial success criterion: at least one plausible cause and one relevant piece of evidence. Review responses anonymously to decide whether the modelling should be repeated.
 
 ### Quality check
 

@@ -67,7 +67,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-policy-analysis-001]
@@ -157,11 +157,20 @@ Ringkasan tindakan dengan lokasi sumber.
 
 #### Contoh input
 
-Petikan pekeliling sintetik menyatakan laporan perlu dihantar sebelum 15 November oleh semua unit. Unit sasaran ialah Pentadbiran. Nombor halaman disertakan.
+Petikan pekeliling sintetik pada halaman 3 menyatakan semua unit perlu menghantar laporan pelaksanaan sebelum 15 November. Unit sasaran ialah Pentadbiran. Tiada maklumat diberikan tentang templat, saluran penghantaran atau pindaan terkini.
 
 #### Contoh hasil
 
-Ringkasan menghasilkan tindakan, pemilik, tarikh akhir dan lokasi sumber, serta menandakan perkara yang perlu disemak terhadap dokumen penuh dan pindaan terkini.
+**Ringkasan untuk Unit Pentadbiran**
+Unit Pentadbiran perlu menyediakan dan menghantar laporan pelaksanaan selewat-lewatnya pada **15 November**. Kewajipan ini dinyatakan dalam petikan yang diberikan, tetapi kaedah penghantaran dan format laporan belum dapat disahkan.
+
+| Tindakan                                    | Pemilik                    | Tarikh akhir         | Sumber                         | Status                      |
+| ------------------------------------------- | -------------------------- | -------------------- | ------------------------------ | --------------------------- |
+| Sahkan pegawai penyedia dan pelulus laporan | Ketua Unit Pentadbiran     | `[TIDAK DINYATAKAN]` | Tidak dinyatakan dalam petikan | Perlu keputusan dalaman     |
+| Sediakan laporan pelaksanaan                | Unit Pentadbiran           | 15 November          | Halaman 3                      | Wajib berdasarkan petikan   |
+| Sahkan templat dan saluran penghantaran     | `[PEMILIK PERLU DISAHKAN]` | Sebelum penghantaran | Tidak dinyatakan dalam petikan | Perlu semakan dokumen penuh |
+
+**Amaran semakan:** Semak dokumen penuh, lampiran dan sebarang pindaan terkini sebelum tindakan. Jangan anggap petikan ini ialah versi pekeliling yang masih berkuat kuasa.
 
 ### Semakan kualiti
 
@@ -210,11 +219,20 @@ Action summary with source locations.
 
 #### Sample input
 
-A synthetic circular extract states that every unit must submit a report by 15 November. The target unit is Administration and page numbers are supplied.
+A synthetic circular extract on page 3 states that every unit must submit an implementation report by 15 November. The target unit is Administration. No information is supplied about the template, submission channel or latest amendments.
 
 #### Sample output
 
-The summary produces the action, owner, deadline and source location, and flags items that must be verified against the full document and latest amendments.
+**Summary for the Administration Unit**
+The Administration Unit must prepare and submit an implementation report by **15 November**. This requirement appears in the supplied extract, but the submission method and report format cannot yet be verified.
+
+| Action                                     | Owner                     | Due date          | Source                    | Status                       |
+| ------------------------------------------ | ------------------------- | ----------------- | ------------------------- | ---------------------------- |
+| Confirm the report preparer and approver   | Head of Administration    | `[NOT STATED]`    | Not stated in the extract | Internal decision required   |
+| Prepare the implementation report          | Administration Unit       | 15 November       | Page 3                    | Required by the extract      |
+| Verify the template and submission channel | `[OWNER TO BE CONFIRMED]` | Before submission | Not stated in the extract | Full-document check required |
+
+**Verification warning:** Check the complete document, attachments and any current amendments before acting. Do not assume that this extract is the version still in force.
 
 ### Quality check
 

@@ -67,7 +67,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-management-report-001, prompt-sales-analysis-001]
@@ -158,7 +158,16 @@ Tempoh: minggu berakhir 25 Oktober. Nota sintetik: latihan siap; vendor menjangk
 
 #### Contoh hasil
 
-Kemas kini memisahkan perkara selesai, sedang berjalan, risiko dan keputusan diperlukan. Jangkaan vendor kekal dilabel sebagai jangkaan dan angka tidak disahkan tidak diterbitkan sebagai fakta.
+**Kemas kini mingguan — minggu berakhir 25 Oktober**
+
+**Status keseluruhan: Kuning — kemajuan dibuat, tetapi dua isu terbuka memerlukan pemantauan.**
+
+- **Selesai:** Sesi latihan yang dirancang telah disempurnakan. Bukti penyelesaian: rekod kehadiran dan bahan latihan `[RUJUKAN PERLU DILAMPIRKAN]`.
+- **Sedang berjalan:** Vendor menjangka kerja integrasi pada hari Jumaat. Tarikh ini ialah jangkaan vendor dan belum disahkan sebagai komitmen penghantaran.
+- **Risiko/isu:** Dua isu masih terbuka. Nota yang diberikan tidak menyatakan keterukan, pemilik atau tarikh sasaran; maklumat ini perlu diperoleh sebelum status risiko boleh dinilai dengan yakin.
+- **Metrik:** Angka penggunaan belum disahkan dan tidak dimasukkan sebagai pencapaian. Sumber, definisi dan tempoh ukuran perlu disahkan dahulu.
+
+**Keputusan atau bantuan diperlukan:** Tetapkan pemilik dan tarikh penyelesaian bagi dua isu terbuka; sahkan sama ada jangkaan integrasi hari Jumaat boleh digunakan dalam perancangan operasi.
 
 ### Semakan kualiti
 
@@ -212,7 +221,16 @@ Period: week ending 25 October. Synthetic notes: training completed; vendor expe
 
 #### Sample output
 
-The update separates completed work, work in progress, risks and decisions needed. The vendor date remains labelled as an expectation and the unverified figure is not presented as fact.
+**Weekly update — week ending 25 October**
+
+**Overall status: Amber — progress has been made, but two open issues require monitoring.**
+
+- **Completed:** The planned training session has been delivered. Completion evidence: attendance record and training materials `[REFERENCE TO BE ATTACHED]`.
+- **In progress:** The vendor expects integration work on Friday. This is a vendor expectation and has not been confirmed as a delivery commitment.
+- **Risks/issues:** Two issues remain open. The supplied notes do not state severity, ownership or target dates; these details are needed before risk status can be assessed confidently.
+- **Metric:** The usage figure is unverified and is not reported as an achievement. Its source, definition and measurement period must first be confirmed.
+
+**Decision or support required:** Assign owners and resolution dates for both open issues; confirm whether the Friday integration expectation may be used for operational planning.
 
 ### Quality check
 

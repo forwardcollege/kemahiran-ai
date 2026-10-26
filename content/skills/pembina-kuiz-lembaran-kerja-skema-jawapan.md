@@ -56,10 +56,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.2
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-kbat-questions-001, skill-rubric-001, skill-rph-001]
@@ -103,7 +103,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-assessment-set-001/0.2.2/build-assessment-materials.zip,
+      path: /downloads/skills/skill-assessment-set-001/0.3.0/build-assessment-materials.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -190,7 +190,39 @@ Semua istilah fakta dalam soalan, pilihan jawapan dan skema mesti datang daripad
 
 ### Contoh penggunaan
 
-Input sintetik: petikan 500 patah perkataan tentang kitaran air, Tahun 5, 20 minit, enam soalan objektif dan dua soalan respons pendek. Hasil mesti menggunakan hanya petikan itu dan memisahkan kertas murid daripada skema.
+#### Contoh input
+
+Petikan sintetik 500 patah perkataan menerangkan penyejatan, pemeluwapan dan hujan dalam kitaran air. Tahap: Tahun 5. Masa: 20 minit. Keperluan: enam soalan objektif, dua respons pendek dan skema berasingan. Semua jawapan mesti boleh disokong oleh petikan.
+
+#### Contoh hasil ringkas
+
+**Petikan kertas murid**
+
+**1. Proses manakah berlaku apabila air cecair dipanaskan lalu menjadi wap air?**
+
+- A. Hujan
+- B. Penyejatan
+- C. Pemeluwapan
+- D. Pengumpulan
+
+**2. Mengapakah titisan air boleh terbentuk pada permukaan luar bekas yang sejuk?**
+
+- A. Wap air menyejuk dan memeluwap
+- B. Bekas menghasilkan air baharu
+- C. Air meresap keluar melalui bekas
+- D. Hujan berlaku di dalam bilik
+
+**7. Terangkan urutan dua proses yang boleh membawa wap air di udara kepada hujan. Gunakan istilah daripada petikan. [2 markah]**
+
+**Petikan skema jawapan**
+
+| Soalan | Jawapan/panduan                                                                                              | Markah | Pemetaan                                |
+| ------ | ------------------------------------------------------------------------------------------------------------ | -----: | --------------------------------------- |
+| 1      | B — Penyejatan                                                                                               |      1 | Mengenal pasti proses                   |
+| 2      | A — Wap air menyejuk dan memeluwap                                                                           |      1 | Mengaplikasi konsep pada situasi harian |
+| 7      | Wap air menyejuk lalu memeluwap menjadi titisan (1); titisan membesar/bergabung dan turun sebagai hujan (1). |      2 | Menerangkan urutan proses               |
+
+**Audit ringkas:** Semua jawapan boleh dijejak kepada petikan. Soalan 2 perlu disemak semula jika petikan tidak menerangkan pemeluwapan pada permukaan sejuk. Pengalih perhatian B–D mesti diuji dengan murid sasaran supaya tidak terlalu mudah atau mengelirukan.
 
 ### Semakan kualiti
 
@@ -250,7 +282,39 @@ Every factual term in questions, answer options and the scheme must come from th
 
 ### Worked example
 
-Synthetic input: a 500-word passage about the water cycle, Year 5, 20 minutes, six objective questions and two short responses. The result must use only that passage and separate the learner paper from the scheme.
+#### Sample input
+
+A synthetic 500-word passage explains evaporation, condensation and rain in the water cycle. Level: Year 5. Time: 20 minutes. Requirement: six objective questions, two short responses and a separate answer scheme. Every answer must be supported by the passage.
+
+#### Representative output
+
+**Learner-paper extract**
+
+**1. Which process occurs when liquid water is heated and becomes water vapour?**
+
+- A. Rainfall
+- B. Evaporation
+- C. Condensation
+- D. Collection
+
+**2. Why can water droplets form on the outside of a cold container?**
+
+- A. Water vapour cools and condenses
+- B. The container creates new water
+- C. Water leaks through the container
+- D. Rain falls inside the room
+
+**7. Explain the sequence of two processes that can turn water vapour in the air into rain. Use terms from the passage. [2 marks]**
+
+**Answer-scheme extract**
+
+| Question | Answer/guidance                                                                                 | Marks | Mapping                                    |
+| -------- | ----------------------------------------------------------------------------------------------- | ----: | ------------------------------------------ |
+| 1        | B — Evaporation                                                                                 |     1 | Identify a process                         |
+| 2        | A — Water vapour cools and condenses                                                            |     1 | Apply the concept to an everyday situation |
+| 7        | Water vapour cools and condenses into droplets (1); droplets grow/combine and fall as rain (1). |     2 | Explain a process sequence                 |
+
+**Short audit:** Every answer is traceable to the passage. Question 2 must be revised if the passage does not explain condensation on a cold surface. Distractors B–D should be tested with target learners to ensure they are neither trivial nor misleading.
 
 ### Quality check
 

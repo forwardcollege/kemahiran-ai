@@ -60,10 +60,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.2
+version: 0.2.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-circular-actions-001]
@@ -104,7 +104,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-policy-analysis-001/0.1.2/analyse-circular-policy-document.zip,
+      path: /downloads/skills/skill-policy-analysis-001/0.2.0/analyse-circular-policy-document.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -173,7 +173,22 @@ Hasilkan: identiti dokumen; tujuan; pihak terlibat; kewajipan dan larangan; tari
 
 ### Contoh penggunaan
 
-Contoh sintetik: pekeliling tiga halaman tentang tarikh penghantaran laporan. Hasil menyenaraikan tarikh, pihak, tindakan dan lokasi sumber serta menandakan unit yang tidak disebut sebagai perkara untuk pengesahan, bukannya menganggap unit itu turut terpakai.
+#### Contoh input
+
+Pekeliling sintetik tiga halaman. Halaman 2 menyatakan semua ketua unit operasi perlu menghantar laporan pelaksanaan sebelum 15 November melalui urus setia. Unit Pentadbiran tidak disebut. Halaman 3 menyatakan format laporan terdapat dalam Lampiran A, tetapi lampiran itu tidak dibekalkan.
+
+#### Contoh hasil
+
+**Rumusan eksekutif**
+Pekeliling mewajibkan **ketua unit operasi** menghantar laporan pelaksanaan kepada urus setia sebelum **15 November**. Ia tidak menyatakan secara jelas bahawa Unit Pentadbiran termasuk dalam skop tersebut. Format wajib dirujuk kepada Lampiran A, yang belum tersedia.
+
+| Keperluan/tindakan                         | Pihak                    | Tarikh               | Sumber             | Tahap kepastian                        |
+| ------------------------------------------ | ------------------------ | -------------------- | ------------------ | -------------------------------------- |
+| Sediakan dan hantar laporan pelaksanaan    | Ketua unit operasi       | 15 November          | Halaman 2          | Jelas dalam dokumen                    |
+| Gunakan format Lampiran A                  | Ketua unit operasi       | Sebelum penghantaran | Halaman 3          | Keperluan jelas; format tidak tersedia |
+| Sahkan sama ada Unit Pentadbiran tertakluk | Pemilik dasar/urus setia | `[TIDAK DINYATAKAN]` | Unit tidak disebut | Memerlukan pengesahan                  |
+
+**Jurang dan risiko:** Jangan mengarahkan Unit Pentadbiran menghantar laporan sebagai kewajipan berdasarkan petikan ini sahaja. Dapatkan dokumen penuh, Lampiran A dan pengesahan skop daripada pemilik dasar. Semak nombor versi serta sebarang pindaan sebelum tindakan diluluskan.
 
 ### Semakan kualiti
 
@@ -218,7 +233,22 @@ Provide: document identity; purpose; affected parties; obligations and prohibiti
 
 ### Worked example
 
-Synthetic example: a three-page circular about report-submission dates. The result lists dates, parties, actions and source locations, and flags an unmentioned unit for confirmation instead of assuming coverage.
+#### Sample input
+
+A synthetic three-page circular. Page 2 states that all heads of operational units must submit an implementation report through the secretariat by 15 November. The Administration Unit is not mentioned. Page 3 says the report format appears in Appendix A, but the appendix is not supplied.
+
+#### Sample output
+
+**Executive summary**
+The circular requires **heads of operational units** to submit an implementation report to the secretariat by **15 November**. It does not explicitly state that the Administration Unit is within scope. The mandatory format is referenced in Appendix A, which is not available.
+
+| Requirement/action                          | Party                      | Date              | Source                | Confidence                            |
+| ------------------------------------------- | -------------------------- | ----------------- | --------------------- | ------------------------------------- |
+| Prepare and submit an implementation report | Heads of operational units | 15 November       | Page 2                | Clear in the document                 |
+| Use the Appendix A format                   | Heads of operational units | Before submission | Page 3                | Requirement clear; format unavailable |
+| Confirm whether Administration is in scope  | Policy owner/secretariat   | `[NOT STATED]`    | Unit is not mentioned | Confirmation required                 |
+
+**Gaps and risks:** Do not direct Administration to submit a report as a mandatory requirement based on this extract alone. Obtain the complete document, Appendix A and a scope confirmation from the policy owner. Check the version number and any amendments before action is approved.
 
 ### Quality check
 

@@ -60,10 +60,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.2
+version: 0.2.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-assessment-set-001, skill-student-feedback-001]
@@ -113,7 +113,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-rubric-001/0.1.2/design-moderate-rubrics.zip,
+      path: /downloads/skills/skill-rubric-001/0.2.0/design-moderate-rubrics.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -188,7 +188,19 @@ Bina jadual kriteria dan aras prestasi menggunakan bukti yang boleh diperhatikan
 
 ### Contoh penggunaan
 
-Contoh sintetik: rubrik empat aras untuk pembentangan sains berdasarkan ketepatan fakta, penggunaan bukti dan kejelasan penerangan. Dua respons contoh dinyahkenal pasti digunakan untuk mengesan deskriptor yang bertindih atau sukar dibuktikan.
+#### Contoh input
+
+Tugasan sintetik: pembentangan tiga minit tentang pencemaran air. Murid mesti menerangkan satu punca, satu kesan dan menggunakan sekurang-kurangnya dua bukti daripada sumber kelas. Kriteria: ketepatan fakta, penggunaan bukti dan kejelasan penerangan.
+
+#### Contoh hasil
+
+| Kriteria             | 4 — Kukuh                                                                                    | 3 — Memadai                                                                                                    | 2 — Sedang berkembang                                                                          | 1 — Belum ditunjukkan                                                        |
+| -------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Ketepatan fakta      | Punca dan kesan diterangkan dengan tepat; tiada percanggahan dengan sumber kelas.            | Punca dan kesan umumnya tepat dengan satu kekurangan kecil yang tidak mengubah maksud utama.                   | Sebahagian penerangan tepat, tetapi terdapat kekeliruan yang menjejaskan hubungan punca–kesan. | Punca atau kesan tidak dapat dikenal pasti dengan tepat berdasarkan respons. |
+| Penggunaan bukti     | Dua atau lebih bukti khusus digunakan dan hubungan setiap bukti dengan tuntutan diterangkan. | Dua bukti berkaitan digunakan, tetapi hubungan salah satu bukti dengan tuntutan hanya diterangkan secara umum. | Satu bukti berkaitan digunakan atau bukti disenaraikan tanpa menghubungkannya dengan tuntutan. | Tiada bukti daripada sumber kelas yang dapat dikenal pasti.                  |
+| Kejelasan penerangan | Idea disusun dalam urutan punca → bukti → kesan; istilah utama dijelaskan dan mudah diikuti. | Urutan keseluruhan jelas, dengan satu lompatan idea atau istilah yang kurang diterangkan.                      | Urutan tidak konsisten dan memerlukan pendengar membuat beberapa andaian.                      | Penerangan terlalu terhad untuk menentukan urutan idea.                      |
+
+**Catatan penyelarasan:** Dua penilai menguji rubrik pada respons anonim. Frasa “sangat menarik” dibuang kerana tidak dapat diperhatikan secara konsisten. Jika penilai berbeza lebih daripada satu aras, mereka perlu menandakan bukti respons yang menyokong keputusan dan menyemak deskriptor sebelum markah dimuktamadkan.
 
 ### Semakan kualiti
 
@@ -237,7 +249,19 @@ Create a criteria-by-performance-level table using observable evidence. Avoid va
 
 ### Worked example
 
-Synthetic example: a four-level science-presentation rubric for factual accuracy, evidence and explanatory clarity. Two de-identified sample responses are used to identify overlapping or unobservable descriptors.
+#### Sample input
+
+Synthetic task: a three-minute presentation about water pollution. Learners must explain one cause, one effect and use at least two pieces of evidence from class sources. Criteria: factual accuracy, use of evidence and clarity of explanation.
+
+#### Sample output
+
+| Criterion              | 4 — Strong                                                                                                 | 3 — Secure                                                                                                 | 2 — Developing                                                                                 | 1 — Not yet demonstrated                                             |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Factual accuracy       | Cause and effect are explained accurately with no contradiction of class sources.                          | Cause and effect are generally accurate, with one minor omission that does not change the central meaning. | Part of the explanation is accurate, but confusion weakens the cause–effect relationship.      | A cause or effect cannot be identified accurately from the response. |
+| Use of evidence        | Two or more specific pieces of evidence are used and the link between each one and the claim is explained. | Two relevant pieces of evidence are used, but one link to the claim is explained only generally.           | One relevant piece of evidence is used, or evidence is listed without connection to the claim. | No evidence from the class sources can be identified.                |
+| Clarity of explanation | Ideas follow a cause → evidence → effect sequence; key terms are explained and easy to follow.             | The overall sequence is clear, with one jump in reasoning or under-explained term.                         | The sequence is inconsistent and requires the listener to make several assumptions.            | The explanation is too limited to determine a sequence of ideas.     |
+
+**Moderation note:** Two assessors test the rubric on anonymous responses. “Very engaging” is removed because it cannot be observed consistently. If ratings differ by more than one level, assessors identify the response evidence supporting their decisions and revise the descriptor before finalising scores.
 
 ### Quality check
 

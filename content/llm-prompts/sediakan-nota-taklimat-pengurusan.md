@@ -67,7 +67,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-policy-analysis-001, skill-management-report-001]
@@ -167,7 +167,24 @@ Keputusan diperlukan: pilih tarikh program antara 12 atau 19 November. Fakta: de
 
 #### Contoh hasil
 
-Nota satu halaman menerangkan keputusan, fakta, pilihan, pertukaran dan syor bersyarat kepada kuasa pemilik keputusan.
+**Keputusan diperlukan**
+Pilih tarikh program: 12 atau 19 November.
+
+**Fakta disahkan**
+
+- Dewan tersedia pada kedua-dua tarikh.
+- Fasilitator hanya tersedia pada 19 November.
+- Notis minimum kepada peserta ialah dua minggu.
+
+| Pilihan     | Kelebihan                                          | Kekangan/risiko                                                                                                                                               |
+| ----------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 12 November | Program boleh dilaksanakan lebih awal.             | Fasilitator yang dikenal pasti tidak tersedia; fasilitator alternatif perlu dicari dan disahkan. Pematuhan tempoh notis bergantung pada tarikh notis sebenar. |
+| 19 November | Dewan dan fasilitator yang dikenal pasti tersedia. | Program berlangsung seminggu lebih lewat; jadual peserta masih perlu disahkan.                                                                                |
+
+**Syor**
+Pilih **19 November**, tertakluk pada pengesahan bahawa notis dua minggu masih boleh dipenuhi dan peserta utama tersedia. Pilihan ini mempunyai jurang pelaksanaan paling kecil berdasarkan fakta yang diberikan.
+
+**Tindakan selepas keputusan:** sahkan tarikh dengan dewan dan fasilitator, keluarkan notis rasmi, kemudian rekod pemilik setiap tindakan. Pemilik keputusan akhir kekal pada pihak pengurusan yang diberi kuasa.
 
 ### Semakan kualiti
 
@@ -222,7 +239,24 @@ Decision required: choose a programme date between 12 and 19 November. Facts: th
 
 #### Sample output
 
-The one-page brief explains the decision, facts, options, trade-offs and a recommendation that remains subject to the decision owner’s authority.
+**Decision required**
+Select the programme date: 12 or 19 November.
+
+**Verified facts**
+
+- The hall is available on both dates.
+- The facilitator is available only on 19 November.
+- Participants require at least two weeks’ notice.
+
+| Option      | Advantage                                               | Constraint/risk                                                                                                                                             |
+| ----------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 12 November | The programme can take place earlier.                   | The identified facilitator is unavailable; an alternative must be found and confirmed. Compliance with the notice period depends on the actual notice date. |
+| 19 November | Both the hall and identified facilitator are available. | The programme takes place one week later; participant availability still requires confirmation.                                                             |
+
+**Recommendation**
+Select **19 November**, subject to confirming that the two-week notice requirement can still be met and that key participants are available. This option has the fewest known delivery gaps based on the supplied facts.
+
+**Actions after the decision:** confirm the date with the venue and facilitator, issue the official notice, then assign an owner to each action. Final authority remains with the authorised management decision-maker.
 
 ### Quality check
 

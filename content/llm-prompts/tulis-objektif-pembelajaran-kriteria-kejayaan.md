@@ -59,7 +59,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.5.0
+version: 0.6.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-rph-001, skill-dskp-activity-001]
@@ -186,7 +186,16 @@ Topik: perubahan keadaan jirim; Tahun 5; 60 minit; bukti melalui penerangan lisa
 
 #### Contoh hasil
 
-Jadual objektif, kriteria ‘Saya boleh…’, bukti dan semakan guru dilabel sebagai cadangan generik, bukan penjajaran DSKP.
+**Status penjajaran:** Cadangan generik berdasarkan topik dan bukti yang diberikan. **Bukan penjajaran DSKP** kerana petikan standard rasmi tidak dilampirkan.
+
+| Objektif pembelajaran                                                                                                                                               | Kriteria kejayaan “Saya boleh…”                                                                                 | Bukti pembelajaran                                      | Semakan guru                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Pada akhir pelajaran, murid dapat mengelaskan sekurang-kurangnya enam contoh kepada pepejal, cecair atau gas serta menerangkan satu ciri bagi setiap keadaan jirim. | Saya boleh mengelaskan sekurang-kurangnya 5 daripada 6 contoh dengan betul dan menerangkan ciri yang digunakan. | Kad pengelasan individu dan penerangan lisan ringkas.   | Adakah pengelasan menggunakan ciri keadaan jirim, bukan sekadar hafalan contoh? |
+| Murid dapat menerangkan satu perubahan keadaan jirim menggunakan urutan keadaan asal → proses → keadaan akhir.                                                      | Saya boleh menerangkan contoh seperti ais → peleburan → air dengan istilah yang tepat.                          | Respons dua ayat atau rajah berlabel pada tiket keluar. | Adakah proses dan arah perubahan dinyatakan dengan tepat?                       |
+
+**Cadangan aliran 60 minit:** 8 minit pencungkil idea, 15 minit demonstrasi dan perbincangan, 20 minit pengelasan, 12 minit penerangan berpasangan, 5 minit tiket keluar.
+
+**Sebelum digunakan:** Guru perlu membandingkan istilah, skop dan tahap dengan DSKP Tahun 5 yang sedang berkuat kuasa.
 
 ### Semakan kualiti
 
@@ -257,7 +266,16 @@ Topic: changes in states of matter; Year 5; 60 minutes; evidence through oral ex
 
 #### Sample output
 
-The table of objectives, ‘I can…’ criteria, evidence and teacher checks is labelled as a generic suggestion rather than DSKP alignment.
+**Alignment status:** A generic suggestion based on the supplied topic and evidence. **Not DSKP-aligned** because no official standards extract was attached.
+
+| Learning objective                                                                                                                       | “I can…” success criterion                                                        | Evidence of learning                                     | Teacher check                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| By the end of the lesson, learners can classify at least six examples as solids, liquids or gases and explain one feature of each state. | I can classify at least 5 of 6 examples correctly and explain the feature I used. | Individual sorting cards and a short oral explanation.   | Does the classification use properties of states of matter rather than memorised examples alone? |
+| Learners can explain one change of state using the sequence original state → process → final state.                                      | I can explain an example such as ice → melting → water using accurate terms.      | A two-sentence response or labelled exit-ticket diagram. | Are the process and direction of change stated accurately?                                       |
+
+**Suggested 60-minute flow:** 8-minute prior-knowledge check, 15-minute demonstration and discussion, 20-minute classification task, 12-minute paired explanation, 5-minute exit ticket.
+
+**Before use:** The teacher must compare the terminology, scope and level with the current Year 5 DSKP.
 
 ### Quality check
 

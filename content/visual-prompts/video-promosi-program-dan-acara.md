@@ -59,7 +59,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [visual-event-poster-001]
@@ -145,6 +145,8 @@ visual_prompt:
 
 ### Kegunaan koleksi
 
+> **Pratonton contoh:** Imej di atas ialah papan cerita sintetik untuk menunjukkan struktur montaj. Ia bukan klip video janaan atau rakaman program sebenar.
+
 Gunakan prompt ini untuk klip pengenalan 10–20 saat bagi program pendidikan, komuniti atau pembangunan profesional. Sediakan brief acara yang telah disahkan sebelum menjana supaya aktiviti, peserta dan lokasi tidak direka-reka. Jana visual tanpa teks acara; tambah tajuk, tarikh, logo, sari kata dan seruan tindakan dalam penyunting video menggunakan maklumat yang telah disahkan.
 
 ### Sebelum menjana
@@ -211,6 +213,8 @@ Video janaan bukan rakaman program sebenar. Jangan persembahkannya sebagai dokum
 ## English
 
 ### What this collection is for
+
+> **Representative preview:** The image above is a synthetic storyboard showing the montage structure. It is not a generated video clip or footage of a real programme.
 
 Use these prompts for a 10–20 second introduction to an education, community or professional-development programme. Prepare a verified event brief before generation so that activities, participants and venues are not invented. Generate the visual without event text; add the verified title, date, logo, captions and call to action in a video editor.
 

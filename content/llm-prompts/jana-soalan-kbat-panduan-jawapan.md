@@ -61,7 +61,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.4.0
+version: 0.5.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-assessment-set-001]
@@ -173,11 +173,23 @@ Set soalan KBAT, tujuan pemikiran, panduan jawapan dan audit item.
 
 #### Contoh input
 
-Petikan sintetik Tingkatan 2 menunjukkan perubahan jumlah pembaziran makanan tetapi tidak menerangkan sebab. Minta empat soalan respons pendek.
+Petikan sintetik Tingkatan 2 menyatakan bahawa sisa makanan kantin berkurang daripada 80 kg kepada 62 kg seminggu selepas kempen pengasingan sisa. Petikan tidak menerangkan sebab perubahan atau memberikan kumpulan perbandingan. Minta empat soalan respons pendek.
 
 #### Contoh hasil
 
-Set mengandungi soalan pengiraan, penilaian batas bukti, cadangan maklumat tambahan dan perbandingan hujah, berserta panduan jawapan dan audit aras pemikiran.
+1. **Hitung pengurangan sisa makanan dalam kilogram dan peratus. Tunjukkan langkah anda.**
+   _Panduan jawapan:_ Pengurangan = 80 − 62 = **18 kg**. Peratus pengurangan = 18 ÷ 80 × 100 = **22.5%**.
+
+2. **Adakah data ini membuktikan bahawa kempen menyebabkan pengurangan tersebut? Jelaskan.**
+   _Panduan jawapan:_ Tidak. Data menunjukkan perubahan selepas kempen tetapi tidak mengasingkan faktor lain seperti jumlah murid, menu atau cara timbangan. Jawapan perlu membezakan hubungan masa daripada sebab-akibat.
+
+3. **Cadangkan dua maklumat tambahan yang akan menguatkan penilaian keberkesanan kempen.**
+   _Panduan jawapan:_ Contohnya data beberapa minggu sebelum dan selepas kempen, jumlah hidangan, kaedah timbangan yang sama, atau data kantin perbandingan.
+
+4. **Seorang murid berkata, “Kempen ini pasti berjaya kerana sisa berkurang.” Tulis semula hujah itu supaya lebih tepat.**
+   _Panduan jawapan:_ “Sisa yang direkodkan berkurang 22.5% selepas kempen. Ini konsisten dengan kemungkinan kempen membantu, tetapi maklumat tambahan diperlukan sebelum kita membuat kesimpulan sebab-akibat.”
+
+**Audit aras pemikiran:** Soalan 1 mengaplikasi; Soalan 2 menilai bukti; Soalan 3 mencipta cadangan siasatan; Soalan 4 menilai dan membina semula hujah.
 
 ### Semakan kualiti
 
@@ -239,11 +251,23 @@ A KBAT question set, thinking purpose, answer guidance and item audit.
 
 #### Sample input
 
-A synthetic Form 2 passage shows a change in food-waste totals but does not explain the cause. Request four short-response questions.
+A synthetic Form 2 passage states that canteen food waste fell from 80 kg to 62 kg per week after a waste-separation campaign. It does not explain the cause or provide a comparison group. Request four short-response questions.
 
 #### Sample output
 
-The set includes calculation, evidence-limit evaluation, additional-information and argument-comparison questions, with answer guidance and a thinking-level audit.
+1. **Calculate the reduction in food waste in kilograms and as a percentage. Show your working.**
+   _Answer guidance:_ Reduction = 80 − 62 = **18 kg**. Percentage reduction = 18 ÷ 80 × 100 = **22.5%**.
+
+2. **Does this information prove that the campaign caused the reduction? Explain.**
+   _Answer guidance:_ No. The figures show a change after the campaign but do not isolate other factors such as student numbers, menus or weighing methods. The answer should distinguish timing from causation.
+
+3. **Suggest two additional pieces of information that would strengthen an evaluation of the campaign.**
+   _Answer guidance:_ Examples include several weeks of before-and-after data, meal counts, a consistent weighing method or data from a comparison canteen.
+
+4. **A learner says, “The campaign definitely worked because waste decreased.” Rewrite the argument so it is more accurate.**
+   _Answer guidance:_ “Recorded waste fell by 22.5% after the campaign. This is consistent with the campaign possibly helping, but more information is needed before drawing a causal conclusion.”
+
+**Thinking-level audit:** Question 1 applies; Question 2 evaluates evidence; Question 3 creates an investigation proposal; Question 4 evaluates and reconstructs an argument.
 
 ### Quality check
 

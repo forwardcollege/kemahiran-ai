@@ -67,7 +67,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [visual-social-campaign-001]
@@ -177,7 +177,14 @@ Matlamat: mempromosikan bengkel perniagaan empat minggu. Audiens: pemilik SME ba
 
 #### Contoh hasil
 
-Kalendar empat minggu mengehadkan penerbitan kepada dua hantaran seminggu, memadankan format dengan saluran dan menandakan tuntutan serta visual untuk kelulusan manusia.
+| Minggu | Hantaran 1                                                                                         | Hantaran 2                                                                     | Tujuan dan seruan tindakan                                               |
+| ------ | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| 1      | Instagram karusel: “3 cabaran biasa pemilik SME baharu” menggunakan hasil bengkel yang diluluskan. | Facebook grafik statik: tarikh, masa dan siapa yang sesuai menyertai.          | Kesedaran — “Simpan tarikh” dan lawati halaman maklumat rasmi.           |
+| 2      | Instagram Reel 20 saat: satu tip persediaan perniagaan daripada bahan bengkel.                     | Facebook hantaran teks + visual: penerangan ringkas hasil pembelajaran.        | Pertimbangan — semak hasil bengkel dan syarat penyertaan.                |
+| 3      | Instagram petikan testimoni sintetik yang jelas dilabel sebagai contoh.                            | Facebook FAQ: tempoh, format dan perkara yang peserta perlu sediakan.          | Keyakinan — jawab kebimbangan praktikal tanpa mencipta dakwaan kejayaan. |
+| 4      | Instagram karusel: ringkasan “Apa yang akan anda bawa pulang”.                                     | Hantaran silang platform: peringatan akhir berdasarkan tarikh yang diluluskan. | Tindakan — daftar melalui pautan rasmi.                                  |
+
+**Semakan sebelum terbit:** sahkan semua tarikh dan pautan; jangan gunakan testimoni sintetik seolah-olah testimoni pelanggan sebenar; pastikan visual, sari kata dan tuntutan hasil mendapat kelulusan manusia.
 
 ### Semakan kualiti
 
@@ -235,7 +242,14 @@ Goal: promote a four-week business workshop. Audience: new SME owners. Channels:
 
 #### Sample output
 
-The four-week calendar limits publishing to two posts per week, matches formats to channels and flags claims and visuals for human approval.
+| Week | Post 1                                                                                          | Post 2                                                                | Purpose and call to action                                                |
+| ---- | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| 1    | Instagram carousel: “3 common challenges for new SME owners”, using approved workshop outcomes. | Facebook static graphic: date, time and intended participants.        | Awareness — save the date and visit the official information page.        |
+| 2    | 20-second Instagram Reel: one business-preparation tip from the workshop material.              | Facebook text + visual: concise explanation of the learning outcomes. | Consideration — review the outcomes and participation requirements.       |
+| 3    | Instagram synthetic testimonial, clearly labelled as an example.                                | Facebook FAQ: duration, format and what participants need to prepare. | Confidence — address practical concerns without inventing success claims. |
+| 4    | Instagram carousel: “What you will take away”.                                                  | Cross-platform final reminder based on the approved date.             | Action — register through the official link.                              |
+
+**Pre-publication check:** verify every date and link; never present the synthetic testimonial as a real customer statement; obtain human approval for visuals, captions and outcome claims.
 
 ### Quality check
 

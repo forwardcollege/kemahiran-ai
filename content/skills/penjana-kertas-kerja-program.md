@@ -56,10 +56,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.2
+version: 0.2.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-programme-outcomes-001, skill-activity-report-001]
@@ -106,7 +106,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-programme-paper-001/0.1.2/draft-programme-paper.zip,
+      path: /downloads/skills/skill-programme-paper-001/0.2.0/draft-programme-paper.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -175,7 +175,40 @@ Susun latar belakang, rasional, objektif, hasil, skop, pelaksanaan, jadual, tang
 
 ### Contoh penggunaan
 
-Contoh sintetik: bengkel literasi AI sehari untuk 40 peserta dengan had perbelanjaan tetapi sebut harga belum diterima. Draf menggunakan had yang diluluskan, mengekalkan angka belum sah sebagai tempat letak dan menyatakan pemilik bagi tindakan mendapatkan sebut harga.
+#### Contoh input
+
+Program sintetik: bengkel literasi AI sehari untuk 40 peserta. Had perbelanjaan diluluskan: RM8,000. Tempat, fasilitator dan makan minum memerlukan sebut harga; tiada sebut harga diterima. Tujuan: membina penggunaan AI yang praktikal dan bertanggungjawab.
+
+#### Contoh hasil
+
+**1. Tujuan**
+Kertas kerja ini memohon pertimbangan untuk melaksanakan bengkel literasi AI sehari bagi 40 peserta, dengan fokus pada penggunaan praktikal, semakan hasil dan pengendalian maklumat secara bertanggungjawab.
+
+**2. Objektif**
+
+1. Membolehkan peserta menerangkan sekurang-kurangnya tiga prinsip penggunaan AI yang bertanggungjawab.
+2. Membolehkan peserta menyiapkan satu latihan aliran kerja menggunakan data sintetik atau dinyahkenal pasti.
+3. Menghasilkan pelan tindakan individu yang boleh disemak selepas program.
+
+**3. Cadangan pelaksanaan**
+
+- Tarikh/tempat: `[PERLU DISAHKAN]`
+- Peserta: 40 orang
+- Tempoh: satu hari
+- Kaedah: demonstrasi, latihan berpandu, tugasan aplikasi dan refleksi tindakan
+
+**4. Anggaran kewangan**
+
+| Item                 |                    Anggaran | Asas/status                              |
+| -------------------- | --------------------------: | ---------------------------------------- |
+| Tempat dan peralatan |  `[SEBUT HARGA DIPERLUKAN]` | Pemilik: Urus Setia                      |
+| Fasilitator          |  `[SEBUT HARGA DIPERLUKAN]` | Pemilik: Penyelaras Program              |
+| Makan minum          |  `[SEBUT HARGA DIPERLUKAN]` | Pemilik: Urus Setia                      |
+| Bahan peserta        | `[ANGGARAN PERLU DISAHKAN]` | Berdasarkan 40 peserta                   |
+| **Jumlah maksimum**  |  **Tidak melebihi RM8,000** | Had diluluskan; bukan anggaran kos akhir |
+
+**5. Kelulusan diperlukan**
+Kelulusan konsep program dan kebenaran mendapatkan sebut harga. Komitmen perbelanjaan hanya dibuat selepas sebut harga, pemilihan pembekal dan kuasa kewangan disahkan.
 
 ### Semakan kualiti
 
@@ -224,7 +257,40 @@ Structure the background, rationale, objectives, outcomes, scope, delivery, sche
 
 ### Worked example
 
-Synthetic example: a one-day AI-literacy workshop for 40 participants with a spending limit but no quotations. The draft uses the approved limit, keeps unverified figures as placeholders and names the owner responsible for obtaining quotations.
+#### Sample input
+
+Synthetic programme: a one-day AI-literacy workshop for 40 participants. Approved spending ceiling: RM8,000. Venue, facilitator and catering require quotations; none has been received. Purpose: build practical and responsible AI use.
+
+#### Sample output
+
+**1. Purpose**
+This paper seeks consideration for a one-day AI-literacy workshop for 40 participants, focused on practical use, output review and responsible information handling.
+
+**2. Objectives**
+
+1. Enable participants to explain at least three responsible-AI principles.
+2. Enable participants to complete one workflow exercise using synthetic or de-identified data.
+3. Produce an individual action plan for post-programme review.
+
+**3. Proposed delivery**
+
+- Date/venue: `[CONFIRMATION REQUIRED]`
+- Participants: 40
+- Duration: one day
+- Method: demonstration, guided practice, application task and action reflection
+
+**4. Financial estimate**
+
+| Item                  |                     Estimate | Basis/status                                |
+| --------------------- | ---------------------------: | ------------------------------------------- |
+| Venue and equipment   |       `[QUOTATION REQUIRED]` | Owner: Secretariat                          |
+| Facilitator           |       `[QUOTATION REQUIRED]` | Owner: Programme Coordinator                |
+| Catering              |       `[QUOTATION REQUIRED]` | Owner: Secretariat                          |
+| Participant materials | `[ESTIMATE TO BE CONFIRMED]` | Based on 40 participants                    |
+| **Maximum total**     |    **Not more than RM8,000** | Approved ceiling; not a final cost estimate |
+
+**5. Approval required**
+Approval of the programme concept and permission to obtain quotations. No spending commitment is made until quotations, supplier selection and financial authority are confirmed.
 
 ### Quality check
 

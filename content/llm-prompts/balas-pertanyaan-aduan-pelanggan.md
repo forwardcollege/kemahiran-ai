@@ -59,7 +59,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids:
@@ -212,7 +212,15 @@ Pelanggan melaporkan pesanan sintetik lewat dua hari. Fakta disahkan: bungkusan 
 
 #### Contoh hasil
 
-Jawapan mengakui kesulitan, menerangkan status yang disahkan, memberikan tindakan serta tempoh susulan, dan tidak menjanjikan bayaran balik atau pampasan.
+Salam sejahtera,
+
+Terima kasih kerana memaklumkan kepada kami. Kami mohon maaf atas kelewatan pesanan anda. Berdasarkan semakan terkini, bungkusan tersebut masih dalam transit dan belum ditandakan sebagai dihantar.
+
+Pasukan khidmat pelanggan akan mendapatkan kemas kini daripada penyedia penghantaran dan menghubungi anda semula dalam tempoh **satu hari bekerja**. Pada peringkat ini, kami belum dapat mengesahkan tarikh serahan baharu atau sebarang pampasan kerana kedua-duanya tertakluk pada hasil semakan dan dasar yang berkuat kuasa.
+
+Jika anda mempunyai maklumat penghantaran tambahan yang berkaitan, sila balas melalui saluran rasmi ini. Terima kasih atas kesabaran anda.
+
+**Catatan dalaman:** Pemilik susulan — Pasukan Khidmat Pelanggan. Tempoh — satu hari bekerja. Jangan tutup aduan sehingga kemas kini penghantaran disahkan.
 
 ### Semakan kualiti
 
@@ -285,7 +293,15 @@ A customer reports that a synthetic order is two days late. Verified fact: the p
 
 #### Sample output
 
-The response acknowledges the inconvenience, explains the verified status, provides the next action and timeframe, and makes no refund or compensation promise.
+Hello,
+
+Thank you for bringing this to our attention. We are sorry that your order is late. Our latest verified update shows that the parcel is still in transit and has not been marked as delivered.
+
+The customer service team will request an update from the delivery provider and contact you again within **one working day**. At this stage, we cannot confirm a revised delivery date or any compensation because both depend on the review outcome and the applicable policy.
+
+If you have any additional relevant delivery information, please reply through this official channel. Thank you for your patience.
+
+**Internal note:** Follow-up owner — Customer Service. Timeframe — one working day. Do not close the enquiry until the delivery update is verified.
 
 ### Quality check
 

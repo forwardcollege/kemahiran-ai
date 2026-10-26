@@ -48,10 +48,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.2
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [prompt-customer-response-001, visual-product-photo-001]
@@ -92,7 +92,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-business-proposal-001/0.2.2/draft-business-proposal.zip,
+      path: /downloads/skills/skill-business-proposal-001/0.3.0/draft-business-proposal.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -196,7 +196,20 @@ Input sintetik: sebuah syarikat latihan diminta menjalankan dua bengkel literasi
 
 #### Contoh hasil
 
-Hasil yang betul menyenaraikan dua bengkel, modul, laporan dan tanggungjawab pelanggan; bahagian harga mesti bertanda `[PERLU DISAHKAN]`, bukannya mereka angka.
+**Ringkasan cadangan**
+Cadangan ini merangkumi dua bengkel literasi AI untuk 40 peserta bagi membina kefahaman penggunaan AI yang bertanggungjawab dan memberi latihan amali menggunakan senario kerja yang diluluskan. Pelaksanaan dicadangkan dalam dua sesi supaya peserta boleh mencuba kaedah pertama sebelum mengikuti sesi lanjutan.
+
+| Komponen        | Skop dan hasil serahan                                                                                    | Tanggungjawab                                                                               |
+| --------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Bengkel 1       | Pengenalan, penggunaan bertanggungjawab dan latihan membina arahan; satu set slaid dan lembaran aktiviti. | Penyedia: fasilitasi dan bahan. Pelanggan: sahkan profil peserta serta tempat/peralatan.    |
+| Bengkel 2       | Aplikasi kepada dua aliran kerja pelanggan dan semakan hasil; lembaran kerja tindakan susulan.            | Penyedia: fasilitasi dan rumusan. Pelanggan: bekalkan senario yang telah dinyahkenal pasti. |
+| Laporan ringkas | Kehadiran, aktiviti yang diselesaikan, maklum balas agregat dan tindakan susulan yang dicadangkan.        | Pelanggan mengesahkan siapa yang menerima laporan.                                          |
+
+**Jadual cadangan:** Tarikh dan tempoh setiap sesi — `[PERLU DISAHKAN]`.
+**Yuran profesional:** `[PERLU DISAHKAN SELEPAS SKOP, LOKASI DAN KEPERLUAN LOGISTIK DIPERSETUJUI]`.
+**Tidak termasuk:** perjalanan, sewaan tempat, peralatan peserta dan pembangunan sistem tersuai kecuali dinyatakan secara bertulis.
+
+**Andaian utama:** maksimum 40 peserta; bahan pelanggan diterima sekurang-kurangnya lima hari bekerja sebelum bengkel; semua data latihan telah dinyahkenal pasti.
 
 ### Semakan kualiti
 
@@ -266,7 +279,20 @@ Synthetic input: a training company is asked to run two AI-literacy workshops fo
 
 #### Sample output
 
-An appropriate output lists two workshops, modules, the report and client responsibilities; the price must be marked `[CONFIRMATION REQUIRED]` rather than invented.
+**Proposal summary**
+This proposal covers two AI-literacy workshops for 40 participants, designed to build responsible-use understanding and provide hands-on practice with approved workplace scenarios. The two-session structure allows participants to try the initial method before attending the follow-up workshop.
+
+| Component    | Scope and deliverable                                                                                  | Responsibility                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Workshop 1   | Foundations, responsible use and instruction-building practice; one slide deck and activity worksheet. | Provider: facilitation and materials. Client: confirm participant profile and venue/equipment. |
+| Workshop 2   | Application to two client workflows and output review; follow-up action worksheet.                     | Provider: facilitation and summary. Client: supply de-identified scenarios.                    |
+| Short report | Attendance, completed activities, aggregate feedback and recommended follow-up actions.                | Client confirms authorised report recipients.                                                  |
+
+**Proposed schedule:** Date and duration of each session — `[CONFIRMATION REQUIRED]`.
+**Professional fee:** `[TO BE CONFIRMED AFTER SCOPE, LOCATION AND LOGISTICS ARE AGREED]`.
+**Exclusions:** travel, venue hire, participant equipment and custom system development unless agreed in writing.
+
+**Key assumptions:** no more than 40 participants; client material received at least five working days before delivery; all training data is de-identified.
 
 ### Quality check
 

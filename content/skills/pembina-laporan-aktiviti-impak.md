@@ -64,10 +64,10 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.2
+version: 0.2.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-programme-paper-001, prompt-programme-outcomes-001]
@@ -104,7 +104,7 @@ skill:
   package:
     {
       available: true,
-      path: /downloads/skills/skill-activity-report-001/0.1.2/build-activity-outcome-report.zip,
+      path: /downloads/skills/skill-activity-report-001/0.2.0/build-activity-outcome-report.zip,
       format: skill_md_zip,
       included_files: [README.md, SKILL.md, LICENSES.md],
     }
@@ -158,7 +158,23 @@ Pisahkan fakta pelaksanaan, output, hasil yang diperhatikan, tafsiran tentatif, 
 
 ### Contoh penggunaan
 
-Contoh sintetik: 38 daripada sasaran 40 hadir dan 30 borang maklum balas diterima. Laporan boleh menyatakan kehadiran sebenar dan kadar respons, tetapi tidak boleh melaporkan 95% kepuasan tanpa bilangan respons yang sah atau mendakwa program menyebabkan perubahan jangka panjang.
+#### Contoh input
+
+Program sintetik menyasarkan 40 peserta. Rekod menunjukkan 38 hadir dan 30 borang maklum balas diterima. Tiada pecahan skor kepuasan, ukuran awal atau data susulan diberikan.
+
+#### Contoh hasil
+
+**Ringkasan pelaksanaan**
+Program mencapai **38 daripada 40 peserta sasaran (95.0%)**. Sebanyak **30 borang maklum balas** diterima, bersamaan kadar respons **78.9% daripada peserta yang hadir**. Data yang tersedia menyokong pelaporan capaian dan kadar respons, tetapi belum menyokong kesimpulan tentang kepuasan, pembelajaran atau perubahan amalan.
+
+| Petunjuk                 |          Sasaran |            Sebenar | Tafsiran yang dibenarkan                                             |
+| ------------------------ | ---------------: | -----------------: | -------------------------------------------------------------------- |
+| Kehadiran                |               40 |                 38 | Sasaran kehadiran dicapai pada kadar 95.0%.                          |
+| Borang maklum balas      | Tidak ditetapkan |                 30 | 78.9% peserta hadir menghantar borang.                               |
+| Kepuasan                 |  Tidak diberikan | Tidak dapat dikira | Jangan laporkan peratus kepuasan tanpa bilangan dan taburan respons. |
+| Perubahan jangka panjang |     Tidak diukur |     Tidak tersedia | Tiada tuntutan impak jangka panjang boleh dibuat.                    |
+
+**Cadangan susulan:** Laporkan pecahan setiap item maklum balas bersama penyebutnya; tetapkan ukuran pra/pasca atau semakan susulan hanya jika perubahan pembelajaran atau amalan mahu dinilai.
 
 ### Semakan kualiti
 
@@ -205,7 +221,23 @@ Separate delivery facts, outputs, observed outcomes, tentative interpretation, d
 
 ### Worked example
 
-Synthetic example: 38 of 40 targeted participants attended and 30 feedback forms were received. The report may state actual attendance and response rate, but it must not report 95% satisfaction without a valid response count or claim long-term change was caused by the programme.
+#### Sample input
+
+A synthetic programme targeted 40 participants. Records show that 38 attended and 30 feedback forms were returned. No satisfaction breakdown, baseline measure or follow-up data is supplied.
+
+#### Sample output
+
+**Delivery summary**
+The programme reached **38 of 40 target participants (95.0%)**. A total of **30 feedback forms** were returned, representing a **78.9% response rate among attendees**. The available data supports reporting reach and response rate, but not conclusions about satisfaction, learning or changed practice.
+
+| Indicator        |       Target |               Actual | Permitted interpretation                                                          |
+| ---------------- | -----------: | -------------------: | --------------------------------------------------------------------------------- |
+| Attendance       |           40 |                   38 | The attendance target was reached at 95.0%.                                       |
+| Feedback forms   |      Not set |                   30 | 78.9% of attendees returned a form.                                               |
+| Satisfaction     | Not supplied | Cannot be calculated | Do not report a satisfaction percentage without response counts and distribution. |
+| Long-term change | Not measured |        Not available | No long-term impact claim can be made.                                            |
+
+**Recommended follow-up:** Report each feedback-item distribution with its denominator; define a baseline/post measure or follow-up check only if learning or practice change is to be evaluated.
 
 ### Quality check
 

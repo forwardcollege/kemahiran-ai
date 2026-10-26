@@ -59,7 +59,7 @@ review:
     last_reviewed: "2026-10-26",
     next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
 updated_at: "2026-10-26"
 related_ids: [skill-management-report-001, prompt-management-update-001]
@@ -171,7 +171,17 @@ Soalan: Bandingkan jualan suku pertama mengikut wilayah. Data sintetik menunjukk
 
 #### Contoh hasil
 
-Analisis mengira beza dan bahagian setiap wilayah, mengenal pasti Selatan sebagai nilai terendah, dan menandakan bahawa data tidak menerangkan punca perbezaan. Soalan susulan meminta sasaran, tempoh perbandingan dan semakan data hilang.
+**Ringkasan eksekutif:** Jualan bersih suku pertama berjumlah **RM375,000**. Wilayah Tengah merekodkan nilai tertinggi, manakala Selatan merekodkan nilai terendah. Data ini menunjukkan perbezaan prestasi, tetapi tidak menerangkan puncanya.
+
+| Wilayah | Jualan bersih | Bahagian jumlah | Perbezaan berbanding Tengah |
+| ------- | ------------: | --------------: | --------------------------: |
+| Tengah  |     RM150,000 |           40.0% |                           — |
+| Utara   |     RM120,000 |           32.0% |          -RM30,000 (-20.0%) |
+| Selatan |     RM105,000 |           28.0% |          -RM45,000 (-30.0%) |
+
+**Pemerhatian yang disokong data:** Tengah menyumbang dua perlima daripada jumlah jualan. Jurang Tengah–Selatan ialah RM45,000. Tiada kesimpulan boleh dibuat tentang faktor seperti bilangan pelanggan, harga, musim atau prestasi pasukan kerana pemboleh ubah tersebut tidak diberikan.
+
+**Maklumat susulan yang diperlukan:** sasaran setiap wilayah, data tempoh perbandingan, bilangan transaksi dan status data hilang atau pulangan jualan.
 
 ### Semakan kualiti
 
@@ -228,7 +238,17 @@ Question: Compare first-quarter sales by region. Synthetic data shows North RM12
 
 #### Sample output
 
-The analysis calculates each difference and share, identifies South as the lowest value, and states that the data does not explain the cause. Follow-up questions request targets, a comparison period and a missing-data check.
+**Executive summary:** First-quarter net sales total **RM375,000**. Central records the highest value and South the lowest. These figures show a performance difference, but they do not explain its cause.
+
+| Region  | Net sales | Share of total | Difference from Central |
+| ------- | --------: | -------------: | ----------------------: |
+| Central | RM150,000 |          40.0% |                       — |
+| North   | RM120,000 |          32.0% |      -RM30,000 (-20.0%) |
+| South   | RM105,000 |          28.0% |      -RM45,000 (-30.0%) |
+
+**Evidence-supported observations:** Central contributes two-fifths of total sales. The Central–South gap is RM45,000. No conclusion can be drawn about customer volume, pricing, seasonality or team performance because those variables were not supplied.
+
+**Follow-up information needed:** regional targets, a comparison period, transaction counts, and confirmation of missing data or sales returns.
 
 ### Quality check
 
