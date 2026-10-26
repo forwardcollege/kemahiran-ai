@@ -1129,6 +1129,62 @@ button {
   box-shadow: 0 16px 45px color-mix(in oklab, var(--foreground) 7%, transparent);
 }
 
+.auth-card-skeleton {
+  pointer-events: none;
+}
+
+.auth-skeleton {
+  border-radius: 0.4rem;
+  background: color-mix(in oklab, var(--muted) 78%, var(--card));
+}
+
+.auth-skeleton-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.7rem;
+}
+
+.auth-skeleton-eyebrow {
+  width: 8.5rem;
+  height: 0.65rem;
+}
+
+.auth-skeleton-title {
+  width: min(25rem, 86%);
+  height: 5.4rem;
+  margin-top: 0.9rem;
+}
+
+.auth-skeleton-copy {
+  width: 100%;
+  height: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.auth-skeleton-copy-short {
+  width: 72%;
+  margin-top: 0.55rem;
+}
+
+.auth-skeleton-button {
+  width: 100%;
+  height: 3rem;
+  margin-top: 1.7rem;
+  border-radius: 0.5rem;
+}
+
+.auth-skeleton-privacy {
+  width: 94%;
+  height: 0.65rem;
+  margin-top: 1.35rem;
+}
+
+.auth-skeleton-privacy-short {
+  width: 58%;
+  margin-top: 0.45rem;
+}
+
 .auth-card-icon {
   display: grid;
   width: 3rem;
