@@ -56,12 +56,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids:
   [
     skill-business-proposal-001,
@@ -160,15 +160,26 @@ visual_prompt:
 
 Gunakan prompt ini untuk merancang atau menghasilkan konsep imej produk. Untuk imej yang akan mewakili produk sebenar, foto rujukan yang anda berhak gunakan dan maklumat produk yang diluluskan adalah wajib. Jika bahan tersebut tiada, gunakan hasil hanya sebagai papan mood generik dan jangan terbitkannya sebagai imej produk. Imej janaan tidak boleh mengubah kuantiti, ramuan, label, pensijilan atau prestasi produk.
 
+### Sebelum menjana
+
+Sediakan bahan rujukan berikut sebelum menjana:
+
+- **Wajib:** Foto produk sebenar yang pengguna berhak gunakan untuk mengawal bentuk, warna, label dan skala.
+- **Wajib:** Ciri, kandungan, kuantiti dan tuntutan yang telah diluluskan.
+
+Tentukan nisbah aspek dan tempat penggunaan akhir. Tambah teks, data dan logo sebenar dalam alat reka bentuk selepas visual disemak.
+
 ### Pemboleh ubah
 
-- `{{PRODUCT}}` — produk, bahan, warna, saiz dan ciri fizikal yang tepat.
-- `{{SETTING}}` — permukaan dan latar yang munasabah.
-- `{{LIGHTING}}` — contoh cahaya studio lembut atau cahaya pagi.
-- `{{BRAND_PALETTE}}` — warna latar/prop yang diluluskan.
-- `{{ASPECT_RATIO}}` — 1:1 katalog, 4:5 sosial atau 16:9 banner.
+- `{{PRODUCT}}` — Produk dan ciri tepat **(Wajib)**.
+- `{{SETTING}}` — Latar dan permukaan **(Wajib)**.
+- `{{LIGHTING}}` — Pencahayaan **(Wajib)**.
+- `{{BRAND_PALETTE}}` — Palet jenama **(Pilihan)**.
+- `{{ASPECT_RATIO}}` — Nisbah aspek **(Wajib)**.
 
-### Prompt 1 — katalog bersih
+### Prompt koleksi
+
+#### Prompt 1 — katalog bersih
 
 ```text
 Cipta fotografi produk komersial {{ASPECT_RATIO}} bagi {{PRODUCT}} pada {{SETTING}}. Kekalkan bentuk, warna, bahan, pembungkusan, label dan kuantiti seperti rujukan yang diberikan. Gunakan sudut tiga suku yang semula jadi, perspektif lensa 70mm, {{LIGHTING}}, bayang lembut dan latar bersih dalam palet {{BRAND_PALETTE}}. Produk ialah fokus tunggal, tajam dan berskala munasabah, dengan ruang selamat di sekeliling untuk potongan katalog.
@@ -176,7 +187,7 @@ Cipta fotografi produk komersial {{ASPECT_RATIO}} bagi {{PRODUCT}} pada {{SETTIN
 Jangan ubah reka bentuk produk, cipta teks atau pensijilan, tambah ramuan, gandakan item, sembunyikan kecacatan penting atau menunjukkan hasil penggunaan yang tidak dapat dibuktikan. Elakkan pantulan terbakar, tepi cair, label tidak terbaca dan prop yang mengelirukan saiz.
 ```
 
-### Prompt 2 — gaya hidup Malaysia
+#### Prompt 2 — gaya hidup Malaysia
 
 ```text
 Cipta foto gaya hidup {{ASPECT_RATIO}} yang menunjukkan {{PRODUCT}} digunakan secara munasabah di {{SETTING}} dalam konteks Malaysia kontemporari. Kekalkan produk sebagai subjek utama dan tepat kepada rujukan. Gunakan pencahayaan semula jadi, warna {{BRAND_PALETTE}}, prop minimum yang berkaitan dan tangan hanya jika anatomi jelas serta interaksi selamat. Jangan cipta manfaat, testimoni, keputusan sebelum/selepas atau tuntutan kesihatan.
@@ -190,25 +201,44 @@ Cipta foto gaya hidup {{ASPECT_RATIO}} yang menunjukkan {{PRODUCT}} digunakan se
 4. Tambah teks harga, logo dan tuntutan hanya dalam reka bentuk akhir yang disemak.
 5. Labelkan imej sebagai ilustrasi jika ia bukan foto tepat produk sebenar.
 
+### Semakan hasil
+
+- Subjek, persekitaran, palet dan nisbah aspek sepadan dengan brief.
+- Tiada teks tidak terbaca, logo palsu, fakta rekaan atau tuntutan yang tidak disahkan.
+- Wajah, tubuh, objek dan konteks Malaysia kelihatan munasabah serta tidak stereotaip.
+- Komposisi mempunyai fokus jelas dan ruang yang cukup untuk salinan pascapenghasilan.
+- Kontras, saiz teks yang akan ditambah dan teks alternatif dirancang untuk penggunaan akhir.
+
 ### Batasan dan penggunaan bertanggungjawab
 
 Imej yang cantik tetapi tidak tepat boleh mengelirukan pelanggan. Jangan gunakan AI untuk mereka pensijilan, hasil kesihatan, saiz hidangan, warna produk atau aksesori yang tidak termasuk. Semak keperluan platform jualan dan undang-undang pengiklanan yang terpakai.
 
 ## English
 
-### Intended use
+### What this collection is for
 
 Use these prompts to plan or generate product-image concepts. For an image representing a real product, reference photographs you have the right to use and approved product information are required. If those materials are unavailable, use the result only as a generic mood board and do not publish it as a product image. Generated images must not alter quantity, ingredients, labels, certifications or product performance.
 
+### Before generating
+
+Prepare the following reference materials before generating:
+
+- **Required:** Photographs of the real product that the user may lawfully use to constrain shape, colour, label and scale.
+- **Required:** Approved features, contents, quantity and claims.
+
+Decide the aspect ratio and final use. Add genuine text, data and logos in a design tool after reviewing the visual.
+
 ### Variables
 
-- `{{PRODUCT}}` — accurate product, material, colour, size and physical features.
-- `{{SETTING}}` — plausible surface and background.
-- `{{LIGHTING}}` — such as soft studio light or morning daylight.
-- `{{BRAND_PALETTE}}` — approved background/prop colours.
-- `{{ASPECT_RATIO}}` — 1:1 catalogue, 4:5 social or 16:9 banner.
+- `{{PRODUCT}}` — Product and accurate features **(Required)**.
+- `{{SETTING}}` — Setting and surface **(Required)**.
+- `{{LIGHTING}}` — Lighting **(Required)**.
+- `{{BRAND_PALETTE}}` — Brand palette **(Optional)**.
+- `{{ASPECT_RATIO}}` — Aspect ratio **(Required)**.
 
-### Prompt 1 — clean catalogue
+### Collection prompts
+
+#### Prompt 1 — clean catalogue
 
 ```text
 Create an {{ASPECT_RATIO}} commercial product photograph of {{PRODUCT}} on {{SETTING}}. Preserve the shape, colour, material, packaging, label and quantity shown in the supplied reference. Use a natural three-quarter angle, 70mm lens perspective, {{LIGHTING}}, soft shadows and a clean background in {{BRAND_PALETTE}}. Keep the product as the single sharp focal point at a plausible scale, with safe crop space for a catalogue layout.
@@ -216,7 +246,7 @@ Create an {{ASPECT_RATIO}} commercial product photograph of {{PRODUCT}} on {{SET
 Do not redesign the product, invent text or certifications, add ingredients, duplicate items, hide material defects or show unsubstantiated usage results. Avoid blown reflections, melted edges, unreadable labels and props that misrepresent scale.
 ```
 
-### Prompt 2 — Malaysian lifestyle
+#### Prompt 2 — Malaysian lifestyle
 
 ```text
 Create an {{ASPECT_RATIO}} lifestyle photograph showing {{PRODUCT}} used plausibly in {{SETTING}} within a contemporary Malaysian context. Keep the product as the accurate main subject. Use natural lighting, {{BRAND_PALETTE}}, minimal relevant props and hands only when anatomy is clear and the interaction is safe. Do not invent benefits, testimonials, before-and-after results or health claims.
@@ -229,6 +259,14 @@ Create an {{ASPECT_RATIO}} lifestyle photograph showing {{PRODUCT}} used plausib
 3. Compare every result with the real product and approved label.
 4. Add price copy, logos and claims only in the reviewed final layout.
 5. Label the image as an illustration when it is not an accurate photograph of the actual product.
+
+### Output checks
+
+- The subject, environment, palette and aspect ratio match the brief.
+- There is no illegible text, fake logo, invented fact or unverified claim.
+- Faces, bodies, objects and the Malaysian context are plausible and non-stereotyped.
+- The composition has a clear focus and enough space for post-produced copy.
+- Contrast, eventual text size and alternative text are planned for the final use.
 
 ### Limitations and responsible use
 

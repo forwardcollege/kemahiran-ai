@@ -77,6 +77,63 @@ export function extractFencedCodeBlockAfterHeading(
   return extractFirstFencedCodeBlock(section);
 }
 
+export type ExtractedPromptBlock = {
+  label: string;
+  text: string;
+};
+
+export function extractPromptBlocksAfterHeading(
+  markdown: string,
+  heading: string,
+): ExtractedPromptBlock[] {
+  const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const headingMatch = new RegExp(`^###\\s+${escapedHeading}\\s*$`, "m").exec(
+    markdown,
+  );
+  if (!headingMatch) return [];
+
+  const sectionRemainder = markdown.slice(
+    headingMatch.index + headingMatch[0].length,
+  );
+  const nextHeadingIndex = sectionRemainder.search(/^###\s+/m);
+  const section =
+    nextHeadingIndex === -1
+      ? sectionRemainder
+      : sectionRemainder.slice(0, nextHeadingIndex);
+  const variants = [...section.matchAll(/^####\s+(.+)$/gm)];
+
+  return variants.flatMap((variant, index) => {
+    const start = (variant.index ?? 0) + variant[0].length;
+    const end = variants[index + 1]?.index ?? section.length;
+    const text = extractFirstFencedCodeBlock(section.slice(start, end));
+    return text ? [{ label: variant[1].trim(), text }] : [];
+  });
+}
+
+export function removeLevelThreeSection(
+  markdown: string,
+  heading: string,
+): string {
+  const escapedHeading = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const headingMatch = new RegExp(`^###\\s+${escapedHeading}\\s*$`, "m").exec(
+    markdown,
+  );
+  if (!headingMatch) return markdown;
+
+  const sectionStart = headingMatch.index;
+  const sectionContentStart = sectionStart + headingMatch[0].length;
+  const sectionRemainder = markdown.slice(sectionContentStart);
+  const nextHeadingIndex = sectionRemainder.search(/^###\s+/m);
+  const sectionEnd =
+    nextHeadingIndex === -1
+      ? markdown.length
+      : sectionContentStart + nextHeadingIndex;
+  const before = markdown.slice(0, sectionStart).trimEnd();
+  const after = markdown.slice(sectionEnd).trimStart();
+
+  return [before, after].filter(Boolean).join("\n\n");
+}
+
 export async function renderSafeMarkdown(markdown: string): Promise<string> {
   const output = await unified()
     .use(remarkParse)

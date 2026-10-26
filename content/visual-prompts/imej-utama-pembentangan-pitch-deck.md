@@ -70,12 +70,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [visual-training-scene-001, visual-event-poster-001]
 featured: false
 search_aliases:
@@ -152,16 +152,90 @@ visual_prompt:
 
 ## Bahasa Melayu
 
+### Kegunaan koleksi
+
+Jana imej konsep bersih dengan ruang salinan untuk slaid pendidikan, sektor awam dan perniagaan.
+
+### Sebelum menjana
+
+Tetapkan pemboleh ubah menggunakan maklumat yang telah disahkan. Jika hasil akan mewakili program, produk atau organisasi sebenar, sediakan brief dan aset yang anda berhak gunakan.
+
+Tentukan nisbah aspek dan tempat penggunaan akhir. Tambah teks, data dan logo sebenar dalam alat reka bentuk selepas visual disemak.
+
+### Pemboleh ubah
+
+- `{{KONSEP}}` — Konsep utama **(Wajib)**.
+- `{{PALET}}` — Palet diluluskan **(Wajib)**.
+- `{{RUANG_TEKS}}` — Sisi ruang teks **(Wajib)**.
+
+### Prompt koleksi
+
+#### Prompt utama
+
 ```text
 Cipta visual utama mendatar 16:9 untuk slaid tentang {{KONSEP}}. Gunakan metafora visual yang mudah dan tidak membuat tuntutan fakta: bentuk berlapis, laluan atau objek kerja neutral yang menunjukkan hubungan dan kemajuan. Gaya kolaj editorial 3D yang kemas, cahaya lembut, palet {{PALET}}. Letakkan kelompok visual bertentangan dengan {{RUANG_TEKS}} dan biarkan sekurang-kurangnya 40% ruang negatif bersih. Tiada teks, nombor, logo, bendera, lambang rasmi, graf palsu atau simbol budaya stereotaip.
 ```
+
+### Cadangan penggunaan
+
+1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
+2. Jana beberapa draf tanpa teks atau logo rasmi.
+3. Pilih draf yang paling tepat, kemudian semak fakta, representasi dan kecacatan visual.
+4. Tambah salinan, data, logo dan butiran rasmi dalam alat reka bentuk yang boleh diakses.
+
+### Semakan hasil
+
+- Subjek, persekitaran, palet dan nisbah aspek sepadan dengan brief.
+- Tiada teks tidak terbaca, logo palsu, fakta rekaan atau tuntutan yang tidak disahkan.
+- Wajah, tubuh, objek dan konteks Malaysia kelihatan munasabah serta tidak stereotaip.
+- Komposisi mempunyai fokus jelas dan ruang yang cukup untuk salinan pascapenghasilan.
+- Kontras, saiz teks yang akan ditambah dan teks alternatif dirancang untuk penggunaan akhir.
+
+### Batasan dan penggunaan bertanggungjawab
 
 Tambah tajuk, data dan logo sebenar dalam perisian slaid. Semak bahawa metafora tidak menyampaikan kejayaan atau skala yang belum dibuktikan.
 
 ## English
 
+### What this collection is for
+
+Generate clean conceptual images with copy space for education, public-sector and business slides.
+
+### Before generating
+
+Set the variables using verified information. If the result will represent a real programme, product or organisation, prepare a brief and assets you are authorised to use.
+
+Decide the aspect ratio and final use. Add genuine text, data and logos in a design tool after reviewing the visual.
+
+### Variables
+
+- `{{CONCEPT}}` — Core concept **(Required)**.
+- `{{PALETTE}}` — Approved palette **(Required)**.
+- `{{COPY_SPACE_SIDE}}` — Copy-space side **(Required)**.
+
+### Collection prompts
+
+#### Main prompt
+
 ```text
 Create a 16:9 landscape hero visual for a slide about {{CONCEPT}}. Use a simple visual metaphor that makes no factual claim: layered forms, pathways or neutral work objects suggesting connection and progress. Use a refined editorial 3D-collage style, soft lighting and {{PALETTE}}. Place the visual cluster opposite {{COPY_SPACE_SIDE}} and preserve at least 40% clean negative space. No text, numbers, logos, flags, official emblems, fake charts or stereotyped cultural symbols.
 ```
+
+### Suggested workflow
+
+1. Choose one prompt and replace every variable using the verified brief.
+2. Generate several drafts without official text or logos.
+3. Select the most accurate draft, then check facts, representation and visual defects.
+4. Add copy, data, logos and official details in an accessible design tool.
+
+### Output checks
+
+- The subject, environment, palette and aspect ratio match the brief.
+- There is no illegible text, fake logo, invented fact or unverified claim.
+- Faces, bodies, objects and the Malaysian context are plausible and non-stereotyped.
+- The composition has a clear focus and enough space for post-produced copy.
+- Contrast, eventual text size and alternative text are planned for the final use.
+
+### Limitations and responsible use
 
 Add the actual title, data and logo in presentation software. Check that the metaphor does not imply unproven success or scale.

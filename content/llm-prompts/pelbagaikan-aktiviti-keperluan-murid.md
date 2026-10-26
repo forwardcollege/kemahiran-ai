@@ -58,12 +58,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.5.0
+version: 0.6.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-dskp-activity-001, skill-rph-001]
 featured: false
 search_aliases:
@@ -130,7 +130,17 @@ llm_prompt:
 
 ### Cara menggunakan prompt ini
 
-Nyatakan objektif, aktiviti asal, halangan umum yang diperhatikan dan kekangan sebenar. Gunakan gambaran seperti “arahan panjang sukar diikuti”, bukan label kebolehan atau diagnosis individu.
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+### Pemboleh ubah
+
+- `{{OBJEKTIF}}` — Objektif yang mesti dikekalkan **(Wajib)**.
+- `{{AKTIVITI_ASAL}}` — Aktiviti asal **(Wajib)**.
+- `{{KEPERLUAN}}` — Halangan atau keperluan umum **(Wajib)**.
+- `{{KEKANGAN}}` — Masa, bahan dan ruang **(Wajib)**.
 
 ### Prompt lengkap
 
@@ -151,11 +161,32 @@ Jika cara respons tidak dinyatakan dengan jelas, jangan pilih respons lisan, ber
 Jika bentuk penyertaan atau perkara khusus untuk pemerhatian guru tidak diberikan, gunakan `[BENTUK PENYERTAAN PERLU DITETAPKAN]` atau `[PEMERHATIAN GURU PERLU DITETAPKAN]`; jangan pilih individu, pasangan atau kumpulan. Kekalkan bilangan murid sebagai konteks sahaja. Jangan anggap projektor digunakan hanya kerana ia tersedia.
 ```
 
-### Contoh
+### Hasil dijangka
 
-Objektif: membandingkan dua sumber tenaga; aktiviti asal: membaca petikan dan menerangkan perbezaan; halangan umum: arahan panjang; kekangan: 30 minit, petikan bercetak dan projektor sahaja.
+Pilihan sokongan, teras dan pengayaan dengan objektif serta bukti yang sama.
 
-### Batasan
+### Contoh penggunaan
+
+#### Contoh input
+
+Objektif: membandingkan dua sumber tenaga. Aktiviti asal: membaca petikan dan menerangkan perbezaan. Halangan umum: arahan panjang. Kekangan: 30 minit, petikan bercetak dan projektor sahaja.
+
+#### Contoh hasil
+
+Tiga pilihan sokongan, teras dan pengayaan mengekalkan objektif serta bukti pembelajaran yang sama tanpa melabel atau mendiagnosis murid.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Jangan mendiagnosis atau melabel murid.
+- Guru menentukan kesesuaian sokongan.
 
 Pembezaan memerlukan pengetahuan guru tentang konteks dan aksesibiliti. AI tidak boleh menentukan keperluan individu atau menggantikan pelan sokongan yang diluluskan.
 
@@ -163,7 +194,17 @@ Pembezaan memerlukan pengetahuan guru tentang konteks dan aksesibiliti. AI tidak
 
 ### How to use this prompt
 
-State the objective, original activity, observed general barriers and real constraints. Use descriptions such as “long instructions are difficult to follow,” not ability labels or individual diagnoses.
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+### Variables
+
+- `{{OBJECTIVE}}` — Objective to preserve **(Required)**.
+- `{{CURRENT_ACTIVITY}}` — Current activity **(Required)**.
+- `{{LEARNER_NEEDS}}` — General barriers or needs **(Required)**.
+- `{{CONSTRAINTS}}` — Time, materials and space **(Required)**.
 
 ### Complete prompt
 
@@ -184,10 +225,31 @@ If the response mode is not explicit, do not choose oral, written, visual or dig
 If participation format or a specific teacher-observation focus is not supplied, use `[PARTICIPATION FORMAT TO BE SET]` or `[TEACHER OBSERVATION TO BE SET]`; do not choose individual, pair or group work. Keep learner count as context only. Do not assume the projector is used merely because it is available.
 ```
 
-### Example
+### Expected output
 
-Objective: compare two energy sources; current activity: read a passage and explain differences; general barrier: long instructions; constraints: 30 minutes, printed passage and projector only.
+Support, core and extension options sharing the same objective and evidence.
 
-### Limitations
+### Worked example
+
+#### Sample input
+
+Objective: compare two energy sources. Original activity: read a passage and explain the differences. General barrier: lengthy instructions. Constraints: 30 minutes, printed passage and projector only.
+
+#### Sample output
+
+Three support, core and extension options retain the same objective and learning evidence without labelling or diagnosing learners.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Do not diagnose or label learners.
+- The teacher determines support suitability.
 
 Differentiation requires teacher knowledge of context and accessibility. AI cannot determine individual needs or replace an approved support plan.

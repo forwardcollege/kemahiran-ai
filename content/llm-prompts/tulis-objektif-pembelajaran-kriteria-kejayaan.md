@@ -56,12 +56,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.4.0
+version: 0.5.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-rph-001, skill-dskp-activity-001]
 featured: false
 search_aliases:
@@ -136,7 +136,21 @@ llm_prompt:
 
 ### Cara menggunakan prompt ini
 
-Berikan topik atau petikan DSKP, tahap murid dan tempoh. Jika hanya topik diberikan, hasil mesti dilabel sebagai cadangan generik dan bukan penjajaran DSKP.
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+Bahan rujukan:
+
+- **Pilihan:** Wajib jika pengguna menuntut penjajaran DSKP rasmi.
+
+### Pemboleh ubah
+
+- `{{SUMBER}}` — Topik atau petikan DSKP **(Wajib)**.
+- `{{TAHAP_MURID}}` — Tahap murid **(Wajib)**.
+- `{{TEMPOH}}` — Tempoh pembelajaran **(Wajib)**.
+- `{{BUKTI}}` — Bukti pembelajaran yang sesuai **(Pilihan)**.
 
 ### Prompt lengkap
 
@@ -160,15 +174,32 @@ Jangan gunakan frasa seperti `melalui aktiviti`, `berdasarkan pemerhatian bahan`
 Akhiri dengan semakan: kesetiaan kepada sumber, kebolehlihatan tindakan, kesesuaian tahap, kebolehlaksanaan masa dan bukti pembelajaran. Tandakan andaian `[PERLU SEMAKAN GURU]`. Jangan menilai murid sebenar atau mengandaikan kebolehan individu.
 ```
 
-### Contoh input
-
-Topik: perubahan keadaan jirim; Tahun 5; 60 minit; bukti melalui penerangan lisan dan pengelasan contoh.
-
 ### Hasil dijangka
 
-Jadual ringkas objektif, kriteria `Saya boleh...`, bukti dan perkara untuk semakan guru.
+Objektif boleh diperhatikan, kriteria kejayaan mesra murid dan semakan penjajaran.
 
-### Batasan
+### Contoh penggunaan
+
+#### Contoh input
+
+Topik: perubahan keadaan jirim; Tahun 5; 60 minit; bukti melalui penerangan lisan dan pengelasan contoh. Tiada petikan DSKP dilampirkan.
+
+#### Contoh hasil
+
+Jadual objektif, kriteria ‘Saya boleh…’, bukti dan semakan guru dilabel sebagai cadangan generik, bukan penjajaran DSKP.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Sahkan semua rujukan DSKP dengan sumber rasmi semasa.
+- Objektif janaan memerlukan pertimbangan guru.
 
 Kata kerja yang kelihatan boleh disalah tafsir jika bukti tidak jelas. Guru mesti menyemak standard, tahap, masa dan konteks kelas.
 
@@ -176,7 +207,21 @@ Kata kerja yang kelihatan boleh disalah tafsir jika bukti tidak jelas. Guru mest
 
 ### How to use this prompt
 
-Provide a topic or DSKP extract, learner level and duration. When only a topic is supplied, the result must be labelled generic rather than DSKP-aligned.
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+Reference material:
+
+- **Optional:** Required when the user claims official DSKP alignment.
+
+### Variables
+
+- `{{SOURCE}}` — Topic or DSKP extract **(Required)**.
+- `{{LEARNER_LEVEL}}` — Learner level **(Required)**.
+- `{{DURATION}}` — Learning duration **(Required)**.
+- `{{EVIDENCE}}` — Suitable learning evidence **(Optional)**.
 
 ### Complete prompt
 
@@ -200,14 +245,31 @@ Do not use phrases such as `through an activity`, `based on observing materials`
 Finish with checks for source fidelity, observable action, level suitability, time feasibility and learning evidence. Mark assumptions `[TEACHER REVIEW REQUIRED]`. Do not assess real learners or assume individual ability.
 ```
 
-### Sample input
-
-Topic: changes of state; Year 5; 60 minutes; evidence through oral explanation and classifying examples.
-
 ### Expected output
 
-A concise table of objectives, `I can...` criteria, evidence and teacher-review points.
+Observable objectives, learner-friendly success criteria and an alignment check.
 
-### Limitations
+### Worked example
+
+#### Sample input
+
+Topic: changes in states of matter; Year 5; 60 minutes; evidence through oral explanation and classifying examples. No DSKP extract is attached.
+
+#### Sample output
+
+The table of objectives, ‘I can…’ criteria, evidence and teacher checks is labelled as a generic suggestion rather than DSKP alignment.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Verify every DSKP reference against the current official source.
+- Generated objectives require teacher judgement.
 
 Apparently observable verbs can still be ambiguous when evidence is unclear. The teacher must verify the standard, level, timing and class context.

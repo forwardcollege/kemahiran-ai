@@ -50,12 +50,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.5.0
+version: 0.6.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-rph-001, prompt-learning-objectives-001]
 featured: false
 search_aliases:
@@ -116,7 +116,17 @@ llm_prompt:
 
 ### Cara menggunakan prompt ini
 
-Berikan objektif, pemerhatian dan bukti yang dinyahkenal pasti. Bezakan perkara yang benar-benar diperhatikan daripada tafsiran atau kemungkinan sebab.
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+### Pemboleh ubah
+
+- `{{OBJEKTIF}}` — Objektif pembelajaran **(Wajib)**.
+- `{{PEMERHATIAN}}` — Pemerhatian tanpa data pengenalan **(Wajib)**.
+- `{{BUKTI}}` — Bukti pembelajaran **(Wajib)**.
+- `{{KEKANGAN}}` — Kekangan yang diketahui **(Pilihan)**.
 
 ### Prompt lengkap
 
@@ -144,11 +154,31 @@ Setiap hipotesis mesti menggunakan bahasa kemungkinan seperti `mungkin`, `boleh 
 Jika input tidak menamakan kaedah yang boleh diubah, jangan reka perbincangan pasangan, soal jawab, demonstrasi atau strategi lain. Bahagian kelima tetap wajib diisi dengan `[PELARASAN PERLU DIPILIH GURU]`, kekangan yang perlu dipatuhi dan permintaan kepada guru untuk memilih kaedah sedia ada. Bukti susulan boleh menerangkan perkara yang perlu diperhatikan, tetapi jangan menetapkan kaedah pengumpulan baharu tanpa kebenaran. Sebelum tamat, semak bahawa kelima-lima bahagian mempunyai kandungan.
 ```
 
-### Contoh
+### Hasil dijangka
 
-Objektif: murid menerangkan dua sebab hakisan; pemerhatian: ramai boleh mengenal pasti contoh tetapi alasan tidak merujuk bukti; bukti: respons lisan dan tiga contoh anonim.
+Refleksi ringkas dengan fakta, tafsiran tentatif dan satu pelarasan seterusnya.
 
-### Batasan
+### Contoh penggunaan
+
+#### Contoh input
+
+Objektif: murid menerangkan dua sebab hakisan. Pemerhatian: ramai mengenal pasti contoh tetapi alasan tidak merujuk bukti. Bukti: respons lisan dan tiga contoh anonim.
+
+#### Contoh hasil
+
+Refleksi memisahkan pemerhatian daripada tafsiran tentatif dan mencadangkan satu pelarasan pelajaran seterusnya yang boleh diperiksa.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Jangan masukkan identiti murid atau membuat diagnosis.
 
 Refleksi ini menyusun bukti yang diberi sahaja. Ia tidak membuktikan punca, keberkesanan guru atau kebolehan murid.
 
@@ -156,7 +186,17 @@ Refleksi ini menyusun bukti yang diberi sahaja. Ia tidak membuktikan punca, kebe
 
 ### How to use this prompt
 
-Provide the objective, de-identified observations and evidence. Separate what was actually observed from interpretation or possible causes.
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+### Variables
+
+- `{{OBJECTIVE}}` — Learning objective **(Required)**.
+- `{{OBSERVATIONS}}` — De-identified observations **(Required)**.
+- `{{EVIDENCE}}` — Learning evidence **(Required)**.
+- `{{CONSTRAINTS}}` — Known constraints **(Optional)**.
 
 ### Complete prompt
 
@@ -184,10 +224,30 @@ Every hypothesis must use possibility language such as `may`, `might` or `cannot
 If the input does not name an adjustable method, do not invent pair discussion, questioning, demonstration or another strategy. The fifth section must still contain `[ADJUSTMENT TO BE CHOSEN BY TEACHER]`, the constraints to preserve and a request for the teacher to select an existing method. Follow-up evidence may describe what should be observed, but must not prescribe a new collection method without permission. Before finishing, check that all five sections contain content.
 ```
 
-### Example
+### Expected output
 
-Objective: learners explain two causes of erosion; observation: many identified examples but explanations did not cite evidence; evidence: oral responses and three anonymous examples.
+A concise reflection separating facts, tentative interpretation and one next adjustment.
 
-### Limitations
+### Worked example
+
+#### Sample input
+
+Objective: learners explain two causes of erosion. Observation: many identify examples but their reasoning does not cite evidence. Evidence: oral responses and three anonymous examples.
+
+#### Sample output
+
+The reflection separates observation from tentative interpretation and proposes one checkable adjustment for the next lesson.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Do not include learner identities or make diagnoses.
 
 This reflection organises supplied evidence only. It does not prove causation, teacher effectiveness or learner ability.

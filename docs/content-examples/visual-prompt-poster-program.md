@@ -139,22 +139,42 @@ visual_prompt:
   variables:
     - id: programme_theme
       token: "{{TEMA_PROGRAM}}"
+      token_en: "{{PROGRAMME_THEME}}"
       label:
         ms: Tema program
         en: Programme theme
       required: true
     - id: location_context
       token: "{{KONTEKS_LOKASI}}"
+      token_en: "{{LOCATION_CONTEXT}}"
       label:
         ms: Konteks lokasi Malaysia
         en: Malaysian location context
       required: true
     - id: brand_colours
       token: "{{WARNA_JENAMA}}"
+      token_en: "{{BRAND_COLOURS}}"
       label:
         ms: Warna jenama
         en: Brand colours
       required: false
+  reference_assets:
+    - id: verified_event_brief
+      type: event_brief
+      required: true
+      supply_mode: runtime
+      sensitive: false
+      usage:
+        ms: Gunakan tema, audiens, lokasi dan aktiviti program yang telah disahkan.
+        en: Use the verified programme theme, audience, venue and activities.
+    - id: brand_guide
+      type: brand_guide
+      required: false
+      supply_mode: runtime
+      sensitive: false
+      usage:
+        ms: Gunakan warna yang diluluskan; tambah logo sebenar selepas penjanaan.
+        en: Use approved colours; add the genuine logo after generation.
   image_metadata:
     subject: diverse_malaysian_participants
     environment: contemporary_malaysian_community_venue
@@ -181,13 +201,19 @@ visual_prompt:
 
 Gunakan prompt ini untuk menghasilkan visual utama bagi poster program pendidikan, komuniti atau pembangunan profesional. Tambah tajuk dan butiran acara menggunakan alat reka bentuk selepas visual dijana; jangan bergantung pada penjana imej untuk teks akhir yang tepat.
 
+### Sebelum menjana
+
+Sediakan brief acara yang telah disahkan. Jika ada, sediakan panduan jenama yang anda berhak gunakan. Tentukan format akhir 4:5 atau 1:1 dan rancang untuk menambah tajuk, tarikh, tempat serta logo sebenar selepas visual disemak.
+
 ### Pemboleh ubah
 
-- `{{TEMA_PROGRAM}}` — contohnya literasi digital, keusahawanan atau pembangunan guru.
-- `{{KONTEKS_LOKASI}}` — contohnya dewan komuniti bandar, sekolah luar bandar atau ruang latihan moden di Malaysia.
-- `{{WARNA_JENAMA}}` — satu atau dua warna aksen yang diluluskan.
+- `{{TEMA_PROGRAM}}` — contohnya literasi digital, keusahawanan atau pembangunan guru **(Wajib)**.
+- `{{KONTEKS_LOKASI}}` — contohnya dewan komuniti bandar, sekolah luar bandar atau ruang latihan moden di Malaysia **(Wajib)**.
+- `{{WARNA_JENAMA}}` — satu atau dua warna aksen yang diluluskan **(Pilihan)**.
 
-### Prompt utama — format menegak 4:5
+### Prompt koleksi
+
+#### Prompt 1 — format menegak 4:5
 
 ```text
 Hasilkan fotografi editorial menegak 4:5 untuk visual utama poster bertemakan {{TEMA_PROGRAM}} di {{KONTEKS_LOKASI}}.
@@ -199,7 +225,7 @@ Letakkan kumpulan pada bahagian bawah atau sisi bingkai dan sediakan ruang negat
 Jangan hasilkan teks, logo, bendera atau lambang rasmi. Elakkan tangan cacat, wajah berulang, anggota tambahan, peserta pendua, suasana pelancongan generik, pakaian tidak sesuai dan representasi budaya yang stereotaip.
 ```
 
-### Variasi format segi empat 1:1
+#### Prompt 2 — variasi segi empat 1:1
 
 ```text
 Gunakan konsep yang sama dalam komposisi 1:1. Kekalkan peserta di bahagian bawah dua pertiga bingkai dan tinggalkan ruang teks yang jelas di sebelah kiri. Pastikan subjek utama masih dapat dibaca apabila imej dipaparkan sebagai lakaran kecil media sosial.
@@ -213,23 +239,37 @@ Gunakan konsep yang sama dalam komposisi 1:1. Kekalkan peserta di bahagian bawah
 4. Tambah tajuk, tarikh, logo dan butiran rasmi dalam alat reka bentuk.
 5. Dapatkan kelulusan pihak komunikasi sebelum diterbitkan.
 
+### Semakan hasil
+
+- Tema, lokasi, peserta dan palet sepadan dengan brief.
+- Komposisi menyediakan ruang teks yang praktikal.
+- Wajah, tubuh, pakaian dan objek kelihatan munasabah.
+- Tiada teks tidak terbaca, logo palsu atau lambang rasmi rekaan.
+- Representasi komuniti Malaysia sesuai dan tidak stereotaip.
+
 ### Batasan dan penggunaan bertanggungjawab
 
 Imej janaan tidak menggambarkan peserta sebenar. Jangan menampilkan individu rekaan sebagai penerima manfaat sebenar atau menggunakan lambang rasmi tanpa kebenaran. Semak dengan teliti unsur budaya, agama, pakaian dan konteks lokasi.
 
 ## English
 
-### Intended use
+### What this collection is for
 
 Use this prompt to create a key visual for an education, community or professional-development programme poster. Add the event title and details in a design tool after generating the visual; do not rely on an image generator for accurate final typography.
 
+### Before generating
+
+Prepare a verified event brief. If available, prepare a brand guide you are authorised to use. Decide whether the final format is 4:5 or 1:1 and plan to add the genuine title, date, venue and logo after reviewing the visual.
+
 ### Variables
 
-- `{{PROGRAMME_THEME}}` — for example digital literacy, entrepreneurship or teacher development.
-- `{{LOCATION_CONTEXT}}` — for example an urban community hall, rural school or modern training space in Malaysia.
-- `{{BRAND_COLOURS}}` — one or two approved accent colours.
+- `{{PROGRAMME_THEME}}` — for example digital literacy, entrepreneurship or teacher development **(Required)**.
+- `{{LOCATION_CONTEXT}}` — for example an urban community hall, rural school or modern training space in Malaysia **(Required)**.
+- `{{BRAND_COLOURS}}` — one or two approved accent colours **(Optional)**.
 
-### Main prompt — vertical 4:5 format
+### Collection prompts
+
+#### Prompt 1 — vertical 4:5 format
 
 ```text
 Create a vertical 4:5 editorial photograph for the key visual of a {{PROGRAMME_THEME}} poster set in {{LOCATION_CONTEXT}}.
@@ -241,7 +281,7 @@ Position the group in the lower or side portion of the frame and preserve clean 
 Do not generate text, logos, flags or official emblems. Avoid distorted hands, repeated faces, extra limbs, duplicate participants, generic tourism imagery, unsuitable clothing and stereotyped cultural representation.
 ```
 
-### Square 1:1 variation
+#### Prompt 2 — square 1:1 variation
 
 ```text
 Use the same concept in a 1:1 composition. Keep participants within the lower two-thirds and leave clear copy space on the left. Ensure the main subject remains readable when displayed as a small social-media thumbnail.
@@ -254,6 +294,14 @@ Use the same concept in a 1:1 composition. Keep participants within the lower tw
 3. Select the image with the most practical copy space.
 4. Add the title, date, logos and official details in a design tool.
 5. Obtain communications approval before publication.
+
+### Output checks
+
+- Theme, venue, participants and palette match the brief.
+- The composition provides practical copy space.
+- Faces, bodies, clothing and objects are plausible.
+- There is no illegible text, fake logo or invented official emblem.
+- Malaysian community representation is suitable and non-stereotyped.
 
 ### Limitations and responsible use
 

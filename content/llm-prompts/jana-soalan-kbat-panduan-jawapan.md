@@ -58,12 +58,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.3.0
+version: 0.4.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-assessment-set-001]
 featured: false
 search_aliases:
@@ -132,7 +132,21 @@ llm_prompt:
 
 ### Cara menggunakan prompt ini
 
-Lampirkan kandungan yang telah diajar. Prompt ini tidak patut digunakan untuk menghasilkan soalan daripada ingatan model sahaja.
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+Bahan rujukan:
+
+- **Wajib:** Kandungan yang menjadi asas semua soalan dan jawapan.
+
+### Pemboleh ubah
+
+- `{{KANDUNGAN}}` — Kandungan sumber **(Wajib)**.
+- `{{TAHAP}}` — Tahap murid **(Wajib)**.
+- `{{BILANGAN}}` — Bilangan soalan **(Wajib)**.
+- `{{FORMAT}}` — Format respons **(Wajib)**.
 
 ### Prompt lengkap
 
@@ -151,11 +165,32 @@ Paparkan setiap soalan sebagai item lengkap yang berasingan; jangan gabungkan so
 Audit semua item untuk bahasa sesuai tahap, petunjuk jawapan, kekaburan, lebih daripada satu tafsiran munasabah, fakta di luar sumber dan pertindihan. Baiki jika boleh; jika tidak, tandakan `[PERLU SEMAKAN GURU]`. Gunakan bahasa audit berkalibrasi seperti `tiada isu dikenal pasti dalam semakan ini`; jangan mendakwa `tiada kekaburan`, `tiada fakta luar` atau kualiti yang sempurna sebagai kepastian. Jangan hasilkan markah atau gred murid sebenar.
 ```
 
-### Contoh input dan hasil dijangka
+### Hasil dijangka
 
-Petikan sintetik tentang perubahan jumlah pembaziran makanan yang tidak menerangkan sebab, Tingkatan 2, empat soalan respons pendek. Hasil merangkumi pengiraan terus, batas kesimpulan, maklumat tambahan yang diperlukan dan cara menilai bukti tanpa mereka sebab atau penyelesaian.
+Set soalan KBAT, tujuan pemikiran, panduan jawapan dan audit item.
 
-### Batasan
+### Contoh penggunaan
+
+#### Contoh input
+
+Petikan sintetik Tingkatan 2 menunjukkan perubahan jumlah pembaziran makanan tetapi tidak menerangkan sebab. Minta empat soalan respons pendek.
+
+#### Contoh hasil
+
+Set mengandungi soalan pengiraan, penilaian batas bukti, cadangan maklumat tambahan dan perbandingan hujah, berserta panduan jawapan dan audit aras pemikiran.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Semak fakta
+- aras dan kemungkinan jawapan alternatif.
 
 Soalan yang menggunakan kata “mengapa” tidak semestinya KBAT. Guru mesti menyemak tuntutan aras, keterbukaan jawapan dan kesesuaian pemarkahan.
 
@@ -163,7 +198,21 @@ Soalan yang menggunakan kata “mengapa” tidak semestinya KBAT. Guru mesti men
 
 ### How to use this prompt
 
-Attach content that has been taught. This prompt should not generate questions from model memory alone.
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+Reference material:
+
+- **Required:** Content grounding every question and answer.
+
+### Variables
+
+- `{{SOURCE_CONTENT}}` — Source content **(Required)**.
+- `{{LEARNER_LEVEL}}` — Learner level **(Required)**.
+- `{{QUESTION_COUNT}}` — Number of questions **(Required)**.
+- `{{RESPONSE_FORMAT}}` — Response format **(Required)**.
 
 ### Complete prompt
 
@@ -182,10 +231,31 @@ Present every question as a complete separate item; do not group questions under
 Audit all items for level-appropriate language, answer clues, ambiguity, multiple reasonable interpretations, facts outside the source and duplication. Repair them when possible; otherwise mark `[TEACHER REVIEW REQUIRED]`. Use calibrated audit language such as `no issue identified in this review`; do not claim `no ambiguity`, `no outside facts` or perfect quality as certainty. Do not produce marks or grades for real learners.
 ```
 
-### Sample input and expected output
+### Expected output
 
-A synthetic passage about a change in food-waste quantity that does not explain its cause, Form 2, four short-response questions. The output covers direct calculation, limits on conclusions, needed additional information and evaluation of evidence without inventing causes or solutions.
+A KBAT question set, thinking purpose, answer guidance and item audit.
 
-### Limitations
+### Worked example
+
+#### Sample input
+
+A synthetic Form 2 passage shows a change in food-waste totals but does not explain the cause. Request four short-response questions.
+
+#### Sample output
+
+The set includes calculation, evidence-limit evaluation, additional-information and argument-comparison questions, with answer guidance and a thinking-level audit.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Review facts
+- level and plausible alternative answers.
 
 A question containing “why” is not automatically higher order. The teacher must review thinking demand, acceptable variation and marking suitability.

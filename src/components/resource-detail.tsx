@@ -2,9 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { CaretRightIcon } from "@phosphor-icons/react/ssr";
 import { SkillActions } from "@/components/skill-actions";
+import { PromptActions } from "@/components/prompt-actions";
 import type { Resource } from "@/lib/content/repository";
 import {
   extractFencedCodeBlockAfterHeading,
+  extractPromptBlocksAfterHeading,
+  removeLevelThreeSection,
   renderSafeMarkdown,
 } from "@/lib/content/markdown";
 import type { Locale } from "@/lib/content/schema";
@@ -30,7 +33,20 @@ export async function ResourceDetail({
 }) {
   const { data } = resource;
   const counterpart: Locale = locale === "ms" ? "en" : "ms";
-  const html = await renderSafeMarkdown(resource.body[locale]);
+  const promptSectionHeading =
+    data.type === "llm_prompt"
+      ? locale === "ms"
+        ? "Prompt lengkap"
+        : "Complete prompt"
+      : data.type === "visual_prompt"
+        ? locale === "ms"
+          ? "Prompt koleksi"
+          : "Collection prompts"
+        : null;
+  const visibleGuide = promptSectionHeading
+    ? removeLevelThreeSection(resource.body[locale], promptSectionHeading)
+    : resource.body[locale];
+  const html = await renderSafeMarkdown(visibleGuide);
   const copyableInstruction =
     data.type === "skill"
       ? extractFencedCodeBlockAfterHeading(
@@ -38,6 +54,24 @@ export async function ResourceDetail({
           locale === "ms" ? "Arahan untuk disalin" : "Copyable instruction",
         )
       : null;
+  const copyablePrompts =
+    data.type === "llm_prompt"
+      ? [
+          {
+            label: locale === "ms" ? "Prompt lengkap" : "Complete prompt",
+            text:
+              extractFencedCodeBlockAfterHeading(
+                resource.body[locale],
+                promptSectionHeading ?? "",
+              ) ?? "",
+          },
+        ].filter((prompt) => prompt.text)
+      : data.type === "visual_prompt"
+        ? extractPromptBlocksAfterHeading(
+            resource.body[locale],
+            promptSectionHeading ?? "",
+          )
+        : [];
   const licenseLabel =
     data.license.id === "pending"
       ? locale === "ms"
@@ -134,6 +168,26 @@ export async function ResourceDetail({
             preload
           />
         </figure>
+      ) : null}
+
+      {data.type === "llm_prompt" ? (
+        <PromptActions
+          locale={locale}
+          prompts={copyablePrompts}
+          resourceType="llm_prompt"
+          variableCount={data.llm_prompt.variables.length}
+        />
+      ) : null}
+
+      {data.type === "visual_prompt" ? (
+        <PromptActions
+          locale={locale}
+          prompts={copyablePrompts}
+          resourceType="visual_prompt"
+          variableCount={data.visual_prompt.variables.length}
+          mediaType={data.visual_prompt.media_type}
+          aspectRatios={data.visual_prompt.aspect_ratios}
+        />
       ) : null}
 
       {data.type === "skill" ? (

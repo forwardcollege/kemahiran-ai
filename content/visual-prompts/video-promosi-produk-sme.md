@@ -64,12 +64,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [visual-product-photo-001]
 featured: false
 search_aliases:
@@ -164,20 +164,102 @@ visual_prompt:
 
 ## Bahasa Melayu
 
+### Kegunaan koleksi
+
+Rancang video produk ringkas dengan pergerakan kamera, pencahayaan dan bingkai akhir yang terkawal tanpa mencipta ciri produk.
+
+### Sebelum menjana
+
+Sediakan bahan rujukan berikut sebelum menjana:
+
+- **Wajib:** Kekalkan bentuk, warna, label dan pembungkusan sebenar.
+
+Tentukan nisbah aspek, tempoh dan saluran penerbitan. Rancang untuk menambah teks, sari kata, logo dan audio yang diluluskan semasa penyuntingan.
+
+### Pemboleh ubah
+
+- `{{PRODUK}}` — Produk dan ciri visual disahkan **(Wajib)**.
+- `{{AKSI}}` — Aksi penggunaan dibenarkan **(Wajib)**.
+- `{{PALET}}` — Palet jenama **(Wajib)**.
+- `{{NISBAH_ASPEK}}` — Nisbah aspek **(Wajib)**.
+
+### Prompt koleksi
+
+#### Prompt utama
+
 ```text
 Cipta video produk {{NISBAH_ASPEK}} selama 12 saat menggunakan rujukan {{PRODUK}} sebagai sumber kebenaran visual. Kekalkan bentuk, warna, bahan, label dan proporsi; jangan tambah ciri atau tuntutan.
 
 0–3 saat: syot utama statik dengan cahaya lembut. 3–7 saat: orbit perlahan menunjukkan dua sudut sebenar. 7–10 saat: aksi {{AKSI}} yang dibenarkan, tanpa mendakwa hasil. 10–12 saat: produk berhenti di kanan dengan ruang kosong di kiri untuk salinan yang akan ditambah kemudian. Palet {{PALET}}, kesinambungan penuh, tiada teks janaan, logo baharu, bahan tambahan, perubahan pembungkusan, tangan cacat, kerlipan atau objek melompat.
 ```
 
+### Cadangan penggunaan
+
+1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
+2. Jana draf tanpa teks atau logo rasmi supaya visual boleh disemak terlebih dahulu.
+3. Semak kesinambungan bingkai demi bingkai, kemudian jana semula bahagian yang bermasalah.
+4. Tambah sari kata, audio berlesen, logo dan butiran disahkan semasa penyuntingan.
+
+### Semakan hasil
+
+- Subjek, persekitaran, palet dan nisbah aspek sepadan dengan brief.
+- Tiada teks tidak terbaca, logo palsu, fakta rekaan atau tuntutan yang tidak disahkan.
+- Wajah, tubuh, objek dan konteks Malaysia kelihatan munasabah serta tidak stereotaip.
+- Tempoh, urutan, pergerakan kamera dan tempo konsisten dengan prompt.
+- Kesinambungan wajah, pakaian, tangan, objek dan lokasi telah diperiksa bingkai demi bingkai.
+- Sari kata boleh dibaca, audio berlesen dan versi tanpa bunyi masih boleh difahami.
+
+### Batasan dan penggunaan bertanggungjawab
+
 Semak setiap bingkai terhadap foto produk. Tambah harga, promosi dan tuntutan hanya selepas pengesahan manusia.
 
 ## English
+
+### What this collection is for
+
+Plan short product videos with controlled camera, lighting and end frames without inventing product features.
+
+### Before generating
+
+Prepare the following reference materials before generating:
+
+- **Required:** Preserve actual shape, colour, label and packaging.
+
+Decide the aspect ratio, duration and publishing channel. Plan to add approved text, captions, logos and audio during editing.
+
+### Variables
+
+- `{{PRODUCT}}` — Product and verified visual features **(Required)**.
+- `{{USE_ACTION}}` — Permitted use action **(Required)**.
+- `{{PALETTE}}` — Brand palette **(Required)**.
+- `{{ASPECT_RATIO}}` — Aspect ratio **(Required)**.
+
+### Collection prompts
+
+#### Main prompt
 
 ```text
 Create a 12-second {{ASPECT_RATIO}} product video using {{PRODUCT}} reference images as the visual source of truth. Preserve shape, colour, material, label and proportions; add no feature or claim.
 
 0–3 seconds: static hero shot with soft light. 3–7 seconds: slow orbit showing two accurate angles. 7–10 seconds: permitted {{USE_ACTION}} without implying an outcome. 10–12 seconds: product settles on the right with blank space on the left for later copy. Use {{PALETTE}}, full continuity, no generated text, new logo, added ingredient, packaging change, malformed hands, flicker or jumping objects.
 ```
+
+### Suggested workflow
+
+1. Choose one prompt and replace every variable using the verified brief.
+2. Generate a draft without official text or logos so the visuals can be reviewed first.
+3. Review continuity frame by frame, then regenerate any problematic segment.
+4. Add captions, licensed audio, logos and verified details during editing.
+
+### Output checks
+
+- The subject, environment, palette and aspect ratio match the brief.
+- There is no illegible text, fake logo, invented fact or unverified claim.
+- Faces, bodies, objects and the Malaysian context are plausible and non-stereotyped.
+- Duration, sequence, camera movement and pacing are consistent with the prompt.
+- Continuity of faces, clothing, hands, objects and location has been checked frame by frame.
+- Captions are readable, audio is licensed and the muted version remains understandable.
+
+### Limitations and responsible use
 
 Check every frame against product photographs. Add price, promotion and claims only after human verification.

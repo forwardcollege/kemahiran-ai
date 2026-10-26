@@ -108,6 +108,7 @@ llm_prompt:
   variables:
     - id: organisation
       token: "{{NAMA_ORGANISASI}}"
+      token_en: "{{ORGANISATION_NAME}}"
       label:
         ms: Nama organisasi
         en: Organisation name
@@ -117,6 +118,7 @@ llm_prompt:
         en: Example District Education Office
     - id: meeting_details
       token: "{{BUTIRAN_MESYUARAT}}"
+      token_en: "{{MEETING_DETAILS}}"
       label:
         ms: Tarikh, masa, tempat dan pengerusi
         en: Date, time, venue and chair
@@ -126,6 +128,7 @@ llm_prompt:
         en: 15 October 2026, 9:00 a.m., Main Meeting Room
     - id: notes
       token: "{{NOTA_DINYAHKENAL_PASTI}}"
+      token_en: "{{DEIDENTIFIED_NOTES}}"
       label:
         ms: Nota mesyuarat yang telah dinyahkenal pasti
         en: De-identified meeting notes
@@ -133,6 +136,13 @@ llm_prompt:
       example:
         ms: Agenda, perbincangan, keputusan dan tindakan ringkas
         en: Brief agenda, discussion, decision and action notes
+    - id: organisation_format
+      token: "{{FORMAT_ORGANISASI}}"
+      token_en: "{{ORGANISATION_FORMAT}}"
+      label:
+        ms: Format wajib organisasi
+        en: Required organisational format
+      required: false
   expected_output:
     ms: Draf minit mesyuarat formal dengan agenda, keputusan, tindakan, pemilik dan tarikh sasaran.
     en: Formal draft minutes with agenda items, decisions, actions, owners and target dates.
@@ -140,7 +150,7 @@ llm_prompt:
     - long_context
     - instruction_following
     - structured_output
-  sample_included: false
+  sample_included: true
   limitations:
     ms:
       - Semak semua nama, keputusan dan tarikh dengan rekod rasmi.
@@ -155,16 +165,16 @@ llm_prompt:
 ### Cara menggunakan prompt ini
 
 1. Nyahkenal pasti nota dan keluarkan maklumat sulit yang tidak diperlukan.
-2. Gantikan pemboleh ubah bertanda kurungan berganda.
-3. Tampalkan prompt lengkap ke dalam alat AI yang diluluskan organisasi.
+2. Gantikan semua pemboleh ubah; gunakan format organisasi yang sah jika ada.
+3. Salin prompt lengkap ke dalam alat AI yang diluluskan organisasi.
 4. Semak draf dengan pengerusi atau urus setia sebelum diedarkan.
 
 ### Pemboleh ubah
 
-- `{{NAMA_ORGANISASI}}` — nama penuh organisasi atau jawatankuasa.
-- `{{BUTIRAN_MESYUARAT}}` — tarikh, masa, tempat, pengerusi dan kehadiran yang telah disahkan.
-- `{{FORMAT_ORGANISASI}}` — susunan tajuk atau format wajib, jika ada.
-- `{{NOTA_DINYAHKENAL_PASTI}}` — nota sumber yang telah dibersihkan daripada data sensitif yang tidak perlu.
+- `{{NAMA_ORGANISASI}}` — nama penuh organisasi atau jawatankuasa **(Wajib)**.
+- `{{BUTIRAN_MESYUARAT}}` — tarikh, masa, tempat, pengerusi dan kehadiran yang telah disahkan **(Wajib)**.
+- `{{NOTA_DINYAHKENAL_PASTI}}` — nota sumber yang telah dibersihkan daripada data sensitif yang tidak perlu **(Wajib)**.
+- `{{FORMAT_ORGANISASI}}` — susunan tajuk atau format wajib, jika ada **(Pilihan)**.
 
 ### Prompt lengkap
 
@@ -219,11 +229,29 @@ Semakan kualiti sebelum menjawab:
 - Tiada fakta baharu diperkenalkan.
 ```
 
-### Hasil yang dijangka
+### Hasil dijangka
 
 Draf berstruktur yang mempercepat kerja urus setia. Ia masih perlu dibandingkan dengan nota sumber, rakaman yang dibenarkan dan keputusan pengerusi.
 
-### Batasan dan penggunaan wajar
+### Contoh penggunaan
+
+#### Contoh input
+
+Nota sintetik menyatakan bahawa tarikh bengkel 12 November masih tertakluk pada pengesahan dewan, dan Aina perlu menyemak ketersediaan sebelum 30 Oktober.
+
+#### Contoh hasil
+
+Draf menandakan tarikh bengkel sebagai `[PERLU PENGESAHAN]` dan merekodkan tindakan Aina serta tarikh sasaran tanpa menukarkan cadangan itu kepada keputusan.
+
+### Semakan kualiti
+
+- Setiap keputusan disokong oleh nota sumber.
+- Setiap tindakan mempunyai pemilik dan tarikh atau ditanda untuk pengesahan.
+- Nama, tarikh dan istilah rasmi sepadan dengan input.
+- Tiada fakta, dasar atau kelulusan baharu diperkenalkan.
+- Pengerusi atau urus setia telah menyemak draf.
+
+### Batasan dan penggunaan bertanggungjawab
 
 Jangan masukkan dokumen terperingkat, data peribadi, maklumat disiplin, butiran kes atau maklumat organisasi yang sensitif ke dalam perkhidmatan AI awam. Kelulusan manusia kekal wajib.
 
@@ -232,16 +260,16 @@ Jangan masukkan dokumen terperingkat, data peribadi, maklumat disiplin, butiran 
 ### How to use this prompt
 
 1. De-identify the notes and remove unnecessary confidential information.
-2. Replace the variables shown in double braces.
-3. Paste the complete prompt into an AI tool approved by your organisation.
+2. Replace every variable; use the valid organisational format when available.
+3. Copy the complete prompt into an AI tool approved by your organisation.
 4. Have the chair or secretariat verify the draft before circulation.
 
 ### Variables
 
-- `{{ORGANISATION_NAME}}` — full organisation or committee name.
-- `{{MEETING_DETAILS}}` — verified date, time, venue, chair and attendance.
-- `{{ORGANISATION_FORMAT}}` — required headings or house format, if any.
-- `{{DEIDENTIFIED_NOTES}}` — source notes cleared of unnecessary sensitive data.
+- `{{ORGANISATION_NAME}}` — full organisation or committee name **(Required)**.
+- `{{MEETING_DETAILS}}` — verified date, time, venue, chair and attendance **(Required)**.
+- `{{DEIDENTIFIED_NOTES}}` — source notes cleared of unnecessary sensitive data **(Required)**.
+- `{{ORGANISATION_FORMAT}}` — required headings or house format, if any **(Optional)**.
 
 ### Complete prompt
 
@@ -300,6 +328,24 @@ Quality checks before responding:
 
 A structured draft that reduces secretariat work. It must still be checked against the source notes, any permitted recording and the chair’s confirmed decisions.
 
-### Limitations and appropriate use
+### Worked example
+
+#### Sample input
+
+Synthetic notes say that a 12 November workshop date remains subject to venue confirmation, and Aina must check availability by 30 October.
+
+#### Sample output
+
+The draft marks the workshop date as `[CONFIRMATION REQUIRED]` and records Aina’s action and target date without turning the proposal into a decision.
+
+### Quality check
+
+- Every decision is supported by the source notes.
+- Every action has an owner and date or is marked for confirmation.
+- Names, dates and official terms match the input.
+- No new fact, policy or approval has been introduced.
+- The chair or secretariat has reviewed the draft.
+
+### Limitations and responsible use
 
 Do not enter classified documents, personal data, disciplinary information, case details or sensitive organisational material into a public AI service. Human approval remains mandatory.

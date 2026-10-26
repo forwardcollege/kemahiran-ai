@@ -64,12 +64,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.0
+version: 0.2.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-management-report-001, prompt-sales-analysis-001]
 featured: false
 search_aliases:
@@ -121,6 +121,20 @@ llm_prompt:
 
 ## Bahasa Melayu
 
+### Cara menggunakan prompt ini
+
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+### Pemboleh ubah
+
+- `{{TEMPOH}}` — Tempoh laporan **(Wajib)**.
+- `{{AUDIENS}}` — Audiens kemas kini **(Wajib)**.
+- `{{NOTA_METRIK}}` — Nota dan metrik **(Wajib)**.
+- `{{KOMITMEN}}` — Komitmen terdahulu **(Pilihan)**.
+
 ### Prompt lengkap
 
 ```text
@@ -132,11 +146,48 @@ Komitmen terdahulu: {{KOMITMEN}}
 Jika tempoh atau bahan sumber tiada, tanya dan berhenti. Hasilkan kemas kini ringkas: ringkasan status; pencapaian dengan bukti; metrik dan perbandingan yang sah; kerja sedang berjalan; risiko/isu dengan kesan dan mitigasi yang dinyatakan; keputusan diperlukan; langkah seterusnya dengan pemilik dan tarikh; serta jurang maklumat. Jangan menukar rancangan kepada pencapaian, mencipta status, pemilik, tarikh, angka atau sebab. Gunakan [PERLU PENGESAHAN] untuk jurang dan kekalkan format konsisten.
 ```
 
-### Contoh dan batasan
+### Hasil dijangka
 
-Nota sintetik “vendor dijangka siap Jumaat” kekal jangkaan, bukan selesai. Pengurus mesti mengesahkan status, data sensitif dan keputusan.
+Kemas kini pengurusan ringkas.
+
+### Contoh penggunaan
+
+#### Contoh input
+
+Tempoh: minggu berakhir 25 Oktober. Nota sintetik: latihan siap; vendor menjangka integrasi pada Jumaat; dua isu masih terbuka; angka penggunaan belum disahkan.
+
+#### Contoh hasil
+
+Kemas kini memisahkan perkara selesai, sedang berjalan, risiko dan keputusan diperlukan. Jangkaan vendor kekal dilabel sebagai jangkaan dan angka tidak disahkan tidak diterbitkan sebagai fakta.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Sahkan status
+- pemilik dan metrik.
 
 ## English
+
+### How to use this prompt
+
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+### Variables
+
+- `{{PERIOD}}` — Reporting period **(Required)**.
+- `{{AUDIENCE}}` — Update audience **(Required)**.
+- `{{NOTES_METRICS}}` — Notes and metrics **(Required)**.
+- `{{COMMITMENTS}}` — Prior commitments **(Optional)**.
 
 ### Complete prompt
 
@@ -149,6 +200,29 @@ Prior commitments: {{COMMITMENTS}}
 If the period or source material is absent, ask and stop. Produce a concise update: status summary; evidence-backed achievements; metrics and valid comparisons; work in progress; risks/issues with stated impact and mitigation; decisions required; next steps with owners and dates; and information gaps. Do not turn plans into achievements or invent status, owners, dates, numbers or causes. Use [CONFIRMATION REQUIRED] for gaps and keep the format consistent.
 ```
 
-### Example and limitations
+### Expected output
 
-The synthetic note “vendor expected to finish Friday” remains an expectation, not completion. A manager must verify status, sensitive data and decisions.
+Concise management update.
+
+### Worked example
+
+#### Sample input
+
+Period: week ending 25 October. Synthetic notes: training completed; vendor expects integration on Friday; two issues remain open; usage figure is unverified.
+
+#### Sample output
+
+The update separates completed work, work in progress, risks and decisions needed. The vendor date remains labelled as an expectation and the unverified figure is not presented as fact.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Verify status
+- owners and metrics.

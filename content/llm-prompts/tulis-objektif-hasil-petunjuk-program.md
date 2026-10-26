@@ -64,12 +64,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.0
+version: 0.2.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-programme-paper-001, skill-activity-report-001]
 featured: false
 search_aliases:
@@ -131,6 +131,21 @@ llm_prompt:
 
 ## Bahasa Melayu
 
+### Cara menggunakan prompt ini
+
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+### Pemboleh ubah
+
+- `{{IDEA_PROGRAM}}` — Idea program **(Wajib)**.
+- `{{KUMPULAN_SASARAN}}` — Kumpulan sasaran **(Wajib)**.
+- `{{AKTIVITI}}` — Aktiviti dirancang **(Wajib)**.
+- `{{BUKTI_TERSEDIA}}` — Bukti tersedia **(Wajib)**.
+- `{{TEMPOH}}` — Tempoh program **(Wajib)**.
+
 ### Prompt lengkap
 
 ```text
@@ -143,11 +158,48 @@ Tempoh: {{TEMPOH}}
 Jika matlamat, kumpulan sasaran atau bukti tersedia tiada, tanya dan berhenti. Bezakan objektif, aktiviti, output dan hasil; jangan melabel kehadiran sebagai impak. Bina jadual dengan pernyataan, petunjuk, definisi, sumber data, kekerapan, garis dasar, sasaran dan pemilik. Jangan cipta garis dasar atau sasaran. Tandakan petunjuk yang tidak boleh diukur dengan sumber sedia ada [TIDAK BOLEH DIUKUR SEKARANG] dan cadangkan soalan keputusan, bukan angka rekaan. Nyatakan had atribusi.
 ```
 
-### Contoh dan batasan
+### Hasil dijangka
 
-Program latihan boleh mengukur kehadiran dan skor sebelum/selepas, tetapi tidak boleh mendakwa perubahan tempat kerja tanpa bukti susulan. Pegawai mesti meluluskan definisi, sasaran dan kaedah.
+Rangka objektif-output-hasil-petunjuk.
+
+### Contoh penggunaan
+
+#### Contoh input
+
+Idea: bengkel literasi digital untuk 40 guru selama satu hari. Aktiviti: demonstrasi dan latihan amali. Bukti tersedia: kehadiran, hasil tugasan dan soal selidik sebelum/selepas.
+
+#### Contoh hasil
+
+Rangka membezakan objektif, output dan hasil, kemudian memadankan setiap petunjuk dengan sumber bukti tanpa mendakwa perubahan tempat kerja yang belum diukur.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Petunjuk bukan bukti impak dengan sendirinya.
 
 ## English
+
+### How to use this prompt
+
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+### Variables
+
+- `{{PROGRAMME_IDEA}}` — Programme idea **(Required)**.
+- `{{TARGET_GROUP}}` — Target group **(Required)**.
+- `{{ACTIVITIES}}` — Planned activities **(Required)**.
+- `{{AVAILABLE_EVIDENCE}}` — Available evidence **(Required)**.
+- `{{PERIOD}}` — Programme period **(Required)**.
 
 ### Complete prompt
 
@@ -161,6 +213,28 @@ Period: {{PERIOD}}
 If the goal, target group or available evidence is missing, ask and stop. Separate objectives, activities, outputs and outcomes; do not label attendance as impact. Build a table with statement, indicator, definition, data source, frequency, baseline, target and owner. Do not invent baselines or targets. Mark indicators unsupported by current sources [NOT CURRENTLY MEASURABLE] and propose decision questions rather than fabricated numbers. State attribution limits.
 ```
 
-### Example and limitations
+### Expected output
 
-A training programme may measure attendance and pre/post scores but cannot claim workplace change without follow-up evidence. An officer must approve definitions, targets and methods.
+Objective-output-outcome-indicator framework.
+
+### Worked example
+
+#### Sample input
+
+Idea: a one-day digital-literacy workshop for 40 teachers. Activities: demonstration and hands-on practice. Available evidence: attendance, task output and pre/post survey.
+
+#### Sample output
+
+The framework separates objective, outputs and outcomes, then matches each indicator to an evidence source without claiming unmeasured workplace change.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Indicators alone do not prove impact.

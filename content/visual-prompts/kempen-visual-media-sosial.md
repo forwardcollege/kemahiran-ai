@@ -62,12 +62,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [prompt-social-calendar-001, visual-event-poster-001]
 featured: false
 search_aliases:
@@ -157,16 +157,94 @@ visual_prompt:
 
 ## Bahasa Melayu
 
+### Kegunaan koleksi
+
+Bina keluarga visual pengumuman, tip, peringatan dan tindakan dengan gaya jenama konsisten merentas format.
+
+### Sebelum menjana
+
+Sediakan bahan rujukan berikut sebelum menjana:
+
+- **Pilihan:** Gunakan gaya dan warna; tambah logo sebenar kemudian.
+
+Tentukan nisbah aspek dan tempat penggunaan akhir. Tambah teks, data dan logo sebenar dalam alat reka bentuk selepas visual disemak.
+
+### Pemboleh ubah
+
+- `{{TEMA}}` — Tema kempen **(Wajib)**.
+- `{{SUBJEK}}` — Subjek visual **(Wajib)**.
+- `{{PALET_JENAMA}}` — Palet jenama **(Wajib)**.
+
+### Prompt koleksi
+
+#### Prompt utama
+
 ```text
 Cipta helaian konsep 1:1 yang menunjukkan empat jubin visual tanpa teks untuk kempen {{TEMA}}: pengumuman, tip pendidikan, peringatan dan seruan tindakan. Gunakan subjek {{SUBJEK}}, palet {{PALET_JENAMA}}, grid, pencahayaan dan motif yang konsisten; bezakan setiap jubin melalui komposisi, bukan gaya rawak. Tinggalkan zon teks kosong yang praktikal. Tiada perkataan, angka, logo, testimoni atau tuntutan. Kekalkan produk, warna dan proporsi subjek konsisten; elakkan reka letak sesak dan elemen budaya stereotaip.
 ```
+
+### Cadangan penggunaan
+
+1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
+2. Jana beberapa draf tanpa teks atau logo rasmi.
+3. Pilih draf yang paling tepat, kemudian semak fakta, representasi dan kecacatan visual.
+4. Tambah salinan, data, logo dan butiran rasmi dalam alat reka bentuk yang boleh diakses.
+
+### Semakan hasil
+
+- Subjek, persekitaran, palet dan nisbah aspek sepadan dengan brief.
+- Tiada teks tidak terbaca, logo palsu, fakta rekaan atau tuntutan yang tidak disahkan.
+- Wajah, tubuh, objek dan konteks Malaysia kelihatan munasabah serta tidak stereotaip.
+- Komposisi mempunyai fokus jelas dan ruang yang cukup untuk salinan pascapenghasilan.
+- Kontras, saiz teks yang akan ditambah dan teks alternatif dirancang untuk penggunaan akhir.
+
+### Batasan dan penggunaan bertanggungjawab
 
 Jana aset akhir satu demi satu dalam nisbah yang diperlukan. Tambah salinan, CTA dan logo yang diluluskan dalam alat reka bentuk.
 
 ## English
 
+### What this collection is for
+
+Build a coherent family of announcement, tip, reminder and action visuals across formats.
+
+### Before generating
+
+Prepare the following reference materials before generating:
+
+- **Optional:** Use style and colours; add the real logo later.
+
+Decide the aspect ratio and final use. Add genuine text, data and logos in a design tool after reviewing the visual.
+
+### Variables
+
+- `{{THEME}}` — Campaign theme **(Required)**.
+- `{{SUBJECT}}` — Visual subject **(Required)**.
+- `{{BRAND_PALETTE}}` — Brand palette **(Required)**.
+
+### Collection prompts
+
+#### Main prompt
+
 ```text
 Create a 1:1 concept sheet showing four text-free visual tiles for a {{THEME}} campaign: announcement, educational tip, reminder and call to action. Use {{SUBJECT}}, {{BRAND_PALETTE}}, a shared grid, lighting and motif; distinguish each tile by composition rather than random style changes. Leave practical blank copy zones. No words, numbers, logos, testimonials or claims. Keep the product, colours and subject proportions consistent; avoid clutter and stereotyped cultural elements.
 ```
+
+### Suggested workflow
+
+1. Choose one prompt and replace every variable using the verified brief.
+2. Generate several drafts without official text or logos.
+3. Select the most accurate draft, then check facts, representation and visual defects.
+4. Add copy, data, logos and official details in an accessible design tool.
+
+### Output checks
+
+- The subject, environment, palette and aspect ratio match the brief.
+- There is no illegible text, fake logo, invented fact or unverified claim.
+- Faces, bodies, objects and the Malaysian context are plausible and non-stereotyped.
+- The composition has a clear focus and enough space for post-produced copy.
+- Contrast, eventual text size and alternative text are planned for the final use.
+
+### Limitations and responsible use
 
 Generate final assets individually in each required ratio. Add approved copy, CTAs and logos in a design tool.

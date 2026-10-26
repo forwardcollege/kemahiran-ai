@@ -56,12 +56,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.0
+version: 0.2.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-management-report-001, prompt-management-update-001]
 featured: false
 search_aliases:
@@ -130,6 +130,24 @@ llm_prompt:
 
 ## Bahasa Melayu
 
+### Cara menggunakan prompt ini
+
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+Bahan rujukan:
+
+- **Wajib:** Data jualan yang dibenarkan untuk dianalisis.
+
+### Pemboleh ubah
+
+- `{{SOALAN}}` — Soalan analisis **(Wajib)**.
+- `{{DATA_JUALAN}}` — Jadual jualan **(Wajib)**.
+- `{{DEFINISI}}` — Definisi medan **(Wajib)**.
+- `{{PERBANDINGAN}}` — Perbandingan yang sah **(Wajib)**.
+
 ### Prompt lengkap
 
 ```text
@@ -141,11 +159,51 @@ Perbandingan yang sah: {{PERBANDINGAN}}
 Jika data atau definisi utama tiada, tanya dan berhenti. Semak dahulu nilai hilang, pendua, unit bercampur dan jumlah kawalan. Tunjukkan formula bagi jumlah, perubahan mutlak, perubahan peratus dan bahagian segmen yang digunakan. Kenal pasti perbandingan disokong, segmen dan anomali. Jangan mengisi nilai hilang atau menyimpulkan sebab. Pisahkan Dapatan, Hipotesis untuk disiasat dan Soalan susulan. Jangan dedahkan data pelanggan atau membuat ramalan tanpa kaedah yang diluluskan.
 ```
 
-### Contoh dan batasan
+### Hasil dijangka
 
-Jadual sintetik enam bulan boleh menunjukkan penurunan wilayah, tetapi bukan sebabnya. Pemilik data mesti menyemak grain, formula, kerahsiaan dan konteks perniagaan.
+Analisis jualan dengan pengiraan dan soalan susulan.
+
+### Contoh penggunaan
+
+#### Contoh input
+
+Soalan: Bandingkan jualan suku pertama mengikut wilayah. Data sintetik menunjukkan Utara RM120,000, Tengah RM150,000 dan Selatan RM105,000, dengan definisi hasil bersih yang sama bagi semua wilayah.
+
+#### Contoh hasil
+
+Analisis mengira beza dan bahagian setiap wilayah, mengenal pasti Selatan sebagai nilai terendah, dan menandakan bahawa data tidak menerangkan punca perbezaan. Soalan susulan meminta sasaran, tempoh perbandingan dan semakan data hilang.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Nyahkenal pasti pelanggan dan semak formula.
 
 ## English
+
+### How to use this prompt
+
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+Reference material:
+
+- **Required:** Sales data authorised for analysis.
+
+### Variables
+
+- `{{QUESTION}}` — Analysis question **(Required)**.
+- `{{SALES_DATA}}` — Sales table **(Required)**.
+- `{{DEFINITIONS}}` — Field definitions **(Required)**.
+- `{{COMPARATORS}}` — Valid comparators **(Required)**.
 
 ### Complete prompt
 
@@ -158,6 +216,28 @@ Valid comparators: {{COMPARATORS}}
 If the data or core definitions are absent, ask and stop. First check missing values, duplicates, mixed units and control totals. Show formulas used for totals, absolute change, percentage change and segment share. Identify supported comparisons, segments and anomalies. Do not fill gaps or infer causes. Separate Findings, Hypotheses to investigate and Follow-up questions. Do not expose customer data or forecast without an approved method.
 ```
 
-### Example and limitations
+### Expected output
 
-A synthetic six-month table may show a regional decline but not its cause. The data owner must verify grain, formulas, confidentiality and business context.
+Sales analysis with calculations and follow-up questions.
+
+### Worked example
+
+#### Sample input
+
+Question: Compare first-quarter sales by region. Synthetic data shows North RM120,000, Central RM150,000 and South RM105,000, using the same net-revenue definition for every region.
+
+#### Sample output
+
+The analysis calculates each difference and share, identifies South as the lowest value, and states that the data does not explain the cause. Follow-up questions request targets, a comparison period and a missing-data check.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- De-identify customers and verify formulas.

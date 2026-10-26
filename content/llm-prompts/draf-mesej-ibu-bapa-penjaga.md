@@ -53,12 +53,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-rph-001]
 featured: true
 search_aliases:
@@ -136,15 +136,22 @@ llm_prompt:
 
 ### Cara menggunakan prompt ini
 
-Masukkan tujuan, fakta yang telah disahkan, tindakan yang diminta, tarikh akhir, saluran pertanyaan dan nada. Jika ada, lampirkan atau tampalkan dasar komunikasi sekolah yang berkaitan. Gunakan maklumat minimum yang diperlukan. Untuk perkara individu, hantar melalui saluran sekolah yang diluluskan dan semak sendiri sebelum dihantar.
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+Bahan rujukan:
+
+- **Pilihan:** Dasar komunikasi, frasa wajib atau panduan saluran sekolah.
 
 ### Pemboleh ubah
 
-- `{{PURPOSE}}` — sebab mesej dihantar.
-- `{{VERIFIED_FACTS}}` — tarikh, masa, tempat atau maklumat lain yang telah disahkan.
-- `{{REQUESTED_ACTION}}` — tindakan khusus dan tarikh akhir.
-- `{{CONTACT_CHANNEL}}` — saluran rasmi untuk pertanyaan.
-- `{{TONE}}` — contohnya mesra dan profesional.
+- `{{PURPOSE}}` — Tujuan mesej **(Wajib)**.
+- `{{VERIFIED_FACTS}}` — Fakta yang telah disahkan **(Wajib)**.
+- `{{REQUESTED_ACTION}}` — Tindakan yang diminta **(Wajib)**.
+- `{{CONTACT_CHANNEL}}` — Saluran pertanyaan rasmi **(Wajib)**.
+- `{{TONE}}` — Nada mesej **(Pilihan)**.
 
 ### Prompt lengkap
 
@@ -162,13 +169,33 @@ Semak dahulu sama ada tujuan, fakta penting, tindakan/tarikh akhir dan saluran p
 Jangan mencipta fakta, menyalahkan sesiapa, membuat diagnosis, membincangkan prestasi individu secara terbuka atau memasukkan data murid yang tidak diperlukan. Jangan menambah jenis atau tujuan acara, penganjur, manfaat pendidikan, status pengedaran borang, akibat, tempat, masa atau butiran murid jika tidak diberikan. Jika penganjur tidak dinyatakan, jangan tulis `pihak sekolah akan mengadakan` atau ayat setara; gunakan tajuk neutral seperti `Makluman mengenai ...`. Kekalkan tindakan yang diminta secara tepat: arahan `kembalikan borang` tidak membenarkan tambahan `lengkapkan borang` atau langkah lain. Gunakan frasa neutral dan penanda sahaja bagi jurang. Jika input melibatkan maklumat kesihatan, disiplin, kebajikan atau prestasi seorang murid untuk siaran kumpulan, jangan draf siaran itu; nyatakan bahawa perkara tersebut memerlukan saluran peribadi sekolah yang diluluskan dan semakan manusia. Elakkan bahasa mengugut dan jargon. Berikan satu versi utama maksimum 120 patah perkataan dan satu versi sangat ringkas maksimum 50 patah perkataan.
 ```
 
-### Contoh input dan output
+### Hasil dijangka
 
-Input: peringatan borang kebenaran lawatan perlu dipulangkan sebelum 6 November melalui guru kelas; pertanyaan melalui nombor pejabat sekolah.
+Satu mesej ringkas dengan tujuan, fakta, tindakan dan saluran pertanyaan yang jelas.
 
-Output ringkas: “Salam sejahtera ibu bapa/penjaga. Ini ialah peringatan untuk mengembalikan borang kebenaran lawatan kepada guru kelas sebelum 6 November. Jika anda mempunyai pertanyaan, sila hubungi pejabat sekolah melalui saluran rasmi. Terima kasih atas kerjasama.”
+### Contoh penggunaan
 
-### Batasan dan penggunaan wajar
+#### Contoh input
+
+Tujuan: peringatan bengkel STEM. Fakta: 12 November, 2.00–4.00 petang, Makmal Sains. Tindakan: sahkan kehadiran sebelum 8 November. Saluran pertanyaan: nombor pejabat sekolah.
+
+#### Contoh hasil
+
+Mesej ringkas dan mesra menyatakan tujuan, tarikh, tempat, tindakan yang diminta dan saluran rasmi tanpa memasukkan maklumat murid yang tidak perlu.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Jangan masukkan data murid yang tidak perlu.
+- Jangan membuat diagnosis atau dakwaan tentang murid.
+- Semak dasar komunikasi sekolah.
 
 Jangan gunakan prompt ini untuk menyiarkan maklumat disiplin, kesihatan, kebajikan atau prestasi individu dalam kumpulan. Gunakan saluran peribadi yang diluluskan dan ikut prosedur perlindungan murid.
 
@@ -176,15 +203,22 @@ Jangan gunakan prompt ini untuk menyiarkan maklumat disiplin, kesihatan, kebajik
 
 ### How to use this prompt
 
-Provide the purpose, verified facts, requested action, deadline, enquiry channel and tone. When available, attach or paste the relevant school communication policy. Use only the minimum necessary information. For individual matters, use an approved school channel and review the message yourself before sending it.
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+Reference material:
+
+- **Optional:** School communication policy, required wording or channel guidance.
 
 ### Variables
 
-- `{{PURPOSE}}` — why the message is being sent.
-- `{{VERIFIED_FACTS}}` — confirmed dates, times, locations or other details.
-- `{{REQUESTED_ACTION}}` — the specific action and deadline.
-- `{{CONTACT_CHANNEL}}` — official enquiry channel.
-- `{{TONE}}` — for example warm and professional.
+- `{{PURPOSE}}` — Message purpose **(Required)**.
+- `{{VERIFIED_FACTS}}` — Verified facts **(Required)**.
+- `{{REQUESTED_ACTION}}` — Requested action **(Required)**.
+- `{{CONTACT_CHANNEL}}` — Official enquiry channel **(Required)**.
+- `{{TONE}}` — Message tone **(Optional)**.
 
 ### Complete prompt
 
@@ -202,12 +236,32 @@ First check that the purpose, essential facts, requested action/deadline and off
 Do not invent facts, assign blame, make a diagnosis, discuss an individual learner’s performance publicly or include unnecessary student data. Do not add an event type or purpose, organiser, educational benefit, form-distribution status, consequence, venue, time or learner detail when it is not supplied. If the organiser is missing, do not write `the school will organise` or equivalent; use a neutral label such as `Notice about ...`. Preserve the requested action exactly: `return the form` does not authorise adding `complete the form` or another step. Use neutral wording and placeholders only for gaps. If the input concerns an individual learner's health, discipline, welfare or performance for a group broadcast, do not draft the broadcast; state that the matter requires an approved private school channel and human review. Avoid threatening language and jargon. Provide one main version of no more than 120 words and one very short version of no more than 50 words.
 ```
 
-### Sample input and output
+### Expected output
 
-Input: reminder that the trip consent form must be returned to the class teacher by 6 November; enquiries through the school office number.
+A concise message with a clear purpose, facts, action and enquiry channel.
 
-Short output: “Dear parents and guardians, this is a reminder to return the trip consent form to the class teacher by 6 November. For questions, please contact the school office through the official channel. Thank you for your cooperation.”
+### Worked example
 
-### Limitations and appropriate use
+#### Sample input
+
+Purpose: STEM workshop reminder. Facts: 12 November, 2:00–4:00 p.m., Science Lab. Action: confirm attendance by 8 November. Enquiry channel: school office number.
+
+#### Sample output
+
+A concise, warm message states the purpose, date, venue, requested action and official channel without including unnecessary student information.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Do not include unnecessary student data.
+- Do not diagnose or make unsupported claims about a learner.
+- Check school communication policy.
 
 Do not use this prompt to broadcast an individual learner’s disciplinary, health, welfare or performance information. Use an approved private channel and follow safeguarding procedures.

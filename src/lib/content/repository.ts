@@ -4,7 +4,10 @@ import matter from "gray-matter";
 import { parse as parseYaml } from "yaml";
 import {
   splitBilingualBody,
+  validateLlmPromptBodyStructure,
+  validatePromptVariableUsage,
   validateSkillBodyStructure,
+  validateVisualPromptBodyStructure,
   type BilingualBody,
 } from "./languages";
 import {
@@ -83,6 +86,22 @@ export function loadResources(): Resource[] {
         try {
           body = splitBilingualBody(parsed.content);
           if (result.data.type === "skill") validateSkillBodyStructure(body);
+          if (result.data.type === "llm_prompt")
+            validateLlmPromptBodyStructure(body);
+          if (result.data.type === "visual_prompt")
+            validateVisualPromptBodyStructure(body);
+          if (result.data.type === "llm_prompt")
+            validatePromptVariableUsage(
+              body,
+              result.data.llm_prompt.variables,
+              "LLM Prompt",
+            );
+          if (result.data.type === "visual_prompt")
+            validatePromptVariableUsage(
+              body,
+              result.data.visual_prompt.variables,
+              "Visual Prompt",
+            );
         } catch (error) {
           issue(
             filePath,

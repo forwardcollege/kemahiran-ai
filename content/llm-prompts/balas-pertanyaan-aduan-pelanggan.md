@@ -56,12 +56,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids:
   [
     skill-business-proposal-001,
@@ -161,15 +161,22 @@ llm_prompt:
 
 ### Cara menggunakan prompt ini
 
-Nyahkenal pasti mesej pelanggan. Masukkan fakta yang disahkan, dasar berkaitan, pilihan yang dibenarkan, pemilik tindakan dan tempoh tindak balas. Jika dasar atau kuasa penyelesaian tidak tersedia, gunakan prompt hanya untuk menyediakan pengakuan penerimaan dan cadangan eskalasi—bukan penyelesaian. Jangan minta AI menentukan fakta pertikaian atau menawarkan pampasan sendiri.
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+Bahan rujukan:
+
+- **Wajib:** Dasar dan pilihan penyelesaian yang diluluskan bagi isu tersebut.
 
 ### Pemboleh ubah
 
-- `{{CUSTOMER_MESSAGE}}` — mesej atau ringkasan isu tanpa data peribadi yang tidak perlu.
-- `{{VERIFIED_FACTS}}` — perkara yang boleh disahkan melalui rekod.
-- `{{POLICY_OPTIONS}}` — dasar dan penyelesaian yang dibenarkan.
-- `{{NEXT_STEP_OWNER}}` — tindakan, pemilik dan tempoh.
-- `{{TONE_CHANNEL}}` — nada dan saluran, contohnya e-mel profesional.
+- `{{CUSTOMER_MESSAGE}}` — Mesej pelanggan yang dinyahkenal pasti **(Wajib)**.
+- `{{VERIFIED_FACTS}}` — Fakta yang disahkan **(Wajib)**.
+- `{{POLICY_OPTIONS}}` — Dasar dan pilihan yang dibenarkan **(Wajib)**.
+- `{{NEXT_STEP_OWNER}}` — Tindakan, pemilik dan tempoh **(Wajib)**.
+- `{{TONE_CHANNEL}}` — Nada dan saluran **(Pilihan)**.
 
 ### Prompt lengkap
 
@@ -193,13 +200,33 @@ Hasilkan jawapan yang:
 Jika dasar atau pilihan yang dibenarkan tidak diberikan, jangan cadangkan penyelesaian; hasilkan pengakuan penerimaan ringkas dan nyatakan bahawa eskalasi manusia diperlukan. Jangan menyalahkan pelanggan atau pekerja. Jangan mencipta sebab, dasar, status, bayaran balik, pampasan atau jaminan. Jangan tambah cara pasukan akan menjalankan tindakan (contohnya menghubungi kurier) jika cara itu tidak diberikan. Jangan tambah syarat, sebab atau pencetus bagi semakan bayaran balik/pampasan; nyatakan hanya bahawa semakan berasingan diperlukan jika itu sahaja yang dibenarkan. Bezakan cadangan daripada tindakan yang telah berlaku: jangan tulis kes `telah dieskalasi`, `telah ditandakan`, `telah direkodkan`, `telah diserahkan` atau setara melainkan rekod mengesahkannya. Tandakan jurang sebagai `[PERLU SEMAKAN]`. Jika isu melibatkan keselamatan, ancaman, diskriminasi, data peribadi, tindakan undang-undang atau media, cadangkan eskalasi manusia dan jangan cuba menyelesaikannya sendiri. Jika laluan, pemilik atau prosedur eskalasi tidak diberikan, gunakan `[PERLU ESKALASI MANUSIA]`; jangan cipta pasukan pengurusan/keselamatan/undang-undang, saluran atau arahan penyimpanan rekod.
 ```
 
-### Contoh input dan output
+### Hasil dijangka
 
-Input sintetik: pelanggan belum menerima pesanan; rekod menunjukkan kelewatan penghantar; ejen dibenarkan memberi kemas kini dalam satu hari bekerja tetapi belum boleh meluluskan bayaran balik.
+Jawapan pelanggan yang empati, tepat dan mempunyai tindakan seterusnya yang jelas.
 
-Output ringkas: “Kami memahami kelewatan ini menyusahkan dan memohon maaf atas pengalaman tersebut. Rekod kami menunjukkan penghantaran masih tertangguh. Pasukan kami akan mendapatkan kemas kini dan menghubungi anda dalam satu hari bekerja. Sebarang permohonan bayaran balik memerlukan semakan berasingan.”
+### Contoh penggunaan
 
-### Batasan dan penggunaan wajar
+#### Contoh input
+
+Pelanggan melaporkan pesanan sintetik lewat dua hari. Fakta disahkan: bungkusan masih dalam transit. Dasar membenarkan kemas kini penghantaran tetapi tiada pampasan automatik. Pasukan khidmat pelanggan memiliki tindakan susulan dalam satu hari bekerja.
+
+#### Contoh hasil
+
+Jawapan mengakui kesulitan, menerangkan status yang disahkan, memberikan tindakan serta tempoh susulan, dan tidak menjanjikan bayaran balik atau pampasan.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Jangan menjanjikan bayaran balik atau pampasan tanpa kuasa.
+- Lindungi data pelanggan.
+- Eskalasi isu keselamatan atau undang-undang.
 
 Semak fakta, dasar, nada dan kuasa sebelum menghantar. Jangan masukkan nombor kad, kata laluan, dokumen pengenalan atau data pelanggan lain yang tidak diperlukan.
 
@@ -207,15 +234,22 @@ Semak fakta, dasar, nada dan kuasa sebelum menghantar. Jangan masukkan nombor ka
 
 ### How to use this prompt
 
-De-identify the customer message. Provide verified facts, relevant policy, authorised options, action owner and response timeframe. If policy or resolution authority is unavailable, use the prompt only to prepare an acknowledgement and escalation recommendation—not a resolution. Do not ask AI to decide disputed facts or offer compensation on its own.
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+Reference material:
+
+- **Required:** Approved policy and resolution options for the issue.
 
 ### Variables
 
-- `{{CUSTOMER_MESSAGE}}` — message or issue summary without unnecessary personal data.
-- `{{VERIFIED_FACTS}}` — information supported by records.
-- `{{POLICY_OPTIONS}}` — policy and authorised remedies.
-- `{{NEXT_STEP_OWNER}}` — action, owner and timeframe.
-- `{{TONE_CHANNEL}}` — tone and channel, such as professional email.
+- `{{CUSTOMER_MESSAGE}}` — De-identified customer message **(Required)**.
+- `{{VERIFIED_FACTS}}` — Verified facts **(Required)**.
+- `{{POLICY_OPTIONS}}` — Policy and authorised options **(Required)**.
+- `{{NEXT_STEP_OWNER}}` — Action, owner and timeframe **(Required)**.
+- `{{TONE_CHANNEL}}` — Tone and channel **(Optional)**.
 
 ### Complete prompt
 
@@ -239,12 +273,32 @@ Write a response that:
 If policy or authorised options are not supplied, do not propose a resolution; produce a short acknowledgement and state that human escalation is required. Do not blame the customer or staff. Do not invent causes, policies, status, refunds, compensation or guarantees. Do not add how a team will perform an action (for example, contacting a courier) unless that method is supplied. Do not add a condition, reason or trigger for a refund/compensation review; state only that separate review is required when that is the full authorised position. Distinguish a recommendation from a completed action: do not say the case `has been escalated`, `has been flagged`, `has been recorded`, `has been handed over` or equivalent unless the records confirm it. Mark gaps `[REVIEW REQUIRED]`. If the issue concerns safety, threats, discrimination, personal data, legal action or media, recommend human escalation and do not attempt to resolve it yourself. When no escalation route, owner or procedure is supplied, use `[HUMAN ESCALATION REQUIRED]`; do not invent a management/security/legal team, channel or record-retention instruction.
 ```
 
-### Sample input and output
+### Expected output
 
-Synthetic input: the customer has not received an order; records show courier delay; the agent may provide an update within one working day but cannot yet approve a refund.
+An accurate, empathetic customer response with a clear next action.
 
-Short output: “We understand how inconvenient this delay is and are sorry for the experience. Our records show that delivery remains delayed. Our team will obtain an update and contact you within one working day. Any refund request requires a separate review.”
+### Worked example
 
-### Limitations and appropriate use
+#### Sample input
+
+A customer reports that a synthetic order is two days late. Verified fact: the parcel is still in transit. Policy permits a delivery update but no automatic compensation. Customer service owns the follow-up within one working day.
+
+#### Sample output
+
+The response acknowledges the inconvenience, explains the verified status, provides the next action and timeframe, and makes no refund or compensation promise.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Do not promise refunds or compensation without authority.
+- Protect customer data.
+- Escalate safety or legal issues.
 
 Verify facts, policy, tone and authority before sending. Never enter card numbers, passwords, identity documents or unnecessary customer data.

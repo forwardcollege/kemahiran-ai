@@ -64,12 +64,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids:
   [skill-rph-001, visual-training-scene-001, visual-micro-explainer-001]
 featured: true
@@ -154,15 +154,25 @@ visual_prompt:
 
 Gunakan koleksi ini untuk visual konsep, lembaran kerja dan slaid pengajaran. Ia sesuai apabila guru memerlukan satu fokus visual yang jelas, bukan poster sarat teks. Untuk rajah atau visual yang menerangkan fakta kurikulum, lampirkan sumber mata pelajaran atau petikan DSKP yang berkaitan. Semak fakta dan representasi budaya sebelum digunakan.
 
+### Sebelum menjana
+
+Sediakan bahan rujukan berikut sebelum menjana:
+
+- **Pilihan:** Diperlukan apabila visual membuat tuntutan fakta atau menerangkan kandungan kurikulum khusus.
+
+Tentukan nisbah aspek dan tempat penggunaan akhir. Tambah teks, data dan logo sebenar dalam alat reka bentuk selepas visual disemak.
+
 ### Pemboleh ubah
 
-- `{{CONCEPT}}` — konsep atau situasi pembelajaran.
-- `{{LEARNER_LEVEL}}` — contoh Tahun 3 atau Tingkatan 1.
-- `{{SETTING}}` — lokasi Malaysia yang relevan, bukan hiasan rawak.
-- `{{STYLE}}` — contoh ilustrasi rata, buku teks atau potongan kertas.
-- `{{ASPECT_RATIO}}` — 16:9 untuk slaid, 4:3 atau 1:1 untuk lembaran kerja.
+- `{{CONCEPT}}` — Konsep pembelajaran **(Wajib)**.
+- `{{LEARNER_LEVEL}}` — Tahap murid **(Wajib)**.
+- `{{SETTING}}` — Konteks Malaysia **(Wajib)**.
+- `{{STYLE}}` — Gaya ilustrasi **(Wajib)**.
+- `{{ASPECT_RATIO}}` — Nisbah aspek **(Wajib)**.
 
-### Prompt 1 — ilustrasi konsep
+### Prompt koleksi
+
+#### Prompt 1 — ilustrasi konsep
 
 ```text
 Cipta ilustrasi pendidikan {{ASPECT_RATIO}} untuk murid {{LEARNER_LEVEL}} yang menerangkan {{CONCEPT}} melalui satu adegan yang jelas di {{SETTING}}.
@@ -172,7 +182,7 @@ Gunakan gaya {{STYLE}} yang kemas, bentuk mudah dibaca, kontras jelas dan jumlah
 Elakkan logo, lambang rasmi, bendera, teks janaan, wajah selebriti, watak berhak cipta, anatomi cacat, objek pendua, latar berserabut dan unsur yang tidak berkaitan dengan objektif pembelajaran.
 ```
 
-### Prompt 2 — visual lembaran kerja
+#### Prompt 2 — visual lembaran kerja
 
 ```text
 Cipta satu set empat ilustrasi kecil yang konsisten untuk lembaran kerja {{LEARNER_LEVEL}} tentang {{CONCEPT}}. Setiap panel mempunyai satu subjek utama, latar putih atau sangat ringkas, garisan bersih, kontras tinggi dan ruang di bawah untuk label guru. Gunakan konteks objek harian yang munasabah di Malaysia. Tiada teks, nombor, logo atau bingkai hiasan.
@@ -186,25 +196,43 @@ Cipta satu set empat ilustrasi kecil yang konsisten untuk lembaran kerja {{LEARN
 4. Tambah label dalam alat reka bentuk yang boleh diakses.
 5. Sediakan teks alternatif yang menerangkan fungsi pembelajaran visual.
 
+### Semakan hasil
+
+- Subjek, persekitaran, palet dan nisbah aspek sepadan dengan brief.
+- Tiada teks tidak terbaca, logo palsu, fakta rekaan atau tuntutan yang tidak disahkan.
+- Wajah, tubuh, objek dan konteks Malaysia kelihatan munasabah serta tidak stereotaip.
+- Komposisi mempunyai fokus jelas dan ruang yang cukup untuk salinan pascapenghasilan.
+- Kontras, saiz teks yang akan ditambah dan teks alternatif dirancang untuk penggunaan akhir.
+
 ### Batasan dan penggunaan bertanggungjawab
 
 Ilustrasi janaan boleh mengandungi kesilapan fakta atau stereotaip. Jangan gunakan imej rekaan sebagai bukti sejarah atau saintifik. Elakkan menghasilkan wajah murid sebenar dan jangan memuat naik foto murid tanpa kebenaran serta asas pemprosesan yang sesuai.
 
 ## English
 
-### Intended use
+### What this collection is for
 
 Use this collection for concept visuals, worksheets and teaching slides. It suits a clear single learning focus rather than a text-heavy poster. For diagrams or visuals explaining curriculum facts, attach the relevant subject source or DSKP extract. Verify factual accuracy and cultural representation before use.
 
+### Before generating
+
+Prepare the following reference materials before generating:
+
+- **Optional:** Needed when the visual makes factual claims or explains specific curriculum content.
+
+Decide the aspect ratio and final use. Add genuine text, data and logos in a design tool after reviewing the visual.
+
 ### Variables
 
-- `{{CONCEPT}}` — learning concept or situation.
-- `{{LEARNER_LEVEL}}` — for example Year 3 or Form 1.
-- `{{SETTING}}` — a relevant Malaysian setting, not random decoration.
-- `{{STYLE}}` — for example flat, textbook or paper-cut illustration.
-- `{{ASPECT_RATIO}}` — 16:9 for slides, 4:3 or 1:1 for worksheets.
+- `{{CONCEPT}}` — Learning concept **(Required)**.
+- `{{LEARNER_LEVEL}}` — Learner level **(Required)**.
+- `{{SETTING}}` — Malaysian setting **(Required)**.
+- `{{STYLE}}` — Illustration style **(Required)**.
+- `{{ASPECT_RATIO}}` — Aspect ratio **(Required)**.
 
-### Prompt 1 — concept illustration
+### Collection prompts
+
+#### Prompt 1 — concept illustration
 
 ```text
 Create an {{ASPECT_RATIO}} educational illustration for {{LEARNER_LEVEL}} learners explaining {{CONCEPT}} through one clear scene in {{SETTING}}.
@@ -214,7 +242,7 @@ Use a clean {{STYLE}} style, readable shapes, clear contrast and a controlled nu
 Avoid logos, official emblems, flags, generated text, celebrity likenesses, copyrighted characters, distorted anatomy, duplicate objects, clutter and elements unrelated to the learning objective.
 ```
 
-### Prompt 2 — worksheet visual set
+#### Prompt 2 — worksheet visual set
 
 ```text
 Create a consistent set of four small illustrations for a {{LEARNER_LEVEL}} worksheet about {{CONCEPT}}. Give each panel one main subject, a white or minimal background, clean outlines, high contrast and space below for a teacher-added label. Use plausible everyday Malaysian objects and settings. No text, numbers, logos or decorative frames.
@@ -227,6 +255,14 @@ Create a consistent set of four small illustrations for a {{LEARNER_LEVEL}} work
 3. Review anatomy, objects, clothing, location and cultural details.
 4. Add labels in an accessible design tool.
 5. Provide alternative text explaining the visual’s learning function.
+
+### Output checks
+
+- The subject, environment, palette and aspect ratio match the brief.
+- There is no illegible text, fake logo, invented fact or unverified claim.
+- Faces, bodies, objects and the Malaysian context are plausible and non-stereotyped.
+- The composition has a clear focus and enough space for post-produced copy.
+- Contrast, eventual text size and alternative text are planned for the final use.
 
 ### Limitations and responsible use
 

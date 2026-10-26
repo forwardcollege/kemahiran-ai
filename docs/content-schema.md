@@ -302,14 +302,22 @@ llm_prompt:
       - Do not enter confidential information into an AI tool not approved by the organisation.
 ```
 
-The body should contain, in each language:
+Every LLM Prompt body must use this exact level-three section order. The
+complete prompt must contain exactly one fenced code block so the public page
+can render the full prompt and its one-click copy action together near the top
+of the page without duplicating it in the supporting guide. `Contoh penggunaan / Worked
+example` may use level-four input and output headings, but must contain a real
+synthetic example whenever `sample_included: true`.
 
-- how to use the prompt;
-- variables and preparation;
-- the complete copyable prompt;
-- expected output;
-- optional sample input/output; and
-- limitations and appropriate-use guidance.
+| Bahasa Melayu                           | English                         |
+| --------------------------------------- | ------------------------------- |
+| Cara menggunakan prompt ini             | How to use this prompt          |
+| Pemboleh ubah                           | Variables                       |
+| Prompt lengkap                          | Complete prompt                 |
+| Hasil dijangka                          | Expected output                 |
+| Contoh penggunaan                       | Worked example                  |
+| Semakan kualiti                         | Quality check                   |
+| Batasan dan penggunaan bertanggungjawab | Limitations and responsible use |
 
 `reference_inputs` identifies source material that should accompany a prompt. Prompts normally use `supply_mode: runtime`; when persistent organisational knowledge is essential, consider a full Skill instead of making the prompt silently depend on unavailable context.
 
@@ -393,15 +401,26 @@ video_metadata:
 
 Set `image_metadata: null` only when the record is Video and image-only fields are irrelevant. Common composition/style data may still be used for both types if the final schema makes those fields shared.
 
-The body should contain, in each language:
+Every visual-prompt body must use this exact level-three section order. Under
+`Prompt koleksi / Collection prompts`, give every variant a level-four heading
+and exactly one fenced code block. The application renders each complete prompt
+beside its copy action near the top of the page and omits that section from the
+supporting guide; do not duplicate prompt text in frontmatter or
+application code.
 
-- intended use;
-- how to adapt variables;
-- one or more individually copyable prompts;
-- format/generator notes;
-- exclusions or negative instructions where supported;
-- responsible representation guidance; and
-- preview/provenance notes.
+| Bahasa Melayu                           | English                         |
+| --------------------------------------- | ------------------------------- |
+| Kegunaan koleksi                        | What this collection is for     |
+| Sebelum menjana                         | Before generating               |
+| Pemboleh ubah                           | Variables                       |
+| Prompt koleksi                          | Collection prompts              |
+| Cadangan penggunaan                     | Suggested workflow              |
+| Semakan hasil                           | Output checks                   |
+| Batasan dan penggunaan bertanggungjawab | Limitations and responsible use |
+
+Generator compatibility, aspect ratios, output formats and media-specific
+metadata remain structured frontmatter. The public action panel may render
+those values alongside the individually copyable prompts.
 
 `reference_assets` covers source images, verified event briefs, brand guides and factual materials needed to constrain generation. It must record whether an asset is required, how it is supplied and whether it may contain sensitive material. Reference assets are not automatically licensed for redistribution.
 

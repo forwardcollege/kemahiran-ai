@@ -48,12 +48,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-meeting-minutes-001]
 featured: true
 search_aliases:
@@ -139,15 +139,23 @@ llm_prompt:
 
 ### Cara menggunakan prompt ini
 
-Sediakan penerima, tujuan, fakta, rujukan sah, tindakan yang dimohon, lampiran dan penandatangan. Jika organisasi mempunyai kepala surat atau templat, gunakan AI untuk menjana kandungan sahaja dan pindahkan draf yang telah disemak ke dalam templat rasmi.
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+Bahan rujukan:
+
+- **Pilihan:** Templat surat, kepala surat, frasa wajib atau panduan gaya organisasi.
 
 ### Pemboleh ubah
 
-- `{{RECIPIENT}}` — nama jawatan, organisasi dan alamat.
-- `{{REFERENCE_DETAILS}}` — nombor rujukan dan tarikh yang telah disahkan.
-- `{{PURPOSE_FACTS}}` — tujuan dan fakta sokongan.
-- `{{REQUESTED_ACTION}}` — tindakan serta tarikh maklum balas.
-- `{{ATTACHMENTS_SIGNATORY}}` — lampiran dan butiran penandatangan.
+- `{{RECIPIENT}}` — Penerima dan alamat **(Wajib)**.
+- `{{PURPOSE_FACTS}}` — Tujuan dan fakta **(Wajib)**.
+- `{{REQUESTED_ACTION}}` — Tindakan yang dimohon **(Wajib)**.
+- `{{REFERENCE_DETAILS}}` — Rujukan dan tarikh disahkan **(Pilihan)**.
+- `{{ATTACHMENTS_SIGNATORY}}` — Lampiran dan penandatangan **(Pilihan)**.
+- `{{ORGANISATION_REQUIREMENTS}}` — Keperluan format organisasi **(Pilihan)**.
 
 ### Prompt lengkap
 
@@ -166,13 +174,33 @@ Semak dahulu bahawa penerima, tujuan/fakta dan tindakan yang dimohon telah diber
 Gunakan hanya fakta yang diberikan. Jangan mencipta nombor rujukan, nama pegawai, dasar, kelulusan, tarikh, lampiran atau kuasa menandatangani. Tandakan maklumat pilihan yang tiada sebagai `[PERLU PENGESAHAN]` hanya apabila medan itu diperlukan dalam struktur surat. Jangan tambah baris salinan edaran (`s.k.`/`cc`), alamat pengirim, klasifikasi keselamatan, slogan atau frasa wajib jika input atau format organisasi tidak memerlukannya. Jika input masih mengandungi nombor pengenalan, maklumat kes disiplin/kesihatan, butiran hubungan peribadi atau maklumat sulit yang tidak diperlukan, jangan ulang atau proses butiran itu; minta versi yang telah dinyahkenal pasti melalui saluran yang diluluskan. Selepas surat, senaraikan semakan sebelum tandatangan: fakta, rujukan, penerima, lampiran, klasifikasi, kuasa penandatangan dan format organisasi.
 ```
 
-### Contoh input dan output
+### Hasil dijangka
 
-Input sintetik: surat memohon penggunaan dewan pada 18 November, 8.00 pagi–1.00 petang; penerima ialah Pengurus Fasiliti; nombor rujukan belum diberi.
+Draf surat rasmi dengan penanda jelas bagi rujukan, tarikh atau kelulusan yang belum disahkan.
 
-Petikan output: “Ruj. Kami: `[PERLU PENGESAHAN]` … PERMOHONAN PENGGUNAAN DEWAN … Dengan hormatnya perkara di atas dirujuk. 2. Pihak kami memohon pertimbangan…”
+### Contoh penggunaan
 
-### Batasan dan penggunaan wajar
+#### Contoh input
+
+Penerima: Pegawai Pendidikan Daerah. Tujuan: memohon penggunaan dewan bagi bengkel pada 12 November. Fakta: 80 peserta dan jadual dilampirkan. Tindakan: pengesahan bertulis sebelum 30 Oktober. Nombor rujukan belum diberikan.
+
+#### Contoh hasil
+
+Draf surat menggunakan Bahasa Melayu rasmi, menandakan nombor rujukan sebagai belum disahkan dan meninggalkan tandatangan kepada pegawai yang diberi kuasa.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Semak format dan frasa wajib organisasi.
+- Jangan cipta nombor rujukan atau kuasa kelulusan.
+- Dapatkan tandatangan pegawai berkuasa.
 
 Draf ini tidak mengesahkan kuasa, kelulusan atau pematuhan undang-undang. Semak tatacara organisasi, kerahsiaan, frasa wajib dan kuasa penandatangan sebelum dikeluarkan.
 
@@ -180,15 +208,23 @@ Draf ini tidak mengesahkan kuasa, kelulusan atau pematuhan undang-undang. Semak 
 
 ### How to use this prompt
 
-Prepare the recipient, purpose, facts, valid references, requested action, attachments and signatory. When an organisation has official letterhead or a template, use AI to draft the body only and transfer the reviewed text into the official template.
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+Reference material:
+
+- **Optional:** Organisational letter template, letterhead, required wording or style guide.
 
 ### Variables
 
-- `{{RECIPIENT}}` — role, organisation and address.
-- `{{REFERENCE_DETAILS}}` — verified reference numbers and dates.
-- `{{PURPOSE_FACTS}}` — purpose and supporting facts.
-- `{{REQUESTED_ACTION}}` — action and response deadline.
-- `{{ATTACHMENTS_SIGNATORY}}` — attachments and signatory details.
+- `{{RECIPIENT}}` — Recipient and address **(Required)**.
+- `{{PURPOSE_FACTS}}` — Purpose and facts **(Required)**.
+- `{{REQUESTED_ACTION}}` — Requested action **(Required)**.
+- `{{REFERENCE_DETAILS}}` — Verified references and dates **(Optional)**.
+- `{{ATTACHMENTS_SIGNATORY}}` — Attachments and signatory **(Optional)**.
+- `{{ORGANISATION_REQUIREMENTS}}` — Organisational format requirements **(Optional)**.
 
 ### Complete prompt
 
@@ -207,12 +243,32 @@ First verify that the recipient, purpose/facts and requested action have been su
 Use only supplied facts. Do not invent references, officers, policies, approvals, dates, attachments or signing authority. Mark missing optional information `[CONFIRMATION REQUIRED]` only when that field is required by the letter structure. Do not add a copy-distribution (`s.k.`/`cc`) line, sender address, security classification, slogan or mandatory wording unless the inputs or organisational format require it. If the input still contains unnecessary identity numbers, disciplinary/health case information, personal contact details or confidential material, do not repeat or process those details; request a de-identified version through an approved channel. After the letter, list pre-signature checks covering facts, references, recipient, attachments, classification, signing authority and house format.
 ```
 
-### Sample input and output
+### Expected output
 
-Synthetic input: request to use a hall on 18 November, 8:00 a.m.–1:00 p.m.; recipient is the Facilities Manager; reference number not yet assigned.
+A formal letter draft with clear markers for unverified references, dates or approvals.
 
-Output excerpt: “Our Ref.: `[CONFIRMATION REQUIRED]` … REQUEST TO USE THE HALL … We respectfully refer to the matter above. 2. We seek your consideration…”
+### Worked example
 
-### Limitations and appropriate use
+#### Sample input
+
+Recipient: District Education Officer. Purpose: request use of a hall for a workshop on 12 November. Facts: 80 participants and an attached schedule. Action: written confirmation by 30 October. No reference number has been issued.
+
+#### Sample output
+
+The draft uses formal language, marks the reference number as unconfirmed and leaves sign-off to an authorised officer.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Verify organisational format and required wording.
+- Do not invent references or approval authority.
+- Obtain an authorised signatory.
 
 The draft does not establish authority, approval or legal compliance. Verify house procedures, confidentiality, mandatory wording and signing authority before issue.

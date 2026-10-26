@@ -33,6 +33,10 @@ The complete field contract and status lifecycle are defined in `docs/content-sc
 
 For a Skill, keep the seven required level-three body sections in the exact bilingual order documented in the schema. Use level-four headings such as `Contoh input` and `Contoh hasil` only inside `Contoh penggunaan` when that distinction improves understanding. Do not add a repeated package section to the body; package guidance is rendered from structured metadata.
 
+For an LLM Prompt, use the required seven-section bilingual order documented in the schema. Place the complete prompt in exactly one fenced code block under `Prompt lengkap / Complete prompt`; this block is the canonical text copied by the interface. When `sample_included: true`, provide a synthetic worked example with level-four input and output headings.
+
+For an Image or Video Prompt, use the required seven-section bilingual order documented in the schema. Under `Prompt koleksi / Collection prompts`, give every prompt variant a level-four heading and one fenced code block. Each block becomes a separate copy action automatically, so contributors must not add the same prompt to frontmatter or application code.
+
 ## Review and testing sequence
 
 Move a record through these states without skipping evidence:

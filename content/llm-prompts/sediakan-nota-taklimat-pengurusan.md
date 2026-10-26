@@ -64,12 +64,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.1.0
+version: 0.2.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [skill-policy-analysis-001, skill-management-report-001]
 featured: false
 search_aliases:
@@ -128,6 +128,21 @@ llm_prompt:
 
 ## Bahasa Melayu
 
+### Cara menggunakan prompt ini
+
+1. Sediakan semua input wajib dan nyahkenal pasti maklumat sensitif yang tidak diperlukan.
+2. Gantikan setiap pemboleh ubah dalam prompt. Jangan biarkan AI mengisi fakta, dasar atau rujukan yang tiada.
+3. Salin prompt lengkap, tampalkan ke dalam model pilihan anda dan lampirkan bahan rujukan yang dibenarkan.
+4. Semak hasil menggunakan senarai semakan di bawah sebelum menggunakannya.
+
+### Pemboleh ubah
+
+- `{{AUDIENS}}` — Audiens nota **(Wajib)**.
+- `{{KEPUTUSAN}}` — Keputusan diperlukan **(Wajib)**.
+- `{{FAKTA}}` — Fakta disahkan **(Wajib)**.
+- `{{PILIHAN}}` — Pilihan yang dibenarkan **(Wajib)**.
+- `{{KEKANGAN}}` — Kekangan keputusan **(Pilihan)**.
+
 ### Prompt lengkap
 
 ```text
@@ -140,11 +155,48 @@ Kekangan: {{KEKANGAN}}
 Jika keputusan atau fakta utama tiada, tanya dan berhenti. Tulis nota satu halaman: tujuan; isu; konteks; fakta utama dengan sumber; implikasi; pilihan dengan manfaat, risiko dan prasyarat; syor beralasan; keputusan/tindakan diperlukan; dan jurang maklumat. Jangan cipta pilihan, kos, dasar, risiko atau kuasa. Bezakan fakta daripada pertimbangan dan gunakan [PERLU PENGESAHAN] bagi jurang.
 ```
 
-### Contoh dan batasan
+### Hasil dijangka
 
-Dalam kes sintetik pemilihan tarikh program, syor hanya menggunakan tarikh dan kekangan yang diberi. Pemilik keputusan mesti mengesahkan fakta, kuasa dan risiko.
+Nota taklimat satu halaman.
+
+### Contoh penggunaan
+
+#### Contoh input
+
+Keputusan diperlukan: pilih tarikh program antara 12 atau 19 November. Fakta: dewan tersedia pada kedua-dua tarikh; fasilitator hanya tersedia pada 19 November. Kekangan: notis minimum dua minggu.
+
+#### Contoh hasil
+
+Nota satu halaman menerangkan keputusan, fakta, pilihan, pertukaran dan syor bersyarat kepada kuasa pemilik keputusan.
+
+### Semakan kualiti
+
+- Semua pemboleh ubah wajib telah diganti dan tiada token `{{...}}` tertinggal.
+- Hasil mengikuti format yang diminta dan sepadan dengan hasil dijangka.
+- Semua fakta, angka, nama dan tarikh boleh dijejak kepada input atau sumber yang diberikan.
+- Andaian, jurang dan ketidakpastian ditandakan dengan jelas; tiada rujukan atau kelulusan direka-reka.
+- Pemilik kerja telah menyemak privasi, nada dan tindakan sebelum hasil digunakan atau dihantar.
+
+### Batasan dan penggunaan bertanggungjawab
+
+- Syor memerlukan kuasa manusia.
 
 ## English
+
+### How to use this prompt
+
+1. Prepare every required input and de-identify sensitive information that is not needed.
+2. Replace every variable in the prompt. Do not let the AI fill in missing facts, policies or references.
+3. Copy the complete prompt, paste it into your chosen model and attach any authorised reference material.
+4. Review the result with the checklist below before using it.
+
+### Variables
+
+- `{{AUDIENCE}}` — Briefing audience **(Required)**.
+- `{{DECISION}}` — Decision required **(Required)**.
+- `{{FACTS}}` — Verified facts **(Required)**.
+- `{{OPTIONS}}` — Permitted options **(Required)**.
+- `{{CONSTRAINTS}}` — Decision constraints **(Optional)**.
 
 ### Complete prompt
 
@@ -158,6 +210,28 @@ Constraints: {{CONSTRAINTS}}
 If the decision or core facts are missing, ask and stop. Write a one-page note: purpose; issue; context; key sourced facts; implications; options with benefits, risks and prerequisites; reasoned recommendation; decision/action required; and information gaps. Do not invent options, costs, policies, risks or authority. Separate fact from judgement and use [CONFIRMATION REQUIRED] for gaps.
 ```
 
-### Example and limitations
+### Expected output
 
-In a synthetic programme-date decision, the recommendation uses only supplied dates and constraints. The decision owner must verify facts, authority and risks.
+One-page briefing note.
+
+### Worked example
+
+#### Sample input
+
+Decision required: choose a programme date between 12 and 19 November. Facts: the hall is available on both dates; the facilitator is only available on 19 November. Constraint: two weeks’ minimum notice.
+
+#### Sample output
+
+The one-page brief explains the decision, facts, options, trade-offs and a recommendation that remains subject to the decision owner’s authority.
+
+### Quality check
+
+- Every required variable has been replaced and no `{{...}}` token remains.
+- The response follows the requested format and matches the expected output.
+- Every fact, figure, name and date is traceable to the supplied input or source.
+- Assumptions, gaps and uncertainties are clearly labelled; no reference or approval is invented.
+- The work owner has reviewed privacy, tone and actions before the result is used or sent.
+
+### Limitations and responsible use
+
+- Recommendations require human authority.

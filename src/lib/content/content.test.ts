@@ -1,12 +1,19 @@
 import { describe, expect, it } from "vitest";
 import {
+  llmPromptBodySectionHeadings,
   skillBodySectionHeadings,
   splitBilingualBody,
+  validateLlmPromptBodyStructure,
+  validatePromptVariableUsage,
   validateSkillBodyStructure,
+  validateVisualPromptBodyStructure,
+  visualPromptBodySectionHeadings,
 } from "./languages";
 import {
   extractFencedCodeBlockAfterHeading,
   extractFirstFencedCodeBlock,
+  extractPromptBlocksAfterHeading,
+  removeLevelThreeSection,
   renderSafeMarkdown,
 } from "./markdown";
 import {
@@ -163,6 +170,71 @@ describe("catalogue content", () => {
     expect(extractFirstFencedCodeBlock("Tiada blok kod")).toBeNull();
   });
 
+  it("extracts individually labelled prompt variants", () => {
+    const markdown = [
+      "### Prompt koleksi",
+      "",
+      "#### Prompt 1 — katalog",
+      "",
+      "```text",
+      "Prompt pertama",
+      "```",
+      "",
+      "#### Prompt 2 — gaya hidup",
+      "",
+      "```text",
+      "Prompt kedua",
+      "```",
+      "",
+      "### Cadangan penggunaan",
+      "",
+      "Semak hasil.",
+    ].join("\n");
+
+    expect(extractPromptBlocksAfterHeading(markdown, "Prompt koleksi")).toEqual(
+      [
+        { label: "Prompt 1 — katalog", text: "Prompt pertama" },
+        { label: "Prompt 2 — gaya hidup", text: "Prompt kedua" },
+      ],
+    );
+  });
+
+  it("removes a promoted prompt section without removing the guide", () => {
+    const markdown = [
+      "### Pemboleh ubah",
+      "",
+      "Gunakan {{INPUT}}.",
+      "",
+      "### Prompt lengkap",
+      "",
+      "```text",
+      "Hasilkan {{INPUT}}",
+      "```",
+      "",
+      "### Hasil dijangka",
+      "",
+      "Satu hasil.",
+    ].join("\n");
+    const visibleGuide = removeLevelThreeSection(markdown, "Prompt lengkap");
+
+    expect(visibleGuide).toContain("### Pemboleh ubah");
+    expect(visibleGuide).toContain("### Hasil dijangka");
+    expect(visibleGuide).not.toContain("### Prompt lengkap");
+    expect(visibleGuide).not.toContain("Hasilkan {{INPUT}}");
+  });
+
+  it("rejects prompt placeholders that drift from frontmatter variables", () => {
+    const body = {
+      ms: "```text\nGunakan {{TIDAK_DIISTIHAR}}\n```",
+      en: "```text\nUse {{UNDECLARED}}\n```",
+    };
+    const variables = [{ token: "{{DIISYTIHAR}}", token_en: "{{DECLARED}}" }];
+
+    expect(() =>
+      validatePromptVariableUsage(body, variables, "Fixture"),
+    ).toThrow("must match frontmatter");
+  });
+
   it("provides a copyable instruction for every approved Skill", () => {
     const skills = loadResources().filter(
       (resource) => resource.data.type === "skill",
@@ -198,6 +270,52 @@ describe("catalogue content", () => {
           ...resource.body[locale].matchAll(/^###\s+(.+)$/gm),
         ].map((match) => match[1].trim());
         expect(headings).toEqual([...skillBodySectionHeadings[locale]]);
+      }
+    }
+  });
+
+  it("keeps every LLM Prompt on the same bilingual section structure", () => {
+    const prompts = loadResources().filter(
+      (resource) => resource.data.type === "llm_prompt",
+    );
+
+    for (const resource of prompts) {
+      expect(() => validateLlmPromptBodyStructure(resource.body)).not.toThrow();
+      for (const locale of ["ms", "en"] as const) {
+        const headings = [
+          ...resource.body[locale].matchAll(/^###\s+(.+)$/gm),
+        ].map((match) => match[1].trim());
+        expect(headings).toEqual([...llmPromptBodySectionHeadings[locale]]);
+        expect(
+          extractFencedCodeBlockAfterHeading(
+            resource.body[locale],
+            llmPromptBodySectionHeadings[locale][2],
+          ),
+        ).not.toBeNull();
+      }
+    }
+  });
+
+  it("keeps every visual collection on the same bilingual section structure", () => {
+    const prompts = loadResources().filter(
+      (resource) => resource.data.type === "visual_prompt",
+    );
+
+    for (const resource of prompts) {
+      expect(() =>
+        validateVisualPromptBodyStructure(resource.body),
+      ).not.toThrow();
+      for (const locale of ["ms", "en"] as const) {
+        const headings = [
+          ...resource.body[locale].matchAll(/^###\s+(.+)$/gm),
+        ].map((match) => match[1].trim());
+        expect(headings).toEqual([...visualPromptBodySectionHeadings[locale]]);
+        expect(
+          extractPromptBlocksAfterHeading(
+            resource.body[locale],
+            visualPromptBodySectionHeadings[locale][3],
+          ).length,
+        ).toBeGreaterThan(0);
       }
     }
   });

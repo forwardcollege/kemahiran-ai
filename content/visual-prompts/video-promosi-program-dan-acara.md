@@ -56,12 +56,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [visual-event-poster-001]
 featured: true
 search_aliases:
@@ -147,16 +147,27 @@ visual_prompt:
 
 Gunakan prompt ini untuk klip pengenalan 10–20 saat bagi program pendidikan, komuniti atau pembangunan profesional. Sediakan brief acara yang telah disahkan sebelum menjana supaya aktiviti, peserta dan lokasi tidak direka-reka. Jana visual tanpa teks acara; tambah tajuk, tarikh, logo, sari kata dan seruan tindakan dalam penyunting video menggunakan maklumat yang telah disahkan.
 
+### Sebelum menjana
+
+Sediakan bahan rujukan berikut sebelum menjana:
+
+- **Wajib:** Sumber bagi tema, peserta, lokasi, aktiviti dan pengalaman sebenar yang dirancang.
+- **Pilihan:** Gunakan untuk warna dan gaya; tambah logo sebenar semasa penyuntingan.
+
+Tentukan nisbah aspek, tempoh dan saluran penerbitan. Rancang untuk menambah teks, sari kata, logo dan audio yang diluluskan semasa penyuntingan.
+
 ### Pemboleh ubah
 
-- `{{PROGRAMME_THEME}}` — tema dan hasil yang realistik.
-- `{{PARTICIPANT_ACTIVITY}}` — aktiviti yang benar-benar dirancang.
-- `{{VENUE_CONTEXT}}` — lokasi Malaysia yang munasabah.
-- `{{AUDIENCE}}` — peserta sasaran.
-- `{{ASPECT_RATIO}}` — 9:16 atau 16:9.
-- `{{BRAND_PALETTE}}` — warna aksen yang diluluskan.
+- `{{PROGRAMME_THEME}}` — Tema program **(Wajib)**.
+- `{{PARTICIPANT_ACTIVITY}}` — Aktiviti peserta **(Wajib)**.
+- `{{VENUE_CONTEXT}}` — Konteks lokasi **(Wajib)**.
+- `{{AUDIENCE}}` — Peserta sasaran **(Wajib)**.
+- `{{ASPECT_RATIO}}` — Nisbah aspek **(Wajib)**.
+- `{{BRAND_PALETTE}}` — Palet jenama **(Pilihan)**.
 
-### Prompt 1 — montaj 15 saat
+### Prompt koleksi
+
+#### Prompt 1 — montaj 15 saat
 
 ```text
 Cipta video promosi {{ASPECT_RATIO}} berdurasi 15 saat untuk program {{PROGRAMME_THEME}} yang ditujukan kepada {{AUDIENCE}} di {{VENUE_CONTEXT}}. Nada optimistik, profesional dan boleh dipercayai; konteks Malaysia kontemporari tanpa stereotaip.
@@ -170,7 +181,7 @@ Urutan:
 Cahaya siang lembut, warna neutral dengan aksen {{BRAND_PALETTE}}, potongan bersih, gerakan kamera terkawal dan kesinambungan pakaian, ruang serta peserta. Tiada teks janaan, logo, bendera, lambang rasmi atau audio pertuturan. Jangan gambarkan hasil, kemudahan atau aktiviti yang tidak dirancang. Elakkan wajah berubah, anggota tambahan, objek melompat, gerakan laju, kerlipan dan stereotaip budaya.
 ```
 
-### Prompt 2 — klip pengumuman satu syot
+#### Prompt 2 — klip pengumuman satu syot
 
 ```text
 Cipta satu syot promosi {{ASPECT_RATIO}} selama 10 saat di {{VENUE_CONTEXT}}. Kamera bergerak perlahan dari bahan program di latar depan kepada kumpulan kecil {{AUDIENCE}} yang sedang {{PARTICIPANT_ACTIVITY}}, kemudian berhenti dengan ruang kosong di sebelah kiri untuk maklumat acara. Nada profesional, mesra dan realistik. Tiada teks, logo, pertuturan atau tuntutan hasil.
@@ -184,26 +195,46 @@ Cipta satu syot promosi {{ASPECT_RATIO}} selama 10 saat di {{VENUE_CONTEXT}}. Ka
 4. Tambah butiran disahkan, logo sebenar, sari kata dan audio berlesen semasa penyuntingan.
 5. Eksport versi bersari kata dan semak kebolehbacaan pada telefon.
 
+### Semakan hasil
+
+- Subjek, persekitaran, palet dan nisbah aspek sepadan dengan brief.
+- Tiada teks tidak terbaca, logo palsu, fakta rekaan atau tuntutan yang tidak disahkan.
+- Wajah, tubuh, objek dan konteks Malaysia kelihatan munasabah serta tidak stereotaip.
+- Tempoh, urutan, pergerakan kamera dan tempo konsisten dengan prompt.
+- Kesinambungan wajah, pakaian, tangan, objek dan lokasi telah diperiksa bingkai demi bingkai.
+- Sari kata boleh dibaca, audio berlesen dan versi tanpa bunyi masih boleh difahami.
+
 ### Batasan dan penggunaan bertanggungjawab
 
 Video janaan bukan rakaman program sebenar. Jangan persembahkannya sebagai dokumentasi peserta atau bukti hasil. Dapatkan hak bagi muzik, logo dan aset yang ditambah. Jangan gunakan rupa individu sebenar tanpa kebenaran.
 
 ## English
 
-### Intended use
+### What this collection is for
 
 Use these prompts for a 10–20 second introduction to an education, community or professional-development programme. Prepare a verified event brief before generation so that activities, participants and venues are not invented. Generate the visual without event text; add the verified title, date, logo, captions and call to action in a video editor.
 
+### Before generating
+
+Prepare the following reference materials before generating:
+
+- **Required:** Source for the actual planned theme, participants, venue, activities and experience.
+- **Optional:** Use for colours and style; add genuine logos during editing.
+
+Decide the aspect ratio, duration and publishing channel. Plan to add approved text, captions, logos and audio during editing.
+
 ### Variables
 
-- `{{PROGRAMME_THEME}}` — theme and realistic outcome.
-- `{{PARTICIPANT_ACTIVITY}}` — an activity actually planned.
-- `{{VENUE_CONTEXT}}` — a plausible Malaysian location.
-- `{{AUDIENCE}}` — intended participants.
-- `{{ASPECT_RATIO}}` — 9:16 or 16:9.
-- `{{BRAND_PALETTE}}` — approved accent colours.
+- `{{PROGRAMME_THEME}}` — Programme theme **(Required)**.
+- `{{PARTICIPANT_ACTIVITY}}` — Participant activity **(Required)**.
+- `{{VENUE_CONTEXT}}` — Venue context **(Required)**.
+- `{{AUDIENCE}}` — Intended audience **(Required)**.
+- `{{ASPECT_RATIO}}` — Aspect ratio **(Required)**.
+- `{{BRAND_PALETTE}}` — Brand palette **(Optional)**.
 
-### Prompt 1 — 15-second montage
+### Collection prompts
+
+#### Prompt 1 — 15-second montage
 
 ```text
 Create a 15-second {{ASPECT_RATIO}} promotional video for a {{PROGRAMME_THEME}} programme intended for {{AUDIENCE}} in {{VENUE_CONTEXT}}. Keep the tone optimistic, professional and credible in a contemporary Malaysian context without stereotypes.
@@ -217,7 +248,7 @@ Sequence:
 Use soft daylight, a neutral palette with {{BRAND_PALETTE}} accents, clean cuts, controlled camera movement and continuity of clothing, space and participants. No generated text, logos, flags, official emblems or spoken audio. Do not depict outcomes, facilities or activities that are not planned. Avoid changing faces, extra limbs, jumping objects, rapid movement, flicker and cultural stereotypes.
 ```
 
-### Prompt 2 — one-shot announcement clip
+#### Prompt 2 — one-shot announcement clip
 
 ```text
 Create one 10-second {{ASPECT_RATIO}} promotional shot in {{VENUE_CONTEXT}}. Move the camera slowly from programme materials in the foreground to a small group of {{AUDIENCE}} performing {{PARTICIPANT_ACTIVITY}}, then settle with blank space on the left for event information. Keep it professional, warm and realistic. No text, logos, speech or outcome claims.
@@ -230,6 +261,15 @@ Create one 10-second {{ASPECT_RATIO}} promotional shot in {{VENUE_CONTEXT}}. Mov
 3. Review faces, bodies, clothing, objects and location frame by frame for continuity.
 4. Add verified details, genuine logos, captions and licensed audio during editing.
 5. Export a captioned version and check readability on a phone.
+
+### Output checks
+
+- The subject, environment, palette and aspect ratio match the brief.
+- There is no illegible text, fake logo, invented fact or unverified claim.
+- Faces, bodies, objects and the Malaysian context are plausible and non-stereotyped.
+- Duration, sequence, camera movement and pacing are consistent with the prompt.
+- Continuity of faces, clothing, hands, objects and location has been checked frame by frame.
+- Captions are readable, audio is licensed and the muted version remains understandable.
 
 ### Limitations and responsible use
 

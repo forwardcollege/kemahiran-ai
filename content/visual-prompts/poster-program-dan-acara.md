@@ -57,12 +57,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [visual-event-video-001]
 featured: true
 search_aliases:
@@ -155,15 +155,26 @@ visual_prompt:
 
 Hasilkan visual utama tanpa teks untuk poster program. Tambah tajuk, tarikh, tempat, logo dan butiran rasmi kemudian dalam alat reka bentuk; cara ini lebih tepat dan memudahkan semakan jenama.
 
+### Sebelum menjana
+
+Sediakan bahan rujukan berikut sebelum menjana:
+
+- **Pilihan:** Gunakan untuk warna dan gaya sahaja; tambah logo sebenar selepas penjanaan.
+- **Wajib:** Sumber bagi tema, peserta, lokasi dan pengalaman program yang sebenar.
+
+Tentukan nisbah aspek dan tempat penggunaan akhir. Tambah teks, data dan logo sebenar dalam alat reka bentuk selepas visual disemak.
+
 ### Pemboleh ubah
 
-- `{{PROGRAMME_THEME}}` — tema, contohnya pembangunan guru atau literasi digital.
-- `{{LOCATION_CONTEXT}}` — lokasi Malaysia yang realistik.
-- `{{PARTICIPANTS_OR_SYMBOL}}` — peserta atau metafora visual yang relevan.
-- `{{BRAND_COLOURS}}` — maksimum dua warna aksen yang diluluskan.
-- `{{ASPECT_RATIO}}` — 4:5, 1:1 atau 16:9.
+- `{{PROGRAMME_THEME}}` — Tema program **(Wajib)**.
+- `{{LOCATION_CONTEXT}}` — Konteks lokasi **(Wajib)**.
+- `{{PARTICIPANTS_OR_SYMBOL}}` — Peserta atau simbol utama **(Wajib)**.
+- `{{BRAND_COLOURS}}` — Warna jenama **(Pilihan)**.
+- `{{ASPECT_RATIO}}` — Nisbah aspek **(Wajib)**.
 
-### Prompt 1 — fotografi editorial
+### Prompt koleksi
+
+#### Prompt 1 — fotografi editorial
 
 ```text
 Cipta visual utama poster {{ASPECT_RATIO}} untuk program {{PROGRAMME_THEME}} di {{LOCATION_CONTEXT}}. Paparkan {{PARTICIPANTS_OR_SYMBOL}} dalam adegan Malaysia kontemporari yang realistik, inklusif dan tidak stereotaip. Gaya fotografi editorial profesional, perspektif 35mm aras mata, ekspresi semula jadi, cahaya lembut dan palet neutral dengan aksen {{BRAND_COLOURS}}.
@@ -171,7 +182,7 @@ Cipta visual utama poster {{ASPECT_RATIO}} untuk program {{PROGRAMME_THEME}} di 
 Susun subjek pada sepertiga bawah atau kanan dan tinggalkan ruang negatif yang benar-benar bersih untuk tajuk dan butiran acara. Imej mesti masih jelas sebagai lakaran kecil. Jangan hasilkan teks, tarikh, logo, bendera atau lambang rasmi. Elakkan tangan cacat, wajah berulang, peserta pendua, suasana pelancongan generik dan pakaian yang tidak sesuai konteks.
 ```
 
-### Prompt 2 — visual grafik tanpa manusia
+#### Prompt 2 — visual grafik tanpa manusia
 
 ```text
 Cipta komposisi grafik editorial {{ASPECT_RATIO}} untuk {{PROGRAMME_THEME}} menggunakan bentuk geometri, objek simbolik yang relevan dan lapisan warna {{BRAND_COLOURS}}. Reka hierarki visual yang jelas dengan satu fokus utama dan ruang kosong besar untuk tipografi. Gaya moden, dipercayai dan sesuai untuk organisasi Malaysia. Tiada manusia, teks, huruf, logo, bendera, lambang atau ikon berhak cipta.
@@ -185,25 +196,44 @@ Cipta komposisi grafik editorial {{ASPECT_RATIO}} untuk {{PROGRAMME_THEME}} meng
 4. Tambah butiran rasmi serta logo sebenar dalam alat reka bentuk.
 5. Semak tarikh, masa, lokasi, aksesibiliti dan kelulusan jenama.
 
+### Semakan hasil
+
+- Subjek, persekitaran, palet dan nisbah aspek sepadan dengan brief.
+- Tiada teks tidak terbaca, logo palsu, fakta rekaan atau tuntutan yang tidak disahkan.
+- Wajah, tubuh, objek dan konteks Malaysia kelihatan munasabah serta tidak stereotaip.
+- Komposisi mempunyai fokus jelas dan ruang yang cukup untuk salinan pascapenghasilan.
+- Kontras, saiz teks yang akan ditambah dan teks alternatif dirancang untuk penggunaan akhir.
+
 ### Batasan dan penggunaan bertanggungjawab
 
 Orang janaan bukan peserta sebenar. Jangan gambarkan mereka sebagai penerima manfaat sebenar. Logo perlu ditambah daripada fail rasmi; jangan minta model mereka-reka atau membina semula logo.
 
 ## English
 
-### Intended use
+### What this collection is for
 
 Create a text-free key visual for a programme poster. Add the title, date, venue, logos and official details later in a design tool for greater accuracy and easier brand review.
 
+### Before generating
+
+Prepare the following reference materials before generating:
+
+- **Optional:** Use for colours and style only; add genuine logos after generation.
+- **Required:** Source for the programme's actual theme, participants, location and experience.
+
+Decide the aspect ratio and final use. Add genuine text, data and logos in a design tool after reviewing the visual.
+
 ### Variables
 
-- `{{PROGRAMME_THEME}}` — such as teacher development or digital literacy.
-- `{{LOCATION_CONTEXT}}` — a realistic Malaysian location.
-- `{{PARTICIPANTS_OR_SYMBOL}}` — relevant participants or visual metaphor.
-- `{{BRAND_COLOURS}}` — no more than two approved accent colours.
-- `{{ASPECT_RATIO}}` — 4:5, 1:1 or 16:9.
+- `{{PROGRAMME_THEME}}` — Programme theme **(Required)**.
+- `{{LOCATION_CONTEXT}}` — Location context **(Required)**.
+- `{{PARTICIPANTS_OR_SYMBOL}}` — Main participants or symbol **(Required)**.
+- `{{BRAND_COLOURS}}` — Brand colours **(Optional)**.
+- `{{ASPECT_RATIO}}` — Aspect ratio **(Required)**.
 
-### Prompt 1 — editorial photography
+### Collection prompts
+
+#### Prompt 1 — editorial photography
 
 ```text
 Create an {{ASPECT_RATIO}} poster key visual for a {{PROGRAMME_THEME}} programme in {{LOCATION_CONTEXT}}. Show {{PARTICIPANTS_OR_SYMBOL}} in a realistic, inclusive and non-stereotyped contemporary Malaysian scene. Use professional editorial photography, a natural eye-level 35mm perspective, natural expressions, soft light and a neutral palette with {{BRAND_COLOURS}} accents.
@@ -211,7 +241,7 @@ Create an {{ASPECT_RATIO}} poster key visual for a {{PROGRAMME_THEME}} programme
 Place the subject in the lower or right third and preserve genuinely clean negative space for the event title and details. The image must remain clear as a thumbnail. Do not generate text, dates, logos, flags or official emblems. Avoid distorted hands, repeated faces, duplicate participants, generic tourism imagery and contextually unsuitable clothing.
 ```
 
-### Prompt 2 — people-free graphic visual
+#### Prompt 2 — people-free graphic visual
 
 ```text
 Create an {{ASPECT_RATIO}} editorial graphic composition for {{PROGRAMME_THEME}} using geometric shapes, relevant symbolic objects and layers of {{BRAND_COLOURS}}. Establish a clear visual hierarchy with one focal point and generous blank space for typography. Keep it modern, credible and suitable for a Malaysian organisation. No people, text, letters, logos, flags, emblems or copyrighted icons.
@@ -224,6 +254,14 @@ Create an {{ASPECT_RATIO}} editorial graphic composition for {{PROGRAMME_THEME}}
 3. Check representation, anatomy, objects and copy space.
 4. Add official details and genuine logo files in a design tool.
 5. Verify date, time, venue, accessibility and brand approval.
+
+### Output checks
+
+- The subject, environment, palette and aspect ratio match the brief.
+- There is no illegible text, fake logo, invented fact or unverified claim.
+- Faces, bodies, objects and the Malaysian context are plausible and non-stereotyped.
+- The composition has a clear focus and enough space for post-produced copy.
+- Contrast, eventual text size and alternative text are planned for the final use.
 
 ### Limitations and responsible use
 

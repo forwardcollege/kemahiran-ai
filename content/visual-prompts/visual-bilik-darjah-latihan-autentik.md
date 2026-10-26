@@ -68,12 +68,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_required,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-25",
-    next_review_due: "2027-04-25",
+    last_reviewed: "2026-10-26",
+    next_review_due: "2027-04-26",
   }
-version: 0.2.0
+version: 0.3.0
 created_at: "2026-10-25"
-updated_at: "2026-10-25"
+updated_at: "2026-10-26"
 related_ids: [visual-education-001, visual-presentation-hero-001]
 featured: false
 search_aliases:
@@ -164,20 +164,92 @@ visual_prompt:
 
 ## Bahasa Melayu
 
+### Kegunaan koleksi
+
+Cipta visual dokumentari persekitaran pembelajaran dan latihan Malaysia yang kredibel, pelbagai dan tidak stereotaip.
+
+### Sebelum menjana
+
+Tetapkan pemboleh ubah menggunakan maklumat yang telah disahkan. Jika hasil akan mewakili program, produk atau organisasi sebenar, sediakan brief dan aset yang anda berhak gunakan.
+
+Tentukan nisbah aspek dan tempat penggunaan akhir. Tambah teks, data dan logo sebenar dalam alat reka bentuk selepas visual disemak.
+
+### Pemboleh ubah
+
+- `{{AUDIENS}}` — Jenis peserta **(Wajib)**.
+- `{{AKTIVITI}}` — Aktiviti sebenar **(Wajib)**.
+- `{{LOKASI}}` — Lokasi Malaysia **(Wajib)**.
+- `{{NISBAH_ASPEK}}` — Nisbah aspek **(Wajib)**.
+
 ### Prompt koleksi
+
+#### Prompt koleksi
 
 ```text
 Hasilkan fotografi editorial semula jadi {{NISBAH_ASPEK}} di {{LOKASI}}. Paparkan kumpulan kecil {{AUDIENS}} Malaysia sedang melakukan {{AKTIVITI}} secara realistik. Perspektif dokumentari 35mm pada aras mata, cahaya tingkap lembut, ekspresi tumpuan semula jadi dan ruang negatif yang sesuai untuk tajuk laporan. Kepelbagaian yang munasabah tanpa stereotaip; pakaian dan ruang selaras dengan konteks. Tiada teks, logo, bendera atau lambang rasmi. Elakkan gaya stok korporat, pose bersalaman, peserta pendua, anatomi cacat dan peralatan yang tidak disebut.
 ```
 
+### Cadangan penggunaan
+
+1. Pilih satu prompt dan gantikan semua pemboleh ubah berdasarkan brief yang disahkan.
+2. Jana beberapa draf tanpa teks atau logo rasmi.
+3. Pilih draf yang paling tepat, kemudian semak fakta, representasi dan kecacatan visual.
+4. Tambah salinan, data, logo dan butiran rasmi dalam alat reka bentuk yang boleh diakses.
+
+### Semakan hasil
+
+- Subjek, persekitaran, palet dan nisbah aspek sepadan dengan brief.
+- Tiada teks tidak terbaca, logo palsu, fakta rekaan atau tuntutan yang tidak disahkan.
+- Wajah, tubuh, objek dan konteks Malaysia kelihatan munasabah serta tidak stereotaip.
+- Komposisi mempunyai fokus jelas dan ruang yang cukup untuk salinan pascapenghasilan.
+- Kontras, saiz teks yang akan ditambah dan teks alternatif dirancang untuk penggunaan akhir.
+
+### Batasan dan penggunaan bertanggungjawab
+
 Variasikan antara bilik darjah guru, bengkel pegawai dan latihan SME dengan menukar pemboleh ubah sahaja. Gunakan visual sebagai ilustrasi sintetik, bukan bukti peserta atau acara sebenar.
 
 ## English
 
-### Collection prompt
+### What this collection is for
+
+Create credible, diverse and non-stereotyped documentary visuals of Malaysian learning and training environments.
+
+### Before generating
+
+Set the variables using verified information. If the result will represent a real programme, product or organisation, prepare a brief and assets you are authorised to use.
+
+Decide the aspect ratio and final use. Add genuine text, data and logos in a design tool after reviewing the visual.
+
+### Variables
+
+- `{{AUDIENCE}}` — Participant type **(Required)**.
+- `{{ACTIVITY}}` — Actual activity **(Required)**.
+- `{{SETTING}}` — Malaysian setting **(Required)**.
+- `{{ASPECT_RATIO}}` — Aspect ratio **(Required)**.
+
+### Collection prompts
+
+#### Main prompt
 
 ```text
 Create a natural editorial {{ASPECT_RATIO}} photograph in {{SETTING}}. Show a small group of Malaysian {{AUDIENCE}} taking part in {{ACTIVITY}} realistically. Use an eye-level documentary 35mm perspective, soft window light, natural focused expressions and practical negative space for a report heading. Represent credible diversity without stereotypes; keep clothing and room appropriate to context. No text, logos, flags or official emblems. Avoid corporate-stock handshakes, duplicated participants, malformed anatomy and equipment not named in the brief.
 ```
+
+### Suggested workflow
+
+1. Choose one prompt and replace every variable using the verified brief.
+2. Generate several drafts without official text or logos.
+3. Select the most accurate draft, then check facts, representation and visual defects.
+4. Add copy, data, logos and official details in an accessible design tool.
+
+### Output checks
+
+- The subject, environment, palette and aspect ratio match the brief.
+- There is no illegible text, fake logo, invented fact or unverified claim.
+- Faces, bodies, objects and the Malaysian context are plausible and non-stereotyped.
+- The composition has a clear focus and enough space for post-produced copy.
+- Contrast, eventual text size and alternative text are planned for the final use.
+
+### Limitations and responsible use
 
 Vary between a teacher classroom, officer workshop and SME training by changing variables only. Treat the image as synthetic illustration, not evidence of real participants or an actual event.
