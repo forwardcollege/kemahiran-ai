@@ -1,6 +1,6 @@
 # Kemahiran.AI
 
-Kemahiran.AI is Forward Labs’ Malay-first bilingual library of practical AI Skills, LLM prompts and visual-prompt collections for Malaysian educators, public-sector teams, SMEs and professionals. It is powered by Forward College.
+Kemahiran.AI is a Forward College initiative: a Malay-first bilingual library of practical AI Skills, LLM prompts and visual-prompt collections for Malaysian educators, public-sector teams, SMEs and professionals.
 
 ## Current status
 
@@ -57,6 +57,6 @@ Never commit `.env` files or credentials. `.env.example` contains names only. Su
 
 - Application source code, tests, build scripts and configuration are licensed under the [MIT License](LICENSE).
 - Original catalogue resources, prompts, Skill packages, editorial documentation and original media are licensed under [CC BY 4.0](LICENSE-CONTENT.md), except where a resource or attribution manifest states otherwise.
-- Recommended attribution: “Kemahiran.AI by Forward Labs, powered by Forward College (Malaysia) — https://kemahiran.ai.”
+- Recommended attribution: “Kemahiran.AI by Forward College (Malaysia) — https://kemahiran.ai.”
 
 The location in the attribution distinguishes the Malaysian institution from unrelated organisations with the same name. Brand names and logos are not included in the open-content licence.

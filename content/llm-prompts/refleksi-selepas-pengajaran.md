@@ -26,7 +26,7 @@ difficulty: beginner
 intended_output: post_lesson_reflection
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   {
     kind: original,

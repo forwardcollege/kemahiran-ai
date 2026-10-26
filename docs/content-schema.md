@@ -123,7 +123,7 @@ author:
   name: Forward College
   url: https://forward.edu.my
 curator:
-  name: Forward Labs
+  name: Forward College
 
 provenance:
   kind: original # original | adapted_open_source | community_contributed | externally_referenced

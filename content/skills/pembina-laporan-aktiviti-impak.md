@@ -40,7 +40,7 @@ difficulty: intermediate
 intended_output: activity_outcome_report
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   {
     kind: original,

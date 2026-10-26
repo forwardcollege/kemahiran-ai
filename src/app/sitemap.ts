@@ -7,7 +7,13 @@ import {
   resourcePaths,
 } from "@/lib/seo";
 
-const indexRoutes = ["", "/skills", "/llm-prompts", "/visual-prompts"];
+const indexRoutes = [
+  "",
+  "/skills",
+  "/llm-prompts",
+  "/visual-prompts",
+  "/about",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   if (!isSearchIndexingEnabled()) return [];

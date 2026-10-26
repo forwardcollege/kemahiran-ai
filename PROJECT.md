@@ -1,7 +1,7 @@
 # Kemahiran.AI — Product Definition
 
 Status: Draft for review  
-Owner: Forward Labs  
+Owner: Forward College
 Institutional endorsement: Powered by Forward College, Malaysia  
 Last updated: 2026-10-26
 
@@ -31,9 +31,9 @@ The catalogue contains three related but visibly distinct libraries:
 - Canonical URL: `https://kemahiran.ai`; `https://www.kemahiran.ai` redirects to the apex domain
 - DNS provider: Cloudflare; domain email is not configured for the initial deployment
 - Recommended defensive domains: `kemahiranai.com` and `kemahiranai.my`, redirected to the primary domain
-- Brand attribution: **Kemahiran.AI by Forward Labs**
+- Brand attribution: **A Forward College initiative**
 - Institutional line: **Powered by Forward College**
-- Open-content attribution: **Kemahiran.AI by Forward Labs, powered by Forward College (Malaysia)**
+- Open-content attribution: **Kemahiran.AI by Forward College (Malaysia)**
 
 “Kemahiran” describes the capability users gain from the whole product, not only the AI Skills library. The descriptor must appear prominently during launch so that the product is understood as a resource library rather than only a course platform.
 
@@ -87,15 +87,15 @@ Users should be able to:
 
 Malay labels are shown by default, with equivalent English labels after switching language.
 
-| Malay               | English               | Purpose                                       |
-| ------------------- | --------------------- | --------------------------------------------- |
-| Semua Sumber        | All Resources         | Full catalogue and cross-library discovery    |
-| Kemahiran AI        | AI Skills             | Multi-step workflows and portable skills      |
-| Prompt LLM          | LLM Prompts           | Copyable text prompts                         |
-| Prompt Imej & Video | Image & Video Prompts | Visual-first collections                      |
-| Kegemaran           | Favourites            | Account-backed saved resources                |
-| Tentang             | About                 | Mission, editorial standards and Forward Labs |
-| Mohon Sumber        | Request a Resource    | Structured resource request form              |
+| Malay               | English               | Purpose                                          |
+| ------------------- | --------------------- | ------------------------------------------------ |
+| Semua Sumber        | All Resources         | Full catalogue and cross-library discovery       |
+| Kemahiran AI        | AI Skills             | Multi-step workflows and portable skills         |
+| Prompt LLM          | LLM Prompts           | Copyable text prompts                            |
+| Prompt Imej & Video | Image & Video Prompts | Visual-first collections                         |
+| Kegemaran           | Favourites            | Account-backed saved resources                   |
+| Tentang             | About                 | Mission, editorial standards and Forward College |
+| Mohon Sumber        | Request a Resource    | Structured resource request form                 |
 
 The Image and Video content types share one top-level library but must remain independently filterable and switchable.
 
@@ -288,7 +288,7 @@ Reasons:
 - straightforward static generation, server rendering, image optimisation and custom domains;
 - no separate application server or container configuration for this workload.
 
-**Railway is a valid alternative**, especially if Forward Labs prefers one container-oriented platform for several services or already has Railway operations and billing. It can deploy Next.js and custom domains successfully. It is not the first recommendation because Kemahiran.AI does not require a persistent application server or an application-hosted database.
+**Railway is a valid alternative**, especially if Forward College prefers one container-oriented platform for several services or already has Railway operations and billing. It can deploy Next.js and custom domains successfully. It is not the first recommendation because Kemahiran.AI does not require a persistent application server or an application-hosted database.
 
 Portability requirements:
 
@@ -504,7 +504,7 @@ Target WCAG 2.2 AA.
 
 - Application source code, tests, build scripts and configuration use the MIT License.
 - Original catalogue resources, prompts, Skill packages, editorial documentation and original media use Creative Commons Attribution 4.0 International (CC BY 4.0), except where a resource or attribution manifest states otherwise.
-- The preferred attribution is: “Kemahiran.AI by Forward Labs, powered by Forward College (Malaysia) — https://kemahiran.ai.” The location distinguishes the Malaysian institution from unrelated organisations with the same name.
+- The preferred attribution is: “Kemahiran.AI by Forward College (Malaysia) — https://kemahiran.ai.” The location distinguishes the Malaysian institution from unrelated organisations with the same name.
 - Brand names, logos and trade dress are excluded from the open-content licence. Third-party and user-supplied material retains its own rights and is not licensed merely because it is referenced by a resource.
 - Publish only original, licensed or permissioned content.
 - Do not reproduce protected prompt collections, assets or examples from reference products.

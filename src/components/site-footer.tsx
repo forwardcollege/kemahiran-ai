@@ -24,13 +24,13 @@ export function SiteFooter({ locale }: { locale: Locale }) {
           <p className="mt-3 max-w-md text-sm leading-6 text-footer-foreground/70">
             {locale === "ms" ? (
               <>
-                Pustaka sumber AI praktikal untuk Malaysia. Dibina oleh Forward
-                Labs dan dikuasakan oleh <ForwardCollegeLink locale={locale} />.
+                Pustaka sumber AI praktikal untuk Malaysia. Sebuah inisiatif
+                oleh <ForwardCollegeLink locale={locale} />.
               </>
             ) : (
               <>
-                A practical AI resource library for Malaysia. Built by Forward
-                Labs and powered by <ForwardCollegeLink locale={locale} />.
+                A practical AI resource library for Malaysia. An initiative by{" "}
+                <ForwardCollegeLink locale={locale} />.
               </>
             )}
           </p>
@@ -61,11 +61,9 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             {locale === "ms" ? "Ketahui lanjut" : "Learn more"}
           </p>
           <div className="mt-4 grid gap-2 text-sm">
-            <span aria-disabled="true" className="text-footer-foreground/45">
-              {locale === "ms"
-                ? "Tentang — akan datang"
-                : "About — coming soon"}
-            </span>
+            <Link href={`/${locale}/about`}>
+              {locale === "ms" ? "Tentang" : "About"}
+            </Link>
             <span aria-disabled="true" className="text-footer-foreground/45">
               {locale === "ms"
                 ? "Mohon sumber — akan datang"
@@ -75,7 +73,7 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         </div>
       </div>
       <div className="border-t border-footer-foreground/15 px-5 py-5 text-center text-xs text-footer-foreground/55 sm:px-8">
-        © 2026 Forward Labs · Powered by <ForwardCollegeLink locale={locale} />
+        © 2026 Forward College (Malaysia)
       </div>
     </footer>
   );

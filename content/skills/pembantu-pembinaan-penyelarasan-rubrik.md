@@ -36,7 +36,7 @@ difficulty: intermediate
 intended_output: moderated_rubric
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   {
     kind: original,

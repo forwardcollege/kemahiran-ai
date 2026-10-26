@@ -35,7 +35,7 @@ difficulty: beginner
 intended_output: event_poster_key_visual
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   kind: original
   source_urls: []

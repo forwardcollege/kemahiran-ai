@@ -32,7 +32,7 @@ difficulty: intermediate
 intended_output: sales_performance_analysis
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   {
     kind: original,

@@ -34,7 +34,7 @@ difficulty: intermediate
 intended_output: classroom_activity_options
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   kind: original
   source_urls: []

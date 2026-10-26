@@ -40,7 +40,7 @@ difficulty: intermediate
 intended_output: management_briefing_note
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   {
     kind: original,

@@ -53,7 +53,7 @@ author:
   name: Forward College
   url: null
 curator:
-  name: Forward Labs
+  name: Forward College
 
 provenance:
   kind: original

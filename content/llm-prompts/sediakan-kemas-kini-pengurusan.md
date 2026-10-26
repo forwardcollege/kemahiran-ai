@@ -40,7 +40,7 @@ difficulty: beginner
 intended_output: recurring_management_update
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   {
     kind: original,

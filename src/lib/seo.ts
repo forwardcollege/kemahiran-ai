@@ -126,7 +126,7 @@ export function buildResourceMetadata(resource: Resource, locale: Locale) {
     ...metadata,
     authors: [{ name: data.author.name, url: data.author.url ?? undefined }],
     creator: data.author.name,
-    publisher: "Forward Labs",
+    publisher: "Forward College",
     openGraph: {
       ...metadata.openGraph,
       type: "article",
@@ -184,7 +184,8 @@ export function siteJsonLd(locale: Locale) {
       {
         "@type": "Organization",
         "@id": absoluteUrl("/#organization"),
-        name: "Forward Labs",
+        name: "Forward College",
+        sameAs: "https://forward.edu.my",
         url: absoluteUrl("/"),
         logo: {
           "@type": "ImageObject",
@@ -194,6 +195,30 @@ export function siteJsonLd(locale: Locale) {
         },
       },
     ],
+  };
+}
+
+export function aboutPageJsonLd(locale: Locale) {
+  const path = locale === "ms" ? "/ms/about" : "/en/about";
+  const name =
+    locale === "ms"
+      ? "Mengapa kami membina Kemahiran.AI"
+      : "Why we built Kemahiran.AI";
+  const description =
+    locale === "ms"
+      ? "Kisah Kemahiran.AI, sebuah inisiatif Forward College untuk membantu rakyat Malaysia menggunakan AI dengan yakin, bertanggungjawab dan berkesan."
+      : "The story of Kemahiran.AI, a Forward College initiative helping Malaysians use AI confidently, responsibly and effectively.";
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": absoluteUrl(`${path}#about`),
+    url: absoluteUrl(path),
+    name,
+    description,
+    inLanguage: localeCodes[locale],
+    isPartOf: { "@id": absoluteUrl("/#website") },
+    about: { "@id": absoluteUrl("/#organization") },
   };
 }
 

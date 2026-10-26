@@ -56,9 +56,9 @@ export async function generateMetadata({
       template: `%s | ${siteName}`,
     },
     description,
-    authors: [{ name: "Forward Labs" }],
-    creator: "Forward Labs",
-    publisher: "Forward Labs",
+    authors: [{ name: "Forward College" }],
+    creator: "Forward College",
+    publisher: "Forward College",
     category: "Artificial intelligence resources",
     referrer: "origin-when-cross-origin",
     robots: indexable
