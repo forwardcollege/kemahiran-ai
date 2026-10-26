@@ -6,6 +6,23 @@ const headings = {
 } as const;
 
 export type BilingualBody = Record<Locale, string>;
+export type LocalizedRoute = Record<Locale, string>;
+
+export function getCounterpartPath(
+  pathname: string,
+  locale: Locale,
+  localizedRoutes: readonly LocalizedRoute[],
+): string {
+  const counterpart = locale === "ms" ? "en" : "ms";
+  const localizedRoute = localizedRoutes.find(
+    (route) => route[locale] === pathname,
+  );
+
+  return (
+    localizedRoute?.[counterpart] ??
+    pathname.replace(/^\/(ms|en)(?=\/|$)/, `/${counterpart}`)
+  );
+}
 
 export const skillBodySectionHeadings = {
   ms: [

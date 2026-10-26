@@ -8,6 +8,12 @@ import { localeSchema } from "@/lib/content/schema";
 import { getAuthenticatedUser } from "@/lib/supabase/server";
 import "../globals.css";
 
+const libraryPaths = {
+  skill: "skills",
+  llm_prompt: "llm-prompts",
+  visual_prompt: "visual-prompts",
+} as const;
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -54,6 +60,10 @@ export default async function LocaleLayout({
       (resource) => resource.data.type === "visual_prompt",
     ).length,
   };
+  const localizedRoutes = resources.map(({ data }) => ({
+    ms: `/ms/${libraryPaths[data.type]}/${data.slug.ms}`,
+    en: `/en/${libraryPaths[data.type]}/${data.slug.en}`,
+  }));
   return (
     <html
       lang={parsed.data === "ms" ? "ms-MY" : "en-MY"}
@@ -69,7 +79,12 @@ export default async function LocaleLayout({
             : "Skip to main content"}
         </a>
         <div className="app-shell">
-          <SiteHeader locale={parsed.data} counts={counts} user={user} />
+          <SiteHeader
+            locale={parsed.data}
+            counts={counts}
+            user={user}
+            localizedRoutes={localizedRoutes}
+          />
           <div className="app-content">
             {children}
             <SiteFooter locale={parsed.data} />
