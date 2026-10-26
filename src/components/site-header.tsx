@@ -18,6 +18,10 @@ import {
   XIcon,
 } from "@phosphor-icons/react/ssr";
 import { signOut } from "@/app/auth/actions";
+import {
+  getCounterpartPath,
+  type LocalizedRoute,
+} from "@/lib/content/languages";
 import type { AuthenticatedUser } from "@/lib/supabase/server";
 import type { Locale } from "@/lib/content/schema";
 
@@ -56,16 +60,18 @@ export function SiteHeader({
   locale,
   counts,
   user,
+  localizedRoutes,
 }: {
   locale: Locale;
   counts: { skills: number; prompts: number; visual: number };
   user: AuthenticatedUser | null;
+  localizedRoutes: readonly LocalizedRoute[];
 }) {
   const copy = labels[locale];
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const other = locale === "ms" ? "en" : "ms";
-  const counterpartPath = pathname.replace(/^\/(ms|en)(?=\/|$)/, `/${other}`);
+  const counterpartPath = getCounterpartPath(pathname, locale, localizedRoutes);
   const collectionLinks = [
     {
       label: copy.allResources,
