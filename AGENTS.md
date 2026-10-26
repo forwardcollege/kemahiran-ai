@@ -26,7 +26,7 @@ After implementation begins, complete only the approved phase unless the request
 ## 3. Product boundaries
 
 - Product name: **Kemahiran.AI**
-- Owner: **Forward Labs**
+- Owner: **Forward College**
 - Institutional endorsement: **Powered by Forward College**
 - Bahasa Melayu is the default language.
 - English is a linked language variant of the same resource, not a separate catalogue.

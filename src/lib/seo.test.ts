@@ -1,8 +1,10 @@
 import { afterEach, describe, expect, it } from "vitest";
 import {
+  aboutPageJsonLd,
   buildLocalizedMetadata,
   isSearchIndexingEnabled,
   localizedPaths,
+  siteJsonLd,
 } from "./seo";
 
 const originalIndexable = process.env.SITE_INDEXABLE;
@@ -46,5 +48,25 @@ describe("SEO metadata", () => {
 
     process.env.VERCEL_ENV = "production";
     expect(isSearchIndexingEnabled()).toBe(true);
+  });
+
+  it("identifies Forward College as the public publisher", () => {
+    const jsonLd = siteJsonLd("en");
+    expect(jsonLd["@graph"]).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          "@type": "Organization",
+          name: "Forward College",
+        }),
+      ]),
+    );
+  });
+
+  it("builds localized About page structured data", () => {
+    expect(aboutPageJsonLd("ms")).toMatchObject({
+      "@type": "AboutPage",
+      url: "https://kemahiran.ai/ms/about",
+      inLanguage: "ms-MY",
+    });
   });
 });

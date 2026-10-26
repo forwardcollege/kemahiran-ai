@@ -81,7 +81,7 @@ The bundled Python Skill validator could not run because its local Python enviro
 
 These do not block building the site, previewing every resource or implementing validation. They do block setting records to `published`:
 
-1. Forward Labs must choose the default licence for original catalogue content and downloadable packages. The current planning recommendation requires conscious owner/legal acceptance because an open licence may be irrevocable after publication.
+1. Forward College must choose the default licence for original catalogue content and downloadable packages. The current planning recommendation requires conscious owner/legal acceptance because an open licence may be irrevocable after publication.
 2. The 14 new text resources require Gemini behavioural fixtures when normal access is restored.
 3. The 3 Video collections require actual Veo tests before any `tested` claim.
 4. Higher-risk resources must retain the internal-review-only disclosure whenever specialist review remains `not_obtained`.

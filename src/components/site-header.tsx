@@ -106,7 +106,11 @@ export function SiteHeader({
       href: `/${locale}/favourites`,
     },
     { label: copy.request, icon: PlusCircleIcon, disabled: true },
-    { label: copy.about, icon: QuestionIcon, disabled: true },
+    {
+      label: copy.about,
+      icon: QuestionIcon,
+      href: `/${locale}/about`,
+    },
   ];
 
   const isActive = (href: string, home = false) => {
@@ -152,7 +156,7 @@ export function SiteHeader({
             <NavLink
               key={link.label}
               {...link}
-              active={false}
+              active={link.href ? isActive(link.href) : false}
               icon={<Icon weight="regular" />}
             />
           ))}

@@ -39,6 +39,9 @@ describe("catalogue content", () => {
     expect(resources.every((item) => item.data.status === "approved")).toBe(
       true,
     );
+    expect(
+      resources.every((item) => item.data.curator.name === "Forward College"),
+    ).toBe(true);
   });
 
   it("rejects a type without its required type-specific block", () => {

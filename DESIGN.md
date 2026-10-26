@@ -1,7 +1,7 @@
 # Kemahiran.AI — Interface Design System
 
 Status: Approved Phase 2 direction
-Owner: Forward Labs
+Owner: Forward College
 Institutional endorsement: Powered by Forward College
 Last updated: 2026-10-26
 

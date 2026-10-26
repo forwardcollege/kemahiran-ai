@@ -46,7 +46,7 @@ difficulty: intermediate
 intended_output: evidence_grounded_infographic_layout
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   {
     kind: original,

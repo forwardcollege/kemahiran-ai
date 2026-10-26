@@ -34,7 +34,7 @@ difficulty: beginner
 intended_output: formal_meeting_minutes
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   kind: original
   source_urls: []

@@ -28,7 +28,7 @@ difficulty: beginner
 intended_output: daily_lesson_plan
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   kind: original
   source_urls: []

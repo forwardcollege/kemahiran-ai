@@ -45,7 +45,7 @@ Resolve decisions that affect public identity, accounts, publishing and operatio
 - Confirm public catalogue access with sign-in required only for personal actions.
 - Choose the default licence for original resources and downloadable packages.
 - Record Howie Chang as the accountable Forward College internal reviewer. Record specialist reviewers only when available.
-- Supply approved Forward College/Forward Labs logos, colours, type guidance and usage rules.
+- Supply approved Forward College and Kemahiran.AI logos, colours, type guidance and usage rules.
 - Initialise the GitHub repository and branch protections when authorised.
 
 ### Acceptance criteria
@@ -318,3 +318,4 @@ These are not implied by MVP approval.
 | 2026-10-26 | Confirm `kemahiran.ai` with Cloudflare DNS, Vercel hosting, public catalogue access and apex-domain canonicalisation                                            | Approved                          |
 | 2026-10-26 | License original resources and Skill packages under CC BY 4.0 and application code under MIT; use Forward College (Malaysia) in licence attribution             | Approved                          |
 | 2026-10-26 | Use Google OAuth as the only visible MVP authentication method; keep public resources open and prompt sign-in only for personal actions                         | Approved                          |
+| 2026-10-26 | Present Kemahiran.AI as a Forward College initiative and remove Forward Labs from all public-facing attribution                                                 | Approved                          |

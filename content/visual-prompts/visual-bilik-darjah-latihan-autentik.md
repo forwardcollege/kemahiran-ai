@@ -44,7 +44,7 @@ difficulty: beginner
 intended_output: authentic_learning_environment_visual
 languages: [ms, en]
 author: { name: Forward College, url: null }
-curator: { name: Forward Labs }
+curator: { name: Forward College }
 provenance:
   {
     kind: original,

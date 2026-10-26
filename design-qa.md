@@ -82,7 +82,7 @@ No actionable P0, P1 or P2 mismatch remains in the approved vertical slice.
 
 ## Follow-up polish
 
-- **P3:** Replace the temporary typographic `K.` mark and add a favicon when approved Forward Labs/Kemahiran.AI brand assets are supplied.
+- **P3:** Replace the temporary typographic `K.` mark and add a favicon when approved Forward College/Kemahiran.AI brand assets are supplied.
 - **P3:** Add the complete shareable URL state for client filters during the remaining Phase 2 discovery work.
 - **P3:** Add automated browser accessibility coverage when the Phase 2 Playwright suite is introduced.
 
@@ -92,6 +92,103 @@ No actionable P0, P1 or P2 mismatch remains in the approved vertical slice.
 - [x] Text-led resource rows use real repository content.
 - [x] Search, audience filters, sorting, advanced filter and favourite state respond.
 - [x] Mobile navigation and 390px reflow are usable.
+- [x] Formatting, lint, TypeScript, unit tests, content validation and production build pass.
+
+final result: passed
+
+---
+
+# Design QA — About page
+
+Date: 2026-10-27
+Route/state: `/ms/about` and `/en/about`, signed out, approved catalogue content visible in navigation
+Source visual truth: live reference `https://www.superr.ai/our-story` captured as `/private/tmp/kemahiran-about-source-top.png` and `/private/tmp/superr-strip-smooth-reference-matched.png`
+Implementation screenshots: `/private/tmp/kemahiran-about-desktop-top-v2.png`, `/private/tmp/kemahiran-about-shadow-removed.png`, `/private/tmp/kemahiran-about-mobile-ms-top.png`, `/private/tmp/kemahiran-about-mobile-ms-strip.png`, `/private/tmp/kemahiran-about-mobile-en-top.png` and `/private/tmp/kemahiran-about-mobile-en-strip.png`
+Combined comparison: `/private/tmp/kemahiran-superr-smooth-shadow-comparison.png`
+
+## Capture normalisation
+
+- The final focused desktop comparison uses source and implementation captures from the in-app browser at the same viewport and interaction state. Both inputs are 1265 × 712 pixels at device pixel ratio 1 and are stacked in one 1265 × 1424 comparison image.
+- Mobile Malay and English captures use an exact 390 × 900 CSS viewport and device pixel ratio 1 through Chrome DevTools Protocol. The screenshot pixels are also 390 × 900.
+- At 390px, `innerWidth`, document `clientWidth` and document `scrollWidth` all equal 390px in both languages. No horizontal document overflow is present.
+
+## Full-view comparison evidence
+
+The implementation preserves the reference's main editorial structure: a narrow narrative column, generous warm-white negative space, a single image intervention between story sections and a restrained typographic sign-off. Kemahiran.AI retains its approved application navigation, Inter type system and stronger headline weight rather than reproducing Superr's brand identity.
+
+Intentional product differences from the reference:
+
+- The persistent Kemahiran.AI library navigation remains visible on desktop because the About page lives inside the approved Phase 2 application shell.
+- The headline uses the product's existing bold sans-serif hierarchy instead of Superr's serif display face.
+- The image strip contains five original Kemahiran.AI workshop illustrations. At a given viewport, only the centred panel and neighbouring portions are visible; progressively more is revealed as the browser widens.
+
+## Focused-region comparison evidence
+
+The image strip was compared separately because border weight, aspect ratio, shadow and responsive cropping are the defining visual details. The implementation matches the reference pattern with consistent 8:5 frames, a warm mat, dark double-edge treatment, slight per-panel rotation, one crisp offset shadow, horizontal clipping and unframed page whitespace around the strip. All five source assets are 1600 × 1000 pixels. The centred stage image keeps the Malaysian flag visible on its pole.
+
+## Required fidelity surfaces
+
+- **Fonts and typography:** Inter remains consistent with the existing Kemahiran.AI design system. The large, compact headline and readable 1.82 body line height produce a clear editorial hierarchy in Malay and English without truncation.
+- **Spacing and layout rhythm:** The narrative column is capped at 47rem, paragraphs keep consistent spacing and the full-width strip creates the same text–image–text rhythm as the reference. Mobile reflows to one column while the centre image remains dominant.
+- **Colours and visual tokens:** Warm ivory, deep navy and cobalt reuse approved site tokens. The image mat is a slightly warmer ivory, with dark borders and a single neutral offset shadow that mirrors the reference without imitating its brand colours.
+- **Image quality and asset fidelity:** Five generated illustrations were derived from user-supplied workshop photographs and normalised to 1600 × 1000. Third-party logos and readable presentation text were removed or abstracted. Alternative text is localized and describes the workshop context. Media provenance and the pre-publication release check are recorded in `docs/media/about-page.md`.
+- **Copy and content:** The approved bilingual story is present in full, including responsible AI, Forward College's employment focus, subsidies, the RM3,200 starting-salary statement and Howie Chang's CEO/Co-Founder sign-off. The body contains only one intentional Forward College call-to-action link at its closing note.
+
+## Comparison history
+
+### Initial comparison
+
+- No actionable P0, P1 or P2 mismatch was found. The navigation shell and product typography are intentional system-level differences, while the story rhythm and image treatment follow the source closely.
+- One browser warning identified an unconfigured custom Next Image quality. `images.qualities` now includes 88, and a fresh production-preview tab reports no console warnings or errors.
+
+### Iteration 2 — carousel fidelity and interaction
+
+- User review identified that the original rotations were too subtle, the panels sat too close together, the copy-to-strip spacing was too generous and the strip did not expose enough of the remaining story images.
+- Panel angles were strengthened to a varied `-4.2deg` to `+4.3deg` pattern, horizontal gaps were widened and the vertical margin/padding around the strip was reduced. The resulting rhythm follows the reference more closely while keeping every frame at the same 8:5 ratio.
+- The strip now uses native horizontal overflow for touch and trackpad interaction, mouse pointer dragging and left/right keyboard controls. Three rendered cycles create a seamless manual loop, while duplicate cycles are hidden from assistive technology so the accessible list still contains only the five unique photographs.
+- The centred stage photograph remains the initial focus and retains the Malaysian flag. After seven right-arrow advances—more than one full set—the nearest frame remained inside the middle cycle, confirming that the carousel wrapped instead of reaching an endpoint.
+- A 390 × 900 touch-emulation check moved the Malay strip from `scrollLeft: 2327` to `scrollLeft: 2659`. The document width remained exactly 390px, confirming swipe interaction without page-level horizontal overflow.
+- The browser annotation requesting a larger desktop wordmark was handled proportionally inside the existing sidebar brand area; the compact mobile header remains unchanged.
+
+### Iteration 3 — seamless transform loop and Superr-style momentum
+
+- User testing revealed that the native-scroll implementation visibly jumped back at its cycle boundary and felt stepped because scroll snapping competed with dragging.
+- Inspection of the live Superr implementation confirmed its defining mechanics: a transformed track rather than native horizontal scrolling, seven repeated image groups, no snap points, zero drag elasticity, release momentum and position normalisation only after the glide finishes.
+- The strip was rebuilt around the same interaction model. It now drags a GPU-transformed seven-cycle track, follows the pointer directly, continues with eased release momentum and normalises to an equivalent middle-cycle position only after motion settles. The repeated content makes that transform reset visually indistinguishable from uninterrupted movement.
+- A matched desktop drag showed continuous transform updates through release (`-6335px`, `-6677px`, `-7069px`, `-7519px`, `-8011px`, `-8314px`) before the equivalent-cycle normalisation to `-5895px`. Repeated left and right drags remained in the safe middle cycles without exposing an endpoint.
+- The exact 390 × 900 touch check also showed continued momentum after release in both languages. Malay moved from `-3988px` to `-4828px` during momentum before normalising to an equivalent `-3656px` position; the document width remained 390px with no page-level horizontal overflow.
+- Duplicate cycles remain hidden from assistive technology, leaving only five unique localized images in the accessibility tree. Arrow-key navigation uses the same smooth transform path, while reduced-motion users receive an immediate equivalent position change.
+
+### Iteration 4 — shadow simplification
+
+- User review identified a second faint blurred shadow behind the crisp photo shadow. The CSS confirmed two separate shadow layers.
+- The blurred layer was removed on desktop and mobile while preserving the crisp offset shadow, border, warm mat and rotations. The production browser now reports one computed shadow only: `10.4px 12px 0px` with no blur radius.
+- The final matched 1265 × 712 comparison is saved as `/private/tmp/kemahiran-superr-smooth-shadow-comparison.png`; no actionable frame-treatment mismatch remains.
+
+## Interaction and browser checks
+
+- Malay and English routes render with reciprocal metadata and localized copy.
+- The desktop language control navigates from `/ms/about` to `/en/about` and back while retaining the About route.
+- The About item is active in desktop navigation and available in the footer.
+- Mobile navigation, locale control, heading hierarchy and central image crop remain visible at 390 × 900.
+- Mouse dragging, release momentum, seamless normalisation, bidirectional repetition and exact-width mobile touch dragging were verified on the final transform implementation.
+- A fresh production page was inspected after the final build. Previously captured development-only Fast Refresh entries were excluded from the production result; the rendered production page itself introduced no warnings or errors.
+
+## Findings
+
+No actionable P0, P1 or P2 mismatch remains.
+
+## Follow-up polish
+
+- **P3:** Confirm any required participant, venue and event permissions before public deployment, as recorded in the media provenance note.
+
+## Implementation checklist
+
+- [x] Bilingual About routes and metadata are present.
+- [x] One continuous five-image strip uses consistent 1600 × 1000 assets across seven visual cycles and repeats seamlessly without duplicating accessible content.
+- [x] CSS supplies the border, warm mat, rotations and one crisp offset shadow with no faint blur layer.
+- [x] Malay and English desktop and 390px mobile layouts were inspected.
+- [x] Touch, keyboard loop, language switching, navigation state and localized alternative text were verified.
 - [x] Formatting, lint, TypeScript, unit tests, content validation and production build pass.
 
 final result: passed
