@@ -12,7 +12,6 @@ import {
   ChatTextIcon,
   FileTextIcon,
   GraduationCapIcon,
-  HeartIcon,
   ImageIcon,
   MagnifyingGlassIcon,
   SlidersHorizontalIcon,
@@ -20,6 +19,7 @@ import {
   UsersThreeIcon,
 } from "@phosphor-icons/react/ssr";
 import { Button } from "@/components/ui/button";
+import { FavouriteButton } from "@/components/favourite-button";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import type { Locale, ResourceFrontmatter } from "@/lib/content/schema";
@@ -97,6 +97,8 @@ export function CatalogueBrowser({
   eyebrow,
   initialQuery = "",
   tone,
+  userId,
+  initialSavedIds = [],
 }: {
   locale: Locale;
   items: CatalogueItem[];
@@ -106,13 +108,14 @@ export function CatalogueBrowser({
   eyebrow: string;
   initialQuery?: string;
   tone: "all" | "skill" | "prompt" | "visual";
+  userId: string | null;
+  initialSavedIds?: string[];
 }) {
   const [query, setQuery] = useState(initialQuery);
   const [audience, setAudience] = useState("all");
   const [difficulty, setDifficulty] = useState("all");
   const [sort, setSort] = useState("newest");
   const [showFilters, setShowFilters] = useState(false);
-  const [saved, setSaved] = useState<string[]>([]);
   const [audienceHasMore, setAudienceHasMore] = useState(true);
   const audienceScrollRef = useRef<HTMLDivElement>(null);
   const labels =
@@ -345,7 +348,7 @@ export function CatalogueBrowser({
         {filtered.length ? (
           <ol className="resource-list">
             {filtered.map((item, index) => {
-              const isSaved = saved.includes(item.id);
+              const isSaved = initialSavedIds.includes(item.id);
               return (
                 <li
                   key={item.id}
@@ -409,24 +412,13 @@ export function CatalogueBrowser({
                       <dd>{formatDate(item.lastReviewed, locale)}</dd>
                     </div>
                   </dl>
-                  <button
-                    type="button"
-                    className="save-resource"
-                    aria-pressed={isSaved}
-                    aria-label={isSaved ? labels.remove : labels.save}
-                    onClick={() =>
-                      setSaved((current) =>
-                        isSaved
-                          ? current.filter((id) => id !== item.id)
-                          : [...current, item.id],
-                      )
-                    }
-                  >
-                    <HeartIcon
-                      aria-hidden="true"
-                      weight={isSaved ? "fill" : "regular"}
-                    />
-                  </button>
+                  <FavouriteButton
+                    locale={locale}
+                    resourceId={item.id}
+                    resourceTitle={item.title}
+                    userId={userId}
+                    initialSaved={isSaved}
+                  />
                 </li>
               );
             })}

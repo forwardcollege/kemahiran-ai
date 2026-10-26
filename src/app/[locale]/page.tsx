@@ -8,6 +8,7 @@ import {
   getVisibleResources,
 } from "@/lib/content/repository";
 import { localeSchema } from "@/lib/content/schema";
+import { getAuthenticatedUser, getFavouriteIds } from "@/lib/supabase/server";
 
 const copy = {
   ms: {
@@ -65,6 +66,8 @@ export default async function LocaleHome({
     difficulty: data.difficulty,
     lastReviewed: data.review.last_reviewed,
   }));
+  const user = await getAuthenticatedUser();
+  const favouriteIds = await getFavouriteIds(user?.id ?? null);
 
   return (
     <CatalogueBrowser
@@ -76,6 +79,8 @@ export default async function LocaleHome({
       eyebrow={text.eyebrow}
       initialQuery={query}
       tone="all"
+      userId={user?.id ?? null}
+      initialSavedIds={favouriteIds}
     />
   );
 }

@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getVisibleResources } from "@/lib/content/repository";
 import { localeSchema } from "@/lib/content/schema";
+import { getAuthenticatedUser } from "@/lib/supabase/server";
 import "../globals.css";
 
 const inter = Inter({
@@ -43,6 +44,7 @@ export default async function LocaleLayout({
   const parsed = localeSchema.safeParse(locale);
   if (!parsed.success) notFound();
   const resources = getVisibleResources();
+  const user = await getAuthenticatedUser();
   const counts = {
     skills: resources.filter((resource) => resource.data.type === "skill")
       .length,
@@ -67,7 +69,7 @@ export default async function LocaleLayout({
             : "Skip to main content"}
         </a>
         <div className="app-shell">
-          <SiteHeader locale={parsed.data} counts={counts} />
+          <SiteHeader locale={parsed.data} counts={counts} user={user} />
           <div className="app-content">
             {children}
             <SiteFooter locale={parsed.data} />

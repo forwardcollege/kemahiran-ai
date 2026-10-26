@@ -37,6 +37,10 @@ pnpm check
 
 This checks formatting, lint, TypeScript, tests, content validation and the production build. CI runs the same checks for pushes and pull requests.
 
+## Authentication setup
+
+Google OAuth and account-backed favourites require external Supabase and Google Cloud configuration. Follow [the authentication setup guide](docs/authentication-setup.md); never commit local credentials or a Google client secret.
+
 ## Repository documents
 
 - `PROJECT.md` — approved product definition and architectural decisions

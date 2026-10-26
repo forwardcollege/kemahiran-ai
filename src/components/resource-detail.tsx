@@ -3,6 +3,7 @@ import Link from "next/link";
 import { CaretRightIcon } from "@phosphor-icons/react/ssr";
 import { SkillActions } from "@/components/skill-actions";
 import { PromptActions } from "@/components/prompt-actions";
+import { FavouriteButton } from "@/components/favourite-button";
 import type { Resource } from "@/lib/content/repository";
 import {
   extractFencedCodeBlockAfterHeading,
@@ -11,6 +12,7 @@ import {
   renderSafeMarkdown,
 } from "@/lib/content/markdown";
 import type { Locale } from "@/lib/content/schema";
+import { getAuthenticatedUser, getFavouriteIds } from "@/lib/supabase/server";
 
 const paths = {
   skill: "skills",
@@ -32,6 +34,8 @@ export async function ResourceDetail({
   locale: Locale;
 }) {
   const { data } = resource;
+  const user = await getAuthenticatedUser();
+  const favouriteIds = await getFavouriteIds(user?.id ?? null);
   const counterpart: Locale = locale === "ms" ? "en" : "ms";
   const promptSectionHeading =
     data.type === "llm_prompt"
@@ -123,9 +127,19 @@ export async function ResourceDetail({
       </nav>
 
       <header className="mb-10 space-y-5">
-        <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
-          {data.title[locale]}
-        </h1>
+        <div className="resource-detail-heading">
+          <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+            {data.title[locale]}
+          </h1>
+          <FavouriteButton
+            locale={locale}
+            resourceId={data.id}
+            resourceTitle={data.title[locale]}
+            userId={user?.id ?? null}
+            initialSaved={favouriteIds.includes(data.id)}
+            className="detail-favourite"
+          />
+        </div>
         <p className="max-w-3xl text-lg leading-8 text-muted-foreground">
           {data.summary[locale]}
         </p>
