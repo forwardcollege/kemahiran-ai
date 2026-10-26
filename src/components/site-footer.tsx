@@ -22,9 +22,17 @@ export function SiteFooter({ locale }: { locale: Locale }) {
             </span>
           </Link>
           <p className="mt-3 max-w-md text-sm leading-6 text-footer-foreground/70">
-            {locale === "ms"
-              ? "Pustaka sumber AI praktikal untuk Malaysia. Dibina oleh Forward Labs dan dikuasakan oleh Forward College."
-              : "A practical AI resource library for Malaysia. Built by Forward Labs and powered by Forward College."}
+            {locale === "ms" ? (
+              <>
+                Pustaka sumber AI praktikal untuk Malaysia. Dibina oleh Forward
+                Labs dan dikuasakan oleh <ForwardCollegeLink locale={locale} />.
+              </>
+            ) : (
+              <>
+                A practical AI resource library for Malaysia. Built by Forward
+                Labs and powered by <ForwardCollegeLink locale={locale} />.
+              </>
+            )}
           </p>
         </div>
         <div>
@@ -67,8 +75,26 @@ export function SiteFooter({ locale }: { locale: Locale }) {
         </div>
       </div>
       <div className="border-t border-footer-foreground/15 px-5 py-5 text-center text-xs text-footer-foreground/55 sm:px-8">
-        © 2026 Forward Labs · Powered by Forward College
+        © 2026 Forward Labs · Powered by <ForwardCollegeLink locale={locale} />
       </div>
     </footer>
+  );
+}
+
+function ForwardCollegeLink({ locale }: { locale: Locale }) {
+  return (
+    <a
+      href="https://forward.edu.my"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold text-footer-foreground underline decoration-footer-foreground/40 underline-offset-4 transition-colors hover:text-primary focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+    >
+      Forward College
+      <span className="sr-only">
+        {locale === "ms"
+          ? " (dibuka dalam tab baharu)"
+          : " (opens in a new tab)"}
+      </span>
+    </a>
   );
 }
