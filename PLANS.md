@@ -45,7 +45,6 @@ Resolve decisions that affect public identity, accounts, publishing and operatio
 - Confirm public catalogue access with sign-in required only for personal actions.
 - Choose the default licence for original resources and downloadable packages.
 - Record Howie Chang as the accountable Forward College internal reviewer. Record specialist reviewers only when available.
-- Identify the production email sender/domain for magic links.
 - Supply approved Forward College/Forward Labs logos, colours, type guidance and usage rules.
 - Initialise the GitHub repository and branch protections when authorised.
 
@@ -183,12 +182,17 @@ Make each library immediately useful through a purpose-built detail experience.
 
 Add secure, low-friction accounts without putting the public catalogue behind a login wall.
 
+**Google-only authentication checkpoint (2026-10-26):** Howie Chang approved an initial local Phase 4 vertical slice using Google OAuth as the only visible authentication method. There is no separate registration form: the first successful Google sign-in creates the account. Public catalogue listings, resource details, copying and downloads remain open. Sign-in is requested only when a user invokes a personal action, beginning with favourites. Email magic links and passwords are excluded from the MVP unless managed-account testing demonstrates a material access problem. Cloud project creation, provider configuration and deployment remain separate external actions requiring explicit authorisation.
+
+**Local vertical-slice evidence (2026-10-26):** The Google PKCE callback, responsive sign-in prompt, dedicated bilingual sign-in page, sign-out flow, account-backed favourites UI, and versioned favourites/RLS migration are implemented on `codex/sign-up-login`. Formatting, linting, TypeScript, unit tests, content validation, the webpack production build, secret-pattern scanning, and focused Malay/English desktop/mobile interface checks pass. Hosted Google sign-in, cross-device persistence, and direct database RLS tests remain pending until the development Supabase project and Google OAuth client are explicitly authorised and configured.
+
+**Hosted authentication evidence (2026-10-26):** The Forward College `kemahiran-ai-dev` Supabase project and external/testing Google OAuth application are configured with exact local origins and callbacks. Google is the only enabled sign-in provider, the favourites migration and owner-only RLS policies are applied, and `howie@forward.edu.my` is the sole Google test user. A first-time login completed through Google consent, Supabase PKCE exchange, and the local callback; it returned to `/en`, established an authenticated cookie session, and created the corresponding Google-backed Supabase user. Cross-device favourites persistence and direct multi-user RLS testing remain pending.
+
 ### Work
 
 - Create separate local/development and production Supabase configurations when authorised.
 - Add Supabase SSR integration with supported PKCE flow.
 - Configure Google OAuth with minimal identity scopes.
-- Configure branded email magic links and strict redirect allowlists.
 - Add sign-in, callback, sign-out and error/recovery experiences in both languages.
 - Create versioned migrations for `user_preferences`, `favourites` and `resource_requests`.
 - Enable and test RLS for every table.
@@ -199,10 +203,9 @@ Add secure, low-friction accounts without putting the public catalogue behind a 
 
 ### Acceptance criteria
 
-- [ ] A new user can create an account through Google without a separate registration form.
-- [ ] A new user can create an account by clicking a one-time email magic link.
-- [ ] Redirects return the user only to allowlisted application URLs.
-- [ ] Sign-in returns the user to the initiating resource/action.
+- [x] A new user can create an account through Google without a separate registration form.
+- [x] Redirects return the user only to allowlisted application URLs.
+- [x] Sign-in returns the user to the initiating resource/action.
 - [ ] Favourites persist across sessions/devices for the same account.
 - [ ] One user cannot read or mutate another user’s rows under direct database/API testing.
 - [ ] Service-role credentials are absent from client bundles and logs.
@@ -301,7 +304,7 @@ These are not implied by MVP approval.
 | 2026-10-21 | Use Kemahiran.AI as the working product name and `kemahiran.ai` as the intended primary domain                                                                  | Proposed; domain purchase pending |
 | 2026-10-21 | Build fresh rather than fork Zaz-OS/skills-library                                                                                                              | Proposed                          |
 | 2026-10-21 | Use Markdown/Git as the catalogue source of truth                                                                                                               | Proposed                          |
-| 2026-10-21 | Use Supabase Auth/Postgres for Google, magic links and personal data only                                                                                       | Proposed                          |
+| 2026-10-21 | Use Supabase Auth/Postgres for Google authentication and personal data only                                                                                     | Superseded by 2026-10-26 approval |
 | 2026-10-21 | Recommend Vercel while retaining Railway portability                                                                                                            | Proposed                          |
 | 2026-10-21 | Keep public catalogue access open; require login for personal actions                                                                                           | Proposed                          |
 | 2026-10-25 | Approve all 36 MVP resource concepts and the recommended 10-resource anchor-batch selection                                                                     | Approved                          |
@@ -314,3 +317,4 @@ These are not implied by MVP approval.
 | 2026-10-25 | Begin Phase 2 with a coded vertical slice and stop for product-owner review before scaling the complete interface                                               | Approved                          |
 | 2026-10-26 | Confirm `kemahiran.ai` with Cloudflare DNS, Vercel hosting, public catalogue access and apex-domain canonicalisation                                            | Approved                          |
 | 2026-10-26 | License original resources and Skill packages under CC BY 4.0 and application code under MIT; use Forward College (Malaysia) in licence attribution             | Approved                          |
+| 2026-10-26 | Use Google OAuth as the only visible MVP authentication method; keep public resources open and prompt sign-in only for personal actions                         | Approved                          |

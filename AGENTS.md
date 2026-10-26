@@ -77,15 +77,14 @@ Follow `docs/content-schema.md` and begin from the examples in `docs/content-exa
 
 ## 7. Authentication, privacy and database rules
 
-- MVP sign-in methods are Google OAuth and email magic link through Supabase Auth.
-- Do not add password authentication unless approved.
+- The MVP sign-in method is Google OAuth through Supabase Auth. Do not add email magic links or passwords unless the product owner reopens the decision after managed-account testing.
 - Use the supported server-side Supabase integration and PKCE flow.
 - Allowlist authentication redirects explicitly.
 - Enable and test Row Level Security for every user-facing table.
 - A user may access only their own preferences, favourites and resource requests.
 - Never expose the Supabase service-role key or other privileged secrets to browser code.
 - Minimise personal data and do not create public user profiles.
-- Use generic magic-link responses to reduce email enumeration.
+- Keep authentication errors generic and avoid exposing account existence or provider internals.
 - Include an account deletion/request-deletion path before production launch.
 - Database schema changes require versioned migrations and tests.
 
@@ -110,9 +109,9 @@ Follow `docs/content-schema.md` and begin from the examples in `docs/content-exa
 - Validate all content, form inputs, relationship IDs, asset paths and download paths.
 - Treat frontmatter and Markdown as untrusted input during rendering.
 - Protect state-changing actions from cross-site request forgery through the framework/auth-supported approach.
-- Rate-limit abuse-prone forms and authentication email requests.
+- Rate-limit abuse-prone forms and authentication requests.
 - Run secret and dependency checks before release.
-- Do not log magic links, access tokens, email contents or unnecessary personal information.
+- Do not log access tokens, OAuth codes, email contents or unnecessary personal information.
 
 ## 10. Testing and completion
 
@@ -129,7 +128,7 @@ Expected checks should include:
 - automated accessibility checks; and
 - focused manual checks in Malay and English at mobile and desktop sizes.
 
-Critical journeys include search/filtering, locale switching, copy, Skill download, Google/magic-link authentication, favourites and resource requests.
+Critical journeys include search/filtering, locale switching, copy, Skill download, Google authentication, favourites and resource requests.
 
 Do not weaken a test or schema merely to make a failing check pass. Explain any check that cannot run and the remaining risk.
 

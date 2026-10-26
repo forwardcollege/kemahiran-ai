@@ -4,8 +4,9 @@ import {
 } from "@/components/catalogue-browser";
 import { getTaxonomyLabels, type Resource } from "@/lib/content/repository";
 import type { Locale } from "@/lib/content/schema";
+import { getAuthenticatedUser, getFavouriteIds } from "@/lib/supabase/server";
 
-export function LibraryLanding({
+export async function LibraryLanding({
   locale,
   eyebrow,
   title,
@@ -20,7 +21,7 @@ export function LibraryLanding({
   summary: string;
   resources: Resource[];
   query: string;
-  tone: "skill" | "prompt" | "visual";
+  tone: "all" | "skill" | "prompt" | "visual";
 }) {
   const tagTaxonomy = getTaxonomyLabels("tags");
   const tagLabels = Object.fromEntries(
@@ -50,6 +51,8 @@ export function LibraryLanding({
     difficulty: data.difficulty,
     lastReviewed: data.review.last_reviewed,
   }));
+  const user = await getAuthenticatedUser();
+  const favouriteIds = await getFavouriteIds(user?.id ?? null);
 
   return (
     <CatalogueBrowser
@@ -61,6 +64,8 @@ export function LibraryLanding({
       eyebrow={eyebrow}
       initialQuery={query}
       tone={tone}
+      userId={user?.id ?? null}
+      initialSavedIds={favouriteIds}
     />
   );
 }

@@ -238,9 +238,9 @@ Use **Supabase Auth and Supabase Postgres**.
 Authentication methods:
 
 - Google OAuth
-- Email magic link
 - No password authentication in the MVP
 - First successful sign-in creates the account; a separate registration form is unnecessary
+- Keep the account model provider-neutral so an evidence-based fallback can be added later without replacing user records
 
 Public catalogue browsing, search and copying remain available without signing in. Sign-in is required to save server-backed favourites, manage account preferences and submit an attributable resource request.
 
@@ -275,7 +275,7 @@ All exposed tables require Row Level Security. Users may read and change only th
 
 ### Why Supabase is justified
 
-The original local-storage-only approach is no longer sufficient because accounts must persist across devices. Supabase combines Google OAuth, passwordless email and a small relational store without requiring a custom authentication service. It is not used as a CMS, catalogue database or general backend abstraction.
+The original local-storage-only approach is no longer sufficient because accounts must persist across devices. Supabase combines Google OAuth and a small relational store without requiring a custom authentication service. It is not used as a CMS, catalogue database or general backend abstraction.
 
 ### Hosting: Vercel and Railway
 
@@ -401,7 +401,7 @@ Every resource has one shared identity with language variants inside the same re
 13. SEO metadata, sitemap and structured locale URLs
 14. Visible provenance, licensing, version and review metadata
 15. Markdown-based content workflow with automated validation
-16. Supabase Google sign-in and email magic-link sign-in
+16. Supabase Google sign-in
 17. Account-backed favourites
 18. Authenticated request-a-resource form
 19. Account sign-out and deletion/request-deletion path
@@ -460,8 +460,7 @@ Every card communicates:
 
 ### Authentication
 
-- Present “Continue with Google” and “Email me a sign-in link.”
-- Use generic responses for magic-link requests to reduce account enumeration.
+- Present one “Continue with Google” action for both first-time and returning users.
 - Return users to the page/action that initiated sign-in.
 - Explain why an account is needed at the point of action.
 - Do not block public catalogue reading behind authentication.
@@ -494,7 +493,6 @@ Target WCAG 2.2 AA.
 - Store sessions in secure, HTTP-only cookies where supported by the chosen integration.
 - Enable RLS before exposing any user table.
 - Rate-limit resource requests and auth-triggering forms; add bot protection if abuse appears.
-- Configure a trusted custom SMTP sender before production magic-link use.
 - Never collect prompt contents, student data or organisational documents.
 - Minimise profile data; do not create public profiles.
 - Provide a privacy notice, retention rules and an account-deletion process.
@@ -579,7 +577,7 @@ The MVP succeeds when a non-technical Malaysian user can:
 - download a Skill where supported;
 - evaluate a visual prompt through a meaningful preview;
 - discover a related resource;
-- create an account using Google or a magic link;
+- create an account using Google without a separate registration form;
 - retrieve favourites on another device; and
 - complete these tasks comfortably on a mobile device and with keyboard navigation.
 
@@ -593,7 +591,7 @@ Forward College succeeds when its team can add, revise, test and review resource
 - skills.sh presents Skills as reusable agent capabilities and supports package discovery: <https://www.skills.sh>
 - Genspark uses job/role/output-oriented Skills discovery: <https://www.genspark.ai/skills>
 - Zaz-OS/skills-library is MIT-licensed and uses an Astro site plus scraping/enrichment and MCP pipelines: <https://github.com/Zaz-OS/skills-library>
-- Supabase documents Google OAuth and passwordless email magic links: <https://supabase.com/docs/guides/auth/social-login/auth-google> and <https://supabase.com/docs/guides/auth/auth-email-passwordless>
+- Supabase documents Google OAuth with server-side PKCE flows: <https://supabase.com/docs/guides/auth/social-login/auth-google> and <https://supabase.com/docs/guides/auth/server-side>
 - Supabase supports Postgres Row Level Security: <https://supabase.com/docs/guides/database/postgres/row-level-security>
 - Both Vercel and Railway document Next.js deployments: <https://vercel.com/docs/frameworks/full-stack/nextjs> and <https://docs.railway.com/guides/nextjs>
 
@@ -606,19 +604,17 @@ Forward College succeeds when its team can add, revise, test and review resource
 
 - Public browsing remains available without login; accounts protect personalisation rather than catalogue access.
 - Forward College is the default internal review organisation and Howie Chang is the accountable internal reviewer for MVP publication approvals. Specialist review is optional and its absence is disclosed where relevant.
-- A transactional email sender/domain will be available for production magic links.
 - The visual identity and approved Forward College brand assets will be supplied before UI theming is finalised.
 
 ## 16. Open decisions
 
 These decisions do not prevent architecture planning but must be resolved at the stated gate:
 
-| Decision                         | Recommended default                                                          | Required by                    |
-| -------------------------------- | ---------------------------------------------------------------------------- | ------------------------------ |
-| Domain purchase                  | `kemahiran.ai`; Cloudflare DNS; apex canonical                               | Confirmed                      |
-| Frontend host                    | Vercel, while retaining Railway portability                                  | Confirmed                      |
-| Catalogue access                 | Public; sign-in for personal actions                                         | Confirmed                      |
-| Default original-content licence | CC BY 4.0 for resources; MIT for application code                            | Confirmed                      |
-| Review ownership                 | Howie Chang for Forward College internal review; specialist status disclosed | Confirmed                      |
-| Transactional email              | Custom-domain SMTP/provider                                                  | Before production auth testing |
-| Analytics                        | Privacy-conscious, minimal events only                                       | Before launch QA               |
+| Decision                         | Recommended default                                                          | Required by      |
+| -------------------------------- | ---------------------------------------------------------------------------- | ---------------- |
+| Domain purchase                  | `kemahiran.ai`; Cloudflare DNS; apex canonical                               | Confirmed        |
+| Frontend host                    | Vercel, while retaining Railway portability                                  | Confirmed        |
+| Catalogue access                 | Public; sign-in for personal actions                                         | Confirmed        |
+| Default original-content licence | CC BY 4.0 for resources; MIT for application code                            | Confirmed        |
+| Review ownership                 | Howie Chang for Forward College internal review; specialist status disclosed | Confirmed        |
+| Analytics                        | Privacy-conscious, minimal events only                                       | Before launch QA |

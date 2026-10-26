@@ -6,7 +6,6 @@ import {
   BookOpenIcon,
   BooksIcon,
   ChatTextIcon,
-  CompassIcon,
   HeartIcon,
   ImageIcon,
   ListIcon,
@@ -14,8 +13,11 @@ import {
   PlusCircleIcon,
   QuestionIcon,
   SignInIcon,
+  SignOutIcon,
   XIcon,
 } from "@phosphor-icons/react/ssr";
+import { signOut } from "@/app/auth/actions";
+import type { AuthenticatedUser } from "@/lib/supabase/server";
 import type { Locale } from "@/lib/content/schema";
 
 const labels = {
@@ -29,10 +31,9 @@ const labels = {
     request: "Minta sumber",
     about: "Tentang",
     signIn: "Log masuk",
+    signOut: "Log keluar",
     menu: "Buka menu",
     close: "Tutup menu",
-    openAccess: "Akses terbuka",
-    openAccessBody: "Teroka semua sumber tanpa perlu log masuk.",
   },
   en: {
     collection: "Collections",
@@ -44,19 +45,20 @@ const labels = {
     request: "Request a resource",
     about: "About",
     signIn: "Sign in",
+    signOut: "Sign out",
     menu: "Open menu",
     close: "Close menu",
-    openAccess: "Open access",
-    openAccessBody: "Explore every resource without signing in.",
   },
 } as const;
 
 export function SiteHeader({
   locale,
   counts,
+  user,
 }: {
   locale: Locale;
   counts: { skills: number; prompts: number; visual: number };
+  user: AuthenticatedUser | null;
 }) {
   const copy = labels[locale];
   const pathname = usePathname();
@@ -90,7 +92,11 @@ export function SiteHeader({
     },
   ];
   const utilityLinks = [
-    { label: copy.favourites, icon: HeartIcon, disabled: true },
+    {
+      label: copy.favourites,
+      icon: HeartIcon,
+      href: `/${locale}/favourites`,
+    },
     { label: copy.request, icon: PlusCircleIcon, disabled: true },
     { label: copy.about, icon: QuestionIcon, disabled: true },
   ];
@@ -146,25 +152,23 @@ export function SiteHeader({
       </nav>
 
       <div className="sidebar-bottom">
-        <div className="access-note">
-          <CompassIcon aria-hidden="true" weight="regular" />
-          <div>
-            <strong>{copy.openAccess}</strong>
-            <p>{copy.openAccessBody}</p>
-          </div>
-        </div>
         <div className="sidebar-account">
-          <span
-            aria-disabled="true"
-            title={
-              locale === "ms"
-                ? "Akan datang dalam fasa akaun"
-                : "Coming in the account phase"
-            }
-          >
-            <SignInIcon aria-hidden="true" weight="regular" />
-            {copy.signIn}
-          </span>
+          {user ? (
+            <form action={signOut} title={user.email ?? undefined}>
+              <input type="hidden" name="locale" value={locale} />
+              <button type="submit">
+                <SignOutIcon aria-hidden="true" weight="regular" />
+                {copy.signOut}
+              </button>
+            </form>
+          ) : (
+            <Link
+              href={`/${locale}/sign-in?next=${encodeURIComponent(pathname)}`}
+            >
+              <SignInIcon aria-hidden="true" weight="regular" />
+              {copy.signIn}
+            </Link>
+          )}
           <Link
             href={counterpartPath}
             hrefLang={other === "ms" ? "ms-MY" : "en-MY"}
