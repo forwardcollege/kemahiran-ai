@@ -192,3 +192,53 @@ No actionable P0, P1 or P2 mismatch remains.
 - [x] Formatting, lint, TypeScript, unit tests, content validation and production build pass.
 
 final result: passed
+
+---
+
+# Design QA — Responsive header lockup and mobile menu spacing
+
+Date: 2026-10-27
+Route/state: `/ms/about`, signed out, mobile/tablet header closed and menu open
+Source visual truth: `/private/tmp/footer-logo-source.png` (the existing footer lockup rendered by the local application)
+Implementation screenshot: `/private/tmp/mobile-header-after.png`
+Open-menu screenshot: `/private/tmp/mobile-menu-after.png`
+Combined comparison: `/private/tmp/logo-lockup-comparison.png`
+
+## Capture normalisation
+
+- Source and implementation images are both 616 × 760 px captures from the Codex in-app browser.
+- CSS capture size is 616 × 760 px at device scale factor 1; no density normalisation was required.
+- The source footer and implementation header were captured in the same browser, route, locale and signed-out state.
+
+## Full-view comparison evidence
+
+The combined comparison places the mobile/tablet header beside the rendered footer lockup. Both use a 24px magic-wand icon, an 8px icon-to-wordmark gap and a 20px, 900-weight wordmark. Their background and surrounding controls intentionally differ because the header and footer are separate page regions.
+
+## Focused-region comparison evidence
+
+The logo lockups are clearly readable in the combined comparison, so a smaller crop was unnecessary. The open-menu screenshot separately confirms a 20px gap between the active About item and the account/language control group.
+
+## Findings and comparison history
+
+- **Resolved P2 — header lockup proportions differed from the footer.** The mobile/tablet header previously used a 35.2px mark container, a 10.4px gap and a 16.32px wordmark. It now uses the footer's exact 24px icon, 8px gap, 20px wordmark and tight letter spacing. Post-fix evidence: `/private/tmp/logo-lockup-comparison.png`.
+- **Resolved P2 — account controls touched the final navigation item.** A 20px group gap now separates navigation from account actions. Post-fix evidence: `/private/tmp/mobile-menu-after.png`.
+- **Fonts and typography:** the same Inter family, 900 weight, 20px size and tight tracking are used in both lockups.
+- **Spacing and layout rhythm:** icon size and gap are matched; the menu grouping is distinct without altering navigation density.
+- **Colours and visual tokens:** existing foreground and primary tokens remain unchanged for the light header and dark footer contexts.
+- **Image quality and asset fidelity:** both lockups continue to use the same Phosphor magic-wand vector icon; no replacement asset was introduced.
+- **Copy and content:** `Kemahiran.AI`, locale controls and navigation labels are unchanged.
+- **Desktop:** no desktop-sidebar selector or desktop lockup rule was modified.
+
+## Implementation checklist
+
+- [x] Match mobile/tablet header lockup to footer sizing and spacing.
+- [x] Add separation above mobile account and language controls.
+- [x] Preserve the desktop sidebar lockup.
+- [x] Verify closed-header and open-menu states in the in-app browser.
+- [x] Pass formatting, linting, TypeScript, 27 tests and production build.
+
+## Follow-up polish
+
+No remaining P3 item was identified for this scoped change.
+
+final result: passed
