@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { getVisibleResources } from "@/lib/content/repository";
@@ -129,6 +130,7 @@ export default async function LocaleLayout({
             <SiteFooter locale={parsed.data} />
           </div>
         </div>
+        <Analytics />
       </body>
     </html>
   );
