@@ -58,12 +58,12 @@ review:
     editorial_reviewer: Howie Chang,
     specialist_review_status: not_obtained,
     specialist_reviewer: null,
-    last_reviewed: "2026-10-26",
-    next_review_due: "2027-04-26",
+    last_reviewed: "2026-11-10",
+    next_review_due: "2027-05-10",
   }
-version: 0.5.0
+version: 0.6.0
 created_at: "2026-10-25"
-updated_at: "2026-10-26"
+updated_at: "2026-11-10"
 related_ids: [skill-assessment-set-001]
 featured: false
 search_aliases:
@@ -173,23 +173,63 @@ Set soalan KBAT, tujuan pemikiran, panduan jawapan dan audit item.
 
 #### Contoh input
 
-Petikan sintetik Tingkatan 2 menyatakan bahawa sisa makanan kantin berkurang daripada 80 kg kepada 62 kg seminggu selepas kempen pengasingan sisa. Petikan tidak menerangkan sebab perubahan atau memberikan kumpulan perbandingan. Minta empat soalan respons pendek.
+**`{{KANDUNGAN}}` — Kandungan sumber**
+
+Sebuah sekolah merekodkan sisa makanan kantin selama empat minggu. Kantin menyediakan 1,000 hidangan setiap minggu dan menimbang sisa pada waktu yang sama menggunakan penimbang digital yang sama.
+
+| Minggu | Keadaan                         | Sisa makanan | Bilangan hidangan |
+| ------ | ------------------------------- | ------------ | ----------------- |
+| 1      | Sebelum kempen                  | 80 kg        | 1,000             |
+| 2      | Sebelum kempen                  | 78 kg        | 1,000             |
+| 3      | Selepas kempen pengasingan sisa | 64 kg        | 1,000             |
+| 4      | Selepas kempen pengasingan sisa | 62 kg        | 1,000             |
+
+Kempen itu memperkenalkan tong berlabel dan poster yang mengingatkan murid supaya mengambil makanan yang mampu dihabiskan. Menu berbeza setiap minggu. Sekolah tidak mempunyai data daripada kantin perbandingan dan tidak merekod sebab murid meninggalkan makanan. Majlis perwakilan murid perlu mencadangkan langkah seterusnya.
+
+**`{{TAHAP}}` — Tahap murid:** Tingkatan 2
+
+**`{{BILANGAN}}` — Bilangan soalan:** 3
+
+**`{{FORMAT}}` — Format respons:** Tiga soalan respons pendek yang lengkap—satu soalan menganalisis, satu menilai dan satu mencipta. Bagi setiap soalan, nyatakan tujuan pemikiran, bukti sumber yang diperlukan, panduan jawapan, variasi yang boleh diterima dan kriteria ringkas. Akhiri dengan audit item dan panduan guru.
 
 #### Contoh hasil
 
-1. **Hitung pengurangan sisa makanan dalam kilogram dan peratus. Tunjukkan langkah anda.**
-   _Panduan jawapan:_ Pengurangan = 80 − 62 = **18 kg**. Peratus pengurangan = 18 ÷ 80 × 100 = **22.5%**.
+1. **Menganalisis — Apakah pola yang anda lihat sebelum dan selepas kempen? Bandingkan purata sisa makanan bagi kedua-dua tempoh dan jelaskan satu kesimpulan yang disokong oleh data serta satu kesimpulan yang belum dapat dibuat.**
+   - **Tujuan pemikiran:** Mengenal pasti pola, menghubungkan angka dan membezakan pemerhatian daripada sebab-akibat.
+   - **Bukti sumber yang diperlukan:** Rekod 80 kg dan 78 kg sebelum kempen; 64 kg dan 62 kg selepas kempen; 1,000 hidangan setiap minggu.
+   - **Panduan jawapan:** Purata sebelum kempen ialah (80 + 78) ÷ 2 = **79 kg** seminggu. Purata selepas kempen ialah (64 + 62) ÷ 2 = **63 kg** seminggu. Purata itu berkurang **16 kg**, iaitu kira-kira **20.3%**. Data menyokong kesimpulan bahawa sisa yang direkodkan lebih rendah dalam dua minggu selepas kempen. Data belum membuktikan bahawa kempen menyebabkan pengurangan itu.
+   - **Variasi yang boleh diterima:** Murid boleh membandingkan setiap minggu, purata atau julat asalkan pengiraan tepat dan batas kesimpulan dinyatakan.
+   - **Kriteria ringkas:** Pengiraan tepat; pola diterangkan menggunakan bukti; kesimpulan dan batas bukti dibezakan.
 
-2. **Adakah data ini membuktikan bahawa kempen menyebabkan pengurangan tersebut? Jelaskan.**
-   _Panduan jawapan:_ Tidak. Data menunjukkan perubahan selepas kempen tetapi tidak mengasingkan faktor lain seperti jumlah murid, menu atau cara timbangan. Jawapan perlu membezakan hubungan masa daripada sebab-akibat.
+2. **Menilai — Majlis perwakilan murid berkata, “Kempen ini terbukti berkesan dan perlu diteruskan tanpa perubahan.” Sejauh manakah anda bersetuju? Gunakan sekurang-kurangnya dua kekuatan dan dua batasan bukti sebelum memberikan keputusan.**
+   - **Tujuan pemikiran:** Menimbang kualiti bukti dan membina keputusan yang beralasan.
+   - **Bukti sumber yang diperlukan:** Penurunan dalam kedua-dua minggu selepas kempen; bilangan hidangan, masa dan alat timbangan yang konsisten; menu yang berubah; tempoh empat minggu; ketiadaan kantin perbandingan dan sebab pembaziran.
+   - **Panduan jawapan:** Bukti menyokong penerusan sementara kerana kedua-dua rekod selepas kempen lebih rendah, jumlah hidangan sama dan kaedah timbangan konsisten. Namun, hanya dua minggu direkodkan bagi setiap tempoh, menu berubah, tiada kantin perbandingan dan sebab makanan ditinggalkan tidak diketahui. Keputusan yang munasabah ialah meneruskan kempen sambil mengumpul bukti yang lebih kukuh, bukan mendakwa keberkesanannya telah terbukti atau mengekalkannya tanpa perubahan.
+   - **Variasi yang boleh diterima:** Murid boleh bersetuju sebahagian, tidak bersetuju atau mencadangkan percubaan lanjut jika keputusan seimbang dengan bukti.
+   - **Kriteria ringkas:** Sekurang-kurangnya dua kekuatan dan dua batasan yang tepat; keputusan jelas; alasan sepadan dengan bukti.
 
-3. **Cadangkan dua maklumat tambahan yang akan menguatkan penilaian keberkesanan kempen.**
-   _Panduan jawapan:_ Contohnya data beberapa minggu sebelum dan selepas kempen, jumlah hidangan, kaedah timbangan yang sama, atau data kantin perbandingan.
+3. **Mencipta — Reka pelan susulan empat minggu untuk membantu majlis perwakilan murid menilai sama ada kempen menyumbang kepada pengurangan sisa. Nyatakan data yang akan dikumpul, cara membuat perbandingan yang adil, petunjuk kejayaan dan bagaimana dapatan akan digunakan.**
+   - **Tujuan pemikiran:** Menggabungkan bukti dan batasan untuk menghasilkan pelan penyiasatan yang boleh dilaksanakan.
+   - **Bukti sumber yang diperlukan:** Rutin timbangan sedia ada, bilangan hidangan, perubahan menu, ketiadaan perbandingan dan sebab makanan ditinggalkan.
+   - **Panduan jawapan:** Pelan yang kukuh boleh meneruskan timbangan pada masa dan dengan alat yang sama, merekod jumlah hidangan dan jenis menu, serta mengumpul sebab pembaziran melalui pemerhatian atau tinjauan ringkas tanpa nama. Pelan juga boleh membandingkan trend dengan kantin yang serupa atau dengan tempoh asas yang lebih panjang. Petunjuk kejayaan perlu ditetapkan lebih awal, contohnya purata sisa bagi setiap 1,000 hidangan kekal lebih rendah daripada purata asas 79 kg. Selepas empat minggu, majlis boleh mengekalkan, mengubah atau menguji semula kempen berdasarkan pola dan batas data.
+   - **Variasi yang boleh diterima:** Reka bentuk lain boleh diterima jika menangani sekurang-kurangnya dua jurang bukti, menjaga perbandingan yang adil dan tidak mendakwa sebab-akibat tanpa sokongan.
+   - **Kriteria ringkas:** Pelan mempunyai langkah, ukuran, perbandingan dan petunjuk kejayaan yang jelas; pelan boleh dilaksanakan; keputusan dihubungkan dengan dapatan.
 
-4. **Seorang murid berkata, “Kempen ini pasti berjaya kerana sisa berkurang.” Tulis semula hujah itu supaya lebih tepat.**
-   _Panduan jawapan:_ “Sisa yang direkodkan berkurang 22.5% selepas kempen. Ini konsisten dengan kemungkinan kempen membantu, tetapi maklumat tambahan diperlukan sebelum kita membuat kesimpulan sebab-akibat.”
+**Audit item**
 
-**Audit aras pemikiran:** Soalan 1 mengaplikasi; Soalan 2 menilai bukti; Soalan 3 mencipta cadangan siasatan; Soalan 4 menilai dan membina semula hujah.
+- **Bahasa dan tahap:** Ayat dan pengiraan sesuai untuk Tingkatan 2; guru boleh menerangkan istilah `tempoh asas` jika istilah itu belum dipelajari.
+- **Petunjuk jawapan:** Sumber memberikan bukti untuk dihuraikan tetapi tidak memberikan keputusan bagi pihak murid.
+- **Kekaburan dan variasi:** Setiap item menyatakan bilangan bukti atau komponen yang diperlukan dan menerima lebih daripada satu jawapan yang beralasan.
+- **Fakta luar sumber:** Tiada fakta luar diperlukan. Cadangan dalam Soalan 3 dinilai sebagai reka bentuk murid, bukan sebagai fakta yang telah berlaku.
+- **Pertindihan:** Soalan 1 menghuraikan pola, Soalan 2 menimbang tuntutan dan Soalan 3 membina penyiasatan; tiada pertindihan tugas utama dikenal pasti dalam semakan ini.
+
+**Panduan guru**
+
+- Gunakan ketiga-tiga soalan secara berurutan: kenal pasti pola, nilai kekuatan tuntutan, kemudian bina penyiasatan yang menangani jurang bukti.
+- Minta murid menandakan nombor atau ayat sumber yang menyokong setiap alasan. Susulan yang berguna termasuk “Bukti mana yang paling kuat?”, “Apakah penjelasan lain yang masih mungkin?” dan “Bagaimanakah pelan anda membuat perbandingan lebih adil?”.
+- Jangan memberikan kredit penuh hanya untuk pengiraan yang betul. Nilai juga cara murid mentafsir pola, menghadkan tuntutan dan menghubungkan reka bentuk pelan kepada kelemahan bukti.
+- Terima keputusan atau pelan alternatif apabila murid menyokongnya dengan sumber dan memenuhi kriteria. Bincangkan contoh jawapan hanya selepas murid mencuba supaya panduan tidak menjadi petunjuk jawapan.
+- Semak tuntutan aras KBAT dan kesesuaian kriteria untuk kelas sebenar sebelum digunakan; semakan ini tidak menggantikan pertimbangan profesional guru.
 
 ### Semakan kualiti
 
@@ -251,23 +291,63 @@ A KBAT question set, thinking purpose, answer guidance and item audit.
 
 #### Sample input
 
-A synthetic Form 2 passage states that canteen food waste fell from 80 kg to 62 kg per week after a waste-separation campaign. It does not explain the cause or provide a comparison group. Request four short-response questions.
+**`{{SOURCE_CONTENT}}` — Source content**
+
+A school recorded canteen food waste for four weeks. The canteen served 1,000 meals each week and weighed the waste at the same time using the same digital scale.
+
+| Week | Condition                           | Food waste | Meals served |
+| ---- | ----------------------------------- | ---------- | ------------ |
+| 1    | Before the campaign                 | 80 kg      | 1,000        |
+| 2    | Before the campaign                 | 78 kg      | 1,000        |
+| 3    | After the waste-separation campaign | 64 kg      | 1,000        |
+| 4    | After the waste-separation campaign | 62 kg      | 1,000        |
+
+The campaign introduced labelled bins and posters reminding learners to take only as much food as they could finish. The menu differed each week. The school had no comparison canteen and did not record why learners left food. The student council must recommend the next step.
+
+**`{{LEARNER_LEVEL}}` — Learner level:** Form 2
+
+**`{{QUESTION_COUNT}}` — Number of questions:** 3
+
+**`{{RESPONSE_FORMAT}}` — Response format:** Three complete short-response items—one analysing, one evaluating and one creating. For each item, state the thinking purpose, required source evidence, answer guidance, acceptable variation and brief criteria. End with an item audit and teacher guidance.
 
 #### Sample output
 
-1. **Calculate the reduction in food waste in kilograms and as a percentage. Show your working.**
-   _Answer guidance:_ Reduction = 80 − 62 = **18 kg**. Percentage reduction = 18 ÷ 80 × 100 = **22.5%**.
+1. **Analysing — What pattern do you see before and after the campaign? Compare the average food waste for the two periods, then explain one conclusion supported by the data and one conclusion that cannot yet be made.**
+   - **Thinking purpose:** Identify a pattern, connect the figures and distinguish observation from causation.
+   - **Required source evidence:** The pre-campaign records of 80 kg and 78 kg; the post-campaign records of 64 kg and 62 kg; 1,000 meals each week.
+   - **Answer guidance:** The pre-campaign average is (80 + 78) ÷ 2 = **79 kg** per week. The post-campaign average is (64 + 62) ÷ 2 = **63 kg** per week. The average fell by **16 kg**, or about **20.3%**. The data support the conclusion that recorded waste was lower in the two weeks after the campaign. They do not prove that the campaign caused the reduction.
+   - **Acceptable variation:** Learners may compare individual weeks, averages or ranges, provided that the calculations are accurate and the limit on the conclusion is stated.
+   - **Brief criteria:** Accurate calculation; pattern explained with evidence; conclusion distinguished from the evidence limit.
 
-2. **Does this information prove that the campaign caused the reduction? Explain.**
-   _Answer guidance:_ No. The figures show a change after the campaign but do not isolate other factors such as student numbers, menus or weighing methods. The answer should distinguish timing from causation.
+2. **Evaluating — The student council says, “The campaign is proven to work and should continue unchanged.” To what extent do you agree? Use at least two strengths and two limitations of the evidence before reaching a judgement.**
+   - **Thinking purpose:** Weigh the quality of evidence and form a reasoned judgement.
+   - **Required source evidence:** The decrease in both post-campaign weeks; consistent meal counts, weighing time and scale; changing menus; the four-week duration; no comparison canteen or reasons for waste.
+   - **Answer guidance:** The evidence supports continuing the campaign provisionally because both post-campaign records are lower, meal counts are equal and weighing is consistent. However, each period contains only two weeks, menus changed, there is no comparison canteen and the reasons for leaving food are unknown. A reasonable judgement is to continue while collecting stronger evidence, not to claim that effectiveness is proven or that no changes are needed.
+   - **Acceptable variation:** Learners may partly agree, disagree or recommend a further trial if their judgement is balanced against the evidence.
+   - **Brief criteria:** At least two accurate strengths and two accurate limitations; clear judgement; reasoning proportionate to the evidence.
 
-3. **Suggest two additional pieces of information that would strengthen an evaluation of the campaign.**
-   _Answer guidance:_ Examples include several weeks of before-and-after data, meal counts, a consistent weighing method or data from a comparison canteen.
+3. **Creating — Design a four-week follow-up plan to help the student council judge whether the campaign contributed to reducing waste. State the data to collect, how to make a fair comparison, a success indicator and how the findings will be used.**
+   - **Thinking purpose:** Combine evidence and limitations to produce a workable investigation plan.
+   - **Required source evidence:** The existing weighing routine, meal counts, changing menus, missing comparison and missing reasons for waste.
+   - **Answer guidance:** A strong plan could continue weighing at the same time with the same scale, record meals served and menu type, and gather reasons for waste through observation or a short anonymous survey. It could also compare the trend with a similar canteen or with a longer baseline period. A success indicator should be set in advance—for example, average waste per 1,000 meals remains below the 79 kg baseline average. After four weeks, the council could retain, adjust or retest the campaign according to the pattern and the limits of the data.
+   - **Acceptable variation:** Other designs are acceptable if they address at least two evidence gaps, maintain a fair comparison and avoid unsupported causal claims.
+   - **Brief criteria:** Clear steps, measures, comparison and success indicator; feasible plan; decision linked to findings.
 
-4. **A learner says, “The campaign definitely worked because waste decreased.” Rewrite the argument so it is more accurate.**
-   _Answer guidance:_ “Recorded waste fell by 22.5% after the campaign. This is consistent with the campaign possibly helping, but more information is needed before drawing a causal conclusion.”
+**Item audit**
 
-**Thinking-level audit:** Question 1 applies; Question 2 evaluates evidence; Question 3 creates an investigation proposal; Question 4 evaluates and reconstructs an argument.
+- **Language and level:** The wording and calculations are suitable for Form 2; the teacher can explain `baseline period` if learners have not met the term.
+- **Answer clues:** The source provides evidence to interpret but does not make the judgement for the learner.
+- **Ambiguity and variation:** Each item states the number of required evidence points or components and allows more than one reasoned answer.
+- **Outside facts:** No outside fact is required. Suggestions in Question 3 are assessed as the learner’s design, not as facts that have already occurred.
+- **Duplication:** Question 1 explains a pattern, Question 2 weighs a claim and Question 3 constructs an investigation; no duplication of the main task was identified in this review.
+
+**Teacher guidance**
+
+- Use the three questions in sequence: identify the pattern, evaluate the strength of the claim, then build an investigation that addresses evidence gaps.
+- Ask learners to point to the number or sentence supporting each reason. Useful follow-ups include “Which evidence is strongest?”, “What other explanation remains possible?” and “How does your plan make the comparison fairer?”.
+- Do not award full credit for a correct calculation alone. Also assess how learners interpret the pattern, limit the claim and connect the plan design to weaknesses in the evidence.
+- Accept alternative judgements or plans when learners ground them in the source and meet the criteria. Discuss the sample guidance only after learners attempt the questions so that it does not become an answer clue.
+- Review the claimed higher-order demand and adapt the criteria to the actual class before use; this audit does not replace the teacher’s professional judgement.
 
 ### Quality check
 
