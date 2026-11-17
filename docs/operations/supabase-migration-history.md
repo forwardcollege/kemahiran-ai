@@ -18,6 +18,8 @@ Only a migration-history row was inserted: version `202610260001`, name `create_
 
 The repair ran in one transaction with a short lock timeout, a shared lock on the favourites table, checks for concurrent schema/history changes, and a row-count/checksum comparison before commit. Afterwards, the original table identity and RLS remained in place; the count was still four and the checksum was identical. No application data was inserted, updated, deleted or exported. The repository migration was not changed.
 
+The production branch was then resynced through the Supabase dashboard. Its workflow completed with `FUNCTIONS_DEPLOYED`, and the replacement [Supabase Preview check](https://github.com/forwardcollege/kemahiran-ai/runs/133845607389) on release commit `fe235e7` passed. A further query confirmed that the stored migration statements exactly match the repository and all four favourites remain.
+
 Preflight health advisors reported no issues. Separate security-advisor warnings about the existing `public.rls_auto_enable()` function's execution permissions were observed and are outside this history-only repair; they require a separate review. A password-protection notice also remains; this application uses Google OAuth only. This repair is not a full database security audit.
 
 ## Procedure for future drift
