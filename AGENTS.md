@@ -138,6 +138,8 @@ Do not weaken a test or schema merely to make a failing check pass. Explain any 
 - Use `apply_patch` for manual file edits.
 - Make the smallest coherent change that satisfies the approved phase.
 - Preserve user changes and avoid destructive Git commands.
+- Start repository changes on a `codex/` feature branch and open a pull request targeting `main`. Do not commit or push changes directly to `main` unless Howie explicitly requests an exception.
+- Review GitHub CI, Vercel and Supabase checks on the pull request. Resolve failing checks before merging, or obtain an explicit owner decision accepting a documented exception. Merging and production deployment require explicit user authorisation.
 - Do not refactor unrelated code during a scoped task.
 - Document architectural decisions that alter `PROJECT.md` or phase assumptions.
 - Update `PLANS.md` checkboxes/status only when acceptance evidence exists.

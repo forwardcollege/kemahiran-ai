@@ -37,6 +37,12 @@ pnpm check
 
 This checks formatting, lint, TypeScript, tests, content validation and the production build. CI runs the same checks for pushes and pull requests.
 
+## Change and release workflow
+
+Start changes on a `codex/` feature branch, push that branch and open a pull request targeting `main`. Review the preview and every GitHub, Vercel and Supabase check before requesting merge approval. Do not push directly to `main`; merging into `main` triggers the production deployment. Merge and deploy only with Howie's explicit authorisation.
+
+For an existing Supabase table with missing migration history, follow [the migration-history repair runbook](docs/operations/supabase-migration-history.md). Verify the schema before recording an already-applied migration; preserve existing data.
+
 ## Authentication setup
 
 Google OAuth and account-backed favourites require external Supabase and Google Cloud configuration. Follow [the authentication setup guide](docs/authentication-setup.md); never commit local credentials or a Google client secret.
