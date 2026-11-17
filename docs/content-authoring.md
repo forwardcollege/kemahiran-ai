@@ -35,6 +35,8 @@ For a Skill, keep the seven required level-three body sections in the exact bili
 
 For an LLM Prompt, use the required seven-section bilingual order documented in the schema. Place the complete prompt in exactly one fenced code block under `Prompt lengkap / Complete prompt`; this block is the canonical text copied by the interface. When `sample_included: true`, provide a synthetic worked example with level-four input and output headings.
 
+For source-data or document inputs, explain that users may paste text or attach supported files in their AI tool. Show how to replace a source variable with a file name and relevant page, section, sheet or cell range; do not imply that users must retype a document. Keep the example's synthetic source content visible as a text alternative and label illustrative file names clearly. Where Gemini guidance is included, describe adding files from Google Drive and qualify account/admin availability; do not promise that pasting a document URL grants access. The canonical prompt must verify readable source access and request a readable attachment or extract when access fails.
+
 For an Image or Video Prompt, use the required seven-section bilingual order documented in the schema. Under `Prompt koleksi / Collection prompts`, give every prompt variant a level-four heading and one fenced code block. Each block becomes a separate copy action automatically, so contributors must not add the same prompt to frontmatter or application code.
 
 ## Review and testing sequence
